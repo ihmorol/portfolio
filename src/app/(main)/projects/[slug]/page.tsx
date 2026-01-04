@@ -9,7 +9,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
   const { socialLinks } = layoutData.footer;
   // Get project details from projectsData based on slug, fallback to fintech-dashboard
   const projectDetail = projectsData.projectDetails[params.slug as keyof typeof projectsData.projectDetails] 
-    || projectsData.projectDetails['fintech-dashboard'];
+    || projectsData.projectDetails['ielts-platform'];
 
   return (
     <div className="relative flex flex-col overflow-x-hidden min-h-screen bg-background-dark text-white selection:bg-white selection:text-black font-display">
@@ -91,10 +91,11 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                 </div>
                 <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-8">
                     <div className="w-full h-full shadow-2xl rounded-xl overflow-hidden bg-black relative">
-                         <img 
+                         <Image 
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDShKba_AZ0QjhpM-x8bF0NtAPxE1wStruOpmAXY96dnpTEQ8ec3q68HB4sbbYpBDNS41KVvtcBIRXze6-UXimAR4OxZG9zIUbhLfPwCjREIuckElH3-dvYqjk_XoCKpDb3XadeF9R29MeVys7i6FPJw9FReHtHJrOcvuXkEsRszxwl3rpYuIIzImxmVuJBe2VEjcoaLeRa5SrrlxUQNjZFX2KnVSv09HQEQLNBQPkfXL905mCm-DRVVxF7UnIoFAyjTEgTOJCDlWA"
                             alt="Dashboard Main Interface"
-                            className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
+                            fill
+                            className="object-cover opacity-90 hover:scale-105 transition-transform duration-700"
                         />
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
@@ -109,7 +110,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-8 border-t border-gray-100">
                 {projectDetail.screens.map((screen: string, idx: number) => (
                     <div key={idx} className="rounded-lg overflow-hidden h-24 bg-gray-100 relative group cursor-pointer">
-                        <img src={screen} alt={`Screen ${idx + 1}`} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                        <Image src={screen} alt={`Screen ${idx + 1}`} fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
                     </div>
                 ))}
                 <div className="rounded-lg overflow-hidden h-24 bg-gray-100 flex items-center justify-center relative group cursor-pointer border border-gray-200 hover:border-black transition-colors">
@@ -127,7 +128,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                     </div>
                     <h3 className="text-xl font-medium">The Problem</h3>
                     <p className="text-text-secondary leading-relaxed text-sm">
-                        FinCorp's dashboard suffered from high churn. Users felt overwhelmed by data density. Navigation was too deep, making simple exports take 5+ minutes, leading to frustration and lost productivity.
+                        FinCorp&apos;s dashboard suffered from high churn. Users felt overwhelmed by data density. Navigation was too deep, making simple exports take 5+ minutes, leading to frustration and lost productivity.
                     </p>
                 </div>
             </div>
@@ -200,7 +201,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                         <span className="text-accent-blue">const</span> <span className="text-accent-peach">useDataStream</span> = (ticker) ={'>'} {'{\n'}
                         {'  '}<span className="text-accent-blue">const</span> [data, setData] = useState([]);{'\n'}
                         {'  '}useEffect(() ={'>'} {'{\n'}
-                        {'    '}<span className="text-gray-500">// Initialize WebSocket connection</span>{'\n'}
+                        {'    '}<span className="text-gray-500">{/* Initialize WebSocket connection */}</span>{'\n'}
                         {'    '}<span className="text-accent-blue">const</span> ws = <span className="text-accent-blue">new</span> WebSocket(WS_URL);{'\n'}
                         {'    '}ws.onmessage = (event) ={'>'} {'{\n'}
                         {'       '}<span className="text-accent-blue">const</span> newData = JSON.parse(event.data);{'\n'}
@@ -230,7 +231,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                                 The sheer volume of real-time data was overwhelming users. We had to find a balance between completeness and clarity.
                             </p>
                             <div className="pl-4 border-l-2 border-accent-peach">
-                                <p className="text-white text-sm italic">"Solution: Progressive disclosure. We only show high-level trends initially, revealing granular data on interaction."</p>
+                                <p className="text-white text-sm italic">&quot;Solution: Progressive disclosure. We only show high-level trends initially, revealing granular data on interaction.&quot;</p>
                             </div>
                         </div>
                     </div>
@@ -247,7 +248,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                                 Rendering heavy charts on older enterprise laptops caused significant lag and poor user experience.
                             </p>
                             <div className="pl-4 border-l-2 border-accent-blue">
-                                <p className="text-white text-sm italic">"Solution: Virtualization for lists and Web Workers for data processing kept the UI thread free."</p>
+                                <p className="text-white text-sm italic">&quot;Solution: Virtualization for lists and Web Workers for data processing kept the UI thread free.&quot;</p>
                             </div>
                         </div>
                     </div>
@@ -292,16 +293,16 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
 
             <div className="mt-8 pt-8 border-t border-white/5 grid grid-cols-1 md:grid-cols-2 gap-6">
                  <div className="flex items-start gap-4">
-                    <span className="text-4xl text-white/20 font-serif">"</span>
+                    <span className="text-4xl text-white/20 font-serif">&quot;</span>
                     <p className="text-text-secondary text-sm italic mt-2">
-                        "The new dashboard has completely changed how our team operates. What used to take hours now takes minutes."
+                        &quot;The new dashboard has completely changed how our team operates. What used to take hours now takes minutes.&quot;
                         <span className="block mt-2 text-white not-italic font-bold text-xs uppercase tracking-wider">— Head of Analytics, FinCorp</span>
                     </p>
                 </div>
                 <div className="flex items-start gap-4">
-                    <span className="text-4xl text-white/20 font-serif">"</span>
+                    <span className="text-4xl text-white/20 font-serif">&quot;</span>
                     <p className="text-text-secondary text-sm italic mt-2">
-                        "Finally, a tool that looks as good as it performs. The dark mode is a lifesaver for night shifts."
+                        &quot;Finally, a tool that looks as good as it performs. The dark mode is a lifesaver for night shifts.&quot;
                          <span className="block mt-2 text-white not-italic font-bold text-xs uppercase tracking-wider">— Senior Trader, Global Markets</span>
                     </p>
                 </div>
@@ -339,7 +340,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                      <span className="material-symbols-outlined">history_edu</span>
                 </div>
                  <div>
-                     <h4 className="text-lg font-bold">What I'd do differently</h4>
+                     <h4 className="text-lg font-bold">What I&apos;d do differently</h4>
                      <p className="text-text-secondary text-xs mt-2 leading-relaxed">
                         I would involve the engineering team earlier in the design phase to better understand API limitations.
                      </p>
