@@ -17,7 +17,7 @@ export default function ResearchPage() {
 
   return (
     <>
-      <main className="flex-grow flex flex-col items-center w-full max-w-[1440px] mx-auto px-6 md:px-12 py-8 md:py-12 relative min-h-screen">
+      <main className="flex-grow flex flex-col items-center w-full max-w-[1440px] mx-auto px-6 md:px-12 pt-28 md:pt-32 pb-8 md:pb-12 relative min-h-screen">
         <PageLeftSideBar title="RESEARCH" />
         <VerticalSocialLinks items={socialLinks} />
 
