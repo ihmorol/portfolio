@@ -4,94 +4,97 @@ import {
   Smartphone, 
   FileText, 
   Terminal, 
-  Globe 
+  Globe,
+  ShoppingCart,
+  Users,
+  BarChart3
 } from 'lucide-react';
 
 export const projectsData = {
   header: {
     title: "Selected",
-    titleIcon: "Star", // Using string for icon name to be handled by component or just map it
+    titleIcon: "Star",
     titleSuffix: "Works",
-    description: "Explore our latest projects showcasing innovation, design excellence, and technical expertise across various domains."
+    description: "Explore my projects showcasing full-stack development, machine learning, and problem-solving skills built during my studies."
   },
-  categories: ["All Projects", "AI/ML", "Web Development", "Mobile Apps", "Research", "Open Source"],
+  categories: ["All Projects", "Full Stack", "AI/ML", "Web Development", "Mobile Apps", "Open Source"],
   featuredProject: {
     badge: "Featured Project",
-    title: "Fintech Dashboard 2.0",
-    description: "A comprehensive financial analytics platform redesign focusing on user experience, data visualization, and real-time transaction monitoring. Increased user retention by 45%.",
-    techStack: ["React", "TypeScript", "D3.js", "Node.js"],
+    title: "Full-Stack IELTS Learning Platform",
+    description: "A production-ready e-commerce application with user authentication, product catalog, shopping cart, and Stripe payment integration. Features JWT-based auth, role-based access control, and optimized MongoDB queries serving 200+ test users.",
+    techStack: ["React", "Node.js", "MongoDB", "Stripe"],
     ctaText: "View Case Study",
-    ctaLink: "/projects/fintech-dashboard",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDShKba_AZ0QjhpM-x8bF0NtAPxE1wStruOpmAXY96dnpTEQ8ec3q68HB4sbbYpBDNS41KVvtcBIRXze6-UXimAR4OxZG9zIUbhLfPwCjREIuckElH3-dvYqjk_XoCKpDb3XadeF9R29MeVys7i6FPJw9FReHtHJrOcvuXkEsRszxwl3rpYuIIzImxmVuJBe2VEjcoaLeRa5SrrlxUQNjZFX2KnVSv09HQEQLNBQPkfXL905mCm-DRVVxF7UnIoFAyjTEgTOJCDlWA" // Reusing the image from [slug] page for consistency if needed, or placeholder
+    ctaLink: "/projects/ielts-platform",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDe7PX0uQoYvTjv754fluses4lA7hbTSkZtjC-byVFx5eW2j97ihaIPTJp_PaRKtHIhoJGFWv8Hr2akKWBFCQG-1MU47ZAh1ye_vmexNigMtVSG8_AjhUa5xnbZ_FaTCNeY68H7rr-zPjRA1Xq0SngRdJY-CETGlLMcA_6JvcYEhCeWaplK3Z4VJNuKpYgPEOd1P4foyaMeax60t0z24-GcZ56mbWJZzGTDz42jfdYi16Ffhlhyd3oZzbDLkPBH-SLspJBJ4XDG-xk"
   },
   projects: [
     {
-      title: "E-Commerce API",
-      slug: "e-commerce-api",
-      category: "Web Development",
-      date: "Oct 2023",
-      description: "High-performance RESTful API designed for scalability, handling over 10k requests per second with optimized caching strategies.",
-      tags: ["#NodeJS", "#Express", "#Redis", "#MongoDB"],
-      icon: LayoutGrid,
+      title: "IELTS Learning Platform",
+      slug: "ielts-platform",
+      category: "Full Stack",
+      date: "Sep - Nov 2024",
+      description: "Production-ready e-commerce platform with JWT authentication, Stripe payments, admin dashboard, and optimized MongoDB aggregation pipelines. Reduced response time by 40%.",
+      tags: ["#React", "#NodeJS", "#MongoDB", "#Stripe"],
+      icon: ShoppingCart,
       color: "from-indigo-500/20 to-purple-500/20",
       hoverColor: "group-hover:text-blue-400",
       accent: "text-blue-400"
     },
     {
-      title: "Predictive Analytics",
-      slug: "predictive-analytics",
-      category: "AI/ML",
-      date: "Aug 2023",
-      description: "Machine learning model for customer churn prediction achieving 92% accuracy using random forest algorithms on large datasets.",
-      tags: ["#Python", "#ScikitLearn", "#Pandas"],
-      icon: Brain,
+      title: "Real-Time Task Manager",
+      slug: "task-manager",
+      category: "Full Stack",
+      date: "Jun - Aug 2024",
+      description: "Collaborative task management app with Firebase real-time sync supporting 50+ concurrent users. Features drag-and-drop prioritization and TypeScript for reduced runtime errors.",
+      tags: ["#NextJS", "#TypeScript", "#Firebase", "#MaterialUI"],
+      icon: Users,
       color: "from-green-500/20 to-teal-500/20",
       hoverColor: "group-hover:text-green-400",
       accent: "text-green-400"
     },
     {
-      title: "Fitness Tracker",
-      slug: "fitness-tracker",
-      category: "Mobile Apps",
-      date: "Jun 2023",
-      description: "Cross-platform mobile application for tracking workouts and nutrition with social sharing features and Apple Health integration.",
-      tags: ["#Flutter", "#Dart", "#Firebase"],
-      icon: Smartphone,
+      title: "ML Price Predictor",
+      slug: "price-predictor",
+      category: "AI/ML",
+      date: "Mar - May 2024",
+      description: "Housing price prediction model using Random Forest algorithm achieving 87% accuracy. Preprocessed 10,000+ data points and deployed via Flask REST API.",
+      tags: ["#Python", "#ScikitLearn", "#Pandas", "#Flask"],
+      icon: Brain,
       color: "from-pink-500/20 to-orange-500/20",
       hoverColor: "group-hover:text-pink-400",
       accent: "text-pink-400"
     },
     {
-      title: "Quantum Sim",
-      slug: "quantum-sim",
-      category: "Research",
-      date: "Mar 2023",
-      description: "Research paper and simulation tool exploring quantum entanglement visualization for educational purposes. Published in IEEE.",
-      tags: ["#Python", "#Qiskit", "#WebGL"],
+      title: "Hospital Management System",
+      slug: "hospital-system",
+      category: "Web Development",
+      date: "Oct 2023",
+      description: "Java-based desktop application implementing design patterns and OOP principles. Won 1st Runner-Up at UIU Advanced OOP Project Showcase.",
+      tags: ["#Java", "#OOP", "#DesignPatterns", "#Desktop"],
       icon: FileText,
       color: "from-blue-500/20 to-cyan-500/20",
       hoverColor: "group-hover:text-cyan-400",
       accent: "text-cyan-400"
     },
     {
-      title: "CLI Tool Kit",
-      slug: "cli-tool-kit",
-      category: "Open Source",
-      date: "Jan 2023",
-      description: "A popular open-source command line interface utility for automating daily developer workflows. 2k+ stars on GitHub.",
-      tags: ["#Rust", "#CLI", "#Automation"],
-      icon: Terminal,
+      title: "Inventory Management System",
+      slug: "inventory-system",
+      category: "Web Development",
+      date: "Mar 2024",
+      description: "Full SDLC implementation for inventory tracking system. Won 6th Runner-Up at System Analysis & Design Lab Showcase.",
+      tags: ["#SDLC", "#Documentation", "#SystemDesign"],
+      icon: LayoutGrid,
       color: "from-amber-500/20 to-red-500/20",
       hoverColor: "group-hover:text-amber-400",
       accent: "text-amber-400"
     },
     {
-      title: "SaaS Landing",
-      slug: "saas-landing",
+      title: "Portfolio Website",
+      slug: "portfolio",
       category: "Web Development",
-      date: "Dec 2022",
-      description: "Modern landing page for a SaaS startup with complex animations, pricing tables, and CMS integration for blog posts.",
-      tags: ["#NextJS", "#Tailwind", "#Framer"],
+      date: "Jan 2025",
+      description: "Modern portfolio website built with Next.js, TypeScript, and Tailwind CSS featuring dark mode, animations, and responsive design.",
+      tags: ["#NextJS", "#TypeScript", "#Tailwind", "#Framer"],
       icon: Globe,
       color: "from-violet-500/20 to-fuchsia-500/20",
       hoverColor: "group-hover:text-fuchsia-400",
@@ -99,40 +102,40 @@ export const projectsData = {
     }
   ],
   projectDetails: {
-    "fintech-dashboard": {
-      title: "Fintech Redesign",
-      subtitle: "Banking made simple & fast.",
-      description: "Improving user retention through intuitive data visualization and streamlined navigation flows for the next generation of banking.",
-      heroDescription: "We redesigned the entire dashboard experience from the ground up, focusing on speed, clarity, and personalized data views for financial analysts. The result is a highly responsive interface that adapts to user behavior.",
-      heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuDShKba_AZ0QjhpM-x8bF0NtAPxE1wStruOpmAXY96dnpTEQ8ec3q68HB4sbbYpBDNS41KVvtcBIRXze6-UXimAR4OxZG9zIUbhLfPwCjREIuckElH3-dvYqjk_XoCKpDb3XadeF9R29MeVys7i6FPJw9FReHtHJrOcvuXkEsRszxwl3rpYuIIzImxmVuJBe2VEjcoaLeRa5SrrlxUQNjZFX2KnVSv09HQEQLNBQPkfXL905mCm-DRVVxF7UnIoFAyjTEgTOJCDlWA",
-      tags: ["Figma", "React", "D3.js", "Tailwind"],
-      role: "Lead Designer",
-      duration: "4 Weeks",
-      date: "Oct 2023",
-      client: "FinCorp Inc.",
+    "ielts-platform": {
+      title: "IELTS Learning Platform",
+      subtitle: "Full-Stack E-Learning Solution",
+      description: "A comprehensive IELTS preparation platform with course management, payment processing, and user authentication.",
+      heroDescription: "Built a production-ready e-commerce application with user authentication, product catalog, shopping cart, and Stripe payment integration. Implemented JWT-based authentication and role-based access control for admin and customer workflows.",
+      heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuDe7PX0uQoYvTjv754fluses4lA7hbTSkZtjC-byVFx5eW2j97ihaIPTJp_PaRKtHIhoJGFWv8Hr2akKWBFCQG-1MU47ZAh1ye_vmexNigMtVSG8_AjhUa5xnbZ_FaTCNeY68H7rr-zPjRA1Xq0SngRdJY-CETGlLMcA_6JvcYEhCeWaplK3Z4VJNuKpYgPEOd1P4foyaMeax60t0z24-GcZ56mbWJZzGTDz42jfdYi16Ffhlhyd3oZzbDLkPBH-SLspJBJ4XDG-xk",
+      tags: ["React", "Node.js", "MongoDB", "Stripe", "JWT"],
+      role: "Full-Stack Developer",
+      duration: "3 Months",
+      date: "Sep - Nov 2024",
+      client: "Personal Project",
       stats: [
-        { label: "Screens", value: "100+" },
-        { label: "Theme Mode", value: "Dark" }
+        { label: "Test Users", value: "200+" },
+        { label: "Response Time", value: "-40%" }
       ],
       screens: [
         "https://lh3.googleusercontent.com/aida-public/AB6AXuCjJxXEIaIHYx-UsmKeTq4qgU6x_PMiJTakt3K4tLaB0f3jD7K8VL1wmfx1OqWF3NT6jV70RSPi8U29XPvddhRoRN30pncGdKgqOUUsSIgqwyIkrot3IzvzpPOMLsEl1oRw7ltIMyK_1i62XKYnf4maRsf0uM7AB03tyi8wiFzQ6U3gMxuu-p6HmzSOO8FB5o519otzzma21Zmda071ZqZoLjxQ3FYC6c5e8TEEGkXsj3ctOk7pDWMG_vbbXQNE_Xd2MhTjZMahIvM",
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuCX8OQ3umeP2rHZZxA-aqyXBAuVtH37j87gChTn655VuZAwJxVLqDnkzrfQuMV4mZvLkIaOgDnfV2sYpuiyqITS_IuFeyeec30ZohLeN9uh0xMzSUqoTaqufFxkerMC9i0J70rHCOAHsz1oQ-daMwXzVSolNMGVqDBN3utFHjssvJNDZ-BhleSud1ZVMBa_EgzTNerR4zOroNputu2jIIfE2OJURFEkpKqL59HbO7sYbu8BRFKU2wQ7TF1NZmHHdx7kPVVUJwC-LIg",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuCX8OQ3umeP2rHZZxA-aqyXBAuVtH37j87gChTn655VuZAwJxVLqDnkzrfQuMV4mZvLkIaOgDnfV2sYpuiyqITS_IuFeyeec30ZohLeN9uh0xMzSUqoTaqufFxkerMC9i0J70rHCOAHsz1oQ-daMwXzVSolNMGVqDBN3utFHjssvJNDZ-BhleSud1VVMBa_EgzTNerR4zOroNputu2jIIfE2OJURFEkpKqL59HbO7sYbu8BRFKU2wQ7TF1NZmHHdx7kPVVUJwC-LIg",
         "https://lh3.googleusercontent.com/aida-public/AB6AXuCUsLoVxbr5bohxP9QR6b6gIH0EiQ_DcBIQiI_gNw16pWUzgsO_sMTKpJUBxqsrFYVNnxOgRRpnU2G6NE_v36AZ75MClC2mc14l_1yOZkNms-eyD8KlkqeP2VPnM-1pRhIB0hwpR1ZzW9rL10ykQNFSeTZqpElj_lNlde93pSjxbroilWDsGbrczCUXfQB2WjVq1Wu19QIk2TKC0Qruf0NqNtr92lSPer9eDz8gbinAkjCPm0UGPT5_7U6Zr7R2KYw9yz19nY5Jpf0"
       ],
       features: [
         {
-          title: "The Problem",
+          title: "The Challenge",
           icon: "warning",
           iconColor: "text-accent-red",
           iconBg: "bg-accent-red/20",
-          description: "FinCorp's dashboard suffered from high churn. Users felt overwhelmed by data density. Navigation was too deep, making simple exports take 5+ minutes, leading to frustration and lost productivity."
+          description: "Building a scalable e-commerce platform with secure payment processing, user authentication, and efficient database queries for course content delivery."
         },
         {
-          title: "Our Solution",
+          title: "The Solution",
           icon: "lightbulb",
           iconColor: "text-accent-blue",
           iconBg: "bg-accent-blue/20",
-          description: "We modernized the interface with a flattened architecture. The dark theme reduces eye strain for late-night analysts, while vibrant accents highlight critical status changes immediately."
+          description: "Implemented JWT-based authentication with role-based access control, integrated Stripe for secure payments, and optimized MongoDB queries using aggregation pipelines."
         },
         {
           title: "Key Features",
@@ -140,72 +143,72 @@ export const projectsData = {
           iconColor: "text-accent-green",
           iconBg: "bg-accent-green/20",
           list: [
-            "Customizable widget system",
-            "One-click data export",
-            "Real-time websocket updates",
-            "Predictive search analytics"
+            "User authentication with JWT",
+            "Stripe payment integration",
+            "Admin dashboard for course management",
+            "Optimized database queries"
           ]
         }
       ],
       techStack: {
-        frontend: ["React 18", "TypeScript", "Tailwind CSS", "Framer Motion"],
-        visualization: ["D3.js", "Recharts", "WebGL"],
+        frontend: ["React", "Tailwind CSS", "React Query", "React Hook Form"],
+        visualization: ["Chart.js", "Responsive Design"],
         highlight: {
-          title: "Algorithm Highlight",
-          description: "Implemented a custom ",
-          highlightText: "Adaptive Sampling Algorithm",
-          suffix: " to render 50k+ data points without lagging the browser thread, maintaining a steady 60fps during zoom/pan operations."
+          title: "Performance Optimization",
+          description: "Optimized database queries using ",
+          highlightText: "MongoDB Aggregation Pipelines",
+          suffix: " reducing average response time by 40% for complex data fetching operations."
         },
         codeSnippet: {
           title: "Code Snippet",
-          file: "useMarketData.ts",
-          code: `const useDataStream = (ticker) => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    // Initialize WebSocket connection
-    const ws = new WebSocket(WS_URL);
-    ws.onmessage = (event) => {
-       const newData = JSON.parse(event.data);
-       setData(prev => [...prev, newData]);
-    };
-    return () => ws.close();
-  }, [ticker]);
-  return data;
+          file: "auth.middleware.js",
+          code: `const verifyToken = (req, res, next) => {
+  const token = req.headers.authorization?.split(' ')[1];
+  if (!token) {
+    return res.status(401).json({ message: 'Unauthorized' });
+  }
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = decoded;
+    next();
+  } catch (error) {
+    return res.status(403).json({ message: 'Invalid token' });
+  }
 };`
         }
       },
       challenges: [
         {
-          title: "Data Overload",
+          title: "Secure Payment Processing",
           icon: "psychology",
-          description: "The sheer volume of real-time data was overwhelming users. We had to find a balance between completeness and clarity.",
-          solution: "Progressive disclosure. We only show high-level trends initially, revealing granular data on interaction.",
+          description: "Implementing secure payment flow with proper error handling and webhook integration for order confirmation.",
+          solution: "Used Stripe's recommended best practices with webhook verification and idempotency keys.",
           borderColor: "border-accent-peach"
         },
         {
-          title: "Performance Constraints",
+          title: "Database Performance",
           icon: "speed",
-          description: "Rendering heavy charts on older enterprise laptops caused significant lag and poor user experience.",
-          solution: "Virtualization for lists and Web Workers for data processing kept the UI thread free.",
+          description: "Complex queries for course filtering and user progress tracking were causing slow response times.",
+          solution: "Implemented MongoDB aggregation pipelines and proper indexing to optimize query performance.",
           borderColor: "border-accent-blue"
         }
       ],
       impact: {
-        title: "Measurable Impact",
-        description: "Post-launch metrics collected over 3 months showed significant improvements in efficiency.",
+        title: "Project Outcomes",
+        description: "Key achievements and metrics from the project development and testing phase.",
         metrics: [
-          { icon: 'trending_up', val: '+30%', label: 'Daily Active Users', color: 'accent-green', bg: 'bg-accent-green/20' },
-          { icon: 'support_agent', val: '-45%', label: 'Support Tickets', color: 'accent-peach', bg: 'bg-accent-peach/20' },
-          { icon: 'star', val: '4.8/5', label: 'App Store Rating', color: 'accent-blue', bg: 'bg-accent-blue/20' }
+          { icon: 'group', val: '200+', label: 'Test Users', color: 'accent-green', bg: 'bg-accent-green/20' },
+          { icon: 'speed', val: '-40%', label: 'Response Time', color: 'accent-peach', bg: 'bg-accent-peach/20' },
+          { icon: 'security', val: '100%', label: 'Secure Transactions', color: 'accent-blue', bg: 'bg-accent-blue/20' }
         ],
         testimonials: [
           {
-            quote: "The new dashboard has completely changed how our team operates. What used to take hours now takes minutes.",
-            author: "Head of Analytics, FinCorp"
+            quote: "This project helped me understand the complete flow of building a production-ready full-stack application from scratch.",
+            author: "Personal Reflection"
           },
           {
-            quote: "Finally, a tool that looks as good as it performs. The dark mode is a lifesaver for night shifts.",
-            author: "Senior Trader, Global Markets"
+            quote: "Gained hands-on experience with payment integration, authentication, and database optimization.",
+            author: "Learning Outcomes"
           }
         ]
       },
@@ -213,17 +216,17 @@ export const projectsData = {
         {
           title: "Key Takeaway",
           icon: "school",
-          description: "User testing early is crucial. We pivoted our navigation strategy twice based on Week 1 feedback."
+          description: "Planning the database schema early and thinking about query patterns upfront saves significant refactoring time later."
         },
         {
           title: "Skills Developed",
           icon: "fitness_center",
-          description: "Deepened knowledge in WebGL for performance and learned advanced TypeScript generics for safer data handling."
+          description: "Deepened understanding of JWT authentication, Stripe integration, and MongoDB aggregation pipelines."
         },
         {
           title: "What I'd do differently",
           icon: "history_edu",
-          description: "I would involve the engineering team earlier in the design phase to better understand API limitations."
+          description: "Would implement comprehensive testing from the start and use TypeScript for better type safety."
         }
       ]
     }

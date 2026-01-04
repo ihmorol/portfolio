@@ -6,134 +6,134 @@ export const academicData = {
   },
   currentDegree: {
     badge: "Current Degree",
-    degree: "M.S. in Computer Science",
-    university: "Stanford University",
-    location: "Stanford, CA",
-    gradDate: "Exp. Graduation: June 2025",
-    gpa: "4.0/4.0",
-    focus: "Artificial Intelligence",
-    awards: ["Dean's List 2024", "Graduate Fellowship"],
-    visualLabel: "Research Assistant"
+    degree: "B.Sc. in Computer Science and Engineering",
+    university: "United International University (UIU)",
+    location: "Dhaka, Bangladesh",
+    gradDate: "Expected Graduation: December 2026",
+    gpa: "3.9+/4.0",
+    focus: "Software Engineering & Machine Learning",
+    awards: ["100% Merit Scholarship (5 terms)", "Top 3% in Class"],
+    visualLabel: "Teaching Assistant"
   },
   thesis: {
-    status: "In Progress",
-    title: "\"Neural Architecture Search for Efficient Edge Computing\"",
-    advisor: "Dr. Emily Chen",
-    duration: "Sep 2024 - Present",
-    quote: "\"Investigating novel search strategies to optimize neural networks for resource-constrained devices without sacrificing accuracy.\"",
-    techStack: ["Python", "PyTorch", "AutoML"],
-    methodology: "Evolutionary algorithms combined with weight-sharing supernets.",
-    outcomes: "30% reduction in inference latency on ARM Cortex-M.",
+    status: "Future Plan",
+    title: "\"Exploring ML Applications in Software Systems\"",
+    advisor: "To be determined",
+    duration: "Expected 2026",
+    quote: "\"Interested in researching the intersection of machine learning and practical software applications to solve real-world problems.\"",
+    techStack: ["Python", "scikit-learn", "React", "Node.js"],
+    methodology: "Combining full-stack development skills with ML fundamentals.",
+    outcomes: "Building practical applications with ML integration.",
     proposalLink: "#"
   },
   certifications: [
     {
-      title: "Deep Learning Specialization",
+      title: "100% Merit Scholarship",
+      year: "2022-Present",
+      issuer: "United International University",
+      skills: "Achievement: Top 3% each trimester for 5 terms"
+    },
+    {
+      title: "Champion - CSE Week Programming Contest",
+      year: "2024",
+      issuer: "UIU CSE Department",
+      skills: "Skills: Algorithms, Problem Solving, Competitive Programming"
+    },
+    {
+      title: "1st Runner-Up - OOP Project Showcase",
       year: "2023",
-      issuer: "Coursera • Andrew Ng",
-      skills: "Skills: CNNs, RNNs, Transformers"
-    },
-    {
-      title: "AWS Certified Solutions Architect",
-      year: "2022",
-      issuer: "Amazon Web Services",
-      skills: "Skills: Cloud Architecture, Security"
-    },
-    {
-      title: "Full Stack Web Dev",
-      year: "2021",
-      issuer: "Udemy • Colt Steele",
-      skills: "Skills: React, Node.js, MongoDB"
+      issuer: "UIU CSE Department",
+      skills: "Skills: Java, Design Patterns, Software Architecture"
     }
   ],
   coursework: [
     {
-      category: "AI & Machine Learning",
-      colorClass: "text-purple-300",
-      courses: [
-        "CS229: Machine Learning",
-        "CS224n: NLP with Deep Learning",
-        "CS231n: Computer Vision"
-      ]
-    },
-    {
       category: "Core Computer Science",
       colorClass: "text-blue-300",
       courses: [
-        "Operating Systems",
-        "Distributed Systems",
-        "Database Management"
+        "Data Structures & Algorithms",
+        "Object-Oriented Programming",
+        "Database Systems"
       ]
     },
     {
       category: "Software Engineering",
       colorClass: "text-green-300",
       courses: [
-        "Advanced Web Applications",
-        "Mobile App Development",
-        "Software Testing & QA"
+        "Software Engineering",
+        "System Analysis & Design",
+        "Web Development"
+      ]
+    },
+    {
+      category: "Systems & Networks",
+      colorClass: "text-purple-300",
+      courses: [
+        "Computer Networks",
+        "Operating Systems",
+        "Computer Architecture"
+      ]
+    },
+    {
+      category: "AI & Machine Learning",
+      colorClass: "text-amber-300",
+      courses: [
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Statistics & Probability"
       ]
     },
     {
       category: "Mathematics & Theory",
-      colorClass: "text-amber-300",
-      courses: [
-        "Linear Algebra & Optimization",
-        "Probability & Statistics",
-        "Graph Theory"
-      ]
-    },
-    {
-      category: "Electives & Seminars",
       colorClass: "text-pink-300",
       colSpan: "lg:col-span-2",
       subLists: [
         [
-          "Human-Computer Interaction",
-          "Computer Graphics"
+          "Discrete Mathematics",
+          "Linear Algebra"
         ],
         [
-          "Ethics in AI",
-          "Bioinformatics"
+          "Calculus",
+          "Theory of Computation"
         ]
       ]
     }
   ],
   workshops: [
     {
-      month: "MAY",
-      day: "15",
-      title: "ICML 2024 Workshop",
-      description: "Presented poster on \"Efficient Neural Search\""
+      month: "AUG",
+      day: "25",
+      title: "Teaching Assistant Onboarding",
+      description: "Started as TA for DSA and DBMS courses"
     },
     {
-      month: "FEB",
-      day: "28",
-      title: "Stanford NLP Seminar",
-      description: "Guest lecture series on Large Language Models"
+      month: "MAR",
+      day: "15",
+      title: "UIU CSE Week 2024",
+      description: "Champion in Programming Contest (80+ participants)"
     },
     {
       month: "NOV",
-      day: "10",
-      title: "Google Cloud Dev Day",
-      description: "Hands-on workshop for Kubernetes and Docker"
+      day: "20",
+      title: "OOP Project Showcase 2023",
+      description: "1st Runner-Up with Hospital Management System"
     }
   ],
   achievements: [
      {
-       title: "Best Paper Award",
-       subtitle: "IEEE Conference 2023",
-       icon: "star"
+       title: "Champion",
+       subtitle: "CSE Week Programming Contest 2024",
+       icon: "emoji_events"
      },
      {
-       title: "Hackathon Winner",
-       subtitle: "HackMIT 2022 - 1st Place",
+       title: "1st Runner-Up",
+       subtitle: "Advanced OOP Project Showcase 2023",
        icon: "workspace_premium"
      },
      {
-       title: "Academic Excellence",
-       subtitle: "Top 5% of Class (2021-2023)",
-       icon: "military_tech"
+       title: "Merit Scholar",
+       subtitle: "100% Scholarship, Top 3% (5 Terms)",
+       icon: "school"
      }
   ]
 };

@@ -6,78 +6,85 @@ export const skillsData = {
   },
   programmingLanguages: {
     title: "Programming Languages",
-    description: "Core languages that form the foundation of my development capabilities. Mastery across systems and scripting.",
+    description: "Core languages that form the foundation of my development capabilities. Proficient in both compiled and interpreted languages.",
     languages: [
-      {
-        name: "Python",
-        years: "5 Years",
-        usage: "Data Analysis, Backend Dev, Scripting",
-        percentage: 95,
-        colorClass: "bg-green-500"
-      },
       {
         name: "JavaScript / TypeScript",
         years: "4 Years",
-        usage: "Frontend, Node.js, Interactive UI",
+        usage: "Frontend, Backend, Full-Stack Development",
         percentage: 90,
         colorClass: "bg-blue-500"
       },
       {
+        name: "Python",
+        years: "1 Years",
+        usage: "Data Analysis, ML, Scripting, Backend",
+        percentage: 85,
+        colorClass: "bg-green-500"
+      },
+      {
+        name: "Java",
+        years: "2 Years",
+        usage: "OOP, Enterprise Applications, Android",
+        percentage: 75,
+        colorClass: "bg-orange-500"
+      },
+      {
         name: "C++",
         years: "3 Years",
-        usage: "Systems Programming, Game Dev",
-        percentage: 75,
+        usage: "Competitive Programming, DSA",
+        percentage: 80,
         colorClass: "bg-purple-500"
       }
     ],
     projects: [
       {
-        icon: "Py",
-        iconBg: "bg-green-100",
-        iconColor: "text-green-600",
-        title: "FinTech Analytics",
-        description: "Predictive market modeling engine built with Python & Pandas."
+        icon: "JS",
+        iconBg: "bg-yellow-100",
+        iconColor: "text-yellow-600",
+        title: "IELTS Learning Platform",
+        description: "Full-stack e-commerce app with React, Node.js, and Stripe integration."
       },
       {
         icon: "TS",
         iconBg: "bg-blue-100",
         iconColor: "text-blue-600",
-        title: "E-Commerce Dash",
-        description: "Real-time inventory management with React & TypeScript."
+        title: "Real-Time Task Manager",
+        description: "Collaborative task app with Next.js, TypeScript and Firebase."
       }
     ]
   },
   aiMl: {
     title: "AI & Machine Learning",
-    description: "Deploying intelligent solutions using cutting-edge frameworks.",
+    description: "Exploring machine learning fundamentals and building practical applications.",
     items: [
       {
-        name: "TensorFlow",
-        icon: "neurology",
-        iconColor: "text-indigo-400",
-        hoverBorder: "hover:border-indigo-500/50",
-        description: "Deep learning models for image recognition and NLP tasks."
-      },
-      {
-        name: "PyTorch",
+        name: "scikit-learn",
         icon: "model_training",
         iconColor: "text-orange-400",
         hoverBorder: "hover:border-orange-500/50",
-        description: "Research prototyping and production deployment of neural nets."
+        description: "Regression, classification, and data preprocessing for ML models."
       },
       {
-        name: "Scikit-Learn",
+        name: "Pandas & NumPy",
         icon: "dataset",
         iconColor: "text-green-400",
         hoverBorder: "hover:border-green-500/50",
-        description: "Classic ML algorithms for regression and classification."
+        description: "Data manipulation, feature engineering, and statistical analysis."
       },
       {
-        name: "OpenCV",
-        icon: "visibility",
+        name: "Flask API",
+        icon: "api",
         iconColor: "text-cyan-400",
         hoverBorder: "hover:border-cyan-500/50",
-        description: "Real-time computer vision and image processing pipelines."
+        description: "Deploying ML models as REST APIs for real-time predictions."
+      },
+      {
+        name: "Data Visualization",
+        icon: "analytics",
+        iconColor: "text-purple-400",
+        hoverBorder: "hover:border-purple-500/50",
+        description: "Matplotlib, Seaborn for exploratory data analysis and insights."
       }
     ]
   },
@@ -85,21 +92,21 @@ export const skillsData = {
     title: "Currently Learning",
     items: [
       {
-        name: "Rust",
-        topic: "System Safety",
+        name: "Machine Learning",
+        topic: "Deep Learning Fundamentals",
+        percentage: 50,
+        colorClass: "bg-purple-500"
+      },
+      {
+        name: "System Design",
+        topic: "Scalable Architecture",
         percentage: 40,
-        colorClass: "bg-amber-500"
+        colorClass: "bg-blue-500"
       },
       {
-        name: "GraphQL",
-        topic: "API Query",
-        percentage: 65,
-        colorClass: "bg-pink-500"
-      },
-      {
-        name: "Web3 / Solidity",
-        topic: "Smart Contracts",
-        percentage: 25,
+        name: "Docker",
+        topic: "Containerization",
+        percentage: 35,
         colorClass: "bg-cyan-500"
       }
     ]
@@ -110,77 +117,77 @@ export const skillsData = {
       title: "Frontend",
       items: [
         { name: "React.js / Next.js", colorClass: "bg-blue-400" },
-        { name: "Vue.js / Nuxt", colorClass: "bg-blue-400" },
-        { name: "Tailwind CSS", colorClass: "bg-blue-400" }
+        { name: "Tailwind CSS", colorClass: "bg-blue-400" },
+        { name: "ShadcnUI / Bootstrap", colorClass: "bg-blue-400" }
       ]
     },
     backend: {
       title: "Backend",
       items: [
-        { name: "Node.js / Express", colorClass: "bg-green-400" },
-        { name: "Django / Flask", colorClass: "bg-green-400" },
-        { name: "PostgreSQL / Mongo", colorClass: "bg-green-400" }
+        { name: "Node.js / Express.js", colorClass: "bg-green-400" },
+        { name: "MongoDB / Mongoose", colorClass: "bg-green-400" },
+        { name: "REST APIs / JWT Auth", colorClass: "bg-green-400" }
       ]
     },
     mobile: {
-      title: "Mobile Dev",
+      title: "Additional",
       items: [
-        "React Native",
-        "Flutter",
-        "iOS Swift"
+        "React Query",
+        "React Hook Form",
+        "Firebase"
       ]
     }
   },
   devOps: {
     title: "DevOps & Tools",
     ciCd: {
-      title: "CI/CD & Cloud",
+      title: "Deployment & Cloud",
       items: [
-        { name: "AWS", icon: "cloud" },
-        { name: "Docker", icon: "deployed_code" },
-        { name: "Kubernetes", icon: "settings_system_daydream" },
-        { name: "GitHub Actions", icon: "rocket_launch" }
+        { name: "Vercel", icon: "deployed_code" },
+        { name: "Railway", icon: "train" },
+        { name: "GitHub Actions", icon: "rocket_launch" },
+        { name: "Stripe Integration", icon: "payments" }
       ]
     },
     environment: {
-      title: "Environment",
+      title: "Development Environment",
       items: [
-        { name: "VS Code / JetBrains", colorClass: "bg-yellow-400" },
-        { name: "Linux / MacOS", colorClass: "bg-yellow-400" },
-        { name: "Git / Jira / Trello", colorClass: "bg-yellow-400" },
-        { name: "Postman / Insomnia", colorClass: "bg-yellow-400" }
+        { name: "Git / GitHub", colorClass: "bg-yellow-400" },
+        { name: "VS Code", colorClass: "bg-yellow-400" },
+        { name: "Postman", colorClass: "bg-yellow-400" },
+        { name: "npm / pnpm", colorClass: "bg-yellow-400" }
       ]
     }
   },
   certifications: [
     {
-      code: "AWS",
-      codeBg: "bg-orange-500/20",
-      codeColor: "text-orange-400",
-      title: "AWS Certified Solutions Architect",
-      hoverColor: "group-hover:text-orange-400",
-      issuer: "Amazon Web Services • Issued Jan 2023"
-    },
-    {
-      code: "GCP",
+      code: "UIU",
       codeBg: "bg-blue-500/20",
       codeColor: "text-blue-400",
-      title: "Google Professional Data Engineer",
+      title: "100% Merit Scholarship",
       hoverColor: "group-hover:text-blue-400",
-      issuer: "Google Cloud • Issued Nov 2022"
+      issuer: "United International University • 5 Terms (Top 3%)"
     },
     {
-      code: "CKA",
+      code: "DSA",
       codeBg: "bg-green-500/20",
       codeColor: "text-green-400",
-      title: "Certified Kubernetes Administrator",
+      title: "500+ Problems Solved",
       hoverColor: "group-hover:text-green-400",
-      issuer: "CNCF • Issued Aug 2022"
+      issuer: "Codeforces, LeetCode, HackerRank • Ongoing"
+    },
+    {
+      code: "DEV",
+      codeBg: "bg-orange-500/20",
+      codeColor: "text-orange-400",
+      title: "Full-Stack Web Development",
+      hoverColor: "group-hover:text-orange-400",
+      issuer: "Self-taught + Online Courses • 2022 - Present"
     }
   ],
   softSkills: {
     title: "Soft Skills",
-    skills: ['Technical Writing', 'Team Leadership', 'Public Speaking', 'Agile Methodology', 'Problem Solving', 'Mentorship', 'Project Management'],
-    quote: "\"Skills are cheap. Passion is priceless.\" – Combining technical expertise with effective communication and leadership."
+    skills: ['Teaching & Mentorship', 'Problem Solving', 'Team Collaboration', 'Technical Writing', 'Time Management', 'Quick Learning', 'Communication'],
+    quote: "\"The best way to learn is to teach.\" – Combining technical expertise with the ability to explain complex concepts clearly."
   }
 };

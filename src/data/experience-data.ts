@@ -1,111 +1,109 @@
 export const experienceData = {
   header: {
     titlePrefix: "Professional",
-    titleIcon: "history_edu", // Material symbol
+    titleIcon: "history_edu",
     titleSuffix: "Journey",
-    description: "Exploring the path of innovation, leadership, and technical excellence through years of dedicated work."
+    description: "Building expertise through teaching, development, and competitive programming while pursuing my Computer Science degree."
   },
   experience: {
     title: "Experience",
     items: [
       {
-        role: "Senior Product Designer",
-        company: "TechFlow Inc.",
-        location: "San Francisco, CA",
-        type: "Full-time",
-        period: "Jan 2021 - Present",
-        description: "Leading the design system initiative and overseeing the user experience for the core SaaS platform. Collaborating closely with engineering and product teams to deliver intuitive interfaces that drive user engagement.",
+        role: "Undergraduate Teaching Assistant",
+        company: "United International University, CSE Department",
+        location: "Dhaka, Bangladesh",
+        type: "Part-time",
+        period: "Aug 2025 - Present",
+        description: "Assisting students in Data Structures & Algorithms and Database Management courses, improving conceptual clarity through office hours, code reviews, and tutorial sessions.",
         sections: [
           {
             title: "Key Responsibilities",
             icon: "check_circle",
             iconColor: "text-accent-green",
             items: [
-              "Speargrading the design system migration to Figma.",
-              "Mentoring junior designers and conducting design reviews.",
-              "Conducting user research and usability testing sessions."
+              "Assist 100+ students in understanding DSA and DBMS concepts",
+              "Design and grade programming assignments focusing on algorithmic efficiency",
+              "Conduct tutorial sessions on graph algorithms, dynamic programming, SQL, and database normalization"
             ]
           },
           {
-             title: "Achievements",
-             icon: "emoji_events",
-             iconColor: "text-accent-yellow",
+             title: "Topics Covered",
+             icon: "school",
+             iconColor: "text-accent-blue",
              items: [
-               "Increased user retention by 25% through UX improvements.",
-               "Reduced design-to-dev handoff time by 40%."
+               "Data Structures & Algorithms (Trees, Graphs, DP)",
+               "Database Management (SQL, Normalization, ER Diagrams)"
              ]
           }
         ],
-        tags: ["Figma", "React", "User Research", "Prototyping"]
-      },
-      {
-        role: "UI/UX Designer",
-        company: "Creative Pulse Agency",
-        location: "New York, NY",
-        type: "Contract",
-        period: "Jun 2018 - Dec 2020",
-        description: "Worked with diverse clients ranging from fintech startups to established e-commerce brands. Delivered high-fidelity prototypes and comprehensive design systems tailored to client needs.",
-        sections: [
-          {
-            title: "Related Projects",
-            icon: "folder_open",
-            iconColor: "text-accent-blue",
-            items: [
-              "FinTech Mobile App Redesign",
-              "E-commerce Dashboard System"
-            ]
-          },
-        ],
-        tags: ["Sketch", "InVision", "Adobe CC", "HTML/CSS"]
+        tags: ["Teaching", "DSA", "DBMS", "Mentorship"]
       }
     ]
   },
   leadership: {
-    title: "Leadership",
+    title: "Leadership & Achievements",
     items: [
       {
-        role: "Design Lead",
-        period: "2019 - 2020",
-        context: "Innovation Lab • Team of 5 Designers",
-        description: "Led a cross-functional team in the conceptualization of a new AI-driven analytics tool. Fostered a culture of rapid prototyping and iterative feedback.",
-        impactTitle: "Impact",
-        impact: "Successfully launched the MVP within 6 months, securing Series A funding for the internal startup incubator.",
-        tags: ["Team Building", "Strategy", "Agile"]
+        role: "Champion",
+        period: "2024",
+        context: "UIU CSE Week Programming Contest • 80+ Participants",
+        description: "Competed against 80+ participants in algorithmic problem-solving challenges, demonstrating strong competitive programming skills.",
+        impactTitle: "Recognition",
+        impact: "Secured 1st place by solving complex algorithmic problems under time pressure.",
+        tags: ["Competitive Programming", "Algorithms", "Problem Solving"]
+      },
+      {
+        role: "1st Runner-Up",
+        period: "2023",
+        context: "Advanced OOP Project Showcase • UIU",
+        description: "Presented a Java-based hospital management system implementing various design patterns and OOP principles.",
+        impactTitle: "Project Highlight",
+        impact: "Demonstrated expertise in object-oriented design, design patterns, and software architecture.",
+        tags: ["Java", "OOP", "Design Patterns", "Software Architecture"]
+      },
+      {
+        role: "6th Runner-Up",
+        period: "2024",
+        context: "System Analysis & Design Lab Showcase • UIU",
+        description: "Designed and implemented full SDLC for an inventory management system.",
+        impactTitle: "Achievement",
+        impact: "Successfully delivered complete system documentation and implementation following industry-standard SDLC practices.",
+        tags: ["SDLC", "System Design", "Documentation"]
       }
     ]
   },
   growth: {
     title: "Growth",
-    subTitle: "Skills Mastery",
+    subTitle: "Skill Development",
     skills: [
-      { name: "Product Strategy", percentage: 95, colorClass: "bg-accent-purple" },
-      { name: "UI Design", percentage: 90, colorClass: "bg-accent-yellow" },
-      { name: "Frontend Dev", percentage: 75, colorClass: "bg-accent-blue" },
-      { name: "Team Leadership", percentage: 85, colorClass: "bg-accent-green" }
+      { name: "Full-Stack Development", percentage: 85, colorClass: "bg-accent-blue" },
+      { name: "Data Structures & Algorithms", percentage: 90, colorClass: "bg-accent-green" },
+      { name: "Database Management", percentage: 80, colorClass: "bg-accent-purple" },
+      { name: "Problem Solving", percentage: 95, colorClass: "bg-accent-yellow" }
     ]
   },
   volunteering: {
-    title: "Volunteering",
+    title: "Competitive Programming",
     items: [
       {
-        role: "Mentor",
-        organization: "Design for Good",
-        period: "2020 - Present",
-        description: "Mentoring aspiring designers from underrepresented backgrounds. Helping them build portfolios and prepare for interviews.",
-        tags: ["Mentorship", "Education"]
+        role: "Active Competitive Programmer",
+        organization: "Codeforces, LeetCode, HackerRank",
+        period: "2022 - Present",
+        description: "Solved 500+ problems focusing on algorithms and data structures. Regular participant in online contests and virtual competitions.",
+        tags: ["Algorithms", "Data Structures", "Problem Solving"]
       },
       {
-        role: "Web Developer",
-        organization: "Local Animal Shelter",
-        period: "2019",
-        description: "Designed and developed a new adoption portal website to help increase animal adoption rates in the community.",
-        tags: ["Web Dev", "Non-Profit"]
+        role: "Peer Mentor",
+        organization: "UIU CSE Community",
+        period: "2023 - Present",
+        description: "Helping junior students with programming fundamentals, debugging techniques, and contest preparation strategies.",
+        tags: ["Mentorship", "Teaching", "Community"]
       }
     ]
   },
   cta: {
-    title: "Ready to start a new journey?",
-    description: "I'm currently open for new opportunities and collaborations. Let's discuss how my experience can bring value to your team.",
+    title: "Let's work together!",
+    description: "I'm currently looking for internship opportunities and project collaborations. Let's discuss how my skills can contribute to your team.",
     buttonText: "Contact Me"
   }
 };

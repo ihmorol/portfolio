@@ -5,7 +5,7 @@ coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuAnqeYKlxvyWJc4y
 date: "2024-03-15"
 author:
   name: "Ikramul Hasan"
-  image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAmcDR1B5QKJangtQ7-76aszJjgzp7PN3BTZo1r6GNZguOWYok8vtZxkYMa_M4neJDdi0Csy-h-f-25iQjxXTFZA4BX2JsYz_t89lG5KnK69EX5c74IUsO5CjKxl1xcwnwtI5_-txBCWY0QCZnWc5ekZ8yapY5M8WLu7tCJSDxED7mu9uvZIjDOVvqskq5lF9hEZTjyOxmTFH2WGUrHATBO5B9GW7lJNKUSpJy2lAQUmgBr2B_fuVnq0Yl9UT1XiL-RkWH_1k0f0uY"
+  image: "/images/profile/image.jpeg"
 category: "ai-ml"
 tags: ["AI", "Software Engineering", "Future Tech"]
 featured: true

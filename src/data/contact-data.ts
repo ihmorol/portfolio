@@ -6,29 +6,29 @@ export const contactData = {
   },
   scheduleMeeting: {
     title: "Schedule a Meeting",
-    description: "Let's schedule a 15-minutes free consultation call. We are very eager to hear from you and collaborate on your next big idea.",
+    description: "Let's schedule a 15-minute call to discuss collaboration opportunities, internships, or project ideas.",
     buttonText: "Schedule Now"
   },
   email: {
     title: "Email",
-    description: "Send us an email about your project and we will get back to you as soon as possible.",
-    buttonText: "Email Us",
-    emailAddress: "contact@airly.com"
+    description: "Send me an email about your project ideas, opportunities, or just to say hi!",
+    buttonText: "Email Me",
+    emailAddress: "ihmorol@gmail.com"
   },
   sendMessage: {
     title: "Send Message",
-    description: "Send us an in-site message and start live chatting.",
-    buttonText: "Message Us"
+    description: "Send me an in-site message and let's start a conversation.",
+    buttonText: "Message Me"
   },
   newsletter: {
     title: "Sign up for Newsletter",
-    description: "Stay up-to-date with our special offers and be the first one to know what's coming next!",
+    description: "Stay up-to-date with my latest projects, blog posts, and learning journey!",
     namePlaceholder: "Your Name",
     emailPlaceholder: "Email Address",
     buttonText: "Sign Up"
   },
   socialChannels: {
     title: "Social Channels",
-    description: "Follow us on our social channels and stay up-to-date and see what's we are doing next"
+    description: "Connect with me on social media and follow my coding journey!"
   }
 };

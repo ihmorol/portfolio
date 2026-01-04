@@ -16,14 +16,14 @@ export const layoutData = {
   },
   footer: {
     brand: {
-      name: "Ikramul",
-      description: "Crafting digital experiences that merge art with technology. Focused on user-centric design and scalable architecture.",
+      name: "Ikramul Hasan",
+      description: "CSE Student at UIU | Full-Stack Developer | Teaching Assistant. Building production-ready applications and exploring the intersection of software engineering and machine learning.",
     },
     socialLinks: [
-      { title: "Github", url: "#", icon: "github" },
-      { title: "Linkedin", url: "#", icon: "linkedin" },
+      { title: "GitHub", url: "https://github.com/ihmorol", icon: "github" },
+      { title: "LinkedIn", url: "https://linkedin.com/in/ihmorol", icon: "linkedin" },
       { title: "Twitter", url: "#", icon: "twitter" },
-      { title: "Mail", url: "mailto:hello@example.com", icon: "mail" },
+      { title: "Email", url: "mailto:ihmorol@gmail.com", icon: "mail" },
     ],
     sitemap: [
       { name: "Home", href: "/" },
@@ -35,15 +35,15 @@ export const layoutData = {
     resources: [
       { name: "Resume", href: "/resume" },
       { name: "Contact", href: "/contact" },
-      { name: "Uses", href: "/uses" },
-      { name: "RSS Feed", href: "/rss" },
+      { name: "Skills", href: "/skills" },
+      { name: "Academic", href: "/academic" },
     ],
     newsletter: {
       title: "Stay Updated",
-      description: "Subscribe to my newsletter for the latest updates on my projects and articles.",
+      description: "Subscribe to my newsletter for the latest updates on my projects, learning journey, and articles.",
       placeholder: "Email address",
     },
-    copyright: "© {year} Ikramul Hasan. All rights reserved.",
+    copyright: "© {year} Ikramul Hasan Moral. All rights reserved.",
     legals: [
       { name: "Privacy Policy", href: "/privacy" },
       { name: "Terms of Service", href: "/terms" },
@@ -52,13 +52,12 @@ export const layoutData = {
   sidebar: {
     title: {
       home: "HOME",
-      // Add other page titles as needed or make dynamic
     },
     socialLinks: [
-      { title: "Linkedin", url: "#" },
-      { title: "Behance", url: "#" },
+      { title: "LinkedIn", url: "https://linkedin.com/in/ihmorol" },
+      { title: "GitHub", url: "https://github.com/ihmorol" },
       { title: "Twitter", url: "#" },
-      { title: "Dribbble", url: "#" }
+      { title: "Email", url: "mailto:ihmorol@gmail.com" }
     ]
   }
 };

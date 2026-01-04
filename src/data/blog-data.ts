@@ -1,19 +1,19 @@
 export const blogData = {
   header: {
-    title: "Writings &",
+    title: "Blog &",
     icon: "BookOpen",
-    titleSuffix: "Ideas"
+    titleSuffix: "Insights"
   },
-  categories: ['All Posts', 'AI-ML', 'Software Engineering', 'Tutorial', 'Research', 'Career', 'Opinion'],
+  categories: ['All Posts', 'Web Development', 'DSA', 'Tutorial', 'Learning', 'Career', 'Projects'],
   newsletter: {
-    title: "Subscribe to our Newsletter",
-    description: "Get the latest articles, tutorials, and tech insights delivered directly to your inbox every week. No spam, ever.",
+    title: "Subscribe to My Newsletter",
+    description: "Get the latest articles, tutorials, and insights from my learning journey delivered directly to your inbox. No spam, ever.",
     placeholder: "Email Address",
     buttonText: "Subscribe"
   },
   connect: {
-    title: "Connect with us",
-    description: "Follow us on our social channels and stay up-to-date and see what's we are doing next"
+    title: "Connect with Me",
+    description: "Follow me on social media and stay up-to-date with my coding journey and latest projects!"
   },
   loadMoreText: "Load More Articles"
 };

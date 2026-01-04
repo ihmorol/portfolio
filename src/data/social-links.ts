@@ -1,6 +1,6 @@
 export const socialLinks = [
-  { title: "Linkedin", url: "#" },
-  { title: "Behance", url: "#" },
+  { title: "LinkedIn", url: "https://linkedin.com/in/ihmorol" },
+  { title: "GitHub", url: "https://github.com/ihmorol" },
   { title: "Twitter", url: "#" },
-  { title: "Dribbble", url: "#" }
+  { title: "Email", url: "mailto:ihmorol@gmail.com" }
 ];
