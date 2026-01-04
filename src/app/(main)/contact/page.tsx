@@ -1,5 +1,5 @@
 import { 
-  Zap, 
+  MessageCircle, 
   Calendar, 
   Video, 
   User, 
@@ -18,6 +18,7 @@ import Link from 'next/link';
 import { Footer } from '@/components/layout/Footer';
 import { PageLeftSideBar } from '@/components/shared/page-left-sidebar';
 import { VerticalSocialLinks } from '@/components/shared/vertical-social-links';
+import { PageHeader } from '@/components/shared/PageHeader';
 import { layoutData } from '@/data/layout-data';
 import { contactData } from '@/data/contact-data';
 
@@ -27,22 +28,22 @@ export default function ContactPage() {
 
   return (
     <>
-      <main className="flex-grow flex flex-col items-center w-full max-w-[1440px] mx-auto px-6 md:px-12 py-8 md:py-12 relative min-h-screen">
+      <main className="flex-grow flex flex-col items-center w-full max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 pt-20 md:pt-24 pb-8 md:pb-12 relative min-h-screen">
         <PageLeftSideBar title="CONTACT" />
         <VerticalSocialLinks items={socialLinks} />
         {/* Header */}
-        <div className="text-center mb-16 md:mb-20 mt-32 relative">
-            <h1 className="text-6xl md:text-8xl font-bold text-white flex items-center justify-center gap-3 md:gap-5 tracking-tight">
-                {header.title}
-                <span className="relative flex items-center justify-center">
-                    <Zap className="text-amber-400 w-16 h-16 md:w-24 md:h-24 fill-current transform -rotate-12 drop-shadow-[0_0_15px_rgba(251,191,36,0.5)]" />
-                </span>
-                {header.titleSuffix}
-            </h1>
-        </div>
+        <PageHeader
+          titlePrefix={header.title}
+          icon=""
+          titleSuffix={header.titleSuffix}
+          customIcon={
+            <MessageCircle className="text-amber-400 w-12 h-12 md:w-16 md:h-16 stroke-[2.5]" />
+          }
+          description="Have a project in mind? Let's make it happen."
+        />
 
         {/* Grid Layout */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-6 pb-20 max-w-[1200px] mx-auto">
+        <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 max-w-[1200px] mx-auto">
             
             {/* Schedule Meeting Card */}
             <div className="md:col-span-12 bg-white rounded-[2.5rem] p-2 md:p-3 flex flex-col md:flex-row overflow-hidden min-h-[420px]">

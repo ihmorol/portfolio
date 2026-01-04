@@ -1,7 +1,7 @@
 export const researchData = {
   hero: {
-    title: "Research &",
-    highlightedTitle: "Publications",
+    title: "Research",
+    highlightedTitle: "& Publications",
     highlightIcon: "auto_stories",
     description: "Exploring the intersection of artificial intelligence, human-computer interaction, and data visualization to build smarter, more accessible systems."
   },

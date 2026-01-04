@@ -3,6 +3,7 @@
 import { Footer } from '@/components/layout/Footer';
 import { PageLeftSideBar } from '@/components/shared/page-left-sidebar';
 import { VerticalSocialLinks } from '@/components/shared/vertical-social-links';
+import { PageHeader } from '@/components/shared/PageHeader';
 import { layoutData } from '@/data/layout-data';
 import { projectsData } from '@/data/projects-data';
 import { 
@@ -27,27 +28,26 @@ export default function ProjectsPage() {
 
   return (
     <div className="bg-[#000000] min-h-screen flex flex-col font-[family-name:var(--font-jakarta)]">
-      <main className="flex-grow w-full max-w-[1440px] mx-auto px-6 md:px-12 py-8 md:py-12 relative">
+      <main className="flex-grow w-full max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 pt-20 md:pt-24 pb-8 md:pb-12 relative">
         
         {/* Fixed Side Elements - Hidden on smaller screens */}
         <PageLeftSideBar title="PROJECTS" />
         <VerticalSocialLinks items={socialLinks} />
 
         {/* Header Section */}
-        <div className="text-center mb-10 md:mb-12 mt-20">
-            <h1 className="text-5xl md:text-7xl font-bold text-white flex items-center justify-center gap-2 md:gap-4 mb-4">
-                {header.title}
-                <Star className="text-amber-300 w-12 h-12 md:w-16 md:h-16 fill-amber-300" />
-                {header.titleSuffix}
-            </h1>
-            <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto font-[family-name:var(--font-spline)]">
-                {header.description}
-            </p>
-        </div>
+        <PageHeader
+          titlePrefix={header.title}
+          icon=""
+          titleSuffix={header.titleSuffix}
+          description="Curated collection of projects showcasing my work."
+          customIcon={
+            <Star className="text-amber-300 w-12 h-12 md:w-16 md:h-16 fill-amber-300" />
+          }
+        />
 
         {/* Filter Section */}
         <div className="w-full max-w-6xl mx-auto mb-12">
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+            <div className="flex flex-wrap justify-center gap-2 md:gap-3">
                 {categories.map((cat) => (
                     <button 
                         key={cat}
@@ -65,7 +65,7 @@ export default function ProjectsPage() {
         </div>
 
         {/* Featured Project */}
-        <div className="w-full max-w-6xl mx-auto mb-20">
+        <div className="w-full max-w-6xl mx-auto mb-12 md:mb-16">
             <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 border border-white/10 rounded-3xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-8 md:gap-12 relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
                 
@@ -120,7 +120,7 @@ export default function ProjectsPage() {
         </div>
 
         {/* Projects Grid */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-20 max-w-6xl mx-auto">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">
             {filteredProjects.map((project, index) => {
                 const Icon = project.icon;
                 return (

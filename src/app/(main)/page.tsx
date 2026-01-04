@@ -12,7 +12,7 @@ import { socialLinks } from '@/data/social-links';
 
 export default function HomePage() {
   return (
-    <main className="relative mx-auto flex w-full max-w-7xl flex-col px-4 pt-32 pb-16 sm:px-6 lg:px-12">
+    <main className="relative mx-auto flex w-full max-w-7xl flex-col px-4 md:px-8 lg:px-12 pt-20 md:pt-24 pb-8 md:pb-12">
       <PageLeftSideBar title="HOME" />
       <VerticalSocialLinks items={socialLinks} />
       <HeroSection />

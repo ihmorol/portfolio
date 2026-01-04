@@ -157,6 +157,27 @@
   .glow-hover:hover {
     box-shadow: 0 0 15px currentColor;
   }
+
+  /* Consistent page spacing utilities */
+  .page-container {
+    @apply px-4 md:px-8 lg:px-12;
+  }
+  
+  .page-padding-y {
+    @apply pt-20 md:pt-24 pb-8 md:pb-12;
+  }
+  
+  .page-header-margin {
+    @apply mb-8 md:mb-12;
+  }
+  
+  .content-grid {
+    @apply gap-4 md:gap-6;
+  }
+  
+  .section-spacing {
+    @apply pb-12 md:pb-16 lg:pb-20;
+  }
 }
 
 /* Custom Scrollbar */

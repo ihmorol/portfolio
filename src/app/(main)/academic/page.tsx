@@ -4,8 +4,10 @@ import { Footer } from '@/components/layout/Footer';
 import Link from 'next/link';
 import { PageLeftSideBar } from '@/components/shared/page-left-sidebar';
 import { VerticalSocialLinks } from '@/components/shared/vertical-social-links';
+import { PageHeader } from '@/components/shared/PageHeader';
 import { layoutData } from '@/data/layout-data';
 import { academicData } from '@/data/academic-data';
+import { GraduationCap } from 'lucide-react';
 
 export default function AcademicPage() {
   const { header, currentDegree, thesis, certifications, coursework, workshops, achievements } = academicData;
@@ -13,23 +15,25 @@ export default function AcademicPage() {
 
   return (
     <div className="bg-background text-white font-display overflow-x-hidden min-h-screen flex flex-col selection:bg-white selection:text-black">
-      <main className="flex-grow flex flex-col items-center w-full max-w-[1440px] mx-auto px-6 md:px-12 py-8 md:py-12 relative">
+      <main className="flex-grow flex flex-col items-center w-full max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 pt-20 md:pt-24 pb-8 md:pb-12 relative">
         
         {/* Fixed Side Elements - Hidden on smaller screens */}
         <PageLeftSideBar title="ACADEMICS" />
         <VerticalSocialLinks items={socialLinks} />
 
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16 mt-16">
-          <h1 className="text-5xl md:text-7xl font-bold text-white flex items-center justify-center gap-2 md:gap-4">
-            {header.titlePrefix}
-            <span className="material-symbols-outlined text-amber-300 text-5xl md:text-7xl" style={{ fontVariationSettings: "'FILL' 1, 'wght' 700" }}>{header.titleIcon}</span>
-            {header.titleSuffix}
-          </h1>
-        </div>
+        <PageHeader
+          titlePrefix={header.titlePrefix}
+          icon={header.titleIcon}
+          titleSuffix={header.titleSuffix}
+          customIcon={
+            <GraduationCap className="text-amber-400 w-12 h-12 md:w-16 md:h-16 stroke-[2.5]" />
+          }
+          description="Academic background, certifications, and continuous learning."
+        />
 
         {/* Main Grid: Current Degree + Thesis + Certifications */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-6 pb-20 max-w-6xl mx-auto">
+        <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">
           
           {/* Current Degree Card */}
           <div className="md:col-span-12 bg-white rounded-3xl p-2 md:p-3 flex flex-col md:flex-row gap-6 md:gap-12 overflow-hidden min-h-[350px]">

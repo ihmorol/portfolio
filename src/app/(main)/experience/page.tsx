@@ -6,8 +6,10 @@ import { GrowthSection } from '@/components/experience/GrowthSection';
 import { VolunteeringCard } from '@/components/experience/VolunteeringCard';
 import { PageLeftSideBar } from '@/components/shared/page-left-sidebar';
 import { VerticalSocialLinks } from '@/components/shared/vertical-social-links';
+import { PageHeader } from '@/components/shared/PageHeader';
 import { layoutData } from '@/data/layout-data';
 import { experienceData } from '@/data/experience-data';
+import { Briefcase } from 'lucide-react';
 
 export default function ExperiencePage() {
   const { header, experience, leadership, growth, volunteering, cta } = experienceData;
@@ -15,21 +17,22 @@ export default function ExperiencePage() {
   // The original file used specific socialLinks import. layoutData has them too. I'll use layoutData.
 
   return (
-    <div className="container mx-auto px-6 md:px-12 pt-28 md:pt-32 pb-8 md:pb-12 max-w-[1440px]">
+    <div className="container mx-auto px-4 md:px-8 lg:px-12 pt-20 md:pt-24 pb-8 md:pb-12 max-w-[1440px]">
       <PageLeftSideBar title="EXPERIENCE" />
       <VerticalSocialLinks items={socialLinks} />
       
       {/* Header */}
-      <div className="text-center mb-12 md:mb-16">
-        <h1 className="text-5xl md:text-7xl font-bold text-white flex items-center justify-center gap-2 md:gap-4 flex-wrap">
-            {header.titlePrefix}
-            <span className="material-symbols-outlined text-accent-yellow text-5xl md:text-7xl" style={{ fontVariationSettings: "'FILL' 1, 'wght' 700" }}>{header.titleIcon}</span>
-            {header.titleSuffix}
-        </h1>
-        <p className="text-text-secondary mt-4 max-w-2xl mx-auto font-display">{header.description}</p>
-      </div>
+      <PageHeader
+        titlePrefix={header.titlePrefix}
+        icon={header.titleIcon}
+        titleSuffix={header.titleSuffix}
+        description={header.description}
+        customIcon={
+          <Briefcase className="text-amber-400 w-12 h-12 md:w-16 md:h-16 stroke-[2.5]" />
+        }
+      />
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-6 pb-20 max-w-6xl mx-auto">
+      <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">
         
         {/* Experience Section */}
         <div className="md:col-span-12 space-y-6">

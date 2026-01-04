@@ -17,13 +17,13 @@ export default function ResearchPage() {
 
   return (
     <>
-      <main className="flex-grow flex flex-col items-center w-full max-w-[1440px] mx-auto px-6 md:px-12 pt-28 md:pt-32 pb-8 md:pb-12 relative min-h-screen">
+      <main className="flex-grow flex flex-col items-center w-full max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 pt-20 md:pt-24 pb-8 md:pb-12 relative min-h-screen">
         <PageLeftSideBar title="RESEARCH" />
         <VerticalSocialLinks items={socialLinks} />
 
         <ResearchHero />
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-6 pb-20 max-w-6xl mx-auto">
+        <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">
           <ResearchVision />
 
           <ResearchExperience />

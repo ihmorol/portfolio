@@ -8,10 +8,11 @@ import { BlogCard } from './BlogCard';
 import { NewsletterWidget } from './NewsletterWidget';
 import { PageLeftSideBar } from '@/components/shared/page-left-sidebar';
 import { VerticalSocialLinks } from '@/components/shared/vertical-social-links';
+import { PageHeader } from '@/components/shared/PageHeader';
 import { Footer } from '@/components/layout/Footer';
-import { BookOpen } from 'lucide-react';
 import { layoutData } from '@/data/layout-data';
 import { blogData } from '@/data/blog-data';
+import { BookOpen } from 'lucide-react';
 
 interface BlogContentProps {
   initialPosts: BlogPost[];
@@ -48,18 +49,20 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
   
   return (
     <div className="bg-[#000000] min-h-screen flex flex-col font-[family-name:var(--font-jakarta)]">
-      <main className="flex-grow w-full max-w-[1440px] mx-auto px-6 md:px-12 py-8 md:py-12 relative">
+      <main className="flex-grow w-full max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 pt-20 md:pt-24 pb-8 md:pb-12 relative">
           
         <PageLeftSideBar title="BLOG" />
         <VerticalSocialLinks items={socialLinks} />
 
-        <div className="text-center mb-12 md:mb-16 mt-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white flex items-center justify-center gap-2 md:gap-4 font-[family-name:var(--font-jakarta)]">
-                {header.title}
-                <BookOpen className="text-amber-300 w-12 h-12 md:w-16 md:h-16" strokeWidth={2.5} />
-                {header.titleSuffix}
-            </h1>
-        </div>
+        <PageHeader
+          titlePrefix={header.title}
+          icon="menu_book"
+          titleSuffix={header.titleSuffix}
+          customIcon={
+            <BookOpen className="text-amber-400 w-12 h-12 md:w-16 md:h-16 stroke-[2.5]" />
+          }
+          description="Thoughts, tutorials, and insights on development."
+        />
 
         {/* Featured Post - Only show on 'All Posts' or if it matches category */}
         {(activeCategory === 'All Posts' || (featuredPost && featuredPost.category.toLowerCase().replace(/\s+/g, '-') === activeCategory.toLowerCase().replace(/\s+/g, '-'))) && featuredPost && (
@@ -78,7 +81,7 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
         </div>
 
         {/* Grid */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-6 pb-20 max-w-6xl mx-auto">
+        <div className="w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">
              {filteredPosts.map((post, index) => {
                  // Example injection of Newsletter Widget in the grid
                  // Let's say we want it after the 2nd post

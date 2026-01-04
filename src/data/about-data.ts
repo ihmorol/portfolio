@@ -25,7 +25,7 @@ export const aboutData = {
     location: "San Francisco, CA",
     cvButton: "Download CV",
     status: "Open for Work",
-    profileImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuAmcDR1B5QKJangtQ7-76aszJjgzp7PN3BTZo1r6GNZguOWYok8vtZxkYMa_M4neJDdi0Csy-h-f-25iQjxXTFZA4BX2JsYz_t89lG5KnK69EX5c74IUsO5CjKxl1xcwnwtI5_-txBCWY0QCZnWc5ekZ8yapY5M8WLu7tCJSDxED7mu9uvZIjDOVvqskq5lF9hEZTjyOxmTFH2WGUrHATBO5B9GW7lJNKUSpJy2lAQUmgBr2B_fuVnq0Yl9UT1XiL-RkWH_1k0f0uY"
+    profileImage: "/images/profile/image.jpeg"
   },
   values: [
     {
