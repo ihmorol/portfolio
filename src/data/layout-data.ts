@@ -1,7 +1,7 @@
 export const layoutData = {
   navbar: {
     brand: "Ikramul Hasan",
-    cta: "Start Project",
+    cta: "Hire",
     menuItems: [
       { name: "Home", href: "/" },
       { name: "About", href: "/about" },
