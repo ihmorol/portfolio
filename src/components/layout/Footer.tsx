@@ -37,10 +37,11 @@ export function Footer() {
               {socialLinks.map((social) => {
                 const Icon = iconMap[social.icon] || Mail;
                 // Define hover colors based on platform or just generic
+                const socialTitle = social.title.toLowerCase();
                 const hoverColorClass = 
-                  social.title === "Github" ? "hover:bg-white hover:text-black" :
-                  social.title === "Linkedin" ? "hover:bg-[#0077b5] hover:text-white" :
-                  social.title === "Twitter" ? "hover:bg-[#1DA1F2] hover:text-white" :
+                  socialTitle === "github" ? "hover:bg-white hover:text-black" :
+                  socialTitle === "linkedin" ? "hover:bg-[#0077b5] hover:text-white" :
+                  socialTitle === "twitter" ? "hover:bg-[#1DA1F2] hover:text-white" :
                   "hover:bg-white hover:text-black";
 
                 return (

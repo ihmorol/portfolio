@@ -6,13 +6,8 @@ import {
   Plus, 
   Play, 
   Mail, 
-  Dribbble, 
-  Linkedin, 
-  Twitter, 
-  Instagram, 
-  Github,
-  MessageSquare,
-  ArrowRight
+  Linkedin,
+  Github
 } from 'lucide-react';
 import Link from 'next/link';
 import { Footer } from '@/components/layout/Footer';
@@ -90,7 +85,14 @@ export default function ContactPage() {
                             </div>
                             <div className="flex-1 flex items-center justify-between gap-1 h-8 px-2">
                                 {[...Array(15)].map((_, i) => (
-                                    <div key={i} className={`w-1 bg-blue-${i % 2 === 0 ? '300' : '500'} rounded-full`} style={{ height: `${Math.random() * 60 + 20}%`}}></div>
+                                    <div
+                                      key={i}
+                                      className="w-1 rounded-full"
+                                      style={{
+                                        backgroundColor: i % 2 === 0 ? '#93c5fd' : '#3b82f6',
+                                        height: `${Math.random() * 60 + 20}%`,
+                                      }}
+                                    ></div>
                                 ))}
                             </div>
                         </div>
@@ -156,7 +158,7 @@ export default function ContactPage() {
                 <p className="text-[11px] text-gray-400 mb-8 leading-relaxed font-body">
                     {newsletter.description}
                 </p>
-                <form action="#" className="space-y-4 mt-auto">
+                <form onSubmit={(e) => e.preventDefault()} className="space-y-4 mt-auto">
                     <input type="text" placeholder={newsletter.namePlaceholder} className="w-full bg-transparent border border-gray-700 rounded-full px-6 py-4 text-xs text-white placeholder-gray-500 focus:border-white focus:ring-0 transition-colors" />
                     <input type="email" placeholder={newsletter.emailPlaceholder} className="w-full bg-transparent border border-gray-700 rounded-full px-6 py-4 text-xs text-white placeholder-gray-500 focus:border-white focus:ring-0 transition-colors" />
                     <button type="submit" className="w-full bg-white hover:bg-gray-200 text-black text-[10px] font-bold py-4 rounded-full transition-all uppercase tracking-widest mt-2 flex items-center justify-center gap-2">
@@ -172,20 +174,14 @@ export default function ContactPage() {
                     <p className="text-xs text-gray-400 font-body max-w-sm">{socialChannels.description}</p>
                 </div>
                 <div className="flex items-center gap-3 md:gap-5 flex-wrap justify-center">
-                     <a href="#" className="w-12 h-12 rounded-full bg-[#1c1c1f] flex items-center justify-center transition-all duration-300 group hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-                        <Dribbble className="text-pink-500 group-hover:text-pink-400 w-5 h-5" />
-                    </a>
-                     <a href="#" className="w-12 h-12 rounded-full bg-[#1c1c1f] flex items-center justify-center transition-all duration-300 group hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                     <a href="https://linkedin.com/in/ihmorol" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#1c1c1f] flex items-center justify-center transition-all duration-300 group hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
                         <Linkedin className="text-blue-600 group-hover:text-blue-500 w-5 h-5" />
                     </a>
-                     <a href="#" className="w-12 h-12 rounded-full bg-[#1c1c1f] flex items-center justify-center transition-all duration-300 group hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-                        <Twitter className="text-blue-400 group-hover:text-blue-300 w-5 h-5" />
-                    </a>
-                     <a href="#" className="w-12 h-12 rounded-full bg-[#1c1c1f] flex items-center justify-center transition-all duration-300 group hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-                        <Instagram className="text-pink-500 group-hover:text-pink-400 w-5 h-5" />
-                    </a>
-                     <a href="#" className="w-12 h-12 rounded-full bg-[#1c1c1f] flex items-center justify-center transition-all duration-300 group hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                     <a href="https://github.com/ihmorol" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#1c1c1f] flex items-center justify-center transition-all duration-300 group hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
                         <Github className="text-gray-400 group-hover:text-white w-5 h-5" />
+                    </a>
+                     <a href="mailto:ihmorol@gmail.com" className="w-12 h-12 rounded-full bg-[#1c1c1f] flex items-center justify-center transition-all duration-300 group hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                        <Mail className="text-red-400 group-hover:text-red-300 w-5 h-5" />
                     </a>
                 </div>
             </div>

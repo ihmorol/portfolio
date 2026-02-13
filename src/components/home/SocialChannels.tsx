@@ -9,6 +9,7 @@ export function SocialChannels() {
   // Actually, keeping the logic simple: assuming the colorIdx maps to specific brand colors.
   const getColorClasses = (colorIdx: string) => {
       switch(colorIdx) {
+          case 'gray': return 'text-gray-300 hover:bg-white hover:text-black';
           case 'pink': return 'text-[#EA4C89] hover:bg-[#EA4C89]';
           case 'green': return 'text-[#25D366] hover:bg-[#25D366]';
           case 'blue': return 'text-[#0A66C2] hover:bg-[#0A66C2]';

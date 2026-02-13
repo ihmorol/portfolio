@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { layoutData } from '@/data/layout-data';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/Button';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,12 +35,12 @@ export function Navbar() {
           <Link href="/" className="pl-4 pr-3 text-lg font-bold text-white whitespace-nowrap">
             {brand}
           </Link>
-          <Button 
-            variant="white" 
-            className="rounded-full bg-white text-black hover:bg-gray-200 font-medium px-5"
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-full bg-white text-black hover:bg-gray-200 font-medium px-5 h-10 text-xs font-bold uppercase tracking-widest transition-colors"
           >
             {cta}
-          </Button>
+          </Link>
         </div>
 
         {/* Right Side: Desktop Navigation */}
@@ -96,7 +95,13 @@ export function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <Button className="mt-8 w-full max-w-xs" variant="white">{cta}</Button>
+              <Link
+                href="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="mt-8 w-full max-w-xs inline-flex items-center justify-center rounded-full bg-white text-black hover:bg-gray-200 h-10 text-xs font-bold uppercase tracking-widest transition-colors"
+              >
+                {cta}
+              </Link>
             </div>
           </motion.div>
         )}

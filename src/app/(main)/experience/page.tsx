@@ -10,6 +10,7 @@ import { PageHeader } from '@/components/shared/PageHeader';
 import { layoutData } from '@/data/layout-data';
 import { experienceData } from '@/data/experience-data';
 import { Briefcase } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ExperiencePage() {
   const { header, experience, leadership, growth, volunteering, cta } = experienceData;
@@ -120,9 +121,9 @@ export default function ExperiencePage() {
                 <p className="text-gray-600 font-display">{cta.description}</p>
             </div>
             <div className="relative z-10 shrink-0">
-                <button className="bg-black hover:bg-gray-800 text-white text-xs font-bold py-4 px-8 rounded-full transition-all uppercase tracking-wider shadow-lg">
+                <Link href="/contact" className="inline-flex bg-black hover:bg-gray-800 text-white text-xs font-bold py-4 px-8 rounded-full transition-all uppercase tracking-wider shadow-lg">
                     {cta.buttonText}
-                </button>
+                </Link>
             </div>
         </div>
 
