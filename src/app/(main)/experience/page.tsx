@@ -57,9 +57,9 @@ export default function ExperiencePage() {
         </div>
 
         {/* Leadership & Growth Row */}
-        <div className="md:col-span-12 grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div className="md:col-span-12 grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
             {/* Leadership Section */}
-        <div className="md:col-span-8">
+        <div className="md:col-span-8 space-y-6">
             <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2 mt-8">
                 <span className="w-2 h-8 bg-accent-blue rounded-full"></span>
                 {leadership.title}
@@ -79,7 +79,7 @@ export default function ExperiencePage() {
         </div>
 
         {/* Growth Section */}
-        <div className="md:col-span-4">
+        <div className="md:col-span-4 space-y-6">
              <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2 mt-8">
                 <span className="w-2 h-8 bg-accent-purple rounded-full"></span>
                 {growth.title}
