@@ -32,8 +32,8 @@ export const PublicationList = () => {
             <p className="text-xs text-gray-500 italic">{pub.venue}</p>
             <p className="text-xs text-gray-400 mt-2 line-clamp-2 font-body">{pub.description}</p>
             <div className="flex gap-3 mt-3">
-              {pub.links.map(link => (
-                <a key={link.label} href="#" className="flex items-center gap-1 text-[10px] font-bold text-gray-300 hover:text-white transition-colors">
+              {pub.links.map((link: { label: string; icon: string; url?: string }) => (
+                <a key={link.label} href={link.url || '/research'} className="flex items-center gap-1 text-[10px] font-bold text-gray-300 hover:text-white transition-colors">
                   <span className="material-symbols-outlined text-sm">{link.icon}</span> {link.label}
                 </a>
               ))}

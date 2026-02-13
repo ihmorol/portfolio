@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     default: 'Ikramul Hasan - Portfolio',
     template: '%s | Ikramul Hasan',
   },
-  description: 'Senior Product Designer & Creative Lead Portfolio',
+  description: 'Portfolio of Ikramul Hasan, CSE student, full-stack developer, and teaching assistant.',
 };
 
 export default function RootLayout({

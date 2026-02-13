@@ -135,7 +135,6 @@ export const aboutData = {
       socials: [
         { name: "GitHub", url: "https://github.com/ihmorol", icon: "github", color: "bg-[#171544]", shadow: "shadow-[#171544]/20" },
         { name: "LinkedIn", url: "https://linkedin.com/in/ihmorol", icon: "linkedin", color: "bg-[#0077B5]", shadow: "shadow-[#0077B5]/20" },
-        { name: "Twitter", url: "#", icon: "twitter", color: "bg-[#1DA1F2]", shadow: "shadow-[#1DA1F2]/20" },
         { name: "Email", url: "mailto:ihmorol@gmail.com", icon: "mail", color: "bg-[#EA4335]", shadow: "shadow-[#EA4335]/20" }
       ]
   }

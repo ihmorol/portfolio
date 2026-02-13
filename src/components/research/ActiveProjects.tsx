@@ -26,7 +26,7 @@ export const ActiveProjects = () => {
             </p>
             <div className="flex items-center justify-between mt-auto">
               <span className="text-[10px] font-bold text-gray-500 bg-surface-light px-2 py-1 rounded">{project.year}</span>
-              <a href="#" className={`w-8 h-8 rounded-full bg-white text-black flex items-center justify-center ${project.buttonHover} transition-colors`}>
+              <a href="/projects" className={`w-8 h-8 rounded-full bg-white text-black flex items-center justify-center ${project.buttonHover} transition-colors`}>
                 <span className="material-symbols-outlined text-sm">arrow_outward</span>
               </a>
             </div>

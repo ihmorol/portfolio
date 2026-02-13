@@ -67,7 +67,7 @@ export const researchData = {
         description: "Competed against 80+ participants in algorithmic problem-solving challenges, demonstrating strong competitive programming skills under time pressure.",
         citations: 0,
         links: [
-          { label: "Details", icon: "info" }
+          { label: "Details", icon: "info", url: "/academic" }
         ]
       },
       {
@@ -80,7 +80,7 @@ export const researchData = {
         venue: "UIU OOP Showcase 2023",
         description: "Presented a Java-based hospital management system implementing design patterns including Factory, Singleton, and Observer patterns.",
         links: [
-          { label: "Project", icon: "folder" }
+          { label: "Project", icon: "folder", url: "/projects/hospital-system" }
         ]
       }
     ]
@@ -93,21 +93,21 @@ export const researchData = {
         event: "UIU TA Sessions",
         action: "Ongoing",
         icon: "school",
-        link: "#"
+        link: "/contact"
       },
       {
         title: "Database Management",
         event: "UIU TA Sessions",
         action: "Ongoing",
         icon: "storage",
-        link: "#"
+        link: "/contact"
       },
       {
         title: "Problem Solving Patterns",
         event: "Peer Mentorship",
         action: "Ongoing",
         icon: "psychology",
-        link: "#"
+        link: "/contact"
       }
     ]
   },

@@ -45,8 +45,9 @@ export function HeroSection() {
             </div>
             {/* Resume Button */}
             <Link 
-              href="/resume.pdf" 
+              href="/resume.html" 
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 md:gap-3 bg-gray-900 hover:bg-gray-800 text-white px-3 md:px-4 py-2 md:py-3 rounded-lg md:rounded-xl transition-colors w-full"
             >
               <span 

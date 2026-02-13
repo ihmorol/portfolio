@@ -46,7 +46,7 @@ export function FeaturedProjects() {
                          ))}
                     </div>
                     
-                    <Link href={`/projects/${project.id}`} className={`inline-flex items-center text-xs font-bold uppercase tracking-widest text-white transition-colors ${project.hoverColor}`}>
+                    <Link href={`/projects/${project.slug}`} className={`inline-flex items-center text-xs font-bold uppercase tracking-widest text-white transition-colors ${project.hoverColor}`}>
                         View Details <span className="material-symbols-outlined text-sm ml-1">arrow_forward</span>
                     </Link>
                 </div>

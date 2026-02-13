@@ -23,6 +23,7 @@ export const homeData = {
     projects: [
       {
         id: '1',
+        slug: 'ielts-platform',
         title: 'IELTS Learning Platform',
         category: 'Full Stack',
         description: 'A production-ready e-commerce platform with user authentication, product catalog, shopping cart, and Stripe payment integration serving 200+ test users.',
@@ -38,6 +39,7 @@ export const homeData = {
       },
       {
         id: '2',
+        slug: 'task-manager',
         title: 'Real-Time Task Manager',
         category: 'Full Stack',
         description: 'A real-time collaborative task management app using Firebase with instant synchronization across 50+ concurrent users and drag-and-drop functionality.',
@@ -53,6 +55,7 @@ export const homeData = {
       },
       {
         id: '3',
+        slug: 'price-predictor',
         title: 'ML Price Predictor',
         category: 'AI / ML',
         description: 'A regression model to predict housing prices using Random Forest algorithm with 87% accuracy, processing 10,000+ data points with Flask REST API.',
@@ -132,10 +135,7 @@ export const homeData = {
     channels: [
         { name: "GitHub", url: "https://github.com/ihmorol", icon: "code", colorIdx: "gray" },
         { name: "LinkedIn", url: "https://linkedin.com/in/ihmorol", icon: "work", colorIdx: "blue" },
-        { name: "WhatsApp", url: "#", icon: "chat", colorIdx: "green" },
-        { name: "Facebook", url: "#", icon: "social_leaderboard", colorIdx: "blue_dark" },
-        { name: "Twitter", url: "#", icon: "alternate_email", colorIdx: "blue_bright" },
-        { name: "Instagram", url: "#", icon: "photo_camera", colorIdx: "red" }
+        { name: "Email", url: "mailto:ihmorol@gmail.com", icon: "mail", colorIdx: "red" }
     ]
   }
 };

@@ -22,7 +22,6 @@ export const layoutData = {
     socialLinks: [
       { title: "GitHub", url: "https://github.com/ihmorol", icon: "github" },
       { title: "LinkedIn", url: "https://linkedin.com/in/ihmorol", icon: "linkedin" },
-      { title: "Twitter", url: "#", icon: "twitter" },
       { title: "Email", url: "mailto:ihmorol@gmail.com", icon: "mail" },
     ],
     sitemap: [
@@ -33,10 +32,10 @@ export const layoutData = {
       { name: "Blog", href: "/blog" },
     ],
     resources: [
-      { name: "Resume", href: "/resume" },
+      { name: "Resume", href: "/resume.html" },
       { name: "Contact", href: "/contact" },
       { name: "Skills", href: "/skills" },
-      { name: "Academic", href: "/academic" },
+      { name: "Research", href: "/research" },
     ],
     newsletter: {
       title: "Stay Updated",
@@ -44,10 +43,7 @@ export const layoutData = {
       placeholder: "Email address",
     },
     copyright: "© {year} Ikramul Hasan Moral. All rights reserved.",
-    legals: [
-      { name: "Privacy Policy", href: "/privacy" },
-      { name: "Terms of Service", href: "/terms" },
-    ],
+    legals: [],
   },
   sidebar: {
     title: {
@@ -56,7 +52,6 @@ export const layoutData = {
     socialLinks: [
       { title: "LinkedIn", url: "https://linkedin.com/in/ihmorol" },
       { title: "GitHub", url: "https://github.com/ihmorol" },
-      { title: "Twitter", url: "#" },
       { title: "Email", url: "mailto:ihmorol@gmail.com" }
     ]
   }

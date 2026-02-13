@@ -1,17 +1,17 @@
 export const SITE_CONFIG = {
   name: 'Ikramul Hasan',
-  title: 'Senior Product Designer & Creative Lead',
-  description: 'Portfolio showcasing AI/ML projects, software development, and research',
+  title: 'CSE Student, Full-Stack Developer, Teaching Assistant',
+  description: 'Portfolio showcasing full-stack projects, machine learning work, and academic achievements.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-  email: 'hello@alexmorgan.design',
-  location: 'San Francisco, CA',
-  timezone: 'GMT-8',
+  email: 'ihmorol@gmail.com',
+  location: 'Dhaka, Bangladesh',
+  timezone: 'GMT+6',
   social: {
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
-    twitter: 'https://twitter.com',
-    dribbble: 'https://dribbble.com',
-    behance: 'https://behance.net',
+    github: 'https://github.com/ihmorol',
+    linkedin: 'https://linkedin.com/in/ihmorol',
+    twitter: '',
+    dribbble: '',
+    behance: '',
   }
 };
 
@@ -38,7 +38,5 @@ export const PROJECT_CATEGORIES = [
 export const SOCIAL_LINKS = [
   { name: 'GitHub', icon: 'Github', url: SITE_CONFIG.social.github, color: '#333' },
   { name: 'LinkedIn', icon: 'Linkedin', url: SITE_CONFIG.social.linkedin, color: '#0077B5' },
-  { name: 'Twitter', icon: 'Twitter', url: SITE_CONFIG.social.twitter, color: '#1DA1F2' },
-  { name: 'Dribbble', icon: 'Dribbble', url: SITE_CONFIG.social.dribbble, color: '#EA4C89' },
-  { name: 'Behance', icon: 'Behance', url: SITE_CONFIG.social.behance, color: '#1769FF' },
+  { name: 'Email', icon: 'Mail', url: `mailto:${SITE_CONFIG.email}`, color: '#EA4335' },
 ];
