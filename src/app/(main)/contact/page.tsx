@@ -158,7 +158,7 @@ export default function ContactPage() {
                 <p className="text-[11px] text-gray-400 mb-8 leading-relaxed font-body">
                     {newsletter.description}
                 </p>
-                <form onSubmit={(e) => e.preventDefault()} className="space-y-4 mt-auto">
+                <form action="" className="space-y-4 mt-auto">
                     <input type="text" placeholder={newsletter.namePlaceholder} className="w-full bg-transparent border border-gray-700 rounded-full px-6 py-4 text-xs text-white placeholder-gray-500 focus:border-white focus:ring-0 transition-colors" />
                     <input type="email" placeholder={newsletter.emailPlaceholder} className="w-full bg-transparent border border-gray-700 rounded-full px-6 py-4 text-xs text-white placeholder-gray-500 focus:border-white focus:ring-0 transition-colors" />
                     <button type="submit" className="w-full bg-white hover:bg-gray-200 text-black text-[10px] font-bold py-4 rounded-full transition-all uppercase tracking-widest mt-2 flex items-center justify-center gap-2">

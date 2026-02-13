@@ -13,7 +13,7 @@ export function JourneyTimeline() {
           <Card className="glass-dark h-full p-8 border border-white/10 rounded-3xl">
             <h3 className="text-xl font-bold mb-4 text-white">{philosophy.title}</h3>
             <blockquote className="text-lg font-medium italic text-gray-300 mb-4">
-              "{philosophy.quote}"
+              &quot;{philosophy.quote}&quot;
             </blockquote>
             <p className="text-sm text-gray-400 leading-relaxed">{philosophy.description}</p>
           </Card>

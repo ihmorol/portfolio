@@ -43,7 +43,7 @@ export const layoutData = {
       placeholder: "Email address",
     },
     copyright: "© {year} Ikramul Hasan Moral. All rights reserved.",
-    legals: [],
+    legals: [] as { name: string; href: string }[],
   },
   sidebar: {
     title: {
