@@ -54,7 +54,7 @@ export function Navbar() {
                     className={cn(
                     'px-5 py-2 text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300',
                     pathname === link.href
-                        ? 'bg-white text-black shadow-glow'
+                        ? 'bg-white text-black shadow-lg'
                         : 'text-text-secondary hover:text-white hover:bg-white/10'
                     )}
                 >

@@ -153,15 +153,11 @@ export default function ProjectsPage() {
                             </div>
                             
                             <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                                <div className="flex gap-3">
-                                    <Link href="#" className="text-gray-400 hover:text-white transition-colors relative z-10">
-                                        <Code className="w-5 h-5" />
-                                    </Link>
-                                    <Link href="#" className="text-gray-400 hover:text-white transition-colors relative z-10">
-                                        <Globe className="w-5 h-5" />
-                                    </Link>
+                                <div className="flex gap-3 text-gray-400">
+                                    <Code className="w-5 h-5" />
+                                    <Globe className="w-5 h-5" />
                                 </div>
-                                <span className={`text-[10px] font-bold uppercase tracking-wider text-white hover:${project.accent} transition-colors flex items-center gap-1`}>
+                                <span className="text-[10px] font-bold uppercase tracking-wider text-white transition-colors flex items-center gap-1">
                                     Read More <ArrowRight className="w-4 h-4 ml-1" />
                                 </span>
                             </div>

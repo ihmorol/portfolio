@@ -57,7 +57,7 @@ export function ContactGrid() {
         {/* Newsletter Block */}
         <div className="glass-dark rounded-3xl p-8 flex flex-col border border-white/5">
             <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-coral-accent flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-[#FF6B7A] flex items-center justify-center shrink-0">
                     <span className="text-white font-bold text-xl lowercase">a</span>
                 </div>
                 <div>
