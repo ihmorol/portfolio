@@ -55,3 +55,18 @@ Completed:
 
 Notes:
 1. Material Symbols font link remains temporarily to avoid breaking existing icon labels; migration to a component icon set is deferred.
+
+### Batch 4: Phase 4 Route Migration (Projects Cluster)
+
+Completed:
+1. Migrated `src/app/(main)/projects/page.tsx` to shared token and motion patterns:
+   - `Reveal`, `StaggerGroup`, `HoverField`
+   - tokenized typography and surface styles
+   - consistent filter, featured section, and card hierarchy
+2. Migrated `src/app/(main)/projects/[slug]/page.tsx` to route-consistent structure:
+   - tokenized headings/meta/content blocks
+   - shared card/surface language
+   - staged reveal pacing for detail sections
+
+Notes:
+1. This batch satisfies the first route cluster in Phase 4 and prepares the same pattern for About/Contact and Knowledge clusters.
