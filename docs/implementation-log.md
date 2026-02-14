@@ -70,3 +70,15 @@ Completed:
 
 Notes:
 1. This batch satisfies the first route cluster in Phase 4 and prepares the same pattern for About/Contact and Knowledge clusters.
+
+### Batch 5: Phase 4 Route Migration (About + Contact Cluster)
+
+Completed:
+1. Updated `src/app/(main)/about/page.tsx` with shared reveal sequencing and tokenized layout shell classes.
+2. Updated `src/app/(main)/contact/page.tsx` with:
+   - shared layout shell classes
+   - reveal-driven section pacing
+   - tokenized micro-CTA button typography/focus handling
+
+Notes:
+1. Existing visual compositions in contact cards were preserved while standardizing outer rhythm and interaction semantics.
