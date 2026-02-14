@@ -9,19 +9,37 @@ import { Footer } from '@/components/layout/Footer';
 import { PageLeftSideBar } from '@/components/shared/page-left-sidebar';
 import { VerticalSocialLinks } from '@/components/shared/vertical-social-links';
 import { socialLinks } from '@/data/social-links';
+import { Reveal } from '@/components/motion/Reveal';
+import { StaggerGroup } from '@/components/motion/StaggerGroup';
 
 export default function HomePage() {
   return (
-    <main className="relative mx-auto flex w-full max-w-7xl flex-col px-4 md:px-8 lg:px-12 pt-20 md:pt-24 pb-8 md:pb-12">
+    <main className="section-shell page-padding-y relative flex flex-col">
       <PageLeftSideBar title="HOME" />
       <VerticalSocialLinks items={socialLinks} />
-      <HeroSection />
-      <StatsSection />
-      <FeaturedProjects />
-      <SkillsOverview />
-      <ScheduleMeeting />
-      <ContactGrid />
-      <SocialChannels />
+      <Reveal>
+        <HeroSection />
+      </Reveal>
+      <StaggerGroup className="space-y-0">
+        <Reveal delay={0.02}>
+          <StatsSection />
+        </Reveal>
+        <Reveal delay={0.05}>
+          <FeaturedProjects />
+        </Reveal>
+        <Reveal delay={0.08}>
+          <SkillsOverview />
+        </Reveal>
+        <Reveal delay={0.1}>
+          <ScheduleMeeting />
+        </Reveal>
+        <Reveal delay={0.12}>
+          <ContactGrid />
+        </Reveal>
+        <Reveal delay={0.14}>
+          <SocialChannels />
+        </Reveal>
+      </StaggerGroup>
       <Footer />
     </main>
   );

@@ -37,3 +37,21 @@ Completed:
 
 Notes:
 1. Dark-mode variables remain the default rendered theme (`html.dark` in layout), while light theme is still available via root token definitions.
+
+### Batch 3: Phase 3 Foundation Bootstrap
+
+Completed:
+1. Added shared motion primitive components under `src/components/motion/*`.
+2. Added progressive depth system contract under `src/components/3d/*`.
+3. Integrated route transition wrapper in `src/app/layout.tsx`.
+4. Added home pilot integration:
+   - reveal/stagger sequencing in `src/app/(main)/page.tsx`
+   - hero depth layer and tokenized CTA styles in `src/components/home/HeroSection.tsx`
+   - shared heading token mapping in `src/components/shared/PageHeader.tsx`
+5. Updated UI primitives for tokenized surfaces/micro-type:
+   - `src/components/ui/Card.tsx`
+   - `src/components/ui/Button.tsx`
+   - `src/components/ui/Badge.tsx`
+
+Notes:
+1. Material Symbols font link remains temporarily to avoid breaking existing icon labels; migration to a component icon set is deferred.

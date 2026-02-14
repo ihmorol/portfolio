@@ -27,17 +27,19 @@ export function PageHeader({
 }: PageHeaderProps) {
   return (
     <div className="pt-4 md:pt-8 pb-8 md:pb-12 text-center">
-      <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-white flex items-center justify-center gap-2 md:gap-4 flex-wrap">
+      <h1 className="type-display-2 tracking-tight mb-6 text-text-primary flex items-center justify-center gap-2 md:gap-4 flex-wrap">
         {titlePrefix}
         {customIcon}
         {titleSuffix && (
-          <span className={'font-light italic text-gray-400'}>
+          <span
+            className={suffixItalic ? 'font-light italic text-text-muted' : 'font-semibold text-text-secondary'}
+          >
             {titleSuffix}
           </span>
         )}
       </h1>
       {description && (
-        <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+        <p className="type-body-lg text-text-secondary max-w-2xl mx-auto">
           {description}
         </p>
       )}

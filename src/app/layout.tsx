@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import { Spline_Sans, Plus_Jakarta_Sans } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 import { Navbar } from '@/components/layout/Navbar';
-// import { Footer } from '@/components/layout/Footer'; // Will be created next
-import { ScrollIndicator } from '@/components/layout/ScrollIndicator';
+import { PageTransition } from '@/components/motion/PageTransition';
 import './globals.css';
 import { cn } from '@/lib/utils';
 
@@ -35,14 +34,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cn(splineSans.variable, plusJakarta.variable, 'dark scroll-smooth')}>
-      <body className="bg-background text-text-primary font-display antialiased selection:bg-white selection:text-black overflow-x-hidden">
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <html
+      lang="en"
+      className={cn(
+        splineSans.variable,
+        plusJakarta.variable,
+        'dark scroll-smooth'
+      )}
+    >
+      <body className="bg-background text-text-primary font-body antialiased selection:bg-white selection:text-black overflow-x-hidden">
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          rel="stylesheet"
+        />
         <Navbar />
         <main className="min-h-screen flex flex-col">
-          {children}
+          <PageTransition>{children}</PageTransition>
         </main>
-        {/* <Footer /> */}
         <Toaster position="bottom-right" />
       </body>
     </html>
