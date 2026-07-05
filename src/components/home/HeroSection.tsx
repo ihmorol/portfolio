@@ -38,7 +38,7 @@ export function HeroSection() {
               <Image src="/images/profile/image.jpeg" alt="Profile" fill className="object-cover" priority />
             </HoverField>
             <Link
-              href="/resume.html"
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="focus-ring flex items-center justify-center gap-2 md:gap-3 bg-background-secondary hover:bg-background-tertiary text-text-primary px-3 md:px-4 py-2 md:py-3 rounded-lg md:rounded-xl transition-colors w-full border border-border"

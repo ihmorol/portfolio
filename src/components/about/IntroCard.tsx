@@ -60,10 +60,15 @@ export function IntroCard() {
             </div>
           </div>
           <div className="mt-6 flex flex-col gap-3">
-            <button className="w-full text-center bg-black text-white px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition-colors shadow-lg flex items-center justify-center gap-2">
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full text-center bg-black text-white px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition-colors shadow-lg flex items-center justify-center gap-2"
+            >
               <span>{cvButton}</span>
               <Download size={14} />
-            </button>
+            </a>
             <div className="flex items-center justify-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wide">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
               {status}

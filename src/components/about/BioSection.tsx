@@ -44,7 +44,7 @@ export function BioSection() {
             <p className="text-xs uppercase tracking-[0.2em] text-gray-400 mb-2">Location</p>
             <p className="text-sm text-white mb-4">{intro.location}</p>
             <Link
-              href="/resume.html"
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-auto w-full text-center bg-white text-black px-5 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors"

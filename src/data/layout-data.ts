@@ -32,7 +32,7 @@ export const layoutData = {
       { name: "Blog", href: "/blog" },
     ],
     resources: [
-      { name: "Resume", href: "/resume.html" },
+      { name: "Resume", href: "/resume.pdf" },
       { name: "Contact", href: "/contact" },
       { name: "Skills", href: "/skills" },
       { name: "Research", href: "/research" },
