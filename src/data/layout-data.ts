@@ -17,7 +17,7 @@ export const layoutData = {
   footer: {
     brand: {
       name: "Ikramul Hasan",
-      description: "CSE Student at UIU | Full-Stack Developer | Teaching Assistant. Building production-ready applications and exploring the intersection of software engineering and machine learning.",
+      description: "Final-Year CSE Student at UIU | Full-Stack Developer | ML Researcher. Shipping production platforms and doing applied machine learning research — from intrusion detection to neural ODE surrogates.",
     },
     socialLinks: [
       { title: "GitHub", url: "https://github.com/ihmorol", icon: "github" },

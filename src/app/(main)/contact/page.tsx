@@ -14,6 +14,7 @@ import { Footer } from '@/components/layout/Footer';
 import { PageLeftSideBar } from '@/components/shared/page-left-sidebar';
 import { VerticalSocialLinks } from '@/components/shared/vertical-social-links';
 import { PageHeader } from '@/components/shared/PageHeader';
+import { Reveal } from '@/components/motion/Reveal';
 import { layoutData } from '@/data/layout-data';
 import { contactData } from '@/data/contact-data';
 
@@ -23,22 +24,23 @@ export default function ContactPage() {
 
   return (
     <>
-      <main className="flex-grow flex flex-col items-center w-full max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 pt-20 md:pt-24 pb-8 md:pb-12 relative min-h-screen">
+      <main className="section-shell page-padding-y flex-grow flex flex-col items-center relative min-h-screen">
         <PageLeftSideBar title="CONTACT" />
         <VerticalSocialLinks items={socialLinks} />
-        {/* Header */}
-        <PageHeader
-          titlePrefix={header.title}
-          icon=""
-          titleSuffix={header.titleSuffix}
-          customIcon={
-            <MessageCircle className="text-amber-400 w-12 h-12 md:w-16 md:h-16 stroke-[2.5]" />
-          }
-          description="Have a project in mind? Let's make it happen."
-        />
+        <Reveal>
+          <PageHeader
+            titlePrefix={header.title}
+            icon=""
+            titleSuffix={header.titleSuffix}
+            customIcon={
+              <MessageCircle className="text-accent-yellow w-12 h-12 md:w-16 md:h-16 stroke-[2.5]" />
+            }
+            description="Have a project in mind? Let's build it together."
+          />
+        </Reveal>
 
-        {/* Grid Layout */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 max-w-[1200px] mx-auto">
+        <Reveal delay={0.05} className="w-full max-w-[1200px]">
+          <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 mx-auto">
             
             {/* Schedule Meeting Card */}
             <div className="md:col-span-12 bg-white rounded-[2.5rem] p-2 md:p-3 flex flex-col md:flex-row overflow-hidden min-h-[420px]">
@@ -47,7 +49,7 @@ export default function ContactPage() {
                     <p className="text-gray-500 text-sm md:text-base mb-10 max-w-md leading-relaxed font-body">
                         {scheduleMeeting.description}
                     </p>
-                    <button className="bg-black hover:bg-gray-800 text-white text-[11px] font-bold py-4 px-10 rounded-full transition-all uppercase tracking-widest w-full md:w-fit text-center shadow-lg">
+                    <button className="focus-ring bg-black hover:bg-gray-800 text-white type-micro py-4 px-10 rounded-full transition-all w-full md:w-fit text-center shadow-lg">
                         {scheduleMeeting.buttonText}
                     </button>
                 </div>
@@ -115,7 +117,7 @@ export default function ContactPage() {
                      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-[#121214] to-transparent opacity-50"></div>
                     <h3 className="text-2xl font-bold text-white mb-3">{email.title}</h3>
                     <p className="text-xs text-gray-400 mb-8 leading-relaxed font-body">{email.description}</p>
-                     <a href={`mailto:${email.emailAddress}`} className="block w-full bg-white hover:bg-gray-200 text-black text-[11px] font-bold py-4 px-4 rounded-full transition-all uppercase tracking-widest text-center">
+                     <a href={`mailto:${email.emailAddress}`} className="focus-ring block w-full bg-white hover:bg-gray-200 text-black type-micro py-4 px-4 rounded-full transition-all text-center">
                         {email.buttonText}
                     </a>
                 </div>
@@ -139,7 +141,7 @@ export default function ContactPage() {
                     <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-[#121214] to-transparent opacity-50"></div>
                      <h3 className="text-2xl font-bold text-white mb-3">{sendMessage.title}</h3>
                     <p className="text-xs text-gray-400 mb-8 leading-relaxed font-body">{sendMessage.description}</p>
-                     <button className="block w-full bg-white hover:bg-gray-200 text-black text-[11px] font-bold py-4 px-4 rounded-full transition-all uppercase tracking-widest text-center">
+                     <button className="focus-ring block w-full bg-white hover:bg-gray-200 text-black type-micro py-4 px-4 rounded-full transition-all text-center">
                         {sendMessage.buttonText}
                     </button>
                 </div>
@@ -161,7 +163,7 @@ export default function ContactPage() {
                 <form action="" className="space-y-4 mt-auto">
                     <input type="text" placeholder={newsletter.namePlaceholder} className="w-full bg-transparent border border-gray-700 rounded-full px-6 py-4 text-xs text-white placeholder-gray-500 focus:border-white focus:ring-0 transition-colors" />
                     <input type="email" placeholder={newsletter.emailPlaceholder} className="w-full bg-transparent border border-gray-700 rounded-full px-6 py-4 text-xs text-white placeholder-gray-500 focus:border-white focus:ring-0 transition-colors" />
-                    <button type="submit" className="w-full bg-white hover:bg-gray-200 text-black text-[10px] font-bold py-4 rounded-full transition-all uppercase tracking-widest mt-2 flex items-center justify-center gap-2">
+                    <button type="submit" className="focus-ring w-full bg-white hover:bg-gray-200 text-black type-micro py-4 rounded-full transition-all mt-2 flex items-center justify-center gap-2">
                         {newsletter.buttonText}
                     </button>
                 </form>
@@ -187,6 +189,7 @@ export default function ContactPage() {
             </div>
 
         </div>
+        </Reveal>
       </main>
       <Footer />
     </>

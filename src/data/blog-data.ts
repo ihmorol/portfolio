@@ -4,7 +4,7 @@ export const blogData = {
     icon: "BookOpen",
     titleSuffix: "Insights"
   },
-  categories: ['All Posts', 'Web Development', 'DSA', 'Tutorial', 'Learning', 'Career', 'Projects'],
+  categories: ['All Posts', 'Research', 'Tutorial', 'Learning', 'Career', 'Projects'],
   newsletter: {
     title: "Subscribe to My Newsletter",
     description: "Get the latest articles, tutorials, and insights from my learning journey delivered directly to your inbox. No spam, ever.",

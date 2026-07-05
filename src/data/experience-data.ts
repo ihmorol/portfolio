@@ -3,7 +3,7 @@ export const experienceData = {
     titlePrefix: "Professional",
     titleIcon: "history_edu",
     titleSuffix: "Journey",
-    description: "Building expertise through teaching, development, and competitive programming while pursuing my Computer Science degree."
+    description: "Teaching, freelance production engineering, team leadership, and research — built alongside a Computer Science degree."
   },
   experience: {
     title: "Experience",
@@ -37,12 +37,51 @@ export const experienceData = {
           }
         ],
         tags: ["Teaching", "DSA", "DBMS", "Mentorship"]
+      },
+      {
+        role: "Freelance Full-Stack Developer",
+        company: "EdTech Client — IELTS Preparation Platform",
+        location: "Remote",
+        type: "Freelance",
+        period: "2025 - Present",
+        description: "Developing and operating a live three-app e-learning platform for a commercial client: a Next.js 15 student portal, an Express + TypeScript API, and a React admin dashboard.",
+        sections: [
+          {
+            title: "What I Own",
+            icon: "check_circle",
+            iconColor: "text-accent-green",
+            items: [
+              "Full-stack architecture across student portal, REST API, and admin dashboard",
+              "Video streaming integration (Vimeo/Zoom), AI features, and cloud file storage",
+              "Production releases: OpenAPI docs, Zod validation, JWT auth, go-live checklists"
+            ]
+          },
+          {
+             title: "Stack",
+             icon: "school",
+             iconColor: "text-accent-blue",
+             items: [
+               "Next.js 15, React 19, Tailwind CSS v4, Zustand, TanStack Query",
+               "Express + TypeScript, MongoDB, Swagger/OpenAPI, Zod"
+             ]
+          }
+        ],
+        tags: ["Production", "Next.js", "TypeScript", "Client Work"]
       }
     ]
   },
   leadership: {
     title: "Leadership & Achievements",
     items: [
+      {
+        role: "Champion & Team Lead",
+        period: "2025",
+        context: "Software Engineering Lab Project Show • UIU CSE Project Show",
+        description: "Led a 5-member team building Advyon, a legal-tech platform with case management, document workflows, and AI-assisted insights, through the full SDLC.",
+        impactTitle: "Recognition",
+        impact: "Won Champion at the CSE Project Show — while coordinating requirements, module ownership, and delivery for five developers on a trimester deadline.",
+        tags: ["Team Leadership", "SDLC", "Full-Stack", "AI Integration"]
+      },
       {
         role: "Champion",
         period: "2024",
@@ -59,7 +98,7 @@ export const experienceData = {
         description: "Presented a Java-based hospital management system implementing various design patterns and OOP principles.",
         impactTitle: "Project Highlight",
         impact: "Demonstrated expertise in object-oriented design, design patterns, and software architecture.",
-        tags: ["Java", "OOP", "Design Patterns", "Software Architecture"]
+        tags: ["Java", "OOP", "Design Patterns"]
       },
       {
         role: "6th Runner-Up",
@@ -67,7 +106,7 @@ export const experienceData = {
         context: "System Analysis & Design Lab Showcase • UIU",
         description: "Designed and implemented full SDLC for an inventory management system.",
         impactTitle: "Achievement",
-        impact: "Successfully delivered complete system documentation and implementation following industry-standard SDLC practices.",
+        impact: "Delivered complete system documentation and implementation following industry-standard SDLC practices.",
         tags: ["SDLC", "System Design", "Documentation"]
       }
     ]
@@ -76,14 +115,14 @@ export const experienceData = {
     title: "Growth",
     subTitle: "Skill Development",
     skills: [
-      { name: "Full-Stack Development", percentage: 85, colorClass: "bg-accent-blue" },
+      { name: "Full-Stack Development", percentage: 90, colorClass: "bg-accent-blue" },
+      { name: "Applied Machine Learning", percentage: 75, colorClass: "bg-accent-purple" },
       { name: "Data Structures & Algorithms", percentage: 90, colorClass: "bg-accent-green" },
-      { name: "Database Management", percentage: 80, colorClass: "bg-accent-purple" },
-      { name: "Problem Solving", percentage: 95, colorClass: "bg-accent-yellow" }
+      { name: "Team Leadership", percentage: 80, colorClass: "bg-accent-yellow" }
     ]
   },
   volunteering: {
-    title: "Competitive Programming",
+    title: "Competitive Programming & Community",
     items: [
       {
         role: "Active Competitive Programmer",
@@ -96,14 +135,14 @@ export const experienceData = {
         role: "Peer Mentor",
         organization: "UIU CSE Community",
         period: "2023 - Present",
-        description: "Helping junior students with programming fundamentals, debugging techniques, and contest preparation strategies.",
+        description: "Helping junior students with programming fundamentals, debugging techniques, and contest preparation strategies — and sharing open study guides used by hundreds of classmates.",
         tags: ["Mentorship", "Teaching", "Community"]
       }
     ]
   },
   cta: {
     title: "Let's work together!",
-    description: "I'm currently looking for internship opportunities and project collaborations. Let's discuss how my skills can contribute to your team.",
+    description: "I'm open to software engineering roles, research collaborations, and freelance projects. Let's discuss how my skills can contribute to your team.",
     buttonText: "Contact Me"
   }
 };

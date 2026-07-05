@@ -6,85 +6,85 @@ export const skillsData = {
   },
   programmingLanguages: {
     title: "Programming Languages",
-    description: "Core languages that form the foundation of my development capabilities. Proficient in both compiled and interpreted languages.",
+    description: "Core languages that form the foundation of my development capabilities — from production TypeScript to research Python to contest C++.",
     languages: [
       {
         name: "JavaScript / TypeScript",
         years: "4 Years",
-        usage: "Frontend, Backend, Full-Stack Development",
+        usage: "Production Full-Stack Development",
         percentage: 90,
         colorClass: "bg-blue-500"
       },
       {
         name: "Python",
-        years: "1 Years",
-        usage: "Data Analysis, ML, Scripting, Backend",
+        years: "2 Years",
+        usage: "ML Research, Data Pipelines, Scripting",
         percentage: 85,
         colorClass: "bg-green-500"
       },
       {
-        name: "Java",
-        years: "2 Years",
-        usage: "OOP, Enterprise Applications, Android",
-        percentage: 75,
-        colorClass: "bg-orange-500"
-      },
-      {
         name: "C++",
-        years: "3 Years",
-        usage: "Competitive Programming, DSA",
+        years: "4 Years",
+        usage: "Competitive Programming, DSA, Firmware",
         percentage: 80,
         colorClass: "bg-purple-500"
+      },
+      {
+        name: "Java",
+        years: "2 Years",
+        usage: "OOP, Design Patterns, Desktop Apps",
+        percentage: 70,
+        colorClass: "bg-orange-500"
       }
     ],
     projects: [
       {
-        icon: "JS",
-        iconBg: "bg-yellow-100",
-        iconColor: "text-yellow-600",
-        title: "IELTS Learning Platform",
-        description: "Full-stack e-commerce app with React, Node.js, and Stripe integration."
-      },
-      {
         icon: "TS",
         iconBg: "bg-blue-100",
         iconColor: "text-blue-600",
-        title: "Real-Time Task Manager",
-        description: "Collaborative task app with Next.js, TypeScript and Firebase."
+        title: "Production E-Learning Platform",
+        description: "Three live apps: Next.js 15 portal, Express + TS API, React admin dashboard."
+      },
+      {
+        icon: "PY",
+        iconBg: "bg-green-100",
+        iconColor: "text-green-600",
+        title: "UNSW-NB15 IDS Research",
+        description: "Reproducible ML experiment grid behind my paper under peer review."
       }
     ]
   },
   aiMl: {
     title: "AI & Machine Learning",
-    description: "Exploring machine learning fundamentals and building practical applications.",
+    description: "Research-grade ML: controlled experiments, honest metrics, and reproducible pipelines — not just model.fit().",
     items: [
       {
-        name: "scikit-learn",
+        name: "PyTorch",
         icon: "model_training",
         iconColor: "text-orange-400",
         hoverBorder: "hover:border-orange-500/50",
-        description: "Regression, classification, and data preprocessing for ML models."
+        description: "Neural network training for my thesis: ANN architecture search over ODE systems."
       },
       {
-        name: "Pandas & NumPy",
-        icon: "dataset",
+        name: "scikit-learn & XGBoost",
+        icon: "psychology",
         iconColor: "text-green-400",
         hoverBorder: "hover:border-green-500/50",
-        description: "Data manipulation, feature engineering, and statistical analysis."
+        description: "Classical ML baselines, class-imbalance strategies (SMOTE, weighting), model comparison."
       },
       {
-        name: "Flask API",
-        icon: "api",
+        name: "Pandas & NumPy / SciPy",
+        icon: "dataset",
         iconColor: "text-cyan-400",
         hoverBorder: "hover:border-cyan-500/50",
-        description: "Deploying ML models as REST APIs for real-time predictions."
+        description: "Data pipelines, feature engineering, and numerical methods (RK4, ODE solvers)."
       },
       {
-        name: "Data Visualization",
-        icon: "analytics",
+        name: "Experiment Design",
+        icon: "science",
         iconColor: "text-purple-400",
         hoverBorder: "hover:border-purple-500/50",
-        description: "Matplotlib, Seaborn for exploratory data analysis and insights."
+        description: "Seeded, leakage-proof, config-driven experiment grids with publication-quality visualization."
       }
     ]
   },
@@ -92,21 +92,21 @@ export const skillsData = {
     title: "Currently Learning",
     items: [
       {
-        name: "Machine Learning",
-        topic: "Deep Learning Fundamentals",
-        percentage: 50,
+        name: "Deep Learning",
+        topic: "PINNs & Operator Learning",
+        percentage: 55,
         colorClass: "bg-purple-500"
       },
       {
         name: "System Design",
         topic: "Scalable Architecture",
-        percentage: 40,
+        percentage: 50,
         colorClass: "bg-blue-500"
       },
       {
-        name: "Docker",
-        topic: "Containerization",
-        percentage: 35,
+        name: "DevOps",
+        topic: "Docker & CI/CD Pipelines",
+        percentage: 45,
         colorClass: "bg-cyan-500"
       }
     ]
@@ -116,25 +116,25 @@ export const skillsData = {
     frontend: {
       title: "Frontend",
       items: [
-        { name: "React.js / Next.js", colorClass: "bg-blue-400" },
-        { name: "Tailwind CSS", colorClass: "bg-blue-400" },
-        { name: "ShadcnUI / Bootstrap", colorClass: "bg-blue-400" }
+        { name: "React 19 / Next.js 15", colorClass: "bg-blue-400" },
+        { name: "Tailwind CSS / Radix UI", colorClass: "bg-blue-400" },
+        { name: "Zustand / TanStack Query", colorClass: "bg-blue-400" }
       ]
     },
     backend: {
       title: "Backend",
       items: [
-        { name: "Node.js / Express.js", colorClass: "bg-green-400" },
-        { name: "MongoDB / Mongoose", colorClass: "bg-green-400" },
-        { name: "REST APIs / JWT Auth", colorClass: "bg-green-400" }
+        { name: "Node.js / Express / NestJS", colorClass: "bg-green-400" },
+        { name: "MongoDB / PostgreSQL / Supabase", colorClass: "bg-green-400" },
+        { name: "REST / OpenAPI / Zod / JWT", colorClass: "bg-green-400" }
       ]
     },
     mobile: {
-      title: "Additional",
+      title: "Mobile & Real-Time",
       items: [
-        "React Query",
-        "React Hook Form",
-        "Firebase"
+        "React Native / Expo",
+        "WebRTC / Socket.io",
+        "Redis"
       ]
     }
   },
@@ -146,7 +146,7 @@ export const skillsData = {
         { name: "Vercel", icon: "deployed_code" },
         { name: "Railway", icon: "train" },
         { name: "GitHub Actions", icon: "rocket_launch" },
-        { name: "Stripe Integration", icon: "payments" }
+        { name: "Docker", icon: "package_2" }
       ]
     },
     environment: {
@@ -154,8 +154,8 @@ export const skillsData = {
       items: [
         { name: "Git / GitHub", colorClass: "bg-yellow-400" },
         { name: "VS Code", colorClass: "bg-yellow-400" },
-        { name: "Postman", colorClass: "bg-yellow-400" },
-        { name: "npm / pnpm", colorClass: "bg-yellow-400" }
+        { name: "Postman / Swagger", colorClass: "bg-yellow-400" },
+        { name: "Linux / WSL", colorClass: "bg-yellow-400" }
       ]
     }
   },
@@ -166,7 +166,15 @@ export const skillsData = {
       codeColor: "text-blue-400",
       title: "100% Merit Scholarship",
       hoverColor: "group-hover:text-blue-400",
-      issuer: "United International University • 5 Terms (Top 3%)"
+      issuer: "United International University • 6 Terms (Top 3%)"
+    },
+    {
+      code: "ML",
+      codeBg: "bg-purple-500/20",
+      codeColor: "text-purple-400",
+      title: "Research Paper Under Review",
+      hoverColor: "group-hover:text-purple-400",
+      issuer: "Class-Imbalanced Intrusion Detection • 2026"
     },
     {
       code: "DSA",
@@ -175,19 +183,11 @@ export const skillsData = {
       title: "500+ Problems Solved",
       hoverColor: "group-hover:text-green-400",
       issuer: "Codeforces, LeetCode, HackerRank • Ongoing"
-    },
-    {
-      code: "DEV",
-      codeBg: "bg-orange-500/20",
-      codeColor: "text-orange-400",
-      title: "Full-Stack Web Development",
-      hoverColor: "group-hover:text-orange-400",
-      issuer: "Self-taught + Online Courses • 2022 - Present"
     }
   ],
   softSkills: {
     title: "Soft Skills",
-    skills: ['Teaching & Mentorship', 'Problem Solving', 'Team Collaboration', 'Technical Writing', 'Time Management', 'Quick Learning', 'Communication'],
+    skills: ['Team Leadership', 'Teaching & Mentorship', 'Problem Solving', 'Technical Writing', 'Research Communication', 'Time Management', 'Collaboration'],
     quote: "\"The best way to learn is to teach.\" – Combining technical expertise with the ability to explain complex concepts clearly."
   }
 };

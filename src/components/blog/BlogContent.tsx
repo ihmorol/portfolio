@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { BlogPost, SocialLinks } from '@/types';
 import { FeaturedPost } from './FeaturedPost';
 import { BlogFilter } from './BlogFilter';
@@ -88,12 +88,12 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
                  const showNewsletter = index === 1;
                  
                  return (
-                    <>
-                       <BlogCard key={post.slug} post={post} />
+                    <Fragment key={post.slug}>
+                       <BlogCard post={post} />
                        {showNewsletter && (
                            <NewsletterWidget />
                        )}
-                    </>
+                    </Fragment>
                  );
              })}
              

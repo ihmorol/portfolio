@@ -1,171 +1,210 @@
 'use client';
 
-import { Footer } from '@/components/layout/Footer';
-import { PageLeftSideBar } from '@/components/shared/page-left-sidebar';
-import { VerticalSocialLinks } from '@/components/shared/vertical-social-links';
-import { PageHeader } from '@/components/shared/PageHeader';
-import { layoutData } from '@/data/layout-data';
-import { projectsData } from '@/data/projects-data';
-import { 
-  ArrowUpRight, 
-  ArrowRight, 
-  Star, 
-  Medal,
-  Code, 
-  Globe
-} from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Code,
+  Globe,
+  Medal,
+  Star,
+} from 'lucide-react';
+import { Footer } from '@/components/layout/Footer';
+import { Reveal } from '@/components/motion/Reveal';
+import { HoverField } from '@/components/motion/HoverField';
+import { StaggerGroup } from '@/components/motion/StaggerGroup';
+import { PageHeader } from '@/components/shared/PageHeader';
+import { PageLeftSideBar } from '@/components/shared/page-left-sidebar';
+import { VerticalSocialLinks } from '@/components/shared/vertical-social-links';
+import { layoutData } from '@/data/layout-data';
+import { projectsData } from '@/data/projects-data';
 
 export default function ProjectsPage() {
-  const [activeCategory, setActiveCategory] = useState("All Projects");
+  const [activeCategory, setActiveCategory] = useState('All Projects');
   const { socialLinks } = layoutData.footer;
   const { header, categories, featuredProject, projects } = projectsData;
 
-  const filteredProjects = activeCategory === "All Projects" 
-    ? projects 
-    : projects.filter(p => p.category === activeCategory);
+  const filteredProjects =
+    activeCategory === 'All Projects'
+      ? projects
+      : projects.filter((project) => project.category === activeCategory);
 
   return (
-    <div className="bg-[#000000] min-h-screen flex flex-col font-[family-name:var(--font-jakarta)]">
-      <main className="flex-grow w-full max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 pt-20 md:pt-24 pb-8 md:pb-12 relative">
-        
-        {/* Fixed Side Elements - Hidden on smaller screens */}
+    <div className="bg-background min-h-screen flex flex-col font-body">
+      <main className="section-shell page-padding-y relative flex-grow">
         <PageLeftSideBar title="PROJECTS" />
         <VerticalSocialLinks items={socialLinks} />
 
-        {/* Header Section */}
-        <PageHeader
-          titlePrefix={header.title}
-          icon=""
-          titleSuffix={header.titleSuffix}
-          description="Curated collection of projects showcasing my work."
-          customIcon={
-            <Star className="text-amber-300 w-12 h-12 md:w-16 md:h-16 fill-amber-300" />
-          }
-        />
+        <Reveal>
+          <PageHeader
+            titlePrefix={header.title}
+            icon=""
+            titleSuffix={header.titleSuffix}
+            description="Curated collection of projects showcasing shipped outcomes."
+            customIcon={
+              <Star className="text-accent-yellow w-12 h-12 md:w-16 md:h-16 fill-current" />
+            }
+          />
+        </Reveal>
 
-        {/* Filter Section */}
-        <div className="w-full max-w-6xl mx-auto mb-12">
+        <Reveal delay={0.03}>
+          <div className="w-full max-w-6xl mx-auto mb-12">
             <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-                {categories.map((cat) => (
-                    <button 
-                        key={cat}
-                        onClick={() => setActiveCategory(cat)}
-                        className={`px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
-                            activeCategory === cat 
-                            ? 'bg-white text-black' 
-                            : 'bg-[#1a1b1e] border border-[#333333] text-gray-400 hover:text-white hover:border-white/40'
-                        }`}
-                    >
-                        {cat}
-                    </button>
-                ))}
-            </div>
-        </div>
-
-        {/* Featured Project */}
-        <div className="w-full max-w-6xl mx-auto mb-12 md:mb-16">
-            <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 border border-white/10 rounded-3xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-8 md:gap-12 relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
-                
-                <div className="w-full md:w-1/2 relative z-10">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-400/10 border border-amber-400/30 rounded-full text-amber-300 text-[10px] font-bold uppercase tracking-widest mb-4">
-                        <Medal className="w-4 h-4" />
-                        {featuredProject.badge}
-                    </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{featuredProject.title}</h2>
-                    <p className="text-gray-300 text-sm md:text-base mb-6 leading-relaxed font-[family-name:var(--font-spline)] max-w-md">
-                        {featuredProject.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-8">
-                        {featuredProject.techStack.map((tech: string) => (
-                            <span key={tech} className="px-3 py-1 bg-white/10 rounded-md text-[10px] text-gray-300 font-medium">{tech}</span>
-                        ))}
-                    </div>
-                    <div className="flex gap-4">
-                        <Link href={featuredProject.ctaLink} className="bg-white hover:bg-gray-200 text-black text-xs font-bold py-3 px-6 rounded-full transition-all uppercase tracking-wide inline-block">
-                            {featuredProject.ctaText}
-                        </Link>
-                        <Link href={featuredProject.ctaLink} className="flex items-center justify-center w-10 h-10 rounded-full border border-white/20 text-white hover:bg-white hover:text-black transition-all">
-                            <ArrowUpRight className="w-5 h-5" />
-                        </Link>
-                    </div>  
-                </div>
-
-                <div className="w-full md:w-1/2 relative z-10">
-                    <div className="bg-[#1a1b1e] rounded-xl overflow-hidden shadow-2xl border border-white/5 transform group-hover:scale-[1.02] transition-transform duration-500">
-                        <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 w-full relative p-4 flex items-center justify-center">
-                            <div className="w-full h-full bg-[#2c2d31] rounded-lg border border-white/10 flex flex-col p-4 gap-3">
-                                <div className="flex gap-2">
-                                    <div className="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
-                                    <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                                </div>
-                                <div className="flex gap-4 h-full">
-                                    <div className="w-1/4 h-full bg-white/5 rounded-md"></div>
-                                    <div className="w-3/4 h-full flex flex-col gap-3">
-                                        <div className="w-full h-1/2 bg-white/5 rounded-md"></div>
-                                        <div className="flex gap-3 h-1/2">
-                                            <div className="w-1/2 h-full bg-white/5 rounded-md"></div>
-                                            <div className="w-1/2 h-full bg-white/5 rounded-md"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {/* Projects Grid */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">
-            {filteredProjects.map((project, index) => {
-                const Icon = project.icon;
+              {categories.map((category) => {
+                const isActive = activeCategory === category;
                 return (
-                    <Link href={`/projects/${project.slug}`} key={index} className="group bg-[#1a1b1e] rounded-3xl border border-[#333333] overflow-hidden hover:border-white/20 transition-all duration-300 flex flex-col h-full block">
-                        <div className="h-64 overflow-hidden relative">
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#1a1b1e] to-transparent z-10 opacity-60"></div>
-                            <div className={`w-full h-full bg-gradient-to-br ${project.color} transition-transform duration-700 ease-out flex items-center justify-center transform group-hover:scale-105`}>
-                                <Icon className="text-white/20 w-16 h-16" />
-                            </div>
-                            <div className="absolute top-4 left-4 z-20">
-                                <span className="px-3 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded-full text-[10px] font-bold uppercase tracking-wider text-white">
-                                    {project.category}
-                                </span>
-                            </div>
-                        </div>
-                        
-                        <div className="p-6 flex flex-col flex-grow relative z-20 -mt-12">
-                            <div className="flex justify-between items-start mb-2">
-                                <h3 className={`text-xl font-bold text-white ${project.hoverColor} transition-colors`}>{project.title}</h3>
-                                <span className="text-[10px] text-gray-500 font-mono mt-1">{project.date}</span>
-                            </div>
-                            <p className="text-gray-400 text-xs mb-4 line-clamp-2 leading-relaxed font-[family-name:var(--font-spline)]">
-                                {project.description}
-                            </p>
-                            
-                            <div className="flex flex-wrap gap-2 mb-6 mt-auto">
-                                {project.tags.map(tag => (
-                                    <span key={tag} className="text-[10px] text-gray-500">{tag}</span>
-                                ))}
-                            </div>
-                            
-                            <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                                <div className="flex gap-3 text-gray-400">
-                                    <Code className="w-5 h-5" />
-                                    <Globe className="w-5 h-5" />
-                                </div>
-                                <span className="text-[10px] font-bold uppercase tracking-wider text-white transition-colors flex items-center gap-1">
-                                    Read More <ArrowRight className="w-4 h-4 ml-1" />
-                                </span>
-                            </div>
-                        </div>
-                    </Link>
+                  <button
+                    key={category}
+                    onClick={() => setActiveCategory(category)}
+                    className={[
+                      'focus-ring h-10 px-5 rounded-full type-micro transition-colors border',
+                      isActive
+                        ? 'bg-white text-black border-white'
+                        : 'bg-background-secondary text-text-secondary border-border hover:text-text-primary hover:border-white/40',
+                    ].join(' ')}
+                  >
+                    {category}
+                  </button>
                 );
-            })}
-        </div>
+              })}
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.06}>
+          <section className="w-full max-w-6xl mx-auto mb-12 md:mb-16 surface-card-strong p-6 md:p-10 relative overflow-hidden">
+            <div className="absolute inset-0 bg-[url('/images/brand/mesh-hero-01.svg')] bg-cover bg-center opacity-35" />
+            <div className="absolute -top-28 -right-24 h-72 w-72 rounded-full bg-accent-blue/20 blur-[88px]" />
+
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+              <div className="w-full md:w-1/2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent-yellow/10 border border-accent-yellow/30 rounded-full type-micro text-accent-yellow mb-4">
+                  <Medal className="w-4 h-4" />
+                  {featuredProject.badge}
+                </div>
+                <h2 className="type-h1 text-text-primary mb-4">{featuredProject.title}</h2>
+                <p className="type-body text-text-secondary mb-6 max-w-md">
+                  {featuredProject.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {featuredProject.techStack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 rounded-md bg-background-tertiary border border-border type-caption text-text-secondary"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-3">
+                  <Link
+                    href={featuredProject.ctaLink}
+                    className="focus-ring h-11 px-6 rounded-full bg-white text-black hover:bg-gray-200 type-micro inline-flex items-center"
+                  >
+                    {featuredProject.ctaText}
+                  </Link>
+                  <Link
+                    href={featuredProject.ctaLink}
+                    className="focus-ring h-11 w-11 rounded-full border border-white/25 text-text-primary hover:bg-white hover:text-black transition-colors inline-flex items-center justify-center"
+                    aria-label="Open featured project"
+                  >
+                    <ArrowUpRight className="w-5 h-5" />
+                  </Link>
+                </div>
+              </div>
+
+              <div className="w-full md:w-1/2">
+                <div className="bg-background-secondary rounded-xl overflow-hidden border border-border shadow-card-hover">
+                  <div className="aspect-video w-full p-4 flex items-center justify-center">
+                    <div className="w-full h-full bg-background-tertiary rounded-lg border border-border p-4 gap-3 flex flex-col">
+                      <div className="flex gap-2">
+                        <div className="w-2 h-2 rounded-full bg-red-500" />
+                        <div className="w-2 h-2 rounded-full bg-yellow-500" />
+                        <div className="w-2 h-2 rounded-full bg-green-500" />
+                      </div>
+                      <div className="flex gap-4 h-full">
+                        <div className="w-1/4 h-full bg-white/5 rounded-md" />
+                        <div className="w-3/4 h-full flex flex-col gap-3">
+                          <div className="w-full h-1/2 bg-white/5 rounded-md" />
+                          <div className="flex gap-3 h-1/2">
+                            <div className="w-1/2 h-full bg-white/5 rounded-md" />
+                            <div className="w-1/2 h-full bg-white/5 rounded-md" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </Reveal>
+
+        <StaggerGroup className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">
+          {filteredProjects.map((project, index) => {
+            const Icon = project.icon;
+
+            return (
+              <Reveal key={project.slug} delay={0.03 + index * 0.02} once>
+                <HoverField>
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    className="group surface-card p-1 flex flex-col h-full block hover:border-white/20 transition-colors"
+                  >
+                    <div className="h-64 overflow-hidden relative rounded-[calc(var(--radius-xl)-4px)]">
+                      <div className="absolute inset-0 bg-gradient-to-t from-background-secondary to-transparent z-10 opacity-60" />
+                      <div
+                        className={`w-full h-full bg-gradient-to-br ${project.color} transition-transform duration-700 ease-out flex items-center justify-center transform group-hover:scale-105`}
+                      >
+                        <Icon className="text-white/20 w-16 h-16" />
+                      </div>
+                      <div className="absolute top-4 left-4 z-20">
+                        <span className="px-3 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded-full type-micro text-white">
+                          {project.category}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-6 flex flex-col flex-grow relative z-20 -mt-12">
+                      <div className="flex justify-between items-start mb-2 gap-3">
+                        <h3
+                          className={`type-h3 text-text-primary ${project.hoverColor} transition-colors`}
+                        >
+                          {project.title}
+                        </h3>
+                        <span className="type-caption text-text-muted mt-1 whitespace-nowrap">
+                          {project.date}
+                        </span>
+                      </div>
+                      <p className="type-caption text-text-secondary mb-4 line-clamp-2 leading-relaxed">
+                        {project.description}
+                      </p>
+
+                      <div className="flex flex-wrap gap-2 mb-6 mt-auto">
+                        {project.tags.map((tag) => (
+                          <span key={tag} className="type-caption text-text-muted">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex items-center justify-between pt-4 border-t border-border">
+                        <div className="flex gap-3 text-text-secondary">
+                          <Code className="w-5 h-5" />
+                          <Globe className="w-5 h-5" />
+                        </div>
+                        <span className="type-micro text-text-primary flex items-center gap-1">
+                          Read More <ArrowRight className="w-4 h-4" />
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </HoverField>
+              </Reveal>
+            );
+          })}
+        </StaggerGroup>
       </main>
       <Footer />
     </div>

@@ -10,46 +10,75 @@ module.exports = {
     extend: {
       colors: {
         background: {
-          DEFAULT: '#0A0A0F',
-          secondary: '#1A1A24',
-          tertiary: '#252530',
-        },
-        accent: {
-          coral: '#FF6B7A',
-          blue: '#4A9FFF',
-          teal: '#5DDEF4',
-          green: '#4ADE80',
-          purple: '#E94B8C',
-          yellow: '#F5C842',
+          DEFAULT: 'hsl(var(--background))',
+          secondary: 'hsl(var(--bg-elev-1))',
+          tertiary: 'hsl(var(--bg-elev-2))',
         },
         surface: {
-            DEFAULT: '#1a1b1e',
-            light: '#2c2d31', // Approximated from design context
+          DEFAULT: 'hsl(var(--bg-elev-1))',
+          light: 'hsl(var(--bg-elev-2))',
         },
-        "background-dark": "#050505",
-        "card-dark": "#18181b",
-        "card-lighter": "#242429",
-        "accent-peach": "#fdba74",
-        "accent-red": "#ef4444",
-        
+        accent: {
+          coral: 'hsl(var(--accent-warm))',
+          blue: 'hsl(var(--accent-primary))',
+          teal: 'hsl(var(--accent-cyan))',
+          green: '#4ade80',
+          purple: '#e879f9',
+          yellow: 'hsl(var(--accent-warm))',
+        },
         text: {
-          primary: '#FFFFFF',
-          secondary: '#B4B4C0',
-          muted: '#6B6B78',
+          primary: 'hsl(var(--text-primary))',
+          secondary: 'hsl(var(--text-secondary))',
+          muted: 'hsl(var(--text-muted))',
         },
+        border: 'hsl(var(--border-soft))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        foreground: 'hsl(var(--foreground))',
+        'background-dark': 'hsl(var(--bg-base))',
+        'card-dark': 'hsl(var(--bg-elev-1))',
+        'card-lighter': 'hsl(var(--bg-elev-2))',
+        'accent-peach': 'hsl(var(--accent-warm))',
+        'accent-red': '#ef4444',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['Fira Code', 'monospace'],
-        display: ['Spline Sans', 'sans-serif'],
+        sans: ['var(--font-jakarta)', 'sans-serif'],
+        body: ['var(--font-jakarta)', 'sans-serif'],
+        display: ['var(--font-spline)', 'sans-serif'],
         jakarta: ['var(--font-jakarta)', 'sans-serif'],
+        mono: ['Fira Code', 'monospace'],
       },
       borderRadius: {
-        'card': '28px',
+        card: 'var(--radius-xl)',
       },
       boxShadow: {
-        'card': '0px 8px 32px rgba(0, 0, 0, 0.4)',
-        'card-hover': '0px 16px 48px rgba(0, 0, 0, 0.6)',
+        card: 'var(--shadow-soft)',
+        'card-hover': 'var(--shadow-elevated)',
+        accent: 'var(--glow-accent)',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -81,8 +110,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/forms'),
-  ],
-}
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
+};

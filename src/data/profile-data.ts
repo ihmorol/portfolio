@@ -7,9 +7,9 @@ export const profileData = {
   email: 'ihmorol@gmail.com',
   location: 'Dhaka, Bangladesh',
   roles: {
-    primary: 'CSE Student',
+    primary: 'Final-Year CSE Student',
     secondary: 'Full-Stack Developer',
-    tertiary: 'Teaching Assistant',
+    tertiary: 'ML Researcher',
   },
   social: {
     github: `https://github.com/${username}`,
@@ -20,4 +20,3 @@ export const profileData = {
     email: `mailto:ihmorol@gmail.com`,
   },
 } as const;
-

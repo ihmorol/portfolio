@@ -1,0 +1,50 @@
+export const designTokens = {
+  colors: {
+    bgBase: 'hsl(var(--bg-base))',
+    bgElev1: 'hsl(var(--bg-elev-1))',
+    bgElev2: 'hsl(var(--bg-elev-2))',
+    textPrimary: 'hsl(var(--text-primary))',
+    textSecondary: 'hsl(var(--text-secondary))',
+    textMuted: 'hsl(var(--text-muted))',
+    accentPrimary: 'hsl(var(--accent-primary))',
+    accentCyan: 'hsl(var(--accent-cyan))',
+    accentWarm: 'hsl(var(--accent-warm))',
+    borderSoft: 'hsl(var(--border-soft))',
+    borderStrong: 'hsl(var(--border-strong))',
+  },
+  spacing: {
+    2: 'var(--space-2)',
+    4: 'var(--space-4)',
+    6: 'var(--space-6)',
+    8: 'var(--space-8)',
+    10: 'var(--space-10)',
+    12: 'var(--space-12)',
+    16: 'var(--space-16)',
+    20: 'var(--space-20)',
+    24: 'var(--space-24)',
+  },
+  radius: {
+    sm: 'var(--radius-sm)',
+    md: 'var(--radius-md)',
+    lg: 'var(--radius-lg)',
+    xl: 'var(--radius-xl)',
+  },
+  depth: {
+    soft: 'var(--shadow-soft)',
+    elevated: 'var(--shadow-elevated)',
+    glow: 'var(--glow-accent)',
+  },
+  typography: {
+    display1: 'var(--type-display-1)',
+    display2: 'var(--type-display-2)',
+    h1: 'var(--type-h1)',
+    h2: 'var(--type-h2)',
+    h3: 'var(--type-h3)',
+    bodyLg: 'var(--type-body-lg)',
+    body: 'var(--type-body)',
+    caption: 'var(--type-caption)',
+    micro: 'var(--type-micro)',
+  },
+} as const;
+
+export type DesignTokenPalette = keyof typeof designTokens.colors;

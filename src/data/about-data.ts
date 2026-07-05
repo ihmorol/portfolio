@@ -2,24 +2,24 @@ export const aboutData = {
   hero: {
     titlePrefix: "About",
     titleHighlight: "Ikramul",
-    description: "Passionate Computer Science student bridging theoretical knowledge with practical software solutions. Based in Dhaka, aspiring globally."
+    description: "Final-year Computer Science student shipping production software and doing applied ML research. Based in Dhaka, aspiring globally."
   },
   intro: {
     badge: "Introduction",
     name: "Ikramul Hasan Moral",
-    title: "CSE Student & Full-Stack Developer",
+    title: "Full-Stack Developer & ML Researcher",
     description: [
-      "My journey into the world of programming began with curiosity about how software systems work. What started as solving simple algorithmic problems has evolved into a profound passion for building scalable web applications and exploring machine learning. I believe in writing clean, maintainable code that solves real-world problems.",
-      "Currently pursuing my B.Sc. in Computer Science and Engineering at United International University with a 3.9+ CGPA, I've been consistently recognized as a top performer, earning 100% merit scholarship for five consecutive terms. My approach combines strong theoretical foundations with hands-on project experience.",
-      "As an Undergraduate Teaching Assistant, I help 100+ students master Data Structures & Algorithms and Database Management. Beyond academics, I'm an active competitive programmer with 500+ problems solved across Codeforces, LeetCode, and HackerRank, and I love participating in hackathons and programming contests."
+      "I started programming in 2022 with simple MERN apps and competitive programming problems. Four years later, I ship production platforms — a live three-app e-learning system serving real students, and Advyon, a legal-tech platform I led a 5-member team to build, winning Champion at the UIU CSE Project Show.",
+      "I'm finishing my B.Sc. in Computer Science and Engineering at United International University with a 3.94 CGPA, holding a 100% merit scholarship for six terms (awarded to the top 3% each trimester). Alongside engineering, I've moved into research: my first paper — on handling class imbalance in network intrusion detection — is under peer review, and my thesis applies neural network architecture search to differential equation systems.",
+      "As an Undergraduate Teaching Assistant, I help 100+ students master Data Structures & Algorithms and Database Management. I'm also an active competitive programmer with 500+ problems solved across Codeforces, LeetCode, and HackerRank."
     ],
     highlights: {
         title: "Key Highlights",
         items: [
-            "3.9+ CGPA at UIU",
-            "100% Merit Scholarship",
-            "500+ Problems Solved",
-            "Teaching Assistant"
+            "3.94 CGPA at UIU",
+            "6× 100% Merit Scholarship",
+            "Research Paper Under Review",
+            "2× Project Show Champion"
         ]
     },
     location: "Dhaka, Bangladesh",
@@ -35,15 +35,15 @@ export const aboutData = {
       colorClass: "bg-[#4D96FF]"
     },
     {
-      title: "Continuous Learning",
-      description: "Always exploring new technologies, frameworks, and best practices to stay current and grow as a developer.",
-      icon: "school",
+      title: "Research Rigor",
+      description: "Reproducible experiments, honest metrics, and verified baselines — the same discipline in research and in code.",
+      icon: "science",
       colorClass: "bg-[#6BCB77]"
     },
     {
-      title: "Clean Code",
-      description: "Writing maintainable, well-documented code following industry standards and design patterns.",
-      icon: "code",
+      title: "Ship Real Things",
+      description: "From firmware to frontend — building products that real users depend on, not just demos.",
+      icon: "rocket_launch",
       colorClass: "bg-[#FF6B6B]"
     }
   ],
@@ -54,7 +54,7 @@ export const aboutData = {
       { name: "Competitive Programming", icon: "emoji_events", colorClass: "text-[#FFD93D]" },
       { name: "Open Source", icon: "code", colorClass: "text-[#6BCB77]" },
       { name: "Tech Writing", icon: "edit_note", colorClass: "text-[#4D96FF]" },
-      { name: "Learning New Tech", icon: "rocket_launch", colorClass: "text-[#FF6B6B]" }
+      { name: "ML & Systems Research", icon: "science", colorClass: "text-[#FF6B6B]" }
     ]
   },
   philosophy: {
@@ -68,10 +68,10 @@ export const aboutData = {
     icon: "history_edu",
     items: [
         {
-            period: 'Aug 2025 - Present',
-            role: 'Undergraduate Teaching Assistant',
-            company: 'United International University',
-            description: 'Assisting 100+ students in DSA and DBMS courses, designing assignments, and conducting tutorial sessions.',
+            period: '2026',
+            role: 'First Research Paper Submitted',
+            company: 'UNSW-NB15 Intrusion Detection Study',
+            description: 'Submitted an ML paper on class-imbalanced intrusion detection for peer review; defended FYDP-I on neural ODE surrogates (Team Paradox, supervised by Dr. Muhammad Nomani Kabir).',
             color: 'bg-[#6BCB77]',
             textColor: 'text-[#6BCB77]',
             hoverColor: 'group-hover:text-[#6BCB77]',
@@ -79,10 +79,10 @@ export const aboutData = {
             active: true
         },
         {
-            period: '2024',
-            role: 'Champion - CSE Week Programming Contest',
-            company: 'UIU',
-            description: 'Competed against 80+ participants in algorithmic problem-solving and secured 1st place.',
+            period: 'Aug 2025 - Present',
+            role: 'Undergraduate Teaching Assistant',
+            company: 'United International University',
+            description: 'Assisting 100+ students in DSA and DBMS courses, designing assignments, and conducting tutorial sessions.',
             color: 'bg-[#FFD93D]',
             textColor: '',
             hoverColor: 'group-hover:text-[#FFD93D]',
@@ -90,10 +90,10 @@ export const aboutData = {
             active: false
         },
         {
-            period: '2023',
-            role: '1st Runner-Up - OOP Project Showcase',
-            company: 'UIU',
-            description: 'Presented Java-based hospital management system with design patterns.',
+            period: '2024 - 2025',
+            role: '2× Champion at UIU',
+            company: 'CSE Week Contest & SE Lab Project Show',
+            description: 'Won the CSE Week Programming Contest (80+ participants), then led a 5-member team to Champion at the Software Engineering Lab Project Show with Advyon.',
             color: 'bg-[#4D96FF]',
             textColor: '',
             hoverColor: 'group-hover:text-[#4D96FF]',
@@ -104,7 +104,7 @@ export const aboutData = {
             period: '2022 - Present',
             role: 'B.Sc. in CSE',
             company: 'United International University',
-            description: 'Expected graduation December 2026. CGPA: 3.9+/4.0 with 100% Merit Scholarship.',
+            description: 'Expected graduation December 2026. CGPA 3.94/4.0 with 100% Merit Scholarship for 6 terms.',
             color: 'bg-[#FF6B6B]',
             textColor: '',
             hoverColor: 'group-hover:text-[#FF6B6B]',
@@ -117,12 +117,12 @@ export const aboutData = {
   techStack: {
       title: "Tech Proficiency",
       items: [
-        'React.js',
-        'Next.js',
-        'Node.js',
-        'MongoDB',
+        'React / Next.js',
+        'Node.js / NestJS',
         'TypeScript',
-        'Python',
+        'MongoDB / PostgreSQL',
+        'Python / PyTorch',
+        'Docker / CI/CD',
       ]
   },
   connect: {

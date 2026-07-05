@@ -9,40 +9,60 @@ import { Footer } from '@/components/layout/Footer';
 import { PageLeftSideBar } from '@/components/shared/page-left-sidebar';
 import { VerticalSocialLinks } from '@/components/shared/vertical-social-links';
 import { PageHeader } from '@/components/shared/PageHeader';
+import { Reveal } from '@/components/motion/Reveal';
+import { StaggerGroup } from '@/components/motion/StaggerGroup';
 import { socialLinks } from '@/data/social-links';
 import { User } from 'lucide-react';
 
 export default function AboutPage() {
   return (
     <>
-      <main className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 pb-8 md:pb-12 relative z-10 pt-20 md:pt-24">
+      <main className="section-shell page-padding-y relative z-10">
         <PageLeftSideBar title="ABOUT" />
         <VerticalSocialLinks items={socialLinks} />
-        <PageHeader
-          titlePrefix="About"
-          icon="person"
-          titleSuffix="The Creator"
-          customIcon={
-            <User className="text-amber-400 w-12 h-12 md:w-16 md:h-16 stroke-[2.5]" />
-          }
-          suffixItalic={true}
-          description="Developer crafting digital experiences with passion and precision."
-        />
+        <Reveal>
+          <PageHeader
+            titlePrefix="About"
+            icon="person"
+            titleSuffix="The Creator"
+            customIcon={
+              <User className="text-accent-yellow w-12 h-12 md:w-16 md:h-16 stroke-[2.5]" />
+            }
+            suffixItalic={true}
+            description="Developer crafting digital experiences with precision and intent."
+          />
+        </Reveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6">
-          <div className="lg:col-span-8 flex flex-col gap-6">
-            <IntroCard />
-            <ValuesGrid />
-            <InterestsGrid />
+        <StaggerGroup>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6">
+            <div className="lg:col-span-8 flex flex-col gap-6">
+              <Reveal delay={0.02}>
+                <IntroCard />
+              </Reveal>
+              <Reveal delay={0.05}>
+                <ValuesGrid />
+              </Reveal>
+              <Reveal delay={0.08}>
+                <InterestsGrid />
+              </Reveal>
+            </div>
+            <div className="lg:col-span-4 flex flex-col gap-6">
+              <Reveal delay={0.11}>
+                <PhilosophyCard />
+              </Reveal>
+              <Reveal delay={0.14}>
+                <JourneyWidget />
+              </Reveal>
+              <Reveal delay={0.17}>
+                <TechStack />
+              </Reveal>
+            </div>
           </div>
-          <div className="lg:col-span-4 flex flex-col gap-6">
-            <PhilosophyCard />
-            <JourneyWidget />
-            <TechStack />
-          </div>
-        </div>
+        </StaggerGroup>
 
-        <ConnectSection />
+        <Reveal delay={0.2}>
+          <ConnectSection />
+        </Reveal>
       </main>
       <Footer />
     </>
