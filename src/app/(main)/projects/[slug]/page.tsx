@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Globe } from 'lucide-react';
 import { Footer } from '@/components/layout/Footer';
 import { Reveal } from '@/components/motion/Reveal';
 import { PageLeftSideBar } from '@/components/shared/page-left-sidebar';
@@ -79,6 +79,31 @@ export default function ProjectDetailPage({
                   </span>
                 ))}
               </div>
+
+              {(project.github || project.live) ? (
+                <div className="flex flex-wrap gap-3 mt-6">
+                  {project.github ? (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="focus-ring h-10 px-5 rounded-full border border-white/25 text-text-primary hover:bg-white hover:text-black transition-colors type-micro inline-flex items-center gap-2"
+                    >
+                      <Github size={16} /> View Source
+                    </a>
+                  ) : null}
+                  {project.live ? (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="focus-ring h-10 px-5 rounded-full bg-white text-black hover:bg-gray-200 transition-colors type-micro inline-flex items-center gap-2"
+                    >
+                      <Globe size={16} /> Live Site
+                    </a>
+                  ) : null}
+                </div>
+              ) : null}
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-8 pt-6 border-t border-border">
                 <div>
@@ -212,7 +237,17 @@ export default function ProjectDetailPage({
                   Reach out for source code walkthroughs or collaboration.
                 </p>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
+                {project.github ? (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="focus-ring h-11 px-5 rounded-full border border-white/20 hover:border-white/40 transition-colors type-micro inline-flex items-center gap-2"
+                  >
+                    <Github size={14} /> GitHub
+                  </a>
+                ) : null}
                 <Link
                   href="/projects"
                   className="focus-ring h-11 px-5 rounded-full border border-white/20 hover:border-white/40 transition-colors type-micro inline-flex items-center"

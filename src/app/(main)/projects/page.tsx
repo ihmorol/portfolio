@@ -5,7 +5,7 @@ import { useState } from 'react';
 import {
   ArrowRight,
   ArrowUpRight,
-  Code,
+  Github,
   Globe,
   Medal,
   Star,
@@ -97,20 +97,34 @@ export default function ProjectsPage() {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-3">
+                <div className="flex flex-wrap gap-3">
                   <Link
                     href={featuredProject.ctaLink}
                     className="focus-ring h-11 px-6 rounded-full bg-white text-black hover:bg-gray-200 type-micro inline-flex items-center"
                   >
                     {featuredProject.ctaText}
                   </Link>
-                  <Link
-                    href={featuredProject.ctaLink}
-                    className="focus-ring h-11 w-11 rounded-full border border-white/25 text-text-primary hover:bg-white hover:text-black transition-colors inline-flex items-center justify-center"
-                    aria-label="Open featured project"
-                  >
-                    <ArrowUpRight className="w-5 h-5" />
-                  </Link>
+                  {featuredProject.live ? (
+                    <a
+                      href={featuredProject.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="focus-ring h-11 px-5 rounded-full border border-white/25 text-text-primary hover:bg-white hover:text-black transition-colors type-micro inline-flex items-center gap-2"
+                    >
+                      Live <ArrowUpRight className="w-4 h-4" />
+                    </a>
+                  ) : null}
+                  {featuredProject.github ? (
+                    <a
+                      href={featuredProject.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="focus-ring h-11 w-11 rounded-full border border-white/25 text-text-primary hover:bg-white hover:text-black transition-colors inline-flex items-center justify-center"
+                      aria-label="View source on GitHub"
+                    >
+                      <Github className="w-5 h-5" />
+                    </a>
+                  ) : null}
                 </div>
               </div>
 
@@ -148,11 +162,11 @@ export default function ProjectsPage() {
             return (
               <Reveal key={project.slug} delay={0.03 + index * 0.02} once>
                 <HoverField>
-                  <Link
-                    href={`/projects/${project.slug}`}
-                    className="group surface-card p-1 flex flex-col h-full block hover:border-white/20 transition-colors"
-                  >
-                    <div className="h-64 overflow-hidden relative rounded-[calc(var(--radius-xl)-4px)]">
+                  <div className="group surface-card p-1 flex flex-col h-full hover:border-white/20 transition-colors">
+                    <Link
+                      href={`/projects/${project.slug}`}
+                      className="block h-64 overflow-hidden relative rounded-[calc(var(--radius-xl)-4px)]"
+                    >
                       <div className="absolute inset-0 bg-gradient-to-t from-background-secondary to-transparent z-10 opacity-60" />
                       <div
                         className={`w-full h-full bg-gradient-to-br ${project.color} transition-transform duration-700 ease-out flex items-center justify-center transform group-hover:scale-105`}
@@ -164,15 +178,17 @@ export default function ProjectsPage() {
                           {project.category}
                         </span>
                       </div>
-                    </div>
+                    </Link>
 
                     <div className="p-6 flex flex-col flex-grow relative z-20 -mt-12">
                       <div className="flex justify-between items-start mb-2 gap-3">
-                        <h3
-                          className={`type-h3 text-text-primary ${project.hoverColor} transition-colors`}
-                        >
-                          {project.title}
-                        </h3>
+                        <Link href={`/projects/${project.slug}`}>
+                          <h3
+                            className={`type-h3 text-text-primary ${project.hoverColor} transition-colors`}
+                          >
+                            {project.title}
+                          </h3>
+                        </Link>
                         <span className="type-caption text-text-muted mt-1 whitespace-nowrap">
                           {project.date}
                         </span>
@@ -191,15 +207,38 @@ export default function ProjectsPage() {
 
                       <div className="flex items-center justify-between pt-4 border-t border-border">
                         <div className="flex gap-3 text-text-secondary">
-                          <Code className="w-5 h-5" />
-                          <Globe className="w-5 h-5" />
+                          {project.github ? (
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={`${project.title} on GitHub`}
+                              className="hover:text-text-primary transition-colors"
+                            >
+                              <Github className="w-5 h-5" />
+                            </a>
+                          ) : null}
+                          {project.live ? (
+                            <a
+                              href={project.live}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={`${project.title} live site`}
+                              className="hover:text-text-primary transition-colors"
+                            >
+                              <Globe className="w-5 h-5" />
+                            </a>
+                          ) : null}
                         </div>
-                        <span className="type-micro text-text-primary flex items-center gap-1">
+                        <Link
+                          href={`/projects/${project.slug}`}
+                          className="type-micro text-text-primary flex items-center gap-1"
+                        >
                           Read More <ArrowRight className="w-4 h-4" />
-                        </span>
+                        </Link>
                       </div>
                     </div>
-                  </Link>
+                  </div>
                 </HoverField>
               </Reveal>
             );
