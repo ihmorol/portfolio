@@ -2,8 +2,8 @@ export const homeData = {
   hero: {
     titlePrefix: "Let's",
     titleHighlight: "Connect",
-    subtitle: "CSE Student at UIU | Full-Stack Developer | Teaching Assistant",
-    description: "I'm a passionate Computer Science student with a 3.9+ CGPA, building production-ready web applications and exploring the intersection of software engineering and machine learning. Currently working as a Teaching Assistant, helping students master Data Structures & Algorithms.",
+    subtitle: "Final-Year CSE Student at UIU | Full-Stack Developer | ML Researcher",
+    description: "I build production software and do applied machine learning research. Currently finishing my B.Sc. at United International University (3.94 CGPA, 6-term full merit scholarship), where I also work as a Teaching Assistant. My first research paper — on class-imbalanced intrusion detection — is under review, and my thesis applies neural networks to differential equation systems.",
     buttons: [
       { text: "View Projects", variant: "primary", action: "view_projects" },
       { text: "Download Resume", variant: "secondary", action: "download_resume" },
@@ -11,10 +11,10 @@ export const homeData = {
     ]
   },
   stats: [
-    { value: '3.9+', label: 'CGPA (4.0 Scale)' },
-    { value: '10+', label: 'Projects Completed' },
+    { value: '3.94', label: 'CGPA (4.0 Scale)' },
+    { value: '6×', label: '100% Merit Scholarship' },
     { value: '500+', label: 'Problems Solved' },
-    { value: '100%', label: 'Merit Scholarship' },
+    { value: '1', label: 'Paper Under Review' },
   ],
   featuredProjects: {
     title: "Featured Projects Showcase",
@@ -23,78 +23,78 @@ export const homeData = {
     projects: [
       {
         id: '1',
-        slug: 'ielts-platform',
-        title: 'IELTS Learning Platform',
+        slug: 'advyon',
+        title: 'Advyon — Legal-Tech Platform',
         category: 'Full Stack',
-        description: 'A production-ready e-commerce platform with user authentication, product catalog, shopping cart, and Stripe payment integration serving 200+ test users.',
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDe7PX0uQoYvTjv754fluses4lA7hbTSkZtjC-byVFx5eW2j97ihaIPTJp_PaRKtHIhoJGFWv8Hr2akKWBFCQG-1MU47ZAh1ye_vmexNigMtVSG8_AjhUa5xnbZ_FaTCNeY68H7rr-zPjRA1Xq0SngRdJY-CETGlLMcA_6JvcYEhCeWaplK3Z4VJNuKpYgPEOd1P4foyaMeax60t0z24-GcZ56mbWJZzGTDz42jfdYi16Ffhlhyd3oZzbDLkPBH-SLspJBJ4XDG-xk',
-        tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+        description: 'Case management, document workflows, community discussions, and AI-assisted legal insights. Led a 5-member team through the full SDLC — Champion at the UIU CSE Project Show (Software Engineering Lab).',
+        image: '/images/brand/mesh-hero-01.svg',
+        tech: ['React', 'Express', 'TypeScript', 'MongoDB'],
         color: 'group-hover:text-blue-400',
         hoverColor: 'hover:text-blue-400',
         icons: [
-            { name: "code", title: "React" },
-            { name: "dns", title: "Node.js" },
+            { name: "gavel", title: "Legal-Tech" },
+            { name: "dns", title: "Express" },
             { name: "database", title: "MongoDB" }
         ]
       },
       {
         id: '2',
-        slug: 'task-manager',
-        title: 'Real-Time Task Manager',
+        slug: 'elearning-platform',
+        title: 'Production E-Learning Platform',
         category: 'Full Stack',
-        description: 'A real-time collaborative task management app using Firebase with instant synchronization across 50+ concurrent users and drag-and-drop functionality.',
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAnqeYKlxvyWJc4ykTacXHw8-zy9kyf9bltM7f9la1v6p49Y2F5VwsNK1npLzfOmw6fqAqrYdyJ0n8eBndCEIeSV3OCKDNeUnpK4hxWsL7HVBpti7BiGbymeoqcr4GPxb18rF8FA959Iait4YpUlDnKiKW8uMGgwL4_o4TP9KgMZSAP2ROrsBJx4wLyIoqhi1851WjVRrc25xKP_k4mTjHtrNGuUwhpcHiWBok_Lee98nI-Xia8Q9vYZ8wD9nLNjMEXqclJU4evU9w',
-        tech: ['Next.js', 'TypeScript', 'Firebase'],
+        description: 'A live IELTS-preparation platform built as three apps: a Next.js 15 student portal with video courses and progress tracking, an Express + TypeScript API with Vimeo/Zoom streaming and AI features, and a React admin dashboard.',
+        image: '/images/brand/blob-depth-01.svg',
+        tech: ['Next.js 15', 'React 19', 'Express', 'TypeScript'],
         color: 'group-hover:text-purple-400',
         hoverColor: 'hover:text-purple-400',
         icons: [
             { name: "web", title: "Next.js" },
             { name: "code", title: "TypeScript" },
-            { name: "cloud", title: "Firebase" }
+            { name: "play_circle", title: "Video Streaming" }
         ]
       },
       {
         id: '3',
-        slug: 'price-predictor',
-        title: 'ML Price Predictor',
+        slug: 'unsw-nb15-ids',
+        title: 'Intrusion Detection ML Research',
         category: 'AI / ML',
-        description: 'A regression model to predict housing prices using Random Forest algorithm with 87% accuracy, processing 10,000+ data points with Flask REST API.',
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAwbEbYLzELIFPwZl-dbpD2XagOl_MMBxdDKLtC5d4MXDV2SqrHuOVR5Vl0sPOiIHxPkkp0oPbptkNiClhzwP2W7FdkR8BI3zmhsokstv9vpOEKSerWofrNNaITC5FUx24XBfqYl9KpiMflTu24ORgHczDEnQd-wDFzLOCHGGghpbNAJvveVdvDMaTXOOMug32DB4QEBW7CCOySmx-mTLCzTEmf-ISKWAhbNGXdFRF0YmdQDyoyDQqxTjVJ1Q0XQieb1JpkIiKO1pU',
-        tech: ['Python', 'scikit-learn', 'Flask'],
+        description: 'A reproducible 18-experiment study of class-imbalance strategies (class weighting, oversampling, SMOTE) for binary and multiclass intrusion detection on UNSW-NB15. Paper submitted for peer review.',
+        image: '/images/brand/divider-flow-01.svg',
+        tech: ['Python', 'XGBoost', 'scikit-learn'],
         color: 'group-hover:text-green-400',
         hoverColor: 'hover:text-green-400',
         icons: [
-            { name: "code", title: "Python" },
-            { name: "model_training", title: "scikit-learn" },
-            { name: "api", title: "Flask" }
+            { name: "security", title: "Network Security" },
+            { name: "model_training", title: "Machine Learning" },
+            { name: "science", title: "Research" }
         ]
       },
     ]
   },
   skills: {
     title: "Skills Overview",
-    description: "My technical toolkit spans from frontend development to backend systems and machine learning. I'm constantly learning and building projects to solidify my knowledge.",
+    description: "My toolkit spans production web development, backend systems, and applied machine learning — built through shipped client work, award-winning team projects, and research.",
     cta: "Full Tech Stack",
     categories: [
         {
             name: "Languages",
             colorClass: "bg-blue-500",
-            skills: ["JavaScript", "TypeScript", "Python", "Java", "C++", "SQL"]
+            skills: ["TypeScript", "JavaScript", "Python", "Java", "C++", "SQL"]
         },
         {
             name: "Frontend",
             colorClass: "bg-purple-500",
-            skills: ["React.js", "Next.js", "Tailwind CSS", "ShadcnUI"]
+            skills: ["React.js", "Next.js 15", "React Native", "Tailwind CSS"]
         },
         {
             name: "Backend",
             colorClass: "bg-green-500",
-            skills: ["Node.js", "Express.js", "MongoDB", "REST APIs"]
+            skills: ["Node.js", "Express.js", "NestJS", "MongoDB", "PostgreSQL", "Redis"]
         },
         {
-            name: "Tools",
+            name: "ML & Tools",
             colorClass: "bg-orange-500",
-            skills: ["Git/GitHub", "Vercel", "Postman", "VS Code"]
+            skills: ["PyTorch", "scikit-learn", "Docker", "Git/GitHub", "Supabase"]
         }
     ]
   },
@@ -120,7 +120,7 @@ export const homeData = {
         {
             type: "newsletter",
             title: "Sign up for\nNewsletter",
-            description: "Stay up-to-date with my latest projects, blog posts, and learning journey!",
+            description: "Stay up-to-date with my latest projects, blog posts, and research journey!",
             cta: "Sign Up",
             placeholders: {
                 name: "Your Name",
@@ -131,7 +131,7 @@ export const homeData = {
   },
   social: {
     title: "Social Channels",
-    description: "Connect with me on social media to follow my coding journey and projects.",
+    description: "Connect with me on social media to follow my engineering and research journey.",
     channels: [
         { name: "GitHub", url: "https://github.com/ihmorol", icon: "code", colorIdx: "gray" },
         { name: "LinkedIn", url: "https://linkedin.com/in/ihmorol", icon: "work", colorIdx: "blue" },
