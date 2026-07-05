@@ -7,6 +7,7 @@ author:
   name: "Ikramul Hasan"
   image: "/images/profile/image.jpeg"
 category: "Learning"
+readTime: 6
 tags: ["Learning", "Study System", "Productivity", "University"]
 featured: false
 ---

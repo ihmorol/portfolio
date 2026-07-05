@@ -7,6 +7,7 @@ author:
   name: "Ikramul Hasan"
   image: "/images/profile/image.jpeg"
 category: "Research"
+readTime: 7
 tags: ["Research", "Thesis", "Machine Learning", "FYDP"]
 featured: true
 ---

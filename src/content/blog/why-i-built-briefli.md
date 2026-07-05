@@ -7,6 +7,7 @@ author:
   name: "Ikramul Hasan"
   image: "/images/profile/image.jpeg"
 category: "Projects"
+readTime: 5
 tags: ["Projects", "React", "Supabase", "Side Project"]
 featured: false
 ---
