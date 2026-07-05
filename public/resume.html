@@ -3,117 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ikramul Hasan - Resume</title>
+    <title>Ikramul Hasan Moral - Resume</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Calibri', 'Arial', sans-serif;
-            font-size: 10.5pt;
-            line-height: 1.35;
+            font-size: 9.5pt;
+            line-height: 1.3;
             color: #000;
             background: #fff;
-            padding: 0.4in 0.5in;
+            padding: 0.35in 0.45in;
+            max-width: 8.5in;
+            margin: 0 auto;
         }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 10px;
-            border-bottom: 1.5px solid #000;
-            padding-bottom: 6px;
-        }
-        
-        .name {
-            font-size: 20pt;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-            margin-bottom: 3px;
-        }
-        
-        .contact {
-            font-size: 9.5pt;
-            color: #333;
-        }
-        
-        .contact a {
-            color: #0066cc;
+
+        a {
+            color: #0b57d0;
             text-decoration: none;
         }
-        
-        .section {
-            margin-bottom: 11px;
+
+        .header {
+            text-align: center;
+            margin-bottom: 8px;
         }
-        
-        .section-title {
-            font-size: 11.5pt;
+
+        .name {
+            font-size: 16pt;
             font-weight: bold;
-            text-transform: uppercase;
-            border-bottom: 1px solid #333;
-            margin-bottom: 5px;
-            padding-bottom: 2px;
             letter-spacing: 0.5px;
         }
-        
-        .entry {
-            margin-bottom: 7px;
+
+        .contact {
+            font-size: 9pt;
+            color: #222;
+            margin-top: 2px;
         }
-        
+
+        .section {
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 10pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 3px;
+        }
+
+        .entry {
+            margin-bottom: 5px;
+        }
+
         .entry-header {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 2px;
+            align-items: baseline;
+            gap: 12px;
         }
-        
+
         .entry-title {
             font-weight: bold;
-            font-size: 10.5pt;
+            font-size: 9.5pt;
         }
-        
+
         .entry-subtitle {
             font-style: italic;
-            font-size: 10pt;
+            font-size: 9pt;
             color: #333;
         }
-        
+
         .entry-date {
-            font-size: 9.5pt;
-            color: #555;
-            font-style: italic;
-        }
-        
-        ul {
-            margin-left: 18px;
-            margin-top: 2px;
-        }
-        
-        li {
-            margin-bottom: 2px;
-            font-size: 10pt;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 3px 10px;
-            font-size: 10pt;
-        }
-        
-        .skill-category {
-            font-weight: bold;
+            font-size: 9pt;
+            color: #444;
             white-space: nowrap;
         }
-        
-        .skill-items {
-            color: #222;
+
+        ul {
+            margin-left: 16px;
+            margin-top: 1px;
         }
-        
+
+        li {
+            margin-bottom: 1px;
+            font-size: 9pt;
+        }
+
+        .skill-line {
+            font-size: 9pt;
+            margin-bottom: 1px;
+        }
+
+        .skill-line strong {
+            font-size: 9pt;
+        }
+
+        .inline-note {
+            font-size: 9pt;
+        }
+
         @media print {
             body {
-                padding: 0.3in 0.5in;
+                padding: 0.3in 0.45in;
             }
         }
     </style>
@@ -122,9 +118,10 @@
     <div class="header">
         <div class="name">IKRAMUL HASAN MORAL</div>
         <div class="contact">
-            Dhaka, Bangladesh | <a href="mailto:ihmorol@gmail.com">ihmorol@gmail.com</a> | +880-016-14714959 | 
+            Dhaka, Bangladesh | <a href="mailto:ihmorol@gmail.com">ihmorol@gmail.com</a> | +880-016-14714959 |
             <a href="https://linkedin.com/in/ihmorol">linkedin.com/in/ihmorol</a> |
-            <a href="https://github.com/ihmorol">github.com/ihmorol</a>
+            <a href="https://github.com/ihmorol">github.com/ihmorol</a> |
+            <a href="https://ihmorol.me">ihmorol.me</a>
         </div>
     </div>
 
@@ -133,116 +130,173 @@
         <div class="entry">
             <div class="entry-header">
                 <div>
-                    <span class="entry-title">B.Sc. in Computer Science and Engineering</span> | 
-                    <span class="entry-subtitle">United International University (UIU)</span>
+                    <span class="entry-title">B.Sc. in Computer Science and Engineering</span> |
+                    <span class="entry-subtitle">United International University (UIU), Dhaka</span>
                 </div>
-                <div class="entry-date">Expected December 2026</div>
+                <div class="entry-date">Expected Dec 2026</div>
             </div>
             <ul>
-                <li><strong>CGPA:</strong> 3.94/4.0 | <strong>Awards:</strong> 100% Merit Scholarship (6 terms, top 3% each trimester)</li>
-                <li><strong>Relevant Coursework:</strong> Data Structures & Algorithms, OOP, Database Systems, Software Engineering, Machine Learning, Computer Networks</li>
+                <li>CGPA 3.94/4.0 | 100% merit scholarship, 6 terms (top 3% each trimester)</li>
+                <li>Thesis: Solving the Lorenz ODE System Using Optimal ANN Architectures (supervisor: Dr. Muhammad Nomani Kabir)</li>
             </ul>
         </div>
     </div>
 
     <div class="section">
         <div class="section-title">Technical Skills</div>
-        <div class="skills-grid">
-            <div class="skill-category">Languages:</div>
-            <div class="skill-items">JavaScript, TypeScript, Python, Java, C++, HTML5, CSS3, SQL</div>
-            
-            <div class="skill-category">Frontend:</div>
-            <div class="skill-items">React.js, Next.js, Tailwind CSS, ShadcnUI, Bootstrap, React Query, React Hook Form</div>
-            
-            <div class="skill-category">Backend:</div>
-            <div class="skill-items">Node.js, Express.js, MongoDB, Mongoose, REST APIs, JWT Authentication, Clerk</div>
-            
-            <div class="skill-category">Tools & Technologies:</div>
-            <div class="skill-items">Git/GitHub, Stripe Payment Integration, Vercel, npm, Postman, VS Code</div>
-            
-            <div class="skill-category">Core Competencies:</div>
-            <div class="skill-items">Data Structures & Algorithms, Object-Oriented Design, Software Design Patterns, Machine Learning Fundamentals</div>
+        <div class="skill-line"><strong>Languages:</strong> TypeScript, JavaScript, Python, C++, Java, SQL</div>
+        <div class="skill-line"><strong>Frontend:</strong> React, Next.js, React Native, Tailwind CSS, Zustand, TanStack Query</div>
+        <div class="skill-line"><strong>Backend:</strong> Node.js, Express, NestJS, MongoDB, PostgreSQL, Redis, Supabase, REST, OpenAPI, Zod, JWT</div>
+        <div class="skill-line"><strong>ML &amp; Data:</strong> PyTorch, scikit-learn, XGBoost, pandas, NumPy, SciPy</div>
+        <div class="skill-line"><strong>Tools:</strong> Git, Docker, GitHub Actions, Vercel, Railway, Linux, Postman</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Experience</div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <span class="entry-title">Undergraduate Teaching Assistant</span> |
+                    <span class="entry-subtitle">United International University, Dept. of CSE</span>
+                </div>
+                <div class="entry-date">Aug 2025 - Present</div>
+            </div>
+            <ul>
+                <li>Teach Data Structures &amp; Algorithms and Database Management to 100+ students</li>
+                <li>Run tutorials on graph algorithms, dynamic programming, SQL, and normalization</li>
+                <li>Design and grade programming assignments; hold office hours and code reviews</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <span class="entry-title">Freelance Full-Stack Developer</span> |
+                    <span class="entry-subtitle">EdTech client, IELTS e-learning platform (remote)</span>
+                </div>
+                <div class="entry-date">2025 - Present</div>
+            </div>
+            <ul>
+                <li>Build and run 3 live apps: Next.js 15 student portal, Express + TypeScript API, React admin dashboard</li>
+                <li>Integrated Vimeo/Zoom video streaming, AI study features, and cloud file storage</li>
+                <li>Keep releases safe with Zod validation, OpenAPI docs, JWT auth, and go-live checklists</li>
+            </ul>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Professional Experience</div>
-        
+        <div class="section-title">Research</div>
+
         <div class="entry">
             <div class="entry-header">
                 <div>
-                    <span class="entry-title">Undergraduate Teaching Assistant</span> | 
-                    <span class="entry-subtitle">United International University, Department of CSE</span>
+                    <span class="entry-title">Handling Class Imbalance in UNSW-NB15 Intrusion Detection</span> |
+                    <span class="entry-subtitle">first author, under peer review</span> |
+                    <a class="inline-note" href="https://github.com/ihmorol/unsw-nb15-handling-binary-multiclass-ids">code</a>
                 </div>
-                <div class="entry-date">August 2025 – Present</div>
+                <div class="entry-date">2025 - 2026</div>
             </div>
             <ul>
-                <li>Assist 100+ students in <strong>Data Structures & Algorithms</strong> and <strong>Database Management</strong> courses, improving conceptual clarity through office hours and code reviews</li>
-                <li>Design and grade programming assignments focusing on algorithmic efficiency and clean code principles</li>
-                <li>Conduct tutorial sessions on topics including <strong>Data Structures & Algorithms</strong> (e.g., graph algorithms, dynamic programming) and <strong>Database Management</strong> (e.g., SQL, database normalization)</li>
+                <li>Ran an 18-experiment grid: binary/multiclass tasks, 3 models, 3 imbalance strategies</li>
+                <li>Reported macro-F1, ROC-AUC, and G-Mean with per-class analysis of rare attacks (Worms: 0.07%)</li>
+                <li>Built a seeded, leakage-proof pipeline; all results reproducible from config snapshots</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <span class="entry-title">Undergraduate Thesis: Lorenz ODE System via Optimal ANN Architectures</span> |
+                    <span class="entry-subtitle">team lead, FYDP-I defended</span> |
+                    <a class="inline-note" href="https://github.com/ihmorol/fydp_workspace">code</a>
+                </div>
+                <div class="entry-date">2025 - Present</div>
+            </div>
+            <ul>
+                <li>Designed a 69-run search over network depth, width, activation, and optimizer</li>
+                <li>Verified ground truth with independent RK4 and SciPy DOP853 solvers (RMSE ~1.3e-11)</li>
+                <li>Reviewed 17 papers; benchmarking plain data-driven ANNs against published PINN results</li>
             </ul>
         </div>
     </div>
 
     <div class="section">
         <div class="section-title">Projects</div>
-        
+
         <div class="entry">
             <div class="entry-header">
                 <div>
-                    <span class="entry-title">Full-Stack IELTS Learning Platform</span> | 
-                    <span class="entry-subtitle">React, Node.js, MongoDB, Stripe</span>
+                    <span class="entry-title">Advyon - Legal-Tech Platform</span> |
+                    <span class="entry-subtitle">React, Express, TypeScript, MongoDB</span> |
+                    <a class="inline-note" href="https://github.com/ihmorol/advyon-monorepo">github</a> |
+                    <a class="inline-note" href="https://advyon.vercel.app">live</a>
                 </div>
-                <div class="entry-date">Sep 2024 – Nov 2024</div>
+                <div class="entry-date">2025</div>
             </div>
             <ul>
-                <li>Built a production-ready e-commerce application with <strong>user authentication</strong>, product catalog, shopping cart, and <strong>Stripe payment integration</strong> serving 200+ test users</li>
-                <li>Implemented <strong>JWT-based authentication</strong> and role-based access control for admin and customer workflows</li>
-                <li>Optimized database queries using <strong>MongoDB aggregation pipelines</strong>, reducing average response time by 40%</li>
-                <li>Deployed frontend on Vercel and backend on Railway with CI/CD pipeline for automated testing and deployment</li>
+                <li>Led a 5-member team through the full SDLC; won Champion at UIU CSE Project Show</li>
+                <li>Shipped case management, document workflows, and AI-assisted legal insights</li>
+                <li>Built the Express + TypeScript service layer with JWT auth and role-based access</li>
             </ul>
         </div>
-        
+
         <div class="entry">
             <div class="entry-header">
                 <div>
-                    <span class="entry-title">Real-Time Collaborative Task Manager</span> | 
-                    <span class="entry-subtitle">Next.js, TypeScript, Firebase, Material-UI</span>
+                    <span class="entry-title">BriefLi - AI Shortlink Manager</span> |
+                    <span class="entry-subtitle">React, TypeScript, Supabase, Vercel</span> |
+                    <a class="inline-note" href="https://github.com/ihmorol/briefli">github</a> |
+                    <a class="inline-note" href="https://s.ihmorol.cv">live</a>
                 </div>
-                <div class="entry-date">Jun 2024 – Aug 2024</div>
+                <div class="entry-date">2025 - Present</div>
             </div>
             <ul>
-                <li>Developed a <strong>real-time collaborative</strong> task management app using Firebase Realtime Database with instant synchronization across 50+ concurrent users</li>
-                <li>Architected component library with <strong>TypeScript</strong> for type safety, reducing runtime errors by 60% during development</li>
-                <li>Implemented drag-and-drop task prioritization using React DnD and state management with React Context API</li>
+                <li>Built and run a live shortlink dashboard with AI slug suggestions and click tracking</li>
+                <li>Serverless API on Vercel; Postgres schema with migrations and unique-slug constraints</li>
+                <li>Supports public and authenticated link spaces with soft-delete and restore</li>
             </ul>
         </div>
-        
+
         <div class="entry">
             <div class="entry-header">
                 <div>
-                    <span class="entry-title">Machine Learning Price Predictor</span> | 
-                    <span class="entry-subtitle">Python, scikit-learn, pandas, Flask</span>
+                    <span class="entry-title">Fall Detection Wearable</span> |
+                    <span class="entry-subtitle">Arduino/C++, Python ML, Node.js</span> |
+                    <a class="inline-note" href="https://github.com/ihmorol/Fall_Detection_Wearable_Device">github</a>
                 </div>
-                <div class="entry-date">Mar 2024 – May 2024</div>
+                <div class="entry-date">2025</div>
             </div>
             <ul>
-                <li>Built a regression model to predict housing prices using <strong>Random Forest</strong> algorithm with 87% accuracy on test dataset</li>
-                <li>Preprocessed 10,000+ data points with feature engineering, handling missing values and outlier detection</li>
-                <li>Deployed model via Flask REST API, enabling real-time predictions through a web interface</li>
+                <li>Built a 4-layer IoT system: wearable firmware, ML classifier, alert server, web dashboard</li>
+                <li>Classified falls from accelerometer data in Python; pushed real-time caregiver alerts</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div><span class="entry-title">Other Projects</span></div>
+            </div>
+            <ul>
+                <li>
+                    <a href="https://github.com/ihmorol/remdon">remdon</a> (WebRTC video chat, Redis, PostgreSQL) |
+                    <a href="https://github.com/ihmorol/voicekey">VoiceKey</a> (offline voice-to-keyboard, Whisper) |
+                    <a href="https://github.com/ihmorol/paradoxical-prism">Paradox Prism</a> (steganography reporting) |
+                    <a href="https://github.com/ihmorol/PrintSlot">PrintSlot</a> (campus print-shop app) |
+                    <a href="https://github.com/ihmorol/skill-paradox-backend">Skill Paradox</a> (skill exchange) |
+                    <a href="https://github.com/ihmorol/ann-hybrid-nanofluid-model">ANN Nanofluid Model</a> (scientific ML)
+                </li>
             </ul>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Achievements & Leadership</div>
-        <ul style="margin-left: 18px;">
-            <li><strong>Champion & Team Lead</strong> – Software Engineering Lab, UIU CSE Project Show | Led a 5-member team building Advyon, a legal-tech platform, through the full SDLC</li>
-            <li><strong>Champion</strong> – UIU CSE Week Programming Contest (2024) | Competed against 80+ participants in algorithmic problem-solving</li>
-            <li><strong>Research Paper Under Review</strong> – Class-imbalance strategies for intrusion detection on UNSW-NB15 (binary + multiclass, 18-experiment reproducible study)</li>
-            <li><strong>1st Runner-Up</strong> – Advanced OOP Project Showcase (2023) | Presented Java-based hospital management system with design patterns</li>
-            <li><strong>500+ Problems Solved</strong> – Codeforces, LeetCode, and HackerRank | Active competitive programmer with focus on algorithms and data structures</li>
-            <li><strong>6th Runner-Up</strong> – System Analysis & Design Lab Showcase (2024) | Designed and implemented full SDLC for inventory management system</li>
+        <div class="section-title">Achievements</div>
+        <ul>
+            <li>Champion &amp; Team Lead, Software Engineering Lab, UIU CSE Project Show (Advyon)</li>
+            <li>Champion, UIU CSE Week Programming Contest, 2024 (80+ participants)</li>
+            <li>500+ problems solved on Codeforces, LeetCode, and HackerRank</li>
+            <li>1st Runner-Up, Advanced OOP Project Showcase, 2023; 6th Runner-Up, SAD Lab Showcase, 2024</li>
         </ul>
     </div>
 </body>
