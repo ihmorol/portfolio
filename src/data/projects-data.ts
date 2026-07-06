@@ -31,7 +31,7 @@ export const projectsData = {
     techStack: ["React", "Express", "TypeScript", "MongoDB"],
     ctaText: "View Case Study",
     ctaLink: "/projects/advyon",
-    github: "https://github.com/ihmorol/advyon-monorepo",
+    github: "https://github.com/ihmorol/advyon-client",
     live: "https://advyon.vercel.app",
     image: "/images/brand/mesh-hero-01.svg"
   },
@@ -43,7 +43,7 @@ export const projectsData = {
       date: "2025",
       description: "Legal-tech platform with case management, document workflows, and AI-assisted insights. I led the five-member team that won Champion at the UIU CSE Project Show.",
       tags: ["#React", "#Express", "#TypeScript", "#MongoDB"],
-      github: "https://github.com/ihmorol/advyon-monorepo",
+      github: "https://github.com/ihmorol/advyon-client",
       live: "https://advyon.vercel.app",
       icon: Scale,
       color: "from-indigo-500/20 to-purple-500/20",
