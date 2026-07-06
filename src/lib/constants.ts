@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: 'Ikramul Hasan',
   title: 'CSE Student, Full-Stack Developer, Teaching Assistant',
-  description: 'Portfolio showcasing full-stack projects, machine learning work, and academic achievements.',
+  description: 'Full-stack projects, machine learning research, and academic work by Ikramul Hasan.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
   email: 'ihmorol@gmail.com',
   location: 'Dhaka, Bangladesh',

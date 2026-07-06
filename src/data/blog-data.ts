@@ -2,18 +2,18 @@ export const blogData = {
   header: {
     title: "Blog &",
     icon: "BookOpen",
-    titleSuffix: "Insights"
+    titleSuffix: "Notes"
   },
   categories: ['All Posts', 'Research', 'Tutorial', 'Learning', 'Career', 'Projects'],
   newsletter: {
-    title: "Subscribe to My Newsletter",
-    description: "Get the latest articles, tutorials, and insights from my learning journey delivered directly to your inbox. No spam, ever.",
+    title: "Newsletter",
+    description: "New posts and project updates by email, a few times a year. Unsubscribe any time.",
     placeholder: "Email Address",
     buttonText: "Subscribe"
   },
   connect: {
-    title: "Connect with Me",
-    description: "Follow me on social media and stay up-to-date with my coding journey and latest projects!"
+    title: "Connect",
+    description: "I post new work on GitHub and LinkedIn first."
   },
   loadMoreText: "Load More Articles"
 };

@@ -17,7 +17,7 @@ export const layoutData = {
   footer: {
     brand: {
       name: "Ikramul Hasan",
-      description: "Final-Year CSE Student at UIU | Full-Stack Developer | ML Researcher. Shipping production platforms and doing applied machine learning research — from intrusion detection to neural ODE surrogates.",
+      description: "Final-year CSE student at UIU, full-stack developer, and ML researcher. I build production software and study machine learning for intrusion detection and differential equations.",
     },
     socialLinks: [
       { title: "GitHub", url: "https://github.com/ihmorol", icon: "github" },
@@ -38,8 +38,8 @@ export const layoutData = {
       { name: "Research", href: "/research" },
     ],
     newsletter: {
-      title: "Stay Updated",
-      description: "Subscribe to my newsletter for the latest updates on my projects, learning journey, and articles.",
+      title: "Newsletter",
+      description: "Occasional emails about new projects and posts.",
       placeholder: "Email address",
     },
     copyright: "© {year} Ikramul Hasan Moral. All rights reserved.",
