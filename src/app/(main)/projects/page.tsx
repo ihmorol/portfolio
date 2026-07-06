@@ -41,7 +41,7 @@ export default function ProjectsPage() {
             titlePrefix={header.title}
             icon=""
             titleSuffix={header.titleSuffix}
-            description="Curated collection of projects showcasing shipped outcomes."
+            description={header.description}
             customIcon={
               <Star className="text-accent-yellow w-12 h-12 md:w-16 md:h-16 fill-current" />
             }
@@ -60,8 +60,8 @@ export default function ProjectsPage() {
                     className={[
                       'focus-ring h-10 px-5 rounded-full type-micro transition-colors border',
                       isActive
-                        ? 'bg-white text-black border-white'
-                        : 'bg-background-secondary text-text-secondary border-border hover:text-text-primary hover:border-white/40',
+                        ? 'bg-foreground text-background border-foreground'
+                        : 'bg-background-secondary text-text-secondary border-border hover:text-text-primary hover:border-border-strong',
                     ].join(' ')}
                   >
                     {category}
@@ -100,7 +100,7 @@ export default function ProjectsPage() {
                 <div className="flex flex-wrap gap-3">
                   <Link
                     href={featuredProject.ctaLink}
-                    className="focus-ring h-11 px-6 rounded-full bg-white text-black hover:bg-gray-200 type-micro inline-flex items-center"
+                    className="focus-ring h-11 px-6 rounded-full bg-foreground text-background hover:bg-foreground/85 type-micro inline-flex items-center"
                   >
                     {featuredProject.ctaText}
                   </Link>
@@ -109,7 +109,7 @@ export default function ProjectsPage() {
                       href={featuredProject.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="focus-ring h-11 px-5 rounded-full border border-white/25 text-text-primary hover:bg-white hover:text-black transition-colors type-micro inline-flex items-center gap-2"
+                      className="focus-ring h-11 px-5 rounded-full border border-border-strong text-text-primary hover:bg-foreground hover:text-background transition-colors type-micro inline-flex items-center gap-2"
                     >
                       Live <ArrowUpRight className="w-4 h-4" />
                     </a>
@@ -119,7 +119,7 @@ export default function ProjectsPage() {
                       href={featuredProject.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="focus-ring h-11 w-11 rounded-full border border-white/25 text-text-primary hover:bg-white hover:text-black transition-colors inline-flex items-center justify-center"
+                      className="focus-ring h-11 w-11 rounded-full border border-border-strong text-text-primary hover:bg-foreground hover:text-background transition-colors inline-flex items-center justify-center"
                       aria-label="View source on GitHub"
                     >
                       <Github className="w-5 h-5" />
@@ -138,12 +138,12 @@ export default function ProjectsPage() {
                         <div className="w-2 h-2 rounded-full bg-green-500" />
                       </div>
                       <div className="flex gap-4 h-full">
-                        <div className="w-1/4 h-full bg-white/5 rounded-md" />
+                        <div className="w-1/4 h-full bg-foreground/5 rounded-md" />
                         <div className="w-3/4 h-full flex flex-col gap-3">
-                          <div className="w-full h-1/2 bg-white/5 rounded-md" />
+                          <div className="w-full h-1/2 bg-foreground/5 rounded-md" />
                           <div className="flex gap-3 h-1/2">
-                            <div className="w-1/2 h-full bg-white/5 rounded-md" />
-                            <div className="w-1/2 h-full bg-white/5 rounded-md" />
+                            <div className="w-1/2 h-full bg-foreground/5 rounded-md" />
+                            <div className="w-1/2 h-full bg-foreground/5 rounded-md" />
                           </div>
                         </div>
                       </div>
@@ -162,7 +162,7 @@ export default function ProjectsPage() {
             return (
               <Reveal key={project.slug} delay={0.03 + index * 0.02} once>
                 <HoverField>
-                  <div className="group surface-card p-1 flex flex-col h-full hover:border-white/20 transition-colors">
+                  <div className="group surface-card p-1 flex flex-col h-full hover:border-border-strong transition-colors">
                     <Link
                       href={`/projects/${project.slug}`}
                       className="block h-64 overflow-hidden relative rounded-[calc(var(--radius-xl)-4px)]"
@@ -171,10 +171,10 @@ export default function ProjectsPage() {
                       <div
                         className={`w-full h-full bg-gradient-to-br ${project.color} transition-transform duration-700 ease-out flex items-center justify-center transform group-hover:scale-105`}
                       >
-                        <Icon className="text-white/20 w-16 h-16" />
+                        <Icon className="text-text-primary/20 w-16 h-16" />
                       </div>
                       <div className="absolute top-4 left-4 z-20">
-                        <span className="px-3 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded-full type-micro text-white">
+                        <span className="px-3 py-1 bg-black/60 backdrop-blur-md border border-border rounded-full type-micro text-white">
                           {project.category}
                         </span>
                       </div>

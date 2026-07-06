@@ -30,7 +30,7 @@ export default function SkillsPage() {
           customIcon={
             <Code className="text-amber-400 w-12 h-12 md:w-16 md:h-16 stroke-[2.5]" />
           }
-          description="Technologies and tools I use to bring ideas to life."
+          description="The languages, frameworks, and tools I work with, and how I use them."
         />
 
         <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">

@@ -24,12 +24,12 @@ export default function AboutPage() {
           <PageHeader
             titlePrefix="About"
             icon="person"
-            titleSuffix="The Creator"
+            titleSuffix="Ikramul"
             customIcon={
               <User className="text-accent-yellow w-12 h-12 md:w-16 md:h-16 stroke-[2.5]" />
             }
             suffixItalic={true}
-            description="Developer crafting digital experiences with precision and intent."
+            description="Final-year CSE student in Dhaka. I build production software and do applied ML research."
           />
         </Reveal>
 

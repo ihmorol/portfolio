@@ -37,7 +37,7 @@ export default function ExperiencePage() {
         
         {/* Experience Section */}
         <div className="md:col-span-12 space-y-6">
-            <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+            <h2 className="text-2xl font-bold text-text-primary mb-6 flex items-center gap-2">
                 <span className="w-2 h-8 bg-accent-yellow rounded-full"></span>
                 {experience.title}
             </h2>
@@ -61,7 +61,7 @@ export default function ExperiencePage() {
         <div className="md:col-span-12 grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
             {/* Leadership Section */}
         <div className="md:col-span-8 space-y-6">
-            <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2 mt-8">
+            <h2 className="text-2xl font-bold text-text-primary mb-6 flex items-center gap-2 mt-8">
                 <span className="w-2 h-8 bg-accent-blue rounded-full"></span>
                 {leadership.title}
             </h2>
@@ -81,7 +81,7 @@ export default function ExperiencePage() {
 
         {/* Growth Section */}
         <div className="md:col-span-4 space-y-6">
-             <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2 mt-8">
+             <h2 className="text-2xl font-bold text-text-primary mb-6 flex items-center gap-2 mt-8">
                 <span className="w-2 h-8 bg-accent-purple rounded-full"></span>
                 {growth.title}
             </h2>
@@ -95,7 +95,7 @@ export default function ExperiencePage() {
 
         {/* Volunteering Section */}
         <div className="md:col-span-12 space-y-6">
-            <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2 mt-8">
+            <h2 className="text-2xl font-bold text-text-primary mb-6 flex items-center gap-2 mt-8">
                 <span className="w-2 h-8 bg-accent-green rounded-full"></span>
                 {volunteering.title}
             </h2>
@@ -114,14 +114,14 @@ export default function ExperiencePage() {
         </div>
 
         {/* Footer CTA */}
-        <div className="md:col-span-12 bg-white rounded-card p-8 md:p-12 mt-8 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gray-100 rounded-full -mr-32 -mt-32 z-0"></div>
+        <div className="md:col-span-12 bg-background-secondary border border-border rounded-card p-8 md:p-12 mt-8 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-background-tertiary rounded-full -mr-32 -mt-32 z-0"></div>
             <div className="relative z-10 max-w-xl">
-                <h3 className="text-3xl font-bold text-black mb-4">{cta.title}</h3>
-                <p className="text-gray-600 font-display">{cta.description}</p>
+                <h3 className="text-3xl font-bold text-text-primary mb-4">{cta.title}</h3>
+                <p className="text-text-muted font-display">{cta.description}</p>
             </div>
             <div className="relative z-10 shrink-0">
-                <Link href="/contact" className="inline-flex bg-black hover:bg-gray-800 text-white text-xs font-bold py-4 px-8 rounded-full transition-all uppercase tracking-wider shadow-lg">
+                <Link href="/contact" className="focus-ring inline-flex bg-foreground hover:bg-foreground/85 text-background text-xs font-bold py-4 px-8 rounded-full transition-all uppercase tracking-wider shadow-lg">
                     {cta.buttonText}
                 </Link>
             </div>

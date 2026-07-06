@@ -39,7 +39,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         <VerticalSocialLinks items={socialLinks} />
          <article className="container mx-auto px-6 max-w-4xl">
              {/* Back Link */}
-            <Link href="/blog" className="inline-flex items-center text-text-secondary hover:text-white mb-8 transition-colors">
+            <Link href="/blog" className="inline-flex items-center text-text-secondary hover:text-text-primary mb-8 transition-colors">
                 <ArrowLeft size={16} className="mr-2" /> Back to Blog
             </Link>
 
@@ -48,16 +48,16 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 <div className="flex gap-2 mb-6">
                     <Badge variant="glass" className="text-accent-purple border-accent-purple/20">{post.category}</Badge>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight mb-8 leading-tight">
+                <h1 className="text-4xl md:text-6xl font-bold text-text-primary tracking-tight mb-8 leading-tight">
                     {post.title}
                 </h1>
                 
-                <div className="flex items-center gap-6 text-sm text-text-secondary border-b border-white/5 pb-8">
+                <div className="flex items-center gap-6 text-sm text-text-secondary border-b border-border/60 pb-8">
                     <div className="flex items-center gap-3">
                          <div className="w-10 h-10 rounded-full overflow-hidden relative">
                              <Image src={post.author.image} alt={post.author.name} fill className="object-cover" />
                          </div>
-                         <span className="font-bold text-white">{post.author.name}</span>
+                         <span className="font-bold text-text-primary">{post.author.name}</span>
                     </div>
                     <span className="flex items-center gap-2"><Calendar size={14} /> {formatDate(post.date)}</span>
                     <span className="flex items-center gap-2"><Clock size={14} /> 5 min read</span>
@@ -82,10 +82,10 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             />
             
             {/* Tags */}
-            <div className="mt-16 pt-8 border-t border-white/5">
+            <div className="mt-16 pt-8 border-t border-border/60">
                 <div className="flex flex-wrap gap-2">
                     {post.tags.map(tag => (
-                        <span key={tag} className="text-sm text-gray-400 bg-white/5 px-3 py-1 rounded-full">#{tag}</span>
+                        <span key={tag} className="text-sm text-text-secondary bg-foreground/5 px-3 py-1 rounded-full">#{tag}</span>
                     ))}
                 </div>
             </div>

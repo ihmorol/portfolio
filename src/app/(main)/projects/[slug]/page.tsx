@@ -49,7 +49,7 @@ export default function ProjectDetailPage({
 
   return (
     <>
-      <div className="relative flex min-h-screen flex-col overflow-x-hidden bg-background text-text-primary selection:bg-white selection:text-black font-body">
+      <div className="relative flex min-h-screen flex-col overflow-x-hidden bg-background text-text-primary selection:bg-foreground selection:text-background font-body">
         <PageLeftSideBar title="PROJECT" />
         <VerticalSocialLinks items={socialLinks} />
 
@@ -87,7 +87,7 @@ export default function ProjectDetailPage({
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="focus-ring h-10 px-5 rounded-full border border-white/25 text-text-primary hover:bg-white hover:text-black transition-colors type-micro inline-flex items-center gap-2"
+                      className="focus-ring h-10 px-5 rounded-full border border-border-strong text-text-primary hover:bg-foreground hover:text-background transition-colors type-micro inline-flex items-center gap-2"
                     >
                       <Github size={16} /> View Source
                     </a>
@@ -97,7 +97,7 @@ export default function ProjectDetailPage({
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="focus-ring h-10 px-5 rounded-full bg-white text-black hover:bg-gray-200 transition-colors type-micro inline-flex items-center gap-2"
+                      className="focus-ring h-10 px-5 rounded-full bg-foreground text-background hover:bg-foreground/85 transition-colors type-micro inline-flex items-center gap-2"
                     >
                       <Globe size={16} /> Live Site
                     </a>
@@ -205,10 +205,10 @@ export default function ProjectDetailPage({
                 <h2 className="type-h2 mb-4">Outcomes</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {detail.impact.metrics.map((metric) => {
-                    const textColor = metricTextColorMap[metric.color] || 'text-white';
+                    const textColor = metricTextColorMap[metric.color] || 'text-text-primary';
                     const bgColor =
                       metricBgColorMap[metric.bg] ||
-                      'bg-white/10 border border-white/10';
+                      'bg-foreground/10 border border-border';
 
                     return (
                       <article key={metric.label} className="surface-card p-6">
@@ -243,20 +243,20 @@ export default function ProjectDetailPage({
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="focus-ring h-11 px-5 rounded-full border border-white/20 hover:border-white/40 transition-colors type-micro inline-flex items-center gap-2"
+                    className="focus-ring h-11 px-5 rounded-full border border-border-strong hover:border-border-strong transition-colors type-micro inline-flex items-center gap-2"
                   >
                     <Github size={14} /> GitHub
                   </a>
                 ) : null}
                 <Link
                   href="/projects"
-                  className="focus-ring h-11 px-5 rounded-full border border-white/20 hover:border-white/40 transition-colors type-micro inline-flex items-center"
+                  className="focus-ring h-11 px-5 rounded-full border border-border-strong hover:border-border-strong transition-colors type-micro inline-flex items-center"
                 >
                   View All Projects
                 </Link>
                 <Link
                   href="/contact"
-                  className="focus-ring h-11 px-5 rounded-full bg-white text-black hover:bg-gray-200 transition-colors type-micro inline-flex items-center gap-2"
+                  className="focus-ring h-11 px-5 rounded-full bg-foreground text-background hover:bg-foreground/85 transition-colors type-micro inline-flex items-center gap-2"
                 >
                   Contact <ExternalLink size={14} />
                 </Link>
