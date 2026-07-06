@@ -5,7 +5,6 @@ import {
   Scale,
   Link2,
   Activity,
-  Video,
   Mic,
   ShieldCheck,
   FlaskConical,
@@ -13,7 +12,6 @@ import {
   Users,
   Database,
   Mail,
-  Cpu,
   Waves,
   Layout
 } from 'lucide-react';
@@ -165,20 +163,6 @@ export const projectsData = {
       accent: "text-teal-400"
     },
     {
-      title: "remdon",
-      slug: "remdon",
-      category: "Full Stack",
-      date: "2026",
-      description: "One-to-one random video and text chat built on WebRTC, with Socket.io signaling, a Redis matchmaking queue, PostgreSQL storage, and STUN/TURN traversal in a tested monorepo.",
-      tags: ["#WebRTC", "#SocketIO", "#Redis", "#PostgreSQL"],
-      github: "https://github.com/ihmorol/remdon",
-      live: "",
-      icon: Video,
-      color: "from-violet-500/20 to-fuchsia-500/20",
-      hoverColor: "group-hover:text-fuchsia-400",
-      accent: "text-fuchsia-400"
-    },
-    {
       title: "Skill Paradox",
       slug: "skill-paradox",
       category: "Full Stack",
@@ -205,20 +189,6 @@ export const projectsData = {
       color: "from-emerald-500/20 to-green-500/20",
       hoverColor: "group-hover:text-emerald-400",
       accent: "text-emerald-400"
-    },
-    {
-      title: "OS Laboratory",
-      slug: "os-laboratory",
-      category: "Systems",
-      date: "2026",
-      description: "Documented operating systems experiments in C++: processes and threads, scheduling, synchronization, memory management, and file systems.",
-      tags: ["#C++", "#OperatingSystems", "#Concurrency"],
-      github: "https://github.com/ihmorol/operating-system-laboratory",
-      live: "",
-      icon: Cpu,
-      color: "from-slate-500/20 to-gray-500/20",
-      hoverColor: "group-hover:text-text-secondary",
-      accent: "text-text-secondary"
     },
     {
       title: "Paradox Prism",
