@@ -51,24 +51,24 @@ export function ContactForm() {
   };
 
   return (
-    <Card className="glass-dark p-8 border border-white/5">
+    <Card className="glass-dark p-8 border border-border/60">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
-            <label htmlFor="name" className="text-sm font-bold uppercase tracking-wider text-gray-400">Name</label>
+            <label htmlFor="name" className="text-sm font-bold uppercase tracking-wider text-text-secondary">Name</label>
             <input
               {...register('name')}
-              className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors"
+              className="w-full bg-foreground/5 border border-border rounded-xl px-4 py-3 text-text-primary focus:outline-none focus:border-border-strong transition-colors"
               placeholder="John Doe"
             />
             {errors.name && <p className="text-red-500 text-xs">{errors.name.message}</p>}
           </div>
           
           <div className="space-y-2">
-            <label htmlFor="email" className="text-sm font-bold uppercase tracking-wider text-gray-400">Email</label>
+            <label htmlFor="email" className="text-sm font-bold uppercase tracking-wider text-text-secondary">Email</label>
             <input
               {...register('email')}
-              className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors"
+              className="w-full bg-foreground/5 border border-border rounded-xl px-4 py-3 text-text-primary focus:outline-none focus:border-border-strong transition-colors"
               placeholder="john@example.com"
             />
             {errors.email && <p className="text-red-500 text-xs">{errors.email.message}</p>}
@@ -76,21 +76,21 @@ export function ContactForm() {
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="subject" className="text-sm font-bold uppercase tracking-wider text-gray-400">Subject</label>
+          <label htmlFor="subject" className="text-sm font-bold uppercase tracking-wider text-text-secondary">Subject</label>
           <input
             {...register('subject')}
-            className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors"
+            className="w-full bg-foreground/5 border border-border rounded-xl px-4 py-3 text-text-primary focus:outline-none focus:border-border-strong transition-colors"
             placeholder="Project Inquiry"
           />
           {errors.subject && <p className="text-red-500 text-xs">{errors.subject.message}</p>}
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="message" className="text-sm font-bold uppercase tracking-wider text-gray-400">Message</label>
+          <label htmlFor="message" className="text-sm font-bold uppercase tracking-wider text-text-secondary">Message</label>
           <textarea
             {...register('message')}
             rows={6}
-            className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors resize-none"
+            className="w-full bg-foreground/5 border border-border rounded-xl px-4 py-3 text-text-primary focus:outline-none focus:border-border-strong transition-colors resize-none"
             placeholder="Tell me about your project..."
           />
           {errors.message && <p className="text-red-500 text-xs">{errors.message.message}</p>}
@@ -98,7 +98,7 @@ export function ContactForm() {
 
         <Button 
             type="submit" 
-            className="w-full bg-white text-black hover:bg-gray-200 h-12"
+            className="w-full bg-foreground text-background hover:bg-foreground/85 h-12"
             disabled={isSubmitting}
         >
             {isSubmitting ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}

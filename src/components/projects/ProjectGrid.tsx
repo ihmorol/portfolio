@@ -42,7 +42,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
       </div>
       
       {filteredProjects.length === 0 && (
-        <div className="text-center py-20 text-gray-500">
+        <div className="text-center py-20 text-text-muted">
             No projects found in this category.
         </div>
       )}

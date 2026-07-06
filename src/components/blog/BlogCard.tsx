@@ -62,8 +62,8 @@ export function BlogCard({ post }: BlogCardProps) {
   const Icon = config.icon;
 
   return (
-    <Link href={`/blog/${post.slug}`} className="md:col-span-4 bg-[#1a1b1e] rounded-3xl p-1 flex flex-col h-full border border-[#333333] group hover:border-white/20 transition-colors block">
-      <div className="h-48 rounded-t-[1.3rem] bg-[#2c2d31] relative overflow-hidden">
+    <Link href={`/blog/${post.slug}`} className="md:col-span-4 bg-background-secondary rounded-3xl p-1 flex flex-col h-full border border-border group hover:border-border-strong transition-colors block">
+      <div className="h-48 rounded-t-[1.3rem] bg-background-tertiary relative overflow-hidden">
         {post.coverImage ? (
            <Image 
                src={post.coverImage} 
@@ -78,32 +78,32 @@ export function BlogCard({ post }: BlogCardProps) {
         )}
         
         <div className="absolute bottom-3 left-3 flex gap-2">
-          <span className="bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] font-bold text-white uppercase tracking-wider border border-white/10">
+          <span className="bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] font-bold text-white uppercase tracking-wider border border-border">
             {post.category}
           </span>
         </div>
       </div>
       
       <div className="p-5 flex flex-col flex-grow">
-        <div className="flex items-center gap-2 text-[10px] font-bold text-gray-500 uppercase tracking-wide mb-3">
+        <div className="flex items-center gap-2 text-[10px] font-bold text-text-muted uppercase tracking-wide mb-3">
           <span>{formatDate(post.date)}</span>
-          <span className="w-1 h-1 bg-gray-700 rounded-full"></span>
+          <span className="w-1 h-1 bg-border-strong rounded-full"></span>
           <span>{post.readTime} min read</span>
         </div>
         
-        <h3 className={`text-lg font-bold text-white mb-2 leading-tight ${config.hoverColor} transition-colors`}>
+        <h3 className={`text-lg font-bold text-text-primary mb-2 leading-tight ${config.hoverColor} transition-colors`}>
           {post.title}
         </h3>
         
-        <p className="text-xs text-gray-400 mb-4 font-[family-name:var(--font-spline)] leading-relaxed line-clamp-3 flex-grow">
+        <p className="text-xs text-text-secondary mb-4 font-[family-name:var(--font-spline)] leading-relaxed line-clamp-3 flex-grow">
           {post.excerpt}
         </p>
         
-        <div className="flex items-center justify-between pt-4 border-t border-[#333333] mt-auto">
-          <span className="text-[10px] font-bold text-gray-400 uppercase">
+        <div className="flex items-center justify-between pt-4 border-t border-border mt-auto">
+          <span className="text-[10px] font-bold text-text-secondary uppercase">
             By {post.author.name}
           </span>
-          <ArrowRight size={18} className="text-white group-hover:translate-x-1 transition-transform" />
+          <ArrowRight size={18} className="text-text-primary group-hover:translate-x-1 transition-transform" />
         </div>
       </div>
     </Link>

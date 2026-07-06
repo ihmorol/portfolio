@@ -48,7 +48,7 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
   // We can just inject it in the map loop or layout
   
   return (
-    <div className="bg-[#000000] min-h-screen flex flex-col font-[family-name:var(--font-jakarta)]">
+    <div className="bg-background min-h-screen flex flex-col font-[family-name:var(--font-jakarta)]">
       <main className="flex-grow w-full max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 pt-20 md:pt-24 pb-8 md:pb-12 relative">
           
         <PageLeftSideBar title="BLOG" />
@@ -61,7 +61,7 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
           customIcon={
             <BookOpen className="text-amber-400 w-12 h-12 md:w-16 md:h-16 stroke-[2.5]" />
           }
-          description="Thoughts, tutorials, and insights on development."
+          description="Notes on research, engineering, and studying well, written from experience."
         />
 
         {/* Featured Post - Only show on 'All Posts' or if it matches category */}
@@ -104,23 +104,23 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
              
              {/* Load More Button Placeholder */}
              <div className="md:col-span-12 flex justify-center pt-8">
-                <button className="bg-[#1a1b1e] hover:bg-[#2c2d31] text-white border border-[#333333] px-8 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2">
+                <button className="bg-background-secondary hover:bg-background-tertiary text-text-primary border border-border px-8 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2">
                     {loadMoreText}
                     <span className="material-symbols-outlined text-sm">expand_more</span>
                 </button>
             </div>
 
             {/* Connect Section matching design */}
-            <div className="md:col-span-12 bg-[#1a1b1e] rounded-3xl p-6 md:px-10 md:py-8 border border-[#333333] flex flex-col md:flex-row items-center justify-between gap-8 mt-4">
+            <div className="md:col-span-12 bg-background-secondary rounded-3xl p-6 md:px-10 md:py-8 border border-border flex flex-col md:flex-row items-center justify-between gap-8 mt-4">
                 <div className="text-center md:text-left">
-                    <h3 className="text-xl font-bold text-white mb-2">{connect.title}</h3>
-                    <p className="text-xs text-gray-400 font-[family-name:var(--font-spline)] max-w-sm">
+                    <h3 className="text-xl font-bold text-text-primary mb-2">{connect.title}</h3>
+                    <p className="text-xs text-text-secondary font-[family-name:var(--font-spline)] max-w-sm">
                         {connect.description}
                     </p>
                 </div>
                 <div className="flex items-center gap-4 md:gap-6">
                      {socialLinks.map((link, i) => (
-                         <a key={i} href={link.url} className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#2c2d31] flex items-center justify-center hover:bg-white hover:text-black transition-colors text-gray-400">
+                         <a key={i} href={link.url} className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-background-tertiary flex items-center justify-center hover:bg-foreground hover:text-background transition-colors text-text-secondary">
                              {/* Simple initial for now or map specific icons if needed */}
                              <span className="text-xs font-bold">{link.title.substring(0, 1)}</span> 
                          </a>

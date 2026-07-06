@@ -18,8 +18,8 @@ export function ProjectFilter({ selectedCategory, onSelectCategory }: ProjectFil
           key={category.id}
           variant={selectedCategory === category.id ? 'white' : 'outline'}
           className={cn(
-            'border-white/10 hover:bg-white/10 px-6',
-            selectedCategory === category.id ? 'hover:bg-gray-200' : 'text-gray-400 hover:text-white'
+            'border-border hover:bg-foreground/10 px-6',
+            selectedCategory === category.id ? 'hover:bg-foreground/85' : 'text-text-secondary hover:text-text-primary'
           )}
           onClick={() => onSelectCategory(category.id)}
         >

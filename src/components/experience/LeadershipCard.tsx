@@ -22,21 +22,21 @@ export function LeadershipCard({
   className,
 }: LeadershipCardProps) {
   return (
-    <div className={cn("bg-background-secondary rounded-card p-6 border border-white/5 hover:border-white/20 transition-all h-full flex flex-col", className)}>
+    <div className={cn("bg-background-secondary rounded-card p-6 border border-border/60 hover:border-border-strong transition-all h-full flex flex-col", className)}>
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
-        <h3 className="text-xl font-bold text-white">{role}</h3>
-        <span className="text-xs font-bold text-text-secondary bg-background-tertiary px-3 py-1 rounded-full border border-white/5">
+        <h3 className="text-xl font-bold text-text-primary">{role}</h3>
+        <span className="text-xs font-bold text-text-secondary bg-background-tertiary px-3 py-1 rounded-full border border-border/60">
           {period}
         </span>
       </div>
       <p className="text-accent-blue text-sm font-medium mb-4">{context}</p>
-      <p className="text-gray-300 mb-6 font-display text-sm leading-relaxed">
+      <p className="text-text-secondary mb-6 font-display text-sm leading-relaxed">
         {description}
       </p>
       
       {impact && (
-        <div className="bg-background-tertiary/50 rounded-2xl p-4 border border-white/5 mb-4 m-0">
-          <h4 className="text-xs font-bold text-white mb-2 uppercase tracking-wider">{impactTitle}</h4>
+        <div className="bg-background-tertiary/50 rounded-2xl p-4 border border-border/60 mb-4 m-0">
+          <h4 className="text-xs font-bold text-text-primary mb-2 uppercase tracking-wider">{impactTitle}</h4>
           <p className="text-text-secondary text-sm font-display">{impact}</p>
         </div>
       )}

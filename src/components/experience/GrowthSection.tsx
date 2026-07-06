@@ -18,8 +18,8 @@ export function GrowthSection({
   className,
 }: GrowthSectionProps) {
   return (
-    <div className={cn("bg-background-secondary rounded-card p-6 border border-white/5 h-full flex flex-col", className)}>
-      <h3 className="text-lg font-bold text-white mb-6">{title}</h3>
+    <div className={cn("bg-background-secondary rounded-card p-6 border border-border/60 h-full flex flex-col", className)}>
+      <h3 className="text-lg font-bold text-text-primary mb-6">{title}</h3>
       <div className="space-y-5 flex-grow">
         {skills.map((skill, idx) => (
           <div key={idx}>
