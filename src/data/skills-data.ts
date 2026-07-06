@@ -6,7 +6,7 @@ export const skillsData = {
   },
   programmingLanguages: {
     title: "Programming Languages",
-    description: "Core languages that form the foundation of my development capabilities — from production TypeScript to research Python to contest C++.",
+    description: "The languages I work in most: TypeScript for production apps, Python for research, and C++ for contests.",
     languages: [
       {
         name: "JavaScript / TypeScript",
@@ -42,21 +42,21 @@ export const skillsData = {
         icon: "TS",
         iconBg: "bg-blue-100",
         iconColor: "text-blue-600",
-        title: "Production E-Learning Platform",
-        description: "Three live apps: Next.js 15 portal, Express + TS API, React admin dashboard."
+        title: "E-Learning Platform",
+        description: "Three live apps: a Next.js 15 portal, an Express + TS API, and a React admin dashboard."
       },
       {
         icon: "PY",
         iconBg: "bg-green-100",
         iconColor: "text-green-600",
-        title: "UNSW-NB15 IDS Research",
-        description: "Reproducible ML experiment grid behind my paper under peer review."
+        title: "Intrusion Detection Research",
+        description: "The reproducible ML experiment grid behind my paper, now under peer review."
       }
     ]
   },
   aiMl: {
     title: "AI & Machine Learning",
-    description: "Research-grade ML: controlled experiments, honest metrics, and reproducible pipelines — not just model.fit().",
+    description: "Controlled experiments and reproducible pipelines, with metrics chosen to hold up under review.",
     items: [
       {
         name: "PyTorch",
@@ -84,7 +84,7 @@ export const skillsData = {
         icon: "science",
         iconColor: "text-purple-400",
         hoverBorder: "hover:border-purple-500/50",
-        description: "Seeded, leakage-proof, config-driven experiment grids with publication-quality visualization."
+        description: "Seeded, leakage-proof, config-driven experiment grids with automated result visualization."
       }
     ]
   },
@@ -188,6 +188,6 @@ export const skillsData = {
   softSkills: {
     title: "Soft Skills",
     skills: ['Team Leadership', 'Teaching & Mentorship', 'Problem Solving', 'Technical Writing', 'Research Communication', 'Time Management', 'Collaboration'],
-    quote: "\"The best way to learn is to teach.\" – Combining technical expertise with the ability to explain complex concepts clearly."
+    quote: "\"The best way to learn is to teach.\" TA work and peer mentoring have made me better at both."
   }
 };

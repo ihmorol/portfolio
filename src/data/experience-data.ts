@@ -1,9 +1,9 @@
 export const experienceData = {
   header: {
-    titlePrefix: "Professional",
+    titlePrefix: "Work",
     titleIcon: "history_edu",
-    titleSuffix: "Journey",
-    description: "Teaching, freelance production engineering, team leadership, and research — built alongside a Computer Science degree."
+    titleSuffix: "Experience",
+    description: "Teaching, freelance production work, team leadership, and research, all alongside a computer science degree."
   },
   experience: {
     title: "Experience",
@@ -14,7 +14,7 @@ export const experienceData = {
         location: "Dhaka, Bangladesh",
         type: "Part-time",
         period: "Aug 2025 - Present",
-        description: "Assisting students in Data Structures & Algorithms and Database Management courses, improving conceptual clarity through office hours, code reviews, and tutorial sessions.",
+        description: "I help students in Data Structures & Algorithms and Database Management courses through office hours, code reviews, and tutorial sessions.",
         sections: [
           {
             title: "Key Responsibilities",
@@ -40,11 +40,11 @@ export const experienceData = {
       },
       {
         role: "Freelance Full-Stack Developer",
-        company: "EdTech Client — IELTS Preparation Platform",
+        company: "EdTech Client · IELTS Preparation Platform",
         location: "Remote",
         type: "Freelance",
         period: "2025 - Present",
-        description: "Developing and operating a live three-app e-learning platform for a commercial client: a Next.js 15 student portal, an Express + TypeScript API, and a React admin dashboard.",
+        description: "I develop and operate a live three-app e-learning platform for a commercial client: a Next.js 15 student portal, an Express + TypeScript API, and a React admin dashboard.",
         sections: [
           {
             title: "What I Own",
@@ -77,36 +77,36 @@ export const experienceData = {
         role: "Champion & Team Lead",
         period: "2025",
         context: "Software Engineering Lab Project Show • UIU CSE Project Show",
-        description: "Led a 5-member team building Advyon, a legal-tech platform with case management, document workflows, and AI-assisted insights, through the full SDLC.",
+        description: "Led a five-member team building Advyon, a legal-tech platform with case management, document workflows, and AI-assisted insights, through the full SDLC.",
         impactTitle: "Recognition",
-        impact: "Won Champion at the CSE Project Show — while coordinating requirements, module ownership, and delivery for five developers on a trimester deadline.",
+        impact: "Won Champion at the CSE Project Show while coordinating requirements, module ownership, and delivery for five developers on a trimester deadline.",
         tags: ["Team Leadership", "SDLC", "Full-Stack", "AI Integration"]
       },
       {
         role: "Champion",
         period: "2024",
         context: "UIU CSE Week Programming Contest • 80+ Participants",
-        description: "Competed against 80+ participants in algorithmic problem-solving challenges, demonstrating strong competitive programming skills.",
+        description: "Won first place in the university's algorithmic programming contest against a field of more than 80 participants.",
         impactTitle: "Recognition",
-        impact: "Secured 1st place by solving complex algorithmic problems under time pressure.",
+        impact: "Took 1st place solving algorithmic problems under contest time pressure.",
         tags: ["Competitive Programming", "Algorithms", "Problem Solving"]
       },
       {
         role: "1st Runner-Up",
         period: "2023",
         context: "Advanced OOP Project Showcase • UIU",
-        description: "Presented a Java-based hospital management system implementing various design patterns and OOP principles.",
+        description: "Presented a Java hospital management system built around standard design patterns and OOP principles.",
         impactTitle: "Project Highlight",
-        impact: "Demonstrated expertise in object-oriented design, design patterns, and software architecture.",
+        impact: "Placed 2nd overall for its object-oriented design and use of design patterns.",
         tags: ["Java", "OOP", "Design Patterns"]
       },
       {
         role: "6th Runner-Up",
         period: "2024",
         context: "System Analysis & Design Lab Showcase • UIU",
-        description: "Designed and implemented full SDLC for an inventory management system.",
+        description: "Designed and implemented an inventory management system through the full SDLC.",
         impactTitle: "Achievement",
-        impact: "Delivered complete system documentation and implementation following industry-standard SDLC practices.",
+        impact: "Delivered the working system with complete documentation, from requirements analysis to deployment.",
         tags: ["SDLC", "System Design", "Documentation"]
       }
     ]
@@ -128,21 +128,21 @@ export const experienceData = {
         role: "Active Competitive Programmer",
         organization: "Codeforces, LeetCode, HackerRank",
         period: "2022 - Present",
-        description: "Solved 500+ problems focusing on algorithms and data structures. Regular participant in online contests and virtual competitions.",
+        description: "Solved 500+ algorithm and data structure problems. I take part in online contests and virtual competitions regularly.",
         tags: ["Algorithms", "Data Structures", "Problem Solving"]
       },
       {
         role: "Peer Mentor",
         organization: "UIU CSE Community",
         period: "2023 - Present",
-        description: "Helping junior students with programming fundamentals, debugging techniques, and contest preparation strategies — and sharing open study guides used by hundreds of classmates.",
+        description: "I help junior students with programming fundamentals, debugging, and contest preparation, and share open study guides that hundreds of classmates have used.",
         tags: ["Mentorship", "Teaching", "Community"]
       }
     ]
   },
   cta: {
-    title: "Let's work together!",
-    description: "I'm open to software engineering roles, research collaborations, and freelance projects. Let's discuss how my skills can contribute to your team.",
+    title: "Let's work together",
+    description: "I'm open to software engineering roles, research collaborations, and freelance projects. If any of that fits what you need, get in touch.",
     buttonText: "Contact Me"
   }
 };

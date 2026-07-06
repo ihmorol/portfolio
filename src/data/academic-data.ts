@@ -20,10 +20,10 @@ export const academicData = {
     title: "\"Solving the Lorenz ODE System Using Optimal ANN Architectures\"",
     advisor: "Dr. Muhammad Nomani Kabir",
     duration: "2026 (FYDP-I defended June 2026)",
-    quote: "\"Can a plain, data-driven neural network learn a coupled nonlinear ODE system — and which architecture does it best? We answer with a controlled 69-run search over depth, width, activation, and optimizer.\"",
+    quote: "\"Can a plain, data-driven neural network learn a coupled nonlinear ODE system, and which architecture does it best? We answer with a controlled 69-run search over depth, width, activation, and optimizer.\"",
     techStack: ["Python", "PyTorch", "NumPy", "SciPy"],
-    methodology: "Verified numerical baseline (custom RK4 vs SciPy DOP853, agreement RMSE ≈ 1.3e-11), then a systematic architecture search benchmarked against published PINN results.",
-    outcomes: "FYDP-I defended: 17-paper literature review, verified ground-truth pipeline, and a locked 69-experiment design. Training phase in progress.",
+    methodology: "A verified numerical baseline first (custom RK4 against SciPy DOP853, agreement RMSE around 1.3e-11), then a systematic architecture search benchmarked against published PINN results.",
+    outcomes: "FYDP-I defended with a 17-paper literature review, a verified ground-truth pipeline, and a locked 69-experiment design. The training phase is in progress.",
     proposalLink: "https://github.com/ihmorol/fydp_workspace"
   },
   certifications: [
@@ -37,7 +37,7 @@ export const academicData = {
       title: "Champion - SE Lab Project Show",
       year: "2025",
       issuer: "UIU CSE Project Show",
-      skills: "Led a 5-member team building Advyon, a legal-tech platform, through the full SDLC"
+      skills: "Led a five-member team building Advyon, a legal-tech platform, through the full SDLC"
     },
     {
       title: "Champion - CSE Week Programming Contest",
