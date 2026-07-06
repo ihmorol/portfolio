@@ -36,13 +36,21 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={cn(
         splineSans.variable,
         plusJakarta.variable,
-        'dark scroll-smooth'
+        'scroll-smooth'
       )}
     >
-      <body className="bg-background text-text-primary font-body antialiased selection:bg-white selection:text-black overflow-x-hidden">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}if(t==='dark'){document.documentElement.classList.add('dark');}}catch(e){document.documentElement.classList.add('dark');}})();`,
+          }}
+        />
+      </head>
+      <body className="bg-background text-text-primary font-body antialiased selection:bg-foreground selection:text-background overflow-x-hidden">
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"

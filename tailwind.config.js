@@ -10,13 +10,13 @@ module.exports = {
     extend: {
       colors: {
         background: {
-          DEFAULT: 'hsl(var(--background))',
-          secondary: 'hsl(var(--bg-elev-1))',
-          tertiary: 'hsl(var(--bg-elev-2))',
+          DEFAULT: 'hsl(var(--background) / <alpha-value>)',
+          secondary: 'hsl(var(--bg-elev-1) / <alpha-value>)',
+          tertiary: 'hsl(var(--bg-elev-2) / <alpha-value>)',
         },
         surface: {
-          DEFAULT: 'hsl(var(--bg-elev-1))',
-          light: 'hsl(var(--bg-elev-2))',
+          DEFAULT: 'hsl(var(--bg-elev-1) / <alpha-value>)',
+          light: 'hsl(var(--bg-elev-2) / <alpha-value>)',
         },
         accent: {
           coral: 'hsl(var(--accent-warm))',
@@ -27,11 +27,14 @@ module.exports = {
           yellow: 'hsl(var(--accent-warm))',
         },
         text: {
-          primary: 'hsl(var(--text-primary))',
-          secondary: 'hsl(var(--text-secondary))',
-          muted: 'hsl(var(--text-muted))',
+          primary: 'hsl(var(--text-primary) / <alpha-value>)',
+          secondary: 'hsl(var(--text-secondary) / <alpha-value>)',
+          muted: 'hsl(var(--text-muted) / <alpha-value>)',
         },
-        border: 'hsl(var(--border-soft))',
+        border: {
+          DEFAULT: 'hsl(var(--border-soft) / <alpha-value>)',
+          strong: 'hsl(var(--border-strong) / <alpha-value>)',
+        },
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         card: {
@@ -58,7 +61,7 @@ module.exports = {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
         },
-        foreground: 'hsl(var(--foreground))',
+        foreground: 'hsl(var(--foreground) / <alpha-value>)',
         'background-dark': 'hsl(var(--bg-base))',
         'card-dark': 'hsl(var(--bg-elev-1))',
         'card-lighter': 'hsl(var(--bg-elev-2))',

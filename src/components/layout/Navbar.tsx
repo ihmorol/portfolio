@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { layoutData } from '@/data/layout-data';
+import { ThemeToggle } from '@/components/layout/ThemeToggle';
 import { cn } from '@/lib/utils';
 
 export function Navbar() {
@@ -31,45 +32,51 @@ export function Navbar() {
     >
       <nav className="container mx-auto px-6 py-4 md:py-6 flex items-center justify-between pointer-events-auto">
         {/* Left Group: Brand + CTA */}
-        <div className="flex items-center gap-1 p-1 bg-white/5 backdrop-blur-md border border-white/5 rounded-full shadow-lg z-50">
-          <Link href="/" className="pl-4 pr-3 text-lg font-bold text-white whitespace-nowrap">
+        <div className="flex items-center gap-1 p-1 bg-background-secondary/70 backdrop-blur-md border border-border rounded-full shadow-lg z-50">
+          <Link href="/" className="focus-ring rounded-full pl-4 pr-3 text-lg font-bold text-text-primary whitespace-nowrap">
             {brand}
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-full bg-white text-black hover:bg-gray-200 font-medium px-5 h-10 text-xs font-bold uppercase tracking-widest transition-colors"
+            className="focus-ring inline-flex items-center justify-center rounded-full bg-foreground text-background hover:bg-foreground/85 font-medium px-5 h-10 text-xs font-bold uppercase tracking-widest transition-colors"
           >
             {cta}
           </Link>
         </div>
 
         {/* Right Side: Desktop Navigation */}
-        <div className="hidden lg:block relative">
-             <div className="bg-white/5 backdrop-blur-md border border-white/5 rounded-full px-2 py-1.5 flex items-center gap-1 shadow-lg">
+        <div className="hidden lg:flex items-center gap-3 relative">
+             <div className="bg-background-secondary/70 backdrop-blur-md border border-border rounded-full px-2 py-1.5 flex items-center gap-1 shadow-lg">
                 {menuItems.map((link) => (
                 <Link
                     key={link.name}
                     href={link.href}
                     className={cn(
-                    'px-5 py-2 text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300',
+                    'focus-ring px-5 py-2 text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300',
                     pathname === link.href
-                        ? 'bg-white text-black shadow-lg'
-                        : 'text-text-secondary hover:text-white hover:bg-white/10'
+                        ? 'bg-foreground text-background shadow-lg'
+                        : 'text-text-secondary hover:text-text-primary hover:bg-foreground/10'
                     )}
                 >
                     {link.name}
                 </Link>
                 ))}
             </div>
+            <ThemeToggle />
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden z-50 p-2 text-white bg-white/10 rounded-full backdrop-blur-md border border-white/5"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile: Theme Toggle + Menu Toggle */}
+        <div className="lg:hidden z-50 flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMobileMenuOpen}
+            className="focus-ring p-2 text-text-primary bg-foreground/10 rounded-full backdrop-blur-md border border-border"
+          >
+            {isMobileMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu Overlay */}
@@ -89,7 +96,7 @@ export function Navbar() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
                     'text-2xl font-bold tracking-tight',
-                    pathname === link.href ? 'text-white' : 'text-gray-500'
+                    pathname === link.href ? 'text-text-primary' : 'text-text-muted'
                   )}
                 >
                   {link.name}
@@ -98,7 +105,7 @@ export function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-8 w-full max-w-xs inline-flex items-center justify-center rounded-full bg-white text-black hover:bg-gray-200 h-10 text-xs font-bold uppercase tracking-widest transition-colors"
+                className="mt-8 w-full max-w-xs inline-flex items-center justify-center rounded-full bg-foreground text-background hover:bg-foreground/85 h-10 text-xs font-bold uppercase tracking-widest transition-colors"
               >
                 {cta}
               </Link>
