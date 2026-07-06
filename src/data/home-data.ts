@@ -3,7 +3,7 @@ export const homeData = {
     titlePrefix: "Let's",
     titleHighlight: "Connect",
     subtitle: "Final-Year CSE Student at UIU | Full-Stack Developer | ML Researcher",
-    description: "I build production software and do applied machine learning research. Currently finishing my B.Sc. at United International University (3.94 CGPA, 6-term full merit scholarship), where I also work as a Teaching Assistant. My first research paper — on class-imbalanced intrusion detection — is under review, and my thesis applies neural networks to differential equation systems.",
+    description: "I build production software and do applied machine learning research. I'm finishing my B.Sc. at United International University with a 3.94 CGPA and a full merit scholarship across six terms, and I work there as a teaching assistant. My first paper, on class-imbalanced intrusion detection, is under peer review. My thesis applies neural networks to differential equation systems.",
     buttons: [
       { text: "View Projects", variant: "primary", action: "view_projects" },
       { text: "Download Resume", variant: "secondary", action: "download_resume" },
@@ -17,16 +17,16 @@ export const homeData = {
     { value: '1', label: 'Paper Under Review' },
   ],
   featuredProjects: {
-    title: "Featured Projects Showcase",
-    viewAllText: "View All Works",
+    title: "Featured Projects",
+    viewAllText: "View All Projects",
     viewAllLink: "/projects",
     projects: [
       {
         id: '1',
         slug: 'advyon',
-        title: 'Advyon — Legal-Tech Platform',
+        title: 'Advyon',
         category: 'Full Stack',
-        description: 'Case management, document workflows, community discussions, and AI-assisted legal insights. Led a 5-member team through the full SDLC — Champion at the UIU CSE Project Show (Software Engineering Lab).',
+        description: 'Legal-tech platform with case management, document workflows, and AI-assisted legal insights. I led a five-member team through the full SDLC and we won Champion at the UIU CSE Project Show.',
         image: '/images/brand/mesh-hero-01.svg',
         tech: ['React', 'Express', 'TypeScript', 'MongoDB'],
         color: 'group-hover:text-blue-400',
@@ -40,9 +40,9 @@ export const homeData = {
       {
         id: '2',
         slug: 'elearning-platform',
-        title: 'Production E-Learning Platform',
+        title: 'E-Learning Platform',
         category: 'Full Stack',
-        description: 'A live IELTS-preparation platform built as three apps: a Next.js 15 student portal with video courses and progress tracking, an Express + TypeScript API with Vimeo/Zoom streaming and AI features, and a React admin dashboard.',
+        description: 'A live IELTS preparation platform built as three apps: a Next.js 15 student portal with video courses and progress tracking, an Express + TypeScript API with Vimeo and Zoom streaming, and a React admin dashboard.',
         image: '/images/brand/blob-depth-01.svg',
         tech: ['Next.js 15', 'React 19', 'Express', 'TypeScript'],
         color: 'group-hover:text-purple-400',
@@ -56,9 +56,9 @@ export const homeData = {
       {
         id: '3',
         slug: 'unsw-nb15-ids',
-        title: 'Intrusion Detection ML Research',
+        title: 'Intrusion Detection',
         category: 'AI / ML',
-        description: 'A reproducible 18-experiment study of class-imbalance strategies (class weighting, oversampling, SMOTE) for binary and multiclass intrusion detection on UNSW-NB15. Paper submitted for peer review.',
+        description: 'A reproducible 18-experiment study of class-imbalance strategies for binary and multiclass intrusion detection on UNSW-NB15. The paper is under peer review.',
         image: '/images/brand/divider-flow-01.svg',
         tech: ['Python', 'XGBoost', 'scikit-learn'],
         color: 'group-hover:text-green-400',
@@ -73,7 +73,7 @@ export const homeData = {
   },
   skills: {
     title: "Skills Overview",
-    description: "My toolkit spans production web development, backend systems, and applied machine learning — built through shipped client work, award-winning team projects, and research.",
+    description: "I work across web development, backend systems, and applied machine learning. Most of it was built through shipped client work, university team projects, and research.",
     cta: "Full Tech Stack",
     categories: [
         {
@@ -100,7 +100,7 @@ export const homeData = {
   },
   scheduleMeeting: {
     title: "Schedule a Meeting",
-    description: "Let's schedule a 15-minute call to discuss collaboration opportunities, projects, or just to connect!",
+    description: "Book a 15-minute call to talk about a role, a project, or a possible collaboration.",
     cta: "Schedule Now"
   },
   contact: {
@@ -108,19 +108,19 @@ export const homeData = {
         {
             type: "email",
             title: "Email",
-            description: "Send me an email about your project ideas and I'll get back to you as soon as possible.",
+            description: "Email me about a project or role. I usually reply within a day.",
             cta: "Email Me"
         },
         {
             type: "message",
             title: "Send Message",
-            description: "Send me an in-site message and let's start a conversation.",
+            description: "Prefer not to open your mail client? Send a message right from this site.",
             cta: "Message Me"
         },
         {
             type: "newsletter",
             title: "Sign up for\nNewsletter",
-            description: "Stay up-to-date with my latest projects, blog posts, and research journey!",
+            description: "Occasional updates on new projects, writing, and research.",
             cta: "Sign Up",
             placeholders: {
                 name: "Your Name",
@@ -131,7 +131,7 @@ export const homeData = {
   },
   social: {
     title: "Social Channels",
-    description: "Connect with me on social media to follow my engineering and research journey.",
+    description: "The best places to follow my work are GitHub and LinkedIn.",
     channels: [
         { name: "GitHub", url: "https://github.com/ihmorol", icon: "code", colorIdx: "gray" },
         { name: "LinkedIn", url: "https://linkedin.com/in/ihmorol", icon: "work", colorIdx: "blue" },
