@@ -11,14 +11,19 @@
             box-sizing: border-box;
         }
 
+        @page {
+            size: letter;
+            margin: 0;
+        }
+
         body {
-            font-family: 'Calibri', 'Arial', sans-serif;
-            font-size: 9pt;
-            line-height: 1.24;
+            font-family: 'Calibri', 'Carlito', 'Arial', sans-serif;
+            font-size: 9.2pt;
+            line-height: 1.21;
             color: #000;
             background: #fff;
-            padding: 0.3in 0.4in;
-            max-width: 8.5in;
+            padding: 0.3in 0.45in;
+            width: 8.5in;
             margin: 0 auto;
         }
 
@@ -33,31 +38,43 @@
         }
 
         .name {
-            font-size: 15pt;
+            font-size: 17pt;
             font-weight: bold;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
 
         .contact {
-            font-size: 8.5pt;
+            font-size: 9pt;
             color: #222;
-            margin-top: 1px;
+            margin-top: 2px;
+        }
+
+        .summary {
+            font-size: 9.2pt;
+            margin-top: 3px;
+            text-align: center;
         }
 
         .section {
-            margin-bottom: 6px;
+            margin-bottom: 5px;
         }
 
         .section-title {
-            font-size: 9.5pt;
+            font-size: 10pt;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 2px;
+            letter-spacing: 1.2px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 1px;
+            margin-bottom: 3px;
         }
 
         .entry {
             margin-bottom: 3px;
+        }
+
+        .entry:last-child {
+            margin-bottom: 0;
         }
 
         .entry-header {
@@ -69,41 +86,42 @@
 
         .entry-title {
             font-weight: bold;
-            font-size: 9pt;
+            font-size: 9.2pt;
         }
 
         .entry-subtitle {
             font-style: italic;
-            font-size: 8.5pt;
+            font-size: 9pt;
             color: #333;
         }
 
         .entry-date {
-            font-size: 8.5pt;
+            font-size: 9pt;
             color: #444;
             white-space: nowrap;
         }
 
         ul {
-            margin-left: 14px;
+            margin-left: 15px;
         }
 
         li {
-            margin-bottom: 0;
-            font-size: 9pt;
+            margin-bottom: 1px;
+            font-size: 9.2pt;
         }
 
         .skill-line {
-            font-size: 9pt;
+            font-size: 9.2pt;
+            margin-bottom: 1px;
         }
 
         .inline-note {
-            font-size: 8.5pt;
+            font-size: 9pt;
         }
 
         @media print {
             body {
-                padding: 0.25in 0.4in;
+                padding: 0.3in 0.45in;
             }
         }
     </style>
@@ -116,6 +134,10 @@
             <a href="https://linkedin.com/in/ihmorol">linkedin.com/in/ihmorol</a> |
             <a href="https://github.com/ihmorol">github.com/ihmorol</a> |
             <a href="https://ihmorol.me">ihmorol.me</a>
+        </div>
+        <div class="summary">
+            Final-year CSE student (CGPA 3.94) who builds production web platforms and does applied machine learning research.
+            First-author paper under peer review, teaching assistant for 100+ students, two-time university champion.
         </div>
     </div>
 
@@ -214,6 +236,21 @@
                 <li>17-paper literature review; benchmarked against published PINN and DeepONet results</li>
             </ul>
         </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <span class="entry-title">ANN Modeling of Hybrid Nanofluid Boundary Layer Flow</span> |
+                    <span class="entry-subtitle">independent scientific ML study</span> |
+                    <a class="inline-note" href="https://github.com/ihmorol/ann-hybrid-nanofluid-model">code</a>
+                </div>
+                <div class="entry-date">2026</div>
+            </div>
+            <ul>
+                <li>9-layer network trained with Levenberg-Marquardt optimization on ~32,400 physics-generated samples</li>
+                <li>Validated against numerical solutions of the flow equations using MSE, RMSE, and R&sup2; metrics</li>
+            </ul>
+        </div>
     </div>
 
     <div class="section">
@@ -273,26 +310,28 @@
             </div>
             <ul>
                 <li>
-                    <a href="https://github.com/ihmorol/remdon">remdon</a> (WebRTC video chat; Socket.io, Redis, PostgreSQL) |
                     <a href="https://github.com/ihmorol/voicekey">VoiceKey</a> (offline Whisper voice typing, Linux/Windows) |
                     <a href="https://github.com/ihmorol/paradoxical-prism">Paradox Prism</a> (anonymous reporting + steganography) |
-                    <a href="https://github.com/ihmorol/PrintSlot">PrintSlot</a> (campus print-shop app) |
+                    <a href="https://github.com/ihmorol/PrintSlot">PrintSlot</a> (campus print-shop app)
+                </li>
+                <li>
                     <a href="https://github.com/ihmorol/skill-paradox-backend">Skill Paradox</a> (skill-exchange platform) |
-                    <a href="https://github.com/ihmorol/ann-hybrid-nanofluid-model">ANN Nanofluid Model</a> (scientific ML) |
+                    <a href="https://github.com/ihmorol/data-collection-web">Meme Research Console</a> (live study instrument) |
                     <a href="https://github.com/ihmorol/task-manager-mobile">Task Manager</a> (React Native/Expo) |
-                    <a href="https://github.com/ihmorol/email-template-generator">Email Template Generator</a> (live tool)
+                    <a href="https://ihmorol.me">Portfolio</a> (Next.js 14, design-token theming, markdown blog) |
+                    <a href="https://github.com/ihmorol/email-template-generator">Email Templates</a> (live tool)
                 </li>
             </ul>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Achievements</div>
+        <div class="section-title">Achievements &amp; Leadership</div>
         <ul>
             <li>Champion &amp; Team Lead, SE Lab, UIU CSE Project Show (Advyon); Champion, CSE Week Programming Contest 2024 (80+ participants)</li>
             <li>500+ problems solved on <a href="https://codeforces.com/profile/ihmorol">Codeforces</a>, LeetCode, and HackerRank; active competitive programmer since 2022</li>
             <li>1st Runner-Up, Advanced OOP Project Showcase 2023; 6th Runner-Up, System Analysis &amp; Design Lab Showcase 2024</li>
-            <li>Peer mentor, UIU CSE community; study guides shared across the department; open-source contributor</li>
+            <li>Peer mentor, UIU CSE community; exam study packs used by classmates across the department; open-source contributor</li>
         </ul>
     </div>
 </body>
