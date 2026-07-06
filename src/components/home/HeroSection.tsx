@@ -28,7 +28,7 @@ export function HeroSection() {
         customIcon={
           <Zap className="text-accent-yellow w-12 h-12 md:w-16 md:h-16 fill-current -rotate-12 drop-shadow-[0_0_15px_rgba(251,191,36,0.5)]" />
         }
-        description="Building exceptional digital experiences."
+        description="Software engineer and ML researcher, based in Dhaka."
       />
 
       <div className="relative z-10 flex flex-col lg:flex-row gap-4 md:gap-6">
@@ -57,15 +57,15 @@ export function HeroSection() {
             <HoverField>
               <Link
                 href="/projects"
-                className="group focus-ring relative w-full aspect-[3/4] sm:aspect-[9/14] bg-gradient-to-br from-accent-blue via-accent-teal to-accent-coral rounded-xl md:rounded-2xl flex flex-col items-center justify-center gap-2 md:gap-4 transition-transform cursor-pointer border border-white/20"
+                className="group focus-ring relative w-full aspect-[3/4] sm:aspect-[9/14] bg-gradient-to-br from-accent-blue via-accent-teal to-accent-coral rounded-xl md:rounded-2xl flex flex-col items-center justify-center gap-2 md:gap-4 transition-transform cursor-pointer border border-border-strong"
               >
                 <span
-                  className="material-symbols-outlined text-white text-4xl md:text-5xl lg:text-6xl"
+                  className="material-symbols-outlined text-text-primary text-4xl md:text-5xl lg:text-6xl"
                   style={{ fontVariationSettings: "'FILL' 1, 'wght' 400" }}
                 >
                   dynamic_feed
                 </span>
-                <span className="type-micro text-white">View Projects</span>
+                <span className="type-micro text-text-primary">View Projects</span>
               </Link>
             </HoverField>
             <Link

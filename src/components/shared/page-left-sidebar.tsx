@@ -23,16 +23,16 @@ export const PageLeftSideBar: React.FC<PageLeftSideBarProps> = ({ title }) => {
 
   return (
     <div className="fixed left-6 bottom-12 hidden xl:flex flex-col items-center gap-4 z-40">
-      <div className="bg-[#1a1b1e]/80 backdrop-blur border border-[#333333] rounded-full p-1.5 w-10 h-64 flex flex-col justify-between items-center relative">
+      <div className="bg-background-secondary/80 backdrop-blur border border-border rounded-full p-1.5 w-10 h-64 flex flex-col justify-between items-center relative">
         <span 
-          className="text-[10px] font-bold text-gray-400 uppercase tracking-widest text-vertical py-4" 
+          className="text-[10px] font-bold text-text-secondary uppercase tracking-widest text-vertical py-4" 
           style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
         >
           {title}
         </span>
-        <div className="w-1.5 h-full bg-gray-700/50 rounded-full relative overflow-hidden mb-2">
+        <div className="w-1.5 h-full bg-border/50 rounded-full relative overflow-hidden mb-2">
           <div 
-            className="absolute top-0 left-0 w-full bg-white rounded-full transition-all duration-100 ease-out"
+            className="absolute top-0 left-0 w-full bg-foreground rounded-full transition-all duration-100 ease-out"
             style={{ height: `${scrollProgress * 100}%` }}
           ></div>
         </div>

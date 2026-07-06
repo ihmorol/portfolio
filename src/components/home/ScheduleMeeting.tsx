@@ -9,13 +9,13 @@ export function ScheduleMeeting() {
     <section className="flex flex-col gap-6 mb-16">
         <div className="glass-light rounded-3xl p-2 sm:p-3 lg:col-span-12 flex flex-col md:flex-row overflow-hidden min-h-[400px]">
             <div className="w-full md:w-2/5 p-6 md:p-10 flex flex-col justify-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">{title}</h2>
-                <p className="text-gray-600 mb-8 leading-relaxed">{description}</p>
-                <button className="bg-black text-white w-full py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-gray-800 transition-colors">
+                <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">{title}</h2>
+                <p className="text-text-muted mb-8 leading-relaxed">{description}</p>
+                <button className="focus-ring bg-foreground text-background w-full py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 transition-colors">
                     {cta}
                 </button>
             </div>
-            <div className="w-full md:w-3/5 bg-gray-50 rounded-[20px] p-6 md:p-10 flex flex-col justify-center relative overflow-hidden">
+            <div className="w-full md:w-3/5 bg-background-tertiary rounded-[20px] p-6 md:p-10 flex flex-col justify-center relative overflow-hidden">
                 <div className="flex flex-col gap-6 relative z-10">
                     <div className="flex items-center gap-4">
                         <div className="bg-red-400 p-4 rounded-2xl shadow-lg w-16 h-16 flex items-center justify-center shrink-0">
@@ -31,7 +31,7 @@ export function ScheduleMeeting() {
                             <div className="w-8 h-8 rounded-full bg-red-400 flex items-center justify-center mr-3">
                                 <span className="material-symbols-outlined text-white text-sm">sentiment_satisfied</span>
                             </div>
-                            <div className="h-2 w-24 bg-white/30 rounded-full"></div>
+                            <div className="h-2 w-24 bg-white/40 rounded-full"></div>
                         </div>
                         <div className="bg-blue-200 p-3 rounded-full shadow-sm w-12 h-12 flex items-center justify-center shrink-0">
                             <span className="material-symbols-outlined text-blue-600">add</span>
