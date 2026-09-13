@@ -21,9 +21,9 @@ export function Footer() {
   const { brand, socialLinks, sitemap, resources, newsletter, copyright, legals } = layoutData.footer;
 
   return (
-    <footer className="bg-background-secondary border-t border-border/60 pt-20 pb-10">
+    <footer className="bg-background-secondary border-t border-border/60 pt-12 pb-8">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-10">
           
           {/* Brand Section */}
           <div className="md:col-span-4">
@@ -113,7 +113,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border/60 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-6 border-t border-border/60 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-text-muted">
             {copyright.replace('{year}', currentYear.toString())}
           </p>
