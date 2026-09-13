@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { homeData } from '@/data/home-data';
 import { PageHeader } from '@/components/shared/PageHeader';
 import { Zap } from 'lucide-react';
-import { HeroDepthScene } from '@/components/3d/hero/HeroDepthScene';
 import { HoverField } from '@/components/motion/HoverField';
 import { pageEnterTransition } from '@/lib/motion-tokens';
 
@@ -20,7 +19,6 @@ export function HeroSection() {
       transition={pageEnterTransition}
       className="relative isolate w-full mb-8 md:mb-16"
     >
-      <HeroDepthScene className="rounded-[var(--radius-xl)]" />
       <PageHeader
         titlePrefix={titlePrefix}
         icon="bolt"
