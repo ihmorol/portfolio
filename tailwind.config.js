@@ -4,6 +4,7 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/data/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'class',
   theme: {
@@ -66,7 +67,7 @@ module.exports = {
         'card-dark': 'hsl(var(--bg-elev-1))',
         'card-lighter': 'hsl(var(--bg-elev-2))',
         'accent-peach': 'hsl(var(--accent-warm))',
-        'accent-red': '#ef4444',
+        'accent-red': '#ff6b6b',
       },
       fontFamily: {
         sans: ['var(--font-jakarta)', 'sans-serif'],
