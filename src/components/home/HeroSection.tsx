@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { homeData } from '@/data/home-data';
 import { PageHeader } from '@/components/shared/PageHeader';
 import { Zap } from 'lucide-react';
-import { HoverField } from '@/components/motion/HoverField';
+import { TiltCard } from '@/components/motion/TiltCard';
 import { pageEnterTransition } from '@/lib/motion-tokens';
 
 export function HeroSection() {
@@ -32,9 +32,12 @@ export function HeroSection() {
       <div className="relative z-10 flex flex-col lg:flex-row gap-4 md:gap-6">
         <div className="flex flex-row gap-3 md:gap-4 lg:gap-5">
           <div className="flex flex-col gap-2 md:gap-3 w-[calc(50%-6px)] sm:w-36 md:w-44 lg:w-52 flex-shrink-0">
-            <HoverField className="relative w-full aspect-[3/4] sm:aspect-[9/14] rounded-xl md:rounded-2xl overflow-hidden bg-gradient-to-br from-background-tertiary to-background-secondary border border-border">
+            <TiltCard
+              className="relative w-full aspect-[3/4] sm:aspect-[9/14] rounded-xl md:rounded-2xl overflow-hidden bg-gradient-to-br from-background-tertiary to-background-secondary border border-border"
+              intensity={6}
+            >
               <Image src="/images/profile/image.jpeg" alt="Profile" fill className="object-cover" priority />
-            </HoverField>
+            </TiltCard>
             <Link
               href="/resume.pdf"
               target="_blank"
@@ -52,20 +55,20 @@ export function HeroSection() {
           </div>
 
           <div className="flex flex-col gap-2 md:gap-3 w-[calc(50%-6px)] sm:w-36 md:w-44 lg:w-52 flex-shrink-0">
-            <HoverField>
+            <TiltCard intensity={7} className="rounded-xl md:rounded-2xl">
               <Link
                 href="/projects"
-                className="group focus-ring relative w-full aspect-[3/4] sm:aspect-[9/14] bg-gradient-to-br from-accent-blue via-accent-teal to-accent-coral rounded-xl md:rounded-2xl flex flex-col items-center justify-center gap-2 md:gap-4 transition-transform cursor-pointer border border-border-strong"
+                className="group focus-ring relative w-full aspect-[3/4] sm:aspect-[9/14] bg-gradient-to-br from-accent-blue via-accent-teal to-accent-coral rounded-xl md:rounded-2xl flex flex-col items-center justify-center gap-2 md:gap-4 transition-transform cursor-pointer border border-border-strong [transform-style:preserve-3d]"
               >
                 <span
-                  className="material-symbols-outlined text-text-primary text-4xl md:text-5xl lg:text-6xl"
+                  className="material-symbols-outlined text-text-primary text-4xl md:text-5xl lg:text-6xl drop-shadow-sm [transform:translateZ(34px)]"
                   style={{ fontVariationSettings: "'FILL' 1, 'wght' 400" }}
                 >
                   dynamic_feed
                 </span>
-                <span className="type-micro text-text-primary">View Projects</span>
+                <span className="type-micro text-text-primary [transform:translateZ(26px)]">View Projects</span>
               </Link>
-            </HoverField>
+            </TiltCard>
             <Link
               href="/contact"
               className="focus-ring flex items-center justify-center gap-2 md:gap-3 bg-background-secondary hover:bg-background-tertiary text-text-primary px-3 md:px-4 py-2 md:py-3 rounded-lg md:rounded-xl transition-colors w-full border border-border"

@@ -47,20 +47,31 @@ export function Navbar() {
         {/* Right Side: Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-3 relative">
              <div className="bg-background-secondary/70 backdrop-blur-md border border-border rounded-full px-2 py-1.5 flex items-center gap-1 shadow-lg">
-                {menuItems.map((link) => (
+                {menuItems.map((link) => {
+                const isActive = pathname === link.href;
+                return (
                 <Link
                     key={link.name}
                     href={link.href}
                     className={cn(
-                    'focus-ring px-5 py-2 text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300',
-                    pathname === link.href
-                        ? 'bg-foreground text-background shadow-lg'
+                    'focus-ring relative px-5 py-2 text-xs font-bold uppercase tracking-wider rounded-full transition-colors duration-300',
+                    isActive
+                        ? 'text-background'
                         : 'text-text-secondary hover:text-text-primary hover:bg-foreground/10'
                     )}
                 >
-                    {link.name}
+                    {isActive && (
+                      <motion.span
+                        layoutId="navbar-active-pill"
+                        className="absolute inset-0 bg-foreground rounded-full shadow-lg"
+                        transition={{ type: 'spring', stiffness: 380, damping: 32 }}
+                        aria-hidden="true"
+                      />
+                    )}
+                    <span className="relative z-10">{link.name}</span>
                 </Link>
-                ))}
+                );
+                })}
             </div>
             <ThemeToggle />
         </div>

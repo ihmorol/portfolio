@@ -1,6 +1,7 @@
 'use client';
 
 import { homeData } from '@/data/home-data';
+import { Magnetic } from '@/components/motion/Magnetic';
 
 export function SkillsOverview() {
   const { title, description, cta, categories } = homeData.skills;
@@ -12,9 +13,11 @@ export function SkillsOverview() {
             <p className="text-text-muted leading-relaxed mb-6">
                 {description}
             </p>
-            <button className="focus-ring bg-foreground text-background px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 transition-colors w-max">
-                {cta}
-            </button>
+            <Magnetic strength={5}>
+                <button className="focus-ring bg-foreground text-background px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 hover:shadow-lg transition-all duration-300 w-max cursor-pointer">
+                    {cta}
+                </button>
+            </Magnetic>
             <div className="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
                 <span aria-hidden="true" className="material-symbols-outlined text-[200px] text-text-primary">terminal</span>
             </div>

@@ -32,7 +32,11 @@ export function PageHeader({
         {customIcon}
         {titleSuffix && (
           <span
-            className={suffixItalic ? 'font-light italic text-text-muted' : 'font-semibold text-text-secondary'}
+            className={
+              suffixItalic
+                ? 'font-light italic text-text-muted'
+                : 'font-semibold text-gradient-accent'
+            }
           >
             {titleSuffix}
           </span>
