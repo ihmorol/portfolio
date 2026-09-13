@@ -5,15 +5,15 @@
       <stop offset="1" stop-color="#58C9FF" stop-opacity="0" />
     </radialGradient>
     <radialGradient id="g2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1260 140) rotate(22) scale(650 500)">
-      <stop stop-color="#7EF4D0" stop-opacity="0.45" />
-      <stop offset="1" stop-color="#7EF4D0" stop-opacity="0" />
+      <stop stop-color="#45D6BD" stop-opacity="0.45" />
+      <stop offset="1" stop-color="#45D6BD" stop-opacity="0" />
     </radialGradient>
     <radialGradient id="g3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(820 760) rotate(12) scale(760 520)">
       <stop stop-color="#FFC95A" stop-opacity="0.35" />
       <stop offset="1" stop-color="#FFC95A" stop-opacity="0" />
     </radialGradient>
   </defs>
-  <rect width="1600" height="900" fill="#0B101A" />
+  
   <rect width="1600" height="900" fill="url(#g1)" />
   <rect width="1600" height="900" fill="url(#g2)" />
   <rect width="1600" height="900" fill="url(#g3)" />

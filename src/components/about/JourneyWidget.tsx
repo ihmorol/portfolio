@@ -22,7 +22,7 @@ export function JourneyWidget() {
             <div 
               className={`absolute left-[13px] top-1.5 w-3.5 h-3.5 rounded-full border-[3px] border-background-secondary z-10 
               ${item.active 
-                ? `${item.color} shadow-[0_0_10px_#6BCB77]` 
+                ? `${item.color} shadow-[0_0_10px_#4ade80]` 
                 : item.isEducation
                   ? 'bg-border-strong'
                   : `bg-foreground ${item.hoverBg} transition-colors`

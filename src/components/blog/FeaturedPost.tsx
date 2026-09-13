@@ -35,7 +35,7 @@ export function FeaturedPost({ post }: FeaturedPostProps) {
         
         <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
           <div className="flex items-center gap-3 text-xs text-text-secondary font-bold uppercase tracking-wide mb-4">
-            <span className="text-[#ff6b6b]">{post.category}</span>
+            <span className="text-accent-red">{post.category}</span>
             <span className="w-1 h-1 bg-border-strong rounded-full"></span>
             <span>{formatDate(post.date)}</span>
             <span className="w-1 h-1 bg-border-strong rounded-full"></span>

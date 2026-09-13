@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: light;
   --bg-base: 218 35% 96%;
   --bg-elev-1: 220 28% 99%;
   --bg-elev-2: 220 20% 92%;
@@ -67,6 +68,7 @@
 }
 
 .dark {
+  color-scheme: dark;
   --bg-base: 221 29% 6%;
   --bg-elev-1: 224 24% 10%;
   --bg-elev-2: 224 17% 15%;
@@ -107,6 +109,11 @@
   h5,
   h6 {
     font-family: var(--font-spline), sans-serif;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
   }
 }
 

@@ -56,7 +56,7 @@ export default function ContactPage() {
                 <div className="bg-background-tertiary rounded-[2rem] flex-1 relative min-h-[300px] md:min-h-auto overflow-hidden flex items-center justify-center">
                     <div className="relative w-full h-full flex flex-col items-center justify-center gap-6 p-8">
                         <div className="flex gap-6 items-center">
-                            <div className="bg-[#ff6b6b] rounded-3xl w-20 h-20 flex items-center justify-center shadow-xl shadow-red-200">
+                            <div className="bg-accent-red rounded-3xl w-20 h-20 flex items-center justify-center shadow-xl shadow-red-200">
                                 <Calendar className="text-white w-10 h-10" />
                             </div>
                             <div className="bg-blue-600 rounded-full py-4 px-6 shadow-xl shadow-blue-200 min-w-[140px]">
@@ -71,7 +71,7 @@ export default function ContactPage() {
                         <div className="flex gap-6 items-center translate-x-4">
                             <div className="bg-blue-600 rounded-full py-4 px-8 shadow-xl shadow-blue-200 relative min-w-[160px]">
                                 <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-blue-600 transform rotate-45 rounded-sm"></div>
-                                <div className="absolute -left-10 top-1/2 -translate-y-1/2 bg-[#ff8a8a] rounded-full p-2 border-4 border-background-tertiary">
+                                <div className="absolute -left-10 top-1/2 -translate-y-1/2 bg-accent-red rounded-full p-2 border-4 border-background-tertiary">
                                   <User className="text-white w-6 h-6" />
                                 </div>
                                 <div className="h-2.5 w-32 bg-white/40 rounded-full mb-2.5"></div>
@@ -89,9 +89,8 @@ export default function ContactPage() {
                                 {[...Array(15)].map((_, i) => (
                                     <div
                                       key={i}
-                                      className="w-1 rounded-full"
+                                      className={`w-1 rounded-full ${i % 2 === 0 ? 'bg-blue-300' : 'bg-blue-500'}`}
                                       style={{
-                                        backgroundColor: i % 2 === 0 ? '#93c5fd' : '#3b82f6',
                                         height: `${Math.random() * 60 + 20}%`,
                                       }}
                                     ></div>
@@ -150,7 +149,7 @@ export default function ContactPage() {
             {/* Newsletter Card */}
             <div className="md:col-span-4 bg-background-secondary rounded-[2.5rem] p-8 border border-border/60 flex flex-col h-full hover:border-border transition-colors">
                 <div className="flex items-start gap-5 mb-8">
-                    <div className="w-14 h-14 bg-[#ff6b6b] rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-red-900/20">
+                    <div className="w-14 h-14 bg-accent-red rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-red-900/20">
                         <Mail className="text-white w-7 h-7" />
                     </div>
                     <div>

@@ -8,10 +8,10 @@ export function NewsletterWidget() {
 
   return (
     <div className="md:col-span-4 bg-background-secondary rounded-3xl p-6 border border-border flex flex-col h-full group hover:border-border-strong transition-colors relative overflow-hidden">
-      <div className="absolute -right-6 -top-6 w-32 h-32 bg-[#ff6b6b]/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute -right-6 -top-6 w-32 h-32 bg-accent-red/10 rounded-full blur-3xl pointer-events-none"></div>
       
       <div className="flex items-start gap-4 mb-6 z-10">
-        <div className="w-12 h-12 bg-[#ff6b6b] rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-[#ff6b6b]/20">
+        <div className="w-12 h-12 bg-accent-red rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-accent-red/20">
           <Mail className="text-text-primary w-6 h-6" />
         </div>
         <div>
