@@ -22,7 +22,8 @@ interface TiltCardProps {
 /**
  * Mouse-driven 3D tilt with a cursor-tracking glare. Springs back to rest on
  * leave. Replaces flat hover lifts on showcase surfaces; no-op for reduced
- * motion and touch devices.
+ * motion and touch devices. Put border-radius on this wrapper (not the child)
+ * when the child is rounded, so the glare overlay inherits the rounding.
  */
 export function TiltCard({
   children,

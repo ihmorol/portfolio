@@ -20,7 +20,7 @@ import { VerticalSocialLinks } from '@/components/shared/vertical-social-links';
 import { layoutData } from '@/data/layout-data';
 import { projectsData } from '@/data/projects-data';
 import { ProjectCover } from '@/components/projects/ProjectCover';
-import { projectCovers } from '@/data/project-covers';
+import { getProjectCover } from '@/data/project-covers';
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState('All Projects');
@@ -168,6 +168,7 @@ export default function ProjectsPage() {
         <StaggerGroup className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">
           {filteredProjects.map((project, index) => {
             const Icon = project.icon;
+            const cover = getProjectCover(project.slug);
 
             return (
               <Reveal key={project.slug} delay={0.03 + index * 0.02} once>
@@ -181,8 +182,8 @@ export default function ProjectsPage() {
                       <div className="absolute inset-0 transition-transform duration-700 ease-out transform group-hover:scale-105">
                         <ProjectCover
                           label={project.title}
-                          from={projectCovers[project.slug]?.from ?? '#6366f1'}
-                          to={projectCovers[project.slug]?.to ?? '#a855f7'}
+                          from={cover.from}
+                          to={cover.to}
                           icon={Icon}
                         />
                       </div>

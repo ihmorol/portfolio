@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
+  animate,
   motion,
   useMotionValue,
   useReducedMotion,
@@ -16,7 +17,7 @@ import {
 export function CursorGlow() {
   const shouldReduceMotion = useReducedMotion();
   const [isEnabled, setIsEnabled] = useState(false);
-  const [hasMoved, setHasMoved] = useState(false);
+  const hasMovedRef = useRef(false);
 
   const glowX = useMotionValue(-400);
   const glowY = useMotionValue(-400);
@@ -38,14 +39,16 @@ export function CursorGlow() {
     const handlePointerMove = (event: PointerEvent) => {
       glowX.set(event.clientX);
       glowY.set(event.clientY);
-      if (!hasMoved) {
-        setHasMoved(true);
-        glowOpacity.set(1);
+      if (!hasMovedRef.current) {
+        hasMovedRef.current = true;
+        animate(glowOpacity, 1, { duration: 0.4 });
       }
     };
 
-    const handlePointerLeave = () => glowOpacity.set(0);
-    const handlePointerEnter = () => glowOpacity.set(1);
+    const handlePointerLeave = () => animate(glowOpacity, 0, { duration: 0.4 });
+    const handlePointerEnter = () => {
+      if (hasMovedRef.current) animate(glowOpacity, 1, { duration: 0.4 });
+    };
 
     window.addEventListener('pointermove', handlePointerMove, {
       passive: true,
@@ -70,7 +73,7 @@ export function CursorGlow() {
         handlePointerEnter
       );
     };
-  }, [glowX, glowY, glowOpacity, hasMoved, shouldReduceMotion]);
+  }, [glowOpacity, glowX, glowY, shouldReduceMotion]);
 
   if (!isEnabled) return null;
 
@@ -82,7 +85,6 @@ export function CursorGlow() {
         x: springX,
         y: springY,
         opacity: glowOpacity,
-        transition: 'opacity 0.4s ease',
       }}
     >
       <div

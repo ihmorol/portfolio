@@ -8,12 +8,17 @@ import {
   useSpring,
 } from 'framer-motion';
 
+interface AmbientBackgroundProps {
+  /** Max pointer-parallax displacement in px, mirroring ParallaxLayer's speed prop. */
+  range?: number;
+}
+
 /**
  * Fixed ambient backdrop: three blurred accent blobs that drift on slow CSS
  * loops and lean gently toward the pointer (mouse parallax). Sits behind all
  * page content; pure decoration, hidden from the accessibility tree.
  */
-export function AmbientBackground() {
+export function AmbientBackground({ range = 14 }: AmbientBackgroundProps) {
   const shouldReduceMotion = useReducedMotion();
   const [hasFinePointer, setHasFinePointer] = useState(false);
 
@@ -35,15 +40,15 @@ export function AmbientBackground() {
     const handlePointerMove = (event: PointerEvent) => {
       const moveX = (event.clientX / window.innerWidth - 0.5) * 2;
       const moveY = (event.clientY / window.innerHeight - 0.5) * 2;
-      parallaxX.set(moveX * 14);
-      parallaxY.set(moveY * 14);
+      parallaxX.set(moveX * range);
+      parallaxY.set(moveY * range);
     };
 
     window.addEventListener('pointermove', handlePointerMove, {
       passive: true,
     });
     return () => window.removeEventListener('pointermove', handlePointerMove);
-  }, [parallaxX, parallaxY, shouldReduceMotion]);
+  }, [parallaxX, parallaxY, range, shouldReduceMotion]);
 
   return (
     <motion.div

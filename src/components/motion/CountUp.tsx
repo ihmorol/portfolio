@@ -17,12 +17,13 @@ interface CountUpProps {
   duration?: number;
 }
 
-const NUMERIC_PATTERN = /^([^\d]*)([\d.]+)(.*)$/;
+const NUMERIC_PATTERN = /^([^\d]*)([\d.,]+)(.*)$/;
 
 /**
  * Counts the numeric part of a stat up from zero when scrolled into view.
  * Non-numeric prefix/suffix ('×', '+', currency marks) render statically, and
- * reduced-motion users always see the final value.
+ * reduced-motion users always see the final value. Thousands separators
+ * ('1,500+') are preserved via locale grouping during the animation.
  */
 export function CountUp({ value, className, duration = 1.4 }: CountUpProps) {
   const shouldReduceMotion = useReducedMotion();
@@ -31,14 +32,22 @@ export function CountUp({ value, className, duration = 1.4 }: CountUpProps) {
 
   const match = value.match(NUMERIC_PATTERN);
   const prefix = match?.[1] ?? '';
-  const target = match ? parseFloat(match[2]) : NaN;
+  const numeric = match ? match[2].replace(/,/g, '') : '';
+  const target = match ? parseFloat(numeric) : NaN;
   const suffix = match?.[3] ?? '';
-  const decimals = match && match[2].includes('.') ? match[2].split('.')[1].length : 0;
+  const decimals = numeric.includes('.') ? numeric.split('.')[1].length : 0;
+  const useGrouping = Boolean(match?.[2].includes(','));
 
   const raw = useMotionValue(0);
-  const formatted = useTransform(raw, (latest) =>
-    decimals > 0 ? latest.toFixed(decimals) : Math.round(latest).toString()
-  );
+  const formatted = useTransform(raw, (latest) => {
+    const rounded =
+      decimals > 0 ? latest.toFixed(decimals) : Math.round(latest).toString();
+    if (!useGrouping) return rounded;
+    return Number(rounded).toLocaleString('en-US', {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals,
+    });
+  });
 
   useEffect(() => {
     if (!isInView || Number.isNaN(target)) return;

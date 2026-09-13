@@ -26,3 +26,22 @@ export const projectCovers: Record<string, ProjectCoverConfig> = {
   'email-template-generator': { from: '#eab308', to: '#f59e0b' },
   'portfolio-website': { from: '#71717a', to: '#a1a1aa' },
 };
+
+export const DEFAULT_COVER: ProjectCoverConfig = {
+  from: '#6366f1',
+  to: '#a855f7',
+};
+
+/** Cover palette for a project slug, or DEFAULT_COVER with a dev-time warning. */
+export function getProjectCover(slug: string): ProjectCoverConfig {
+  const cover = projectCovers[slug];
+  if (!cover) {
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn(
+        `[project-covers] No cover palette for slug "${slug}" — using DEFAULT_COVER. Add one in src/data/project-covers.ts.`
+      );
+    }
+    return DEFAULT_COVER;
+  }
+  return cover;
+}
