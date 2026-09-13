@@ -3,6 +3,8 @@ import { Spline_Sans, Plus_Jakarta_Sans } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 import { Navbar } from '@/components/layout/Navbar';
 import { PageTransition } from '@/components/motion/PageTransition';
+import { AmbientBackground } from '@/components/motion/AmbientBackground';
+import { CursorGlow } from '@/components/motion/CursorGlow';
 import './globals.css';
 import { cn } from '@/lib/utils';
 
@@ -56,6 +58,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <Navbar />
+        <AmbientBackground />
+        <CursorGlow />
         <main className="min-h-screen flex flex-col">
           <PageTransition>{children}</PageTransition>
         </main>

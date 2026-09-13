@@ -19,6 +19,8 @@ import { PageLeftSideBar } from '@/components/shared/page-left-sidebar';
 import { VerticalSocialLinks } from '@/components/shared/vertical-social-links';
 import { layoutData } from '@/data/layout-data';
 import { projectsData } from '@/data/projects-data';
+import { ProjectCover } from '@/components/projects/ProjectCover';
+import { getProjectCover } from '@/data/project-covers';
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState('All Projects');
@@ -74,8 +76,16 @@ export default function ProjectsPage() {
 
         <Reveal delay={0.06}>
           <section className="w-full max-w-6xl mx-auto mb-12 md:mb-16 surface-card-strong p-6 md:p-10 relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('/images/brand/mesh-hero-01.svg')] bg-cover bg-center opacity-35" />
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage:
+                  'radial-gradient(hsl(var(--text-primary) / 0.07) 1px, transparent 1px)',
+                backgroundSize: '18px 18px',
+              }}
+            />
             <div className="absolute -top-28 -right-24 h-72 w-72 rounded-full bg-accent-blue/20 blur-[88px]" />
+            <div className="absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-accent-yellow/10 blur-[88px]" />
 
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
               <div className="w-full md:w-1/2">
@@ -158,6 +168,7 @@ export default function ProjectsPage() {
         <StaggerGroup className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">
           {filteredProjects.map((project, index) => {
             const Icon = project.icon;
+            const cover = getProjectCover(project.slug);
 
             return (
               <Reveal key={project.slug} delay={0.03 + index * 0.02} once>
@@ -168,10 +179,13 @@ export default function ProjectsPage() {
                       className="block h-64 overflow-hidden relative rounded-[calc(var(--radius-xl)-4px)]"
                     >
                       <div className="absolute inset-0 bg-gradient-to-t from-background-secondary to-transparent z-10 opacity-60" />
-                      <div
-                        className={`w-full h-full bg-gradient-to-br ${project.color} transition-transform duration-700 ease-out flex items-center justify-center transform group-hover:scale-105`}
-                      >
-                        <Icon className="text-text-primary/20 w-16 h-16" />
+                      <div className="absolute inset-0 transition-transform duration-700 ease-out transform group-hover:scale-105">
+                        <ProjectCover
+                          label={project.title}
+                          from={cover.from}
+                          to={cover.to}
+                          icon={Icon}
+                        />
                       </div>
                       <div className="absolute top-4 left-4 z-20">
                         <span className="px-3 py-1 bg-black/60 backdrop-blur-md border border-border rounded-full type-micro text-white">

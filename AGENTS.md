@@ -49,3 +49,17 @@ PRs should include:
 ## Security & Configuration Tips
 - Copy `.env.local.example` to `.env.local` for local setup.
 - Never commit real API keys, SMTP credentials, or analytics secrets.
+
+## Agent skills
+
+### Issue tracker
+
+Issues and PRDs are tracked as GitHub issues via the `gh` CLI; external pull requests are also treated as a triage surface. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Uses the five canonical triage labels with their default names (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context layout: one `CONTEXT.md` + `docs/adr/` at the repo root. See `docs/agents/domain.md`.
