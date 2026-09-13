@@ -1,8 +1,10 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { homeData } from '@/data/home-data';
+import { TiltCard } from '@/components/motion/TiltCard';
+import { ProjectCover } from '@/components/projects/ProjectCover';
+import { projectCovers } from '@/data/project-covers';
 
 export function FeaturedProjects() {
   const { title, viewAllText, viewAllLink, projects } = homeData.featuredProjects;
@@ -18,12 +20,17 @@ export function FeaturedProjects() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
-          <div key={project.id} className="glass-dark rounded-3xl overflow-hidden group hover:border-border-strong transition-all duration-300 border border-border/60 flex flex-col h-full">
+          <TiltCard key={project.id} intensity={4} className="rounded-3xl h-full">
+            <div className="glass-dark rounded-3xl overflow-hidden group hover:border-border-strong transition-all duration-300 border border-border/60 flex flex-col h-full">
              <div className="relative h-48 overflow-hidden">
-                <div 
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" 
-                    style={{ backgroundImage: `url('${project.image}')` }}
-                ></div>
+                <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
+                    <ProjectCover
+                      label={project.title}
+                      from={projectCovers[project.slug]?.from ?? '#6366f1'}
+                      to={projectCovers[project.slug]?.to ?? '#a855f7'}
+                      materialIcon={projectCovers[project.slug]?.materialIcon}
+                    />
+                </div>
                 <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-white border border-border">
                     {project.category}
                 </div>
@@ -51,7 +58,8 @@ export function FeaturedProjects() {
                     </Link>
                 </div>
             </div>
-          </div>
+            </div>
+          </TiltCard>
         ))}
       </div>
     </section>
