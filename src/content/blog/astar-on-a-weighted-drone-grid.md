@@ -9,6 +9,11 @@ author:
 category: "AI and Machine Learning"
 readTime: 6
 tags: ["Artificial Intelligence", "A*", "Search Algorithms", "Python", "Matplotlib"]
+references:
+  - label: "Worked example"
+    note: "input.txt: 4x4 cost grid with -1 obstacles, start (0,0), goal (1,2) -> output.txt: Optimal Cost 7, path (0,0) -> (0,1) -> (1,2)."
+  - label: "Hart, Nilsson & Raphael (1968)"
+    note: "A Formal Basis for the Heuristic Determination of Minimum Cost Paths - the original A* paper."
 featured: false
 ---
 

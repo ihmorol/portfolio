@@ -9,6 +9,10 @@ author:
 category: "Hardware and Embedded"
 readTime: 5
 tags: ["Digital Logic Design", "Boolean Algebra", "Logisim", "Adder", "DLD"]
+references:
+  - label: "Logisim"
+    url: "https://www.cburch.com/logisim/"
+    note: "The circuit simulator used for every experiment in the post."
 featured: false
 ---
 

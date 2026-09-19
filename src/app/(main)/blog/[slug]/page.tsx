@@ -27,7 +27,8 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     'content',
     'coverImage',
     'category',
-    'tags'
+    'tags',
+    'references'
   ]) as BlogPost;
 
   const content = await markdownToHtml(post.content || '');
@@ -89,6 +90,36 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                     ))}
                 </div>
             </div>
+
+            {/* Evidence and references */}
+            {post.references && post.references.length > 0 && (
+                <div className="mt-10 pt-8 border-t border-border/60 pb-4">
+                    <h2 className="type-h3 text-text-primary mb-5">Evidence and references</h2>
+                    <ol className="space-y-4">
+                        {post.references.map((ref, i) => (
+                            <li key={i} className="pl-4 text-sm leading-relaxed text-text-secondary border-l-2 border-border">
+                                <span className="font-bold text-text-primary">{ref.label}</span>
+                                {ref.url ? (
+                                    <>
+                                        {" — "}
+                                        <a
+                                            href={ref.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-accent-blue hover:underline break-all"
+                                        >
+                                            {ref.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                                        </a>
+                                    </>
+                                ) : null}
+                                {ref.note ? (
+                                    <span className="block mt-1">{ref.note}</span>
+                                ) : null}
+                            </li>
+                        ))}
+                    </ol>
+                </div>
+            )}
          </article>
       </main>
       <Footer />

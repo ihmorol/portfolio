@@ -9,6 +9,9 @@ author:
 category: "Hardware and Embedded"
 readTime: 5
 tags: ["Electronics", "Diodes", "Circuit Analysis", "Lab Work"]
+references:
+  - label: "Recorded measurements"
+    note: "D1 0.34 V, D2 0.34 V, D3 0.68 V, D5 0.72 V, D4 off; branch currents 3.1, 3.7, and 9.3 mA; oscilloscope at 5 V/div and 10 ms/div."
 featured: false
 ---
 

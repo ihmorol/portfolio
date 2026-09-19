@@ -9,6 +9,9 @@ author:
 category: "Algorithms and Theory"
 readTime: 6
 tags: ["Theory of Computation", "Automata", "Formal Languages", "CFG", "DFA"]
+references:
+  - label: "Course reference"
+    note: "Sipser, Introduction to the Theory of Computation - ambiguity, epsilon and unit production removal, and Chomsky Normal Form."
 featured: false
 ---
 

@@ -9,6 +9,13 @@ author:
 category: "Software Engineering"
 readTime: 5
 tags: ["React Native", "Virtual DOM", "NestJS", "Mobile Development"]
+references:
+  - label: "React: Render and Commit"
+    url: "https://react.dev/learn/render-and-commit"
+    note: "The official description of the render-then-commit steps behind reconciliation."
+  - label: "NestJS documentation"
+    url: "https://docs.nestjs.com"
+    note: "Controller-service-module structure and dependency injection."
 featured: false
 ---
 

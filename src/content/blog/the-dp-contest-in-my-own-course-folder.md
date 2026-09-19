@@ -9,6 +9,12 @@ author:
 category: "Algorithms and Theory"
 readTime: 6
 tags: ["Algorithms", "Dynamic Programming", "Competitive Programming", "C++"]
+references:
+  - label: "POJ 2229 Sumsets"
+    url: "http://poj.org/problem?id=2229"
+    note: "The parity-recurrence problem; sample: 7 -> 6."
+  - label: "LightOJ problems"
+    note: "Neighbor House (RGB min-cost DP; sample case 137) and String to Palindrome (interval DP; tanbirahmed -> 5)."
 featured: false
 ---
 

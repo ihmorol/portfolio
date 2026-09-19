@@ -9,6 +9,9 @@ author:
 category: "Computer Systems"
 readTime: 5
 tags: ["Operating Systems", "Memory Management", "Page Tables", "Virtual Memory"]
+references:
+  - label: "The derivation chain"
+    note: "2 KB pages -> 11-bit offset; 256 MB VM -> 17-bit VPN; 4 GB physical -> 21-bit frame number; 4-byte PTE; 512 KB single-level table; 9-bit bottom level; (2^8 + 1) x 256 = 65,792 pages for 256 processes."
 featured: false
 ---
 

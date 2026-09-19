@@ -9,6 +9,12 @@ author:
 category: "Research"
 readTime: 7
 tags: ["Research", "FYDP", "Thesis Defense", "Machine Learning"]
+references:
+  - label: "Verified baseline"
+    note: "Custom RK4 cross-checked against SciPy's DOP853 solver: agreement RMSE about 1.3e-11 - the number the defense stood on."
+  - label: "Phase-two implementation"
+    url: "https://github.com/ihmorol/lorenz1960-pinn"
+    note: "The model that came after this post was written."
 featured: true
 ---
 

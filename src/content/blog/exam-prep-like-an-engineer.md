@@ -9,6 +9,9 @@ author:
 category: "Learning"
 readTime: 6
 tags: ["Learning", "Study Systems", "Exam Preparation", "University"]
+references:
+  - label: "Packs in use"
+    note: "Built for HCI (7 topic guides), Mobile App Development (marks split: React Native 8, NestJS 8, Git 2, JS/TS 2 out of 20), Software Engineering, and Machine Learning finals."
 featured: false
 ---
 
