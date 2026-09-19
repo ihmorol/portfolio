@@ -46,7 +46,7 @@ Reading code is recognition. Writing code is recall. Exams test recall.
 
 ## The 60-minute "hour before" plan
 
-The hour before an exam is high-leverage and universally wasted on anxious page-flipping. So every pack ends with a minute-by-minute plan. For MAD it looked like this:
+The hour before an exam is the most valuable and most wasted hour there is, usually lost to anxious page-flipping. So every pack ends with a minute-by-minute plan. For MAD it looked like this:
 
 - **0–18 min.** React Native: props vs state, the reusable component, the custom hook. Write the to-do screen from memory.
 - **18–36 min.** NestJS: the external-API controller and service, the CRUD controller. Write the GET example once.
