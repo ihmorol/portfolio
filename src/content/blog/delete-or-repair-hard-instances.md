@@ -9,6 +9,13 @@ author:
 category: "AI and Machine Learning"
 readTime: 7
 tags: ["Machine Learning", "Literature Review", "Decision Trees", "Naive Bayes", "Concept Drift"]
+references:
+  - label: "Farid, Rahman, Hossain (2014)"
+    note: "Hybrid decision tree and naive Bayes classifiers for multi-class classification tasks. Expert Systems with Applications 41(4), 1937-1946."
+  - label: "Farid et al. (2016)"
+    note: "An adaptive rule-based classifier for concept-drifting data streams. Expert Systems with Applications 64, 305-316."
+  - label: "Brodley & Friedl (1999)"
+    note: "Identifying and eliminating mislabeled training instances. Journal of Artificial Intelligence Research 11 - the noise-filter survey whose finding on single-algorithm filters is quoted."
 featured: false
 ---
 

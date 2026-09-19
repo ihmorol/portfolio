@@ -9,6 +9,9 @@ author:
 category: "Algorithms and Theory"
 readTime: 6
 tags: ["Algorithms", "Greedy Algorithms", "Union-Find", "C++", "Debugging"]
+references:
+  - label: "Sample data"
+    note: "Two-knapsack marks problem: capacities 120 + 20 over five tasks (20/10, 20/5, 30/5, 30/6, 20/40) -> 88 alone, 107 using the friend's capacity. Kruskal's MST prints each accepted edge as u,v--->w."
 featured: false
 ---
 

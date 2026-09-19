@@ -9,6 +9,9 @@ author:
 category: "Hardware and Embedded"
 readTime: 4
 tags: ["Electrical Circuits", "Calculus", "Power", "Problem Solving"]
+references:
+  - label: "Worked values"
+    note: "v(t) = (16000t + 20)e^(-1600t), i(t) = (128t + 0.16)e^(-1600t): p(0) = 3.2 W; the derivative's second root t = -1.25e-3 s is rejected as pre-circuit; energy by integration by parts."
 featured: false
 ---
 

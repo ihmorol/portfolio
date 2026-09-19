@@ -9,6 +9,11 @@ author:
 category: "AI and Machine Learning"
 readTime: 6
 tags: ["Machine Learning", "Class Imbalance", "Intrusion Detection", "XGBoost", "Security"]
+references:
+  - label: "Dataset: UNSW-NB15"
+    note: "Moustafa & Slay, 2015 (ACCS). The partitioned set used here contains 44 Worms, 378 Shellcode, 583 Backdoor, and 677 Analysis samples."
+  - label: "Verification"
+    note: "Every number in the post comes from the experiment's metrics tables. The Friedman test (chi-squared 29.44, p = 0.00027) and bootstrap confidence intervals are recomputable from the committed configs and seed (42)."
 featured: false
 ---
 

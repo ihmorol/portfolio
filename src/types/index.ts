@@ -41,6 +41,12 @@ export interface Result {
   description: string;
 }
 
+export interface BlogReference {
+  label: string;
+  url?: string;
+  note?: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -53,6 +59,7 @@ export interface BlogPost {
   tags: string[];
   author: Author;
   featured?: boolean;
+  references?: BlogReference[];
 }
 
 export type BlogCategory = 

@@ -9,6 +9,12 @@ author:
 category: "AI and Machine Learning"
 readTime: 6
 tags: ["Machine Learning", "kNN", "k-Means", "Clustering", "Python"]
+references:
+  - label: "IRIS dataset"
+    url: "https://archive.ics.uci.edu/dataset/53/iris"
+    note: "Classification dataset: 150 samples, 3 species."
+  - label: "Implementation details"
+    note: "Split 70/15/15 by one random draw per row; k swept over [1, 3, 5, 10, 15] on validation; k-means reseeds empty clusters with a random data point and stops when centroids stop moving (max 500 iterations)."
 featured: false
 ---
 

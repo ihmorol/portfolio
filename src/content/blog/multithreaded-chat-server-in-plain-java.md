@@ -9,6 +9,13 @@ author:
 category: "Software Engineering"
 readTime: 6
 tags: ["Java", "Networking", "Concurrency", "Sockets", "Projects"]
+references:
+  - label: "ServerSocket documentation"
+    url: "https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html"
+    note: "The accept loop and blocking I/O model the server is built on."
+  - label: "IELTS Paradox repository"
+    url: "https://github.com/ihmorol/ielts-paradox"
+    note: "The e-learning project that reused the chat layer."
 featured: false
 ---
 

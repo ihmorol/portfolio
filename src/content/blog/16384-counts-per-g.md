@@ -9,6 +9,9 @@ author:
 category: "Hardware and Embedded"
 readTime: 6
 tags: ["Embedded Systems", "ESP32", "IMU", "Sensors", "IoT"]
+references:
+  - label: "Conversion constants"
+    note: "MPU6050 default full scale: 16,384 LSB/g and 131 LSB per degree/second; the Z-axis offset is corrected by subtracting exactly 1 g at rest. MAX30102: 100-sample IR/red buffers; validity flags gate the display."
 featured: false
 ---
 

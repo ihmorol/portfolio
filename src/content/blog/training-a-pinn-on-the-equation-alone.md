@@ -9,6 +9,13 @@ author:
 category: "AI and Machine Learning"
 readTime: 6
 tags: ["Machine Learning", "PINN", "Physics-Informed Neural Networks", "PyTorch", "FYDP"]
+references:
+  - label: "Full implementation and experiment record"
+    url: "https://github.com/ihmorol/lorenz1960-pinn"
+    note: "Deterministic run (seed 0) reproduces every metric to the last digit; 18 pytest checks cover the initial condition, residual definition, and loss reduction."
+  - label: "Matthews & Bihlo, PinnDE (arXiv:2408.10011)"
+    url: "https://arxiv.org/abs/2408.10011"
+    note: "Source of the training protocol: 3,000 Latin-hypercube collocation points, 20,000 Adam iterations, linear learning-rate decay (Sec. 4.1)."
 featured: false
 ---
 

@@ -9,6 +9,10 @@ author:
 category: "Software Engineering"
 readTime: 5
 tags: ["Java", "OOP", "Collections", "Comparators"]
+references:
+  - label: "Comparator.compare contract"
+    url: "https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#compare-T-T-"
+    note: "The sign rule the whole post hangs on: negative means the first argument sorts before the second."
 featured: false
 ---
 

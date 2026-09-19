@@ -9,6 +9,10 @@ author:
 category: "Algorithms and Theory"
 readTime: 6
 tags: ["Data Structures", "Linked Lists", "C++", "Debugging", "DSA"]
+references:
+  - label: "Joshua Bloch on the binary search bug"
+    url: "https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html"
+    note: "The overflow in (low + high) / 2 lived in the JDK's binary search for nine years."
 featured: false
 ---
 

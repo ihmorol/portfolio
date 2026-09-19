@@ -9,6 +9,9 @@ author:
 category: "AI and Machine Learning"
 readTime: 6
 tags: ["Statistics", "Data Analysis", "Descriptive Statistics", "Correlation"]
+references:
+  - label: "Worked data"
+    note: "25-observation table (age, BMI, cholesterol) with every statistic computed by hand: frequency tables, the three means, variance, quartiles, Pearson r, least-squares line, and Spearman ranks; plus the 100-student CGPA grouped distribution (7, 18, 35, 27, 10, 3)."
 featured: false
 ---
 

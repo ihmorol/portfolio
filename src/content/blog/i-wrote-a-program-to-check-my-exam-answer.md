@@ -9,6 +9,9 @@ author:
 category: "Software Engineering"
 readTime: 5
 tags: ["Software Engineering", "Critical Path Method", "Project Management", "Python", "Verification"]
+references:
+  - label: "The check, concretely"
+    note: "An 11-task dictionary (durations 5 to 25 weeks), forward pass for ES/EF, backward pass through a reversed successor map, float = LS - ES. Output: duration 50, critical tasks A, C, E, F."
 featured: false
 ---
 

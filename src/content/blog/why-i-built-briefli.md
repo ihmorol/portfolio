@@ -9,6 +9,13 @@ author:
 category: "Projects"
 readTime: 5
 tags: ["Projects", "React", "Supabase", "Vercel", "Side Project"]
+references:
+  - label: "Live shortener"
+    url: "https://s.ihmorol.cv"
+    note: "The running app."
+  - label: "BriefLi repository"
+    url: "https://github.com/ihmorol/briefli"
+    note: "Source code."
 featured: false
 ---
 

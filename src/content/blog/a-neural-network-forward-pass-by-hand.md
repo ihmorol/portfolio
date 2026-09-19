@@ -9,6 +9,11 @@ author:
 category: "AI and Machine Learning"
 readTime: 6
 tags: ["Machine Learning", "Neural Networks", "Backpropagation", "Deep Learning"]
+references:
+  - label: "Worked examples"
+    note: "The 2-2-1 network, the RNN update trace (0.01 x 0.55 x 0.497 x 0.1265 = 0.00035), the stochastic neuron at T = 0, and the tau = 0.65 pseudo-labeling check all come from the course's exam questions, recomputed by hand."
+  - label: "NumPy XOR solver"
+    note: "Part 10 of the same prep material trains a 2-2-1 network on XOR with plain NumPy (learning rate 0.1, 10,000 epochs) - the paper-and-pencil numbers, runnable."
 featured: false
 ---
 

@@ -9,6 +9,13 @@ author:
 category: "Research"
 readTime: 5
 tags: ["Research", "Literature Review", "OpenAlex", "Python", "Research Methods"]
+references:
+  - label: "Review pipeline repository"
+    url: "https://github.com/ihmorol/big-data-ml-review"
+    note: "Pool construction, screening scripts, per-paper extraction notes, and the regenerable comparison table."
+  - label: "OpenAlex API documentation"
+    url: "https://docs.openalex.org"
+    note: "The source database behind the pool queries."
 featured: false
 ---
 

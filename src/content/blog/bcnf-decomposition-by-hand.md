@@ -9,6 +9,9 @@ author:
 category: "Computer Systems"
 readTime: 6
 tags: ["Databases", "Normalization", "BCNF", "DBMS", "Functional Dependencies"]
+references:
+  - label: "The worked relation"
+    note: "R(A,B,C,D,E) with F = {A -> E, BC -> A, DE -> B}: A+ = AE fails BCNF; the decomposition R1(A,E), R2(A,B,C,D) is lossless via A+ and does not preserve DE -> B."
 featured: false
 ---
 

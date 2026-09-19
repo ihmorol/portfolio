@@ -9,6 +9,10 @@ author:
 category: "Computer Systems"
 readTime: 6
 tags: ["Computer Networks", "TCP", "Sockets", "Python", "Protocol Design"]
+references:
+  - label: "socket.recv semantics"
+    url: "https://docs.python.org/3/library/socket.html#socket.socket.recv"
+    note: "Why the receiver loop must handle short reads."
 featured: false
 ---
 
