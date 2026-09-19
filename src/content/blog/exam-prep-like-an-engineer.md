@@ -1,18 +1,18 @@
 ---
-title: "Study Packs: How I Engineer Exam Prep (and Why My Classmates Keep Asking for My Notes)"
+title: "Study Packs: Treating Exam Preparation Like an Engineering Project"
 excerpt: "I stopped 'studying hard' and started building study systems: structured prep packs with topic guides, cram sheets, mock exams, and an hour-before reading plan. Here's the full method."
-coverImage: "/images/brand/divider-flow-01.svg"
+coverImage: "/images/brand/cover-exam-prep-like-an-engineer.svg"
 date: "2026-06-28"
 author:
   name: "Ikramul Hasan"
   image: "/images/profile/image.jpeg"
 category: "Learning"
 readTime: 6
-tags: ["Learning", "Study System", "Productivity", "University"]
+tags: ["Learning", "Study Systems", "Exam Preparation", "University"]
 featured: false
 ---
 
-# Study Packs: How I Engineer Exam Prep
+# Study Packs: Treating Exam Preparation Like an Engineering Project
 
 Every trimester, a few days before finals, my shortlinks start getting traffic. Classmates pass around my study packs for Human-Computer Interaction, Mobile Application Development, Software Engineering, and Machine Learning. They ask for them because the packs are engineered prep systems, not piles of notes.
 

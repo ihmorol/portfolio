@@ -1,18 +1,18 @@
 ---
-title: "Why I Built My Own Link Shortener (and Actually Use It Every Day)"
+title: "Building BriefLi: A Link Shortener Designed for Daily Use"
 excerpt: "BriefLi started as an itch: I share study guides and project links constantly, and long URLs with random slugs are unmanageable. So I built a shortlink dashboard on React, Supabase, and Vercel."
-coverImage: "/images/brand/blob-depth-01.svg"
+coverImage: "/images/brand/cover-why-i-built-briefli.svg"
 date: "2026-07-01"
 author:
   name: "Ikramul Hasan"
   image: "/images/profile/image.jpeg"
 category: "Projects"
 readTime: 5
-tags: ["Projects", "React", "Supabase", "Side Project"]
+tags: ["Projects", "React", "Supabase", "Vercel", "Side Project"]
 featured: false
 ---
 
-# Why I Built My Own Link Shortener
+# Building BriefLi: A Link Shortener Designed for Daily Use
 
 Every "should I build my own X?" article ends with "no, use an existing service." Here's the counterargument. I built my own link shortener, [BriefLi](https://s.ihmorol.cv), and it has quietly become the most-used piece of software I've ever written, because the user is me, every single day.
 
