@@ -56,11 +56,14 @@ export interface BlogPost {
 }
 
 export type BlogCategory = 
-  | 'ai-ml' 
-  | 'software-engineering' 
-  | 'tutorial' 
-  | 'research' 
-  | 'career';
+  | 'AI and Machine Learning' 
+  | 'Algorithms and Theory' 
+  | 'Software Engineering' 
+  | 'Computer Systems' 
+  | 'Hardware and Embedded' 
+  | 'Research' 
+  | 'Learning' 
+  | 'Projects';
 
 export interface Author {
   name: string;

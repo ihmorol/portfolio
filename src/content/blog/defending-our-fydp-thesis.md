@@ -1,18 +1,18 @@
 ---
-title: "Defending a Thesis With Zero Trained Models: How We Survived FYDP-I"
+title: "Defending a Thesis With Zero Trained Models: Our FYDP-I Defense"
 excerpt: "Our final-year thesis defense had one awkward problem: we hadn't trained a single neural network yet. Here's how we defended a verified baseline instead, and the exact prep system we used."
-coverImage: "/images/brand/mesh-hero-01.svg"
+coverImage: "/images/brand/cover-defending-our-fydp-thesis.svg"
 date: "2026-06-20"
 author:
   name: "Ikramul Hasan"
   image: "/images/profile/image.jpeg"
 category: "Research"
 readTime: 7
-tags: ["Research", "Thesis", "Machine Learning", "FYDP"]
+tags: ["Research", "FYDP", "Thesis Defense", "Machine Learning"]
 featured: true
 ---
 
-# Defending a Thesis With Zero Trained Models: How We Survived FYDP-I
+# Defending a Thesis With Zero Trained Models: Our FYDP-I Defense
 
 On June 15, 2026, my team (Team Paradox) walked into our FYDP-I defense with a machine learning thesis, *Solving the Lorenz ODE System Using Optimal ANN Architectures*, supervised by Dr. Muhammad Nomani Kabir. We had exactly zero trained neural networks to show for it.
 

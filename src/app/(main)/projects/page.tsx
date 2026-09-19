@@ -74,86 +74,90 @@ export default function ProjectsPage() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.06}>
-          <section className="w-full max-w-6xl mx-auto mb-12 md:mb-16 surface-card-strong p-6 md:p-10 relative overflow-hidden">
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage:
-                  'radial-gradient(hsl(var(--text-primary) / 0.07) 1px, transparent 1px)',
-                backgroundSize: '18px 18px',
-              }}
-            />
-            <div className="absolute -top-28 -right-24 h-72 w-72 rounded-full bg-accent-blue/20 blur-[88px]" />
-            <div className="absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-accent-yellow/10 blur-[88px]" />
+        {activeCategory === 'All Projects' && (
+          <Reveal delay={0.06}>
+            <section className="w-full max-w-6xl mx-auto mb-12 md:mb-16 surface-card-strong p-6 md:p-10 relative overflow-hidden">
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage:
+                    'radial-gradient(hsl(var(--text-primary) / 0.07) 1px, transparent 1px)',
+                  backgroundSize: '18px 18px',
+                }}
+              />
+              <div className="absolute -top-28 -right-24 h-72 w-72 rounded-full bg-accent-blue/20 blur-[88px]" />
+              <div className="absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-accent-yellow/10 blur-[88px]" />
 
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              <div className="w-full md:w-1/2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent-yellow/10 border border-accent-yellow/30 rounded-full type-micro text-accent-yellow mb-4">
-                  <Medal className="w-4 h-4" />
-                  {featuredProject.badge}
-                </div>
-                <h2 className="type-h1 text-text-primary mb-4">{featuredProject.title}</h2>
-                <p className="type-body text-text-secondary mb-6 max-w-md">
-                  {featuredProject.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {featuredProject.techStack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 rounded-md bg-background-tertiary border border-border type-caption text-text-secondary"
+              <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div className="w-full md:w-1/2">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent-yellow/10 border border-accent-yellow/30 rounded-full type-micro text-accent-yellow mb-4">
+                    <Medal className="w-4 h-4" />
+                    {featuredProject.badge}
+                  </div>
+                  <h2 className="type-h1 text-text-primary mb-4">
+                    {featuredProject.title}
+                  </h2>
+                  <p className="type-body text-text-secondary mb-6 max-w-md">
+                    {featuredProject.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {featuredProject.techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 rounded-md bg-background-tertiary border border-border type-caption text-text-secondary"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap gap-3">
+                    <Link
+                      href={featuredProject.ctaLink}
+                      className="focus-ring h-11 px-6 rounded-full bg-foreground text-background hover:bg-foreground/85 type-micro inline-flex items-center"
                     >
-                      {tech}
-                    </span>
-                  ))}
+                      {featuredProject.ctaText}
+                    </Link>
+                    {featuredProject.live ? (
+                      <a
+                        href={featuredProject.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="focus-ring h-11 px-5 rounded-full border border-border-strong text-text-primary hover:bg-foreground hover:text-background transition-colors type-micro inline-flex items-center gap-2"
+                      >
+                        Live <ArrowUpRight className="w-4 h-4" />
+                      </a>
+                    ) : null}
+                    {featuredProject.github ? (
+                      <a
+                        href={featuredProject.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="focus-ring h-11 w-11 rounded-full border border-border-strong text-text-primary hover:bg-foreground hover:text-background transition-colors inline-flex items-center justify-center"
+                        aria-label="View source on GitHub"
+                      >
+                        <Github className="w-5 h-5" />
+                      </a>
+                    ) : null}
+                  </div>
                 </div>
-                <div className="flex flex-wrap gap-3">
-                  <Link
-                    href={featuredProject.ctaLink}
-                    className="focus-ring h-11 px-6 rounded-full bg-foreground text-background hover:bg-foreground/85 type-micro inline-flex items-center"
-                  >
-                    {featuredProject.ctaText}
-                  </Link>
-                  {featuredProject.live ? (
-                    <a
-                      href={featuredProject.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="focus-ring h-11 px-5 rounded-full border border-border-strong text-text-primary hover:bg-foreground hover:text-background transition-colors type-micro inline-flex items-center gap-2"
-                    >
-                      Live <ArrowUpRight className="w-4 h-4" />
-                    </a>
-                  ) : null}
-                  {featuredProject.github ? (
-                    <a
-                      href={featuredProject.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="focus-ring h-11 w-11 rounded-full border border-border-strong text-text-primary hover:bg-foreground hover:text-background transition-colors inline-flex items-center justify-center"
-                      aria-label="View source on GitHub"
-                    >
-                      <Github className="w-5 h-5" />
-                    </a>
-                  ) : null}
-                </div>
-              </div>
 
-              <div className="w-full md:w-1/2">
-                <div className="bg-background-secondary rounded-xl overflow-hidden border border-border shadow-card-hover">
-                  <div className="aspect-video w-full p-4 flex items-center justify-center">
-                    <div className="w-full h-full bg-background-tertiary rounded-lg border border-border p-4 gap-3 flex flex-col">
-                      <div className="flex gap-2">
-                        <div className="w-2 h-2 rounded-full bg-red-500" />
-                        <div className="w-2 h-2 rounded-full bg-yellow-500" />
-                        <div className="w-2 h-2 rounded-full bg-green-500" />
-                      </div>
-                      <div className="flex gap-4 h-full">
-                        <div className="w-1/4 h-full bg-foreground/5 rounded-md" />
-                        <div className="w-3/4 h-full flex flex-col gap-3">
-                          <div className="w-full h-1/2 bg-foreground/5 rounded-md" />
-                          <div className="flex gap-3 h-1/2">
-                            <div className="w-1/2 h-full bg-foreground/5 rounded-md" />
-                            <div className="w-1/2 h-full bg-foreground/5 rounded-md" />
+                <div className="w-full md:w-1/2">
+                  <div className="bg-background-secondary rounded-xl overflow-hidden border border-border shadow-card-hover">
+                    <div className="aspect-video w-full p-4 flex items-center justify-center">
+                      <div className="w-full h-full bg-background-tertiary rounded-lg border border-border p-4 gap-3 flex flex-col">
+                        <div className="flex gap-2">
+                          <div className="w-2 h-2 rounded-full bg-red-500" />
+                          <div className="w-2 h-2 rounded-full bg-yellow-500" />
+                          <div className="w-2 h-2 rounded-full bg-green-500" />
+                        </div>
+                        <div className="flex gap-4 h-full">
+                          <div className="w-1/4 h-full bg-foreground/5 rounded-md" />
+                          <div className="w-3/4 h-full flex flex-col gap-3">
+                            <div className="w-full h-1/2 bg-foreground/5 rounded-md" />
+                            <div className="flex gap-3 h-1/2">
+                              <div className="w-1/2 h-full bg-foreground/5 rounded-md" />
+                              <div className="w-1/2 h-full bg-foreground/5 rounded-md" />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -161,9 +165,9 @@ export default function ProjectsPage() {
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-        </Reveal>
+            </section>
+          </Reveal>
+        )}
 
         <StaggerGroup className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">
           {filteredProjects.map((project, index) => {
@@ -213,7 +217,10 @@ export default function ProjectsPage() {
 
                       <div className="flex flex-wrap gap-2 mb-6 mt-auto">
                         {project.tags.map((tag) => (
-                          <span key={tag} className="type-caption text-text-muted">
+                          <span
+                            key={tag}
+                            className="type-caption text-text-muted"
+                          >
                             {tag}
                           </span>
                         ))}
