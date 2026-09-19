@@ -2,110 +2,93 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
+import { Card } from '@/components/ui/Card';
+import { Badge } from '@/components/ui/Badge';
 import { BlogPost } from '@/types';
 import { formatDate } from '@/lib/utils';
-import { ArrowRight, Brain, Terminal, GraduationCap, FlaskConical, Lightbulb, FileText } from 'lucide-react';
 
 interface BlogCardProps {
   post: BlogPost;
 }
 
-const categoryConfig: Record<string, { color: string, hoverColor: string, icon: any, gradient: string }> = {
-  'ai-ml': { 
-    color: 'text-indigo-400', 
-    hoverColor: 'group-hover:text-indigo-400',
-    icon: Brain,
-    gradient: 'from-indigo-500/20 to-purple-500/20'
-  },
-  'tutorial': { 
-    color: 'text-green-400', 
-    hoverColor: 'group-hover:text-green-400',
-    icon: Terminal,
-    gradient: 'from-green-500/20 to-teal-500/20'
-  },
-  'career': { 
-    color: 'text-pink-400', 
-    hoverColor: 'group-hover:text-pink-400',
-    icon: GraduationCap,
-    gradient: 'from-pink-500/20 to-red-500/20'
-  },
-  'research': { 
-    color: 'text-cyan-400', 
-    hoverColor: 'group-hover:text-cyan-400',
-    icon: FlaskConical,
-    gradient: 'from-blue-500/20 to-cyan-500/20'
-  },
-  'opinion': { 
-    color: 'text-orange-400', 
-    hoverColor: 'group-hover:text-orange-400',
-    icon: Lightbulb,
-    gradient: 'from-orange-500/20 to-yellow-500/20'
-  },
-  'software-engineering': { 
-    color: 'text-blue-400', 
-    hoverColor: 'group-hover:text-blue-400',
-    icon: FileText,
-    gradient: 'from-blue-500/20 to-indigo-500/20'
-  },
-  'default': { 
-    color: 'text-amber-400', 
-    hoverColor: 'group-hover:text-amber-400',
-    icon: FileText,
-    gradient: 'from-gray-500/20 to-gray-400/20'
-  }
-};
-
 export function BlogCard({ post }: BlogCardProps) {
-  // Normalize category key safely
-  const categoryKey = post.category ? post.category.toLowerCase().replace(/\s+/g, '-') : 'default';
-  const config = categoryConfig[categoryKey as keyof typeof categoryConfig] || categoryConfig['default'];
-  const Icon = config.icon;
-
   return (
-    <Link href={`/blog/${post.slug}`} className="md:col-span-4 bg-background-secondary rounded-3xl p-1 flex flex-col h-full border border-border group hover:border-border-strong transition-colors block">
-      <div className="h-48 rounded-t-[1.3rem] bg-background-tertiary relative overflow-hidden">
-        {post.coverImage ? (
-           <Image 
-               src={post.coverImage} 
-               alt={post.title} 
-               fill 
-               className="object-cover group-hover:scale-105 transition-transform duration-500"
-           />
-        ) : (
-            <div className={`absolute inset-0 bg-gradient-to-br ${config.gradient} flex items-center justify-center group-hover:scale-105 transition-transform duration-500`}>
-                <Icon className={`${config.color} w-16 h-16 opacity-80`} />
+    <Link
+      href={`/blog/${post.slug}`}
+      aria-label={`Read post: ${post.title}`}
+      className="group focus-ring rounded-card block h-full"
+    >
+      <Card className="flex h-full flex-col overflow-hidden rounded-[24px] border-border/60 transition-all duration-300 hover:border-border-strong hover:shadow-card-hover">
+        <div className="relative h-52 overflow-hidden">
+          <div className="absolute inset-0 z-10 bg-gradient-to-t from-background to-transparent opacity-40" />
+          {post.coverImage ? (
+            <Image
+              src={post.coverImage}
+              alt={`Cover art for post: ${post.title}`}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+            />
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/20 to-accent-teal/20" />
+          )}
+
+          <div className="absolute left-4 top-4 z-20">
+            <Badge className="border-border bg-black/60 text-white backdrop-blur-md">
+              {post.category}
+            </Badge>
+          </div>
+
+          {post.featured && (
+            <div className="absolute right-4 top-4 z-20">
+              <Badge className="border-transparent bg-accent-coral text-white">
+                Featured
+              </Badge>
             </div>
-        )}
-        
-        <div className="absolute bottom-3 left-3 flex gap-2">
-          <span className="bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] font-bold text-white uppercase tracking-wider border border-border">
-            {post.category}
-          </span>
+          )}
         </div>
-      </div>
-      
-      <div className="p-5 flex flex-col flex-grow">
-        <div className="flex items-center gap-2 text-[10px] font-bold text-text-muted uppercase tracking-wide mb-3">
-          <span>{formatDate(post.date)}</span>
-          <span className="w-1 h-1 bg-border-strong rounded-full"></span>
-          <span>{post.readTime} min read</span>
+
+        <div className="flex flex-grow flex-col p-6">
+          <div className="mb-3 flex items-center gap-2 text-caption text-text-muted">
+            <span>{formatDate(post.date)}</span>
+            <span className="h-1 w-1 rounded-full bg-border-strong"></span>
+            <span>{post.readTime} min read</span>
+          </div>
+
+          <h3 className="mb-2 line-clamp-2 text-lg font-bold leading-snug text-text-primary transition-colors duration-300 group-hover:text-accent-blue">
+            {post.title}
+          </h3>
+
+          <p className="mb-5 line-clamp-2 flex-grow text-xs leading-relaxed text-text-secondary font-[family-name:var(--font-spline)]">
+            {post.excerpt}
+          </p>
+
+          <div className="mt-auto flex items-center justify-between border-t border-border/60 pt-4">
+            <div className="flex items-center gap-2.5">
+              <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full bg-background-tertiary">
+                <Image
+                  src={post.author.image}
+                  alt={post.author.name}
+                  fill
+                  sizes="32px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="leading-tight">
+                <span className="block text-xs font-bold text-text-primary">
+                  {post.author.name}
+                </span>
+                <span className="block text-[10px] text-text-muted">Author</span>
+              </div>
+            </div>
+
+            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-text-secondary transition-all duration-300 group-hover:border-accent-blue group-hover:bg-accent-blue group-hover:text-white">
+              <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-0.5" />
+            </span>
+          </div>
         </div>
-        
-        <h3 className={`text-lg font-bold text-text-primary mb-2 leading-tight ${config.hoverColor} transition-colors`}>
-          {post.title}
-        </h3>
-        
-        <p className="text-xs text-text-secondary mb-4 font-[family-name:var(--font-spline)] leading-relaxed line-clamp-3 flex-grow">
-          {post.excerpt}
-        </p>
-        
-        <div className="flex items-center justify-between pt-4 border-t border-border mt-auto">
-          <span className="text-[10px] font-bold text-text-secondary uppercase">
-            By {post.author.name}
-          </span>
-          <ArrowRight size={18} className="text-text-primary group-hover:translate-x-1 transition-transform" />
-        </div>
-      </div>
+      </Card>
     </Link>
   );
 }

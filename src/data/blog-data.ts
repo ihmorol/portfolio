@@ -4,7 +4,7 @@ export const blogData = {
     icon: "BookOpen",
     titleSuffix: "Notes"
   },
-  categories: ['All Posts', 'Research', 'Tutorial', 'Learning', 'Career', 'Projects'],
+  categories: ['All Posts', 'AI and Machine Learning', 'Algorithms and Theory', 'Software Engineering', 'Computer Systems', 'Hardware and Embedded', 'Research', 'Learning', 'Projects'],
   newsletter: {
     title: "Newsletter",
     description: "New posts and project updates by email, a few times a year. Unsubscribe any time.",
