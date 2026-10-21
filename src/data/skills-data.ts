@@ -50,20 +50,20 @@ export const skillsData = {
         iconBg: "bg-green-100",
         iconColor: "text-green-600",
         title: "Intrusion Detection Research",
-        description: "The reproducible ML experiment grid behind my paper, now under peer review."
+        description: "A reproducible ML experiment grid I built to learn rigorous evaluation on imbalanced data."
       }
     ]
   },
   aiMl: {
     title: "AI & Machine Learning",
-    description: "Controlled experiments and reproducible pipelines, with metrics chosen to hold up under review.",
+    description: "Controlled experiments and reproducible pipelines, with metrics chosen to hold up to scrutiny.",
     items: [
       {
         name: "PyTorch",
         icon: "model_training",
         iconColor: "text-orange-400",
         hoverBorder: "hover:border-orange-500/50",
-        description: "Neural network training for my thesis: ANN architecture search over ODE systems."
+        description: "Neural network training for my thesis: physics-informed networks for ODE systems."
       },
       {
         name: "scikit-learn & XGBoost",
@@ -172,9 +172,9 @@ export const skillsData = {
       code: "ML",
       codeBg: "bg-purple-500/20",
       codeColor: "text-purple-400",
-      title: "Research Paper Under Review",
+      title: "Physics-Informed NN Thesis",
       hoverColor: "group-hover:text-purple-400",
-      issuer: "Class-Imbalanced Intrusion Detection • 2026"
+      issuer: "Lorenz-1960 System • FYDP-II • 2026"
     },
     {
       code: "DSA",

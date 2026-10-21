@@ -3,34 +3,34 @@ export const researchData = {
     title: "Research",
     highlightedTitle: "& Publications",
     highlightIcon: "auto_stories",
-    description: "Applied machine learning research in network security and scientific computing, built on reproducible pipelines and verified baselines."
+    description: "Applied machine-learning research in scientific computing and image analysis, built on reproducible pipelines and verified baselines."
   },
   vision: {
     title: "Research Focus",
-    description: "My research asks practical questions. How should intrusion detection systems handle severely imbalanced attack classes? Can plain neural networks act as surrogates for differential equation solvers? Every study runs on a reproducible pipeline with fixed seeds, leakage-proof splits, and metrics chosen to expose weaknesses rather than hide them.",
+    description: "My research asks practical questions. Can a neural network stand in for a differential-equation solver if it only ever sees the equations? Which simple image features actually reveal an AI-generated picture? Every study runs on a reproducible pipeline with fixed seeds, leakage-proof splits, and metrics chosen to expose weaknesses rather than hide them.",
     currentFocus: {
       title: "Current Focus",
-      text: "ML for Network Security, Neural ODE Surrogates"
+      text: "Physics-Informed Neural Networks, Image Forensics"
     },
     longTermGoal: {
       title: "Long-term Goal",
       text: "Graduate research in applied ML & systems"
     },
     coreInterests: [
-      "Intrusion Detection Systems",
-      "Class-Imbalanced Learning",
+      "Physics-Informed Neural Networks",
       "Scientific Machine Learning",
-      "ANN Architecture Search",
-      "Reproducible ML Pipelines"
+      "Image Forensics",
+      "Reproducible ML Pipelines",
+      "Experiment Design"
     ]
   },
   topics: [
-    "Network Security ML",
-    "Class Imbalance",
-    "Neural ODE Surrogates",
-    "Architecture Search",
+    "Physics-Informed Neural Nets",
+    "Scientific ML",
+    "Image Forensics",
     "Experiment Design",
-    "Reproducibility"
+    "Reproducibility",
+    "Class-Imbalanced Learning"
   ],
   experience: {
     title: "Research Experience",
@@ -40,15 +40,15 @@ export const researchData = {
         institution: "United International University · Team Paradox",
         advisor: "Dr. Muhammad Nomani Kabir",
         period: "2025 - Present",
-        description: "Leading FYDP research on solving the Lorenz-1960 ODE system with optimal ANN architectures. I built a verified RK4/DOP853 ground-truth pipeline (agreement RMSE around 1.3e-11) and designed a controlled 69-run architecture and optimizer search. FYDP-I was defended in June 2026.",
-        tags: ["Scientific ML", "PyTorch", "Numerical Methods"]
+        description: "Leading FYDP research on the Lorenz-1960 ODE system. After defending FYDP-I in June 2026 on a verified RK4/DOP853 ground-truth pipeline (agreement RMSE around 1.3e-11), FYDP-II trains a physics-informed neural network that reproduces the system to about five decimal places from the governing equations alone, with no training data.",
+        tags: ["Scientific ML", "PINNs", "PyTorch", "Numerical Methods"]
       },
       {
         role: "Independent ML Researcher",
         institution: "UNSW-NB15 Intrusion Detection Study",
         advisor: "Self-directed",
         period: "2025 - 2026",
-        description: "Designed and ran a reproducible 18-experiment grid (binary and multiclass, three models, three imbalance strategies) on UNSW-NB15, focusing on rare attack classes like Worms (0.07%) with macro-F1, ROC-AUC, and G-Mean. The paper was submitted for peer review.",
+        description: "Designed and ran a reproducible 18-experiment grid (binary and multiclass, three models, three imbalance strategies) on UNSW-NB15, focusing on rare attack classes like Worms (0.07%) with macro-F1, ROC-AUC, and G-Mean. A self-directed study to learn how to build a trustworthy ML evaluation, not a publication.",
         tags: ["IDS", "Class Imbalance", "scikit-learn", "XGBoost"]
       },
       {
@@ -66,21 +66,21 @@ export const researchData = {
     items: [
       {
         title: "Handling Class Imbalance in UNSW-NB15: Reproducible Baselines for Binary and Multiclass Intrusion Detection",
-        status: "Under Review",
-        statusColor: "text-amber-400 bg-amber-900/20 border-amber-900/30",
+        status: "Methodology Study · Unpublished",
+        statusColor: "text-text-muted bg-foreground/5 border-border",
         authors: [
           { name: "Ikramul Hasan Moral", isMe: true }
         ],
-        venue: "Submitted for peer review, 2026",
-        description: "An 18-experiment evaluation of class-imbalance strategies (no balancing, class weighting, SMOTE) across logistic regression, random forest, and XGBoost. It includes explicit rare-class analysis (Worms: 0.07%, Shellcode: 0.65%) using macro-F1, ROC-AUC, and G-Mean on a leakage-proof, fully reproducible pipeline.",
+        venue: "Self-directed study, 2026",
+        description: "An 18-experiment evaluation of class-imbalance strategies (no balancing, class weighting, SMOTE) across logistic regression, random forest, and XGBoost. It includes explicit rare-class analysis (Worms: 0.07%, Shellcode: 0.65%) using macro-F1, ROC-AUC, and G-Mean on a leakage-proof, fully reproducible pipeline. Built to learn rigorous ML evaluation, not for publication.",
         citations: 0,
         links: [
           { label: "Code", icon: "code", url: "https://github.com/ihmorol/unsw-nb15-handling-binary-multiclass-ids" }
         ]
       },
       {
-        title: "Solving the Lorenz ODE System Using Optimal ANN Architectures",
-        status: "Thesis · In Progress",
+        title: "Solving the Lorenz-1960 ODE System with a Physics-Informed Neural Network",
+        status: "Thesis · FYDP-II",
         statusColor: "text-blue-400 bg-blue-900/20 border-blue-900/30",
         authors: [
           { name: "Ikramul Hasan Moral", isMe: true },
@@ -90,7 +90,7 @@ export const researchData = {
           { name: "Md. Touhidul Islam" }
         ],
         venue: "UIU Final Year Design Project · Supervisor: Dr. Muhammad Nomani Kabir",
-        description: "Which feedforward architecture best approximates a coupled nonlinear ODE system when trained purely on data? A controlled 69-run search over depth (1-4), width (20-100), five activations, and three optimizers, benchmarked against published PINN and DeepONet results on a solver-verified ground truth.",
+        description: "Can a neural network solve a coupled nonlinear ODE system from the equations alone? The model is trained only on the ODE residual, never on solver output, and reproduces the Lorenz-1960 trajectory to about five decimal places, verified against an RK4 and SciPy DOP853 baseline (agreement RMSE around 1.3e-11).",
         links: [
           { label: "Workspace", icon: "folder", url: "https://github.com/ihmorol/fydp_workspace" }
         ]
@@ -140,8 +140,8 @@ export const researchData = {
     title: "Active Research Areas",
     items: [
       {
-        title: "Neural ODE Surrogates",
-        description: "Training the 69-experiment grid for the Lorenz-1960 thesis: separating architecture effects from optimizer effects, benchmarked against the PINN literature.",
+        title: "Physics-Informed Neural Nets",
+        description: "The Lorenz-1960 thesis: the equation residual is the only training signal, and a solver-verified reference is used only to score the model after training.",
         year: "2025 - Present",
         gradient: "from-blue-900 to-slate-900",
         icon: "model_training",
@@ -149,13 +149,13 @@ export const researchData = {
         buttonHover: "hover:bg-blue-400"
       },
       {
-        title: "ML for Network Security",
-        description: "Extending the UNSW-NB15 baseline study with richer imbalance strategies, cost-sensitive learning, and cross-dataset generalization.",
-        year: "2025 - Present",
-        gradient: "from-emerald-900 to-teal-900",
-        icon: "security",
-        hoverColor: "group-hover:text-emerald-400",
-        buttonHover: "hover:bg-emerald-400"
+        title: "Spectral-Spatial Image Forensics",
+        description: "A feature-level study of which simple image statistics, spatial or spectral, separate real photos from AI-generated ones, and how well that holds under compression and an unseen generator.",
+        year: "2026",
+        gradient: "from-fuchsia-900 to-purple-900",
+        icon: "image_search",
+        hoverColor: "group-hover:text-fuchsia-400",
+        buttonHover: "hover:bg-fuchsia-400"
       },
       {
         title: "Research Data Collection",

@@ -17,14 +17,14 @@ export const academicData = {
   },
   thesis: {
     status: "In Progress (FYDP-II)",
-    title: "\"Solving the Lorenz ODE System Using Optimal ANN Architectures\"",
+    title: "\"Solving the Lorenz-1960 ODE System with a Physics-Informed Neural Network\"",
     advisor: "Dr. Muhammad Nomani Kabir",
     duration: "2026 (FYDP-I defended June 2026)",
-    quote: "\"Can a plain, data-driven neural network learn a coupled nonlinear ODE system, and which architecture does it best? We answer with a controlled 69-run search over depth, width, activation, and optimizer.\"",
+    quote: "\"Can a neural network solve a coupled nonlinear ODE system from the equations alone? The model is trained only on the ODE residual and reproduces the Lorenz-1960 trajectory to about five decimal places.\"",
     techStack: ["Python", "PyTorch", "NumPy", "SciPy"],
-    methodology: "A verified numerical baseline first (custom RK4 against SciPy DOP853, agreement RMSE around 1.3e-11), then a systematic architecture search benchmarked against published PINN results.",
-    outcomes: "FYDP-I defended with a 17-paper literature review, a verified ground-truth pipeline, and a locked 69-experiment design. The training phase is in progress.",
-    proposalLink: "https://github.com/ihmorol/fydp_workspace"
+    methodology: "A verified numerical baseline first (custom RK4 against SciPy DOP853, agreement RMSE around 1.3e-11), then a physics-informed network whose only training signal is the ODE residual; the solver reference is used solely to score it afterward.",
+    outcomes: "FYDP-I defended with a verified ground-truth pipeline and literature review. FYDP-II trains the physics-informed network: about five correct decimal places against the reference solver, under six minutes on a laptop CPU, no dataset involved.",
+    proposalLink: "https://github.com/ihmorol/lorenz1960-pinn"
   },
   certifications: [
     {

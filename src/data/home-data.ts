@@ -3,7 +3,7 @@ export const homeData = {
     titlePrefix: "Let's",
     titleHighlight: "Connect",
     subtitle: "Final-Year CSE Student at UIU | Full-Stack Developer | ML Researcher",
-    description: "I build production software and do applied machine learning research. I'm finishing my B.Sc. at United International University with a 3.94 CGPA and a full merit scholarship across six terms, and I work there as a teaching assistant. My first paper, on class-imbalanced intrusion detection, is under peer review. My thesis applies neural networks to differential equation systems.",
+    description: "I build production software and do applied machine-learning research. I'm in my final year of a B.Sc. at United International University on a full merit scholarship across six terms, and I work there as a teaching assistant. Right now I'm finishing a thesis on physics-informed neural networks and building AI-agent systems as a software engineer.",
     buttons: [
       { text: "View Projects", variant: "primary", action: "view_projects" },
       { text: "Download Resume", variant: "secondary", action: "download_resume" },
@@ -14,8 +14,50 @@ export const homeData = {
     { value: '3.94', label: 'CGPA (4.0 Scale)' },
     { value: '6×', label: '100% Merit Scholarship' },
     { value: '500+', label: 'Problems Solved' },
-    { value: '1', label: 'Paper Under Review' },
+    { value: '100+', label: 'Students Mentored (TA)' },
   ],
+  now: {
+    title: "Now",
+    liveLabel: "Live",
+    updated: "October 2026",
+    intro: "A snapshot of what actually has my attention this term, kept current and honest rather than frozen on a résumé.",
+    note: "a snapshot, not an archive.",
+    noteUrl: "https://nownownow.com/about",
+    focus: [
+      {
+        label: "Thesis · FYDP-II",
+        accent: "blue",
+        icon: "neurology",
+        title: "Finishing a thesis on physics-informed neural networks",
+        detail: "A network that reproduces the Lorenz-1960 system to about five decimal places from the governing equations alone, no training data, checked against an RK4 and SciPy solver.",
+        status: "Writing up"
+      },
+      {
+        label: "Engineering",
+        accent: "teal",
+        icon: "smart_toy",
+        title: "Building production AI-agent systems as a software engineer",
+        detail: "Workflow-automation agents that draft and act, with a human approval step before anything leaves the system. Test-driven, shipped in short sprints.",
+        status: "Shipping"
+      },
+      {
+        label: "Research & writing",
+        accent: "purple",
+        icon: "science",
+        title: "Turning three course projects into real write-ups",
+        detail: "Spatial versus spectral features for spotting AI-generated images, a Naive-Bayes and decision-tree study on label noise, and a big-data-with-ML literature review.",
+        status: "Drafting"
+      },
+      {
+        label: "Degree & teaching",
+        accent: "green",
+        icon: "school",
+        title: "Final term of my CSE degree, still assisting two courses",
+        detail: "Last courses are Digital Image Processing and Big Data Analytics. I keep teaching Data Structures and Databases as a teaching assistant.",
+        status: "Final year"
+      }
+    ]
+  },
   featuredProjects: {
     title: "Featured Projects",
     viewAllText: "View All Projects",
@@ -55,18 +97,18 @@ export const homeData = {
       },
       {
         id: '3',
-        slug: 'unsw-nb15-ids',
-        title: 'Intrusion Detection',
-        category: 'AI / ML',
-        description: 'A reproducible 18-experiment study of class-imbalance strategies for binary and multiclass intrusion detection on UNSW-NB15. The paper is under peer review.',
+        slug: 'lorenz-ann-thesis',
+        title: 'Lorenz-1960 PINN',
+        category: 'Research · SciML',
+        description: 'My FYDP-II thesis: a physics-informed neural network that learns the Lorenz-1960 system from its governing equations alone, with no training data, and matches an RK4/SciPy solver to about five decimal places.',
         image: '/images/brand/divider-flow-01.svg',
-        tech: ['Python', 'XGBoost', 'scikit-learn'],
-        color: 'group-hover:text-green-400',
-        hoverColor: 'hover:text-green-400',
+        tech: ['PyTorch', 'PINNs', 'NumPy', 'SciPy'],
+        color: 'group-hover:text-cyan-400',
+        hoverColor: 'hover:text-cyan-400',
         icons: [
-            { name: "security", title: "Network Security" },
-            { name: "model_training", title: "Machine Learning" },
-            { name: "science", title: "Research" }
+            { name: "neurology", title: "Physics-Informed NN" },
+            { name: "timeline", title: "Lorenz-1960 ODE" },
+            { name: "verified", title: "Solver-Verified" }
         ]
       },
     ]

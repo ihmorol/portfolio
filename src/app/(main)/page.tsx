@@ -1,5 +1,6 @@
 import { HeroSection } from '@/components/home/HeroSection';
 import { StatsSection } from '@/components/home/StatsSection';
+import { NowSection } from '@/components/home/NowSection';
 import { FeaturedProjects } from '@/components/home/FeaturedProjects';
 import { SkillsOverview } from '@/components/home/SkillsOverview';
 import { ScheduleMeeting } from '@/components/home/ScheduleMeeting';
@@ -24,7 +25,10 @@ export default function HomePage() {
         <Reveal delay={0.02}>
           <StatsSection />
         </Reveal>
-        <Reveal delay={0.05}>
+        <Reveal delay={0.04}>
+          <NowSection />
+        </Reveal>
+        <Reveal delay={0.06}>
           <FeaturedProjects />
         </Reveal>
         <Reveal delay={0.08}>

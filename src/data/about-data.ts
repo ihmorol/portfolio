@@ -10,7 +10,7 @@ export const aboutData = {
     title: "Full-Stack Developer & ML Researcher",
     description: [
       "I started programming in 2022 with simple MERN apps and competitive programming problems. Since then I've shipped real products: a live three-app e-learning platform that students use every day, and Advyon, a legal-tech platform built by a five-member team I led to Champion at the UIU CSE Project Show.",
-      "I'm finishing my B.Sc. in Computer Science and Engineering at United International University with a 3.94 CGPA and a 100% merit scholarship for six straight terms, awarded to the top 3% each trimester. Lately I've moved into research. My first paper, on handling class imbalance in network intrusion detection, is under peer review, and my thesis applies neural network architecture search to differential equation systems.",
+      "I'm finishing my B.Sc. in Computer Science and Engineering at United International University with a 3.94 CGPA and a 100% merit scholarship for six straight terms, awarded to the top 3% each trimester. Lately I've moved into research: my thesis trains a physics-informed neural network to solve the Lorenz-1960 system from its equations alone, and I run smaller studies on image forensics and class-imbalanced learning to sharpen my methodology.",
       "As an undergraduate teaching assistant I help over 100 students with Data Structures & Algorithms and Database Management. I also compete regularly, with 500+ problems solved on Codeforces, LeetCode, and HackerRank."
     ],
     highlights: {
@@ -18,7 +18,7 @@ export const aboutData = {
         items: [
             "3.94 CGPA at UIU",
             "6× 100% Merit Scholarship",
-            "Research Paper Under Review",
+            "Physics-Informed NN Thesis",
             "2× Project Show Champion"
         ]
     },
@@ -69,9 +69,9 @@ export const aboutData = {
     items: [
         {
             period: '2026',
-            role: 'First Research Paper Submitted',
-            company: 'UNSW-NB15 Intrusion Detection Study',
-            description: 'Submitted an ML paper on class-imbalanced intrusion detection for peer review and defended FYDP-I on neural ODE surrogates (Team Paradox, supervised by Dr. Muhammad Nomani Kabir).',
+            role: 'Thesis: Physics-Informed Neural Network',
+            company: 'FYDP · Team Paradox, UIU',
+            description: 'Defended FYDP-I in June 2026 and moved into FYDP-II, training a physics-informed neural network for the Lorenz-1960 system (Team Paradox, supervised by Dr. Muhammad Nomani Kabir). Also ran a reproducible intrusion-detection study to learn rigorous ML evaluation.',
             color: 'bg-accent-green',
             textColor: 'text-accent-green',
             hoverColor: 'group-hover:text-accent-green',

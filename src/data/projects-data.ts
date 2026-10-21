@@ -13,7 +13,10 @@ import {
   Database,
   Mail,
   Waves,
-  Layout
+  Layout,
+  Fingerprint,
+  Filter,
+  Library
 } from 'lucide-react';
 
 export const projectsData = {
@@ -69,7 +72,7 @@ export const projectsData = {
       slug: "unsw-nb15-ids",
       category: "Research",
       date: "2025 - 2026",
-      description: "A reproducible 18-experiment grid comparing class-imbalance strategies for binary and multiclass intrusion detection on UNSW-NB15. The paper is under peer review.",
+      description: "A reproducible 18-experiment grid comparing class-imbalance strategies for binary and multiclass intrusion detection on UNSW-NB15. A self-directed study I ran to learn rigorous ML evaluation.",
       tags: ["#Python", "#XGBoost", "#ScikitLearn", "#SMOTE"],
       github: "https://github.com/ihmorol/unsw-nb15-handling-binary-multiclass-ids",
       live: "",
@@ -79,13 +82,13 @@ export const projectsData = {
       accent: "text-green-400"
     },
     {
-      title: "Lorenz ODE Thesis",
+      title: "Lorenz-1960 PINN Thesis",
       slug: "lorenz-ann-thesis",
       category: "Research",
       date: "2025 - Present",
-      description: "My FYDP thesis: a controlled 69-run architecture search testing how well plain neural networks learn a coupled nonlinear ODE system, measured against a solver-verified ground truth.",
-      tags: ["#PyTorch", "#NumPy", "#SciPy", "#ScientificML"],
-      github: "https://github.com/ihmorol/fydp_workspace",
+      description: "My FYDP-II thesis: a physics-informed neural network that learns the Lorenz-1960 system from its governing equations alone, with no training data, and matches an RK4/SciPy solver to about five decimal places.",
+      tags: ["#PyTorch", "#PINNs", "#SciML", "#SciPy"],
+      github: "https://github.com/ihmorol/lorenz1960-pinn",
       live: "",
       icon: FlaskConical,
       color: "from-blue-500/20 to-cyan-500/20",
@@ -105,6 +108,48 @@ export const projectsData = {
       color: "from-cyan-500/20 to-blue-500/20",
       hoverColor: "group-hover:text-cyan-400",
       accent: "text-cyan-400"
+    },
+    {
+      title: "Spectral-Spatial Forensics",
+      slug: "spatial-spectral-forensics",
+      category: "Research",
+      date: "2026",
+      description: "A Digital Image Processing study asking which simple feature set, pixel-pattern (spatial) or frequency (spectral) or both, best separates real photos from AI-generated ones, and how much that holds under JPEG compression and an unseen generator. Pre-registered, locked pipeline.",
+      tags: ["#Python", "#ImageForensics", "#SpectralFeatures", "#DIP"],
+      github: "https://github.com/ihmorol/spatial-spectral-forensics",
+      live: "",
+      icon: Fingerprint,
+      color: "from-violet-500/20 to-fuchsia-500/20",
+      hoverColor: "group-hover:text-violet-400",
+      accent: "text-violet-400"
+    },
+    {
+      title: "DT-NB Noise Removal",
+      slug: "dt-nb-noise-removal",
+      category: "Research",
+      date: "2026",
+      description: "A Big Data Analytics study comparing Naive-Bayes instance filtering and decision-tree attribute weighting for handling label noise, scored with refit-within-fold cross-validation and Holm-adjusted significance tests so the numbers hold up.",
+      tags: ["#Python", "#Weka", "#NaiveBayes", "#DecisionTrees"],
+      github: "https://github.com/ihmorol/dt-nb-noise-removal",
+      live: "",
+      icon: Filter,
+      color: "from-emerald-500/20 to-teal-500/20",
+      hoverColor: "group-hover:text-emerald-400",
+      accent: "text-emerald-400"
+    },
+    {
+      title: "Big Data x ML Review",
+      slug: "big-data-ml-review",
+      category: "Research",
+      date: "2026",
+      description: "A team literature review, 'Big Data with Machine Learning: A Review', synthesizing 20 papers from four journals into themes, contrasts, and gaps in the style of Artificial Intelligence Review, rather than twenty separate summaries.",
+      tags: ["#LiteratureReview", "#BigData", "#MachineLearning", "#Research"],
+      github: "https://github.com/ihmorol/big-data-ml-review",
+      live: "",
+      icon: Library,
+      color: "from-sky-500/20 to-blue-500/20",
+      hoverColor: "group-hover:text-sky-400",
+      accent: "text-sky-400"
     },
     {
       title: "Meme Research Console",
@@ -370,9 +415,9 @@ export const projectsData = {
     },
     "unsw-nb15-ids": {
       title: "Intrusion Detection",
-      subtitle: "Class-imbalance baselines for network intrusion detection · paper under review",
+      subtitle: "Class-imbalance baselines for network intrusion detection · a methodology study",
       description: "A reproducible study of imbalance strategies for binary and multiclass IDS on UNSW-NB15.",
-      heroDescription: "Accuracy is a misleading metric when the attack you care about is 0.07% of the traffic. This study runs an 18-experiment grid: two tasks (binary and multiclass), three models (LR, RF, XGBoost), and three imbalance strategies (none, class weighting, SMOTE). It includes explicit rare-class analysis on Worms and Shellcode, reports macro-F1, ROC-AUC, and G-Mean, and fits preprocessing only on training data to prevent leakage. The resulting paper is under peer review.",
+      heroDescription: "Accuracy is a misleading metric when the attack you care about is 0.07% of the traffic. This study runs an 18-experiment grid: two tasks (binary and multiclass), three models (LR, RF, XGBoost), and three imbalance strategies (none, class weighting, SMOTE). It includes explicit rare-class analysis on Worms and Shellcode, reports macro-F1, ROC-AUC, and G-Mean, and fits preprocessing only on training data to prevent leakage. I ran it to teach myself how to build an ML evaluation you can trust; it is a learning project, not a publication.",
       heroImage: "/images/brand/divider-flow-01.svg",
       tags: ["Python", "scikit-learn", "XGBoost", "SMOTE", "UNSW-NB15"],
       screens: [] as string[],
@@ -382,7 +427,7 @@ export const projectsData = {
       client: "Independent Research",
       stats: [
         { label: "Experiment Grid", value: "18 runs" },
-        { label: "Paper Status", value: "Under Review" }
+        { label: "Purpose", value: "Learning study" }
       ],
       features: [
         {
@@ -414,10 +459,10 @@ export const projectsData = {
       ],
       impact: {
         title: "Outcomes",
-        description: "From coursework curiosity to a peer-review submission.",
+        description: "From coursework curiosity to a methodology I trust.",
         metrics: [
           { icon: 'science', val: '18', label: 'Controlled Experiments', color: 'accent-blue', bg: 'bg-accent-blue/20' },
-          { icon: 'article', val: '1', label: 'Paper Under Review', color: 'accent-green', bg: 'bg-accent-green/20' },
+          { icon: 'menu_book', val: 'Method', label: 'Learned Rigorous Evaluation', color: 'accent-green', bg: 'bg-accent-green/20' },
           { icon: 'replay', val: '100%', label: 'Reproducible (Seeded)', color: 'accent-peach', bg: 'bg-accent-peach/20' }
         ],
         testimonials: [
@@ -544,6 +589,66 @@ export const projectsData = {
           {
             quote: "IoT projects punish hand-waving. Every layer either works or the demo fails in front of everyone.",
             author: "Personal Reflection"
+          }
+        ]
+      }
+    },
+    "spatial-spectral-forensics": {
+      title: "Spectral-Spatial Forensics",
+      subtitle: "Which simple image statistics reveal AI-generated images · Digital Image Processing final",
+      description: "A feature-level study of spatial versus spectral cues for detecting AI-generated images.",
+      heroDescription: "AI image detectors are usually black boxes. This study asks a smaller, answerable question instead: with identical processing on both classes and a strict split by image group, which simple and explainable feature set separates real photographs from AI-generated ones, pixel-pattern (spatial) features, frequency (spectral) features, or both combined, and how far the answer moves under matched JPEG compression and on a generator the model never trained on. It is careful measurement, not a new state-of-the-art detector, run on a locked, pre-registered pipeline so every number can be re-derived.",
+      heroImage: "/images/brand/divider-flow-01.svg",
+      tags: ["Python", "NumPy", "scikit-learn", "DFT / Spectrum", "JPEG", "Image Forensics"],
+      screens: [] as string[],
+      role: "Researcher (DIP Final Project)",
+      duration: "One Trimester",
+      date: "2026",
+      client: "University Project (CSE 4883)",
+      stats: [
+        { label: "Feature Sets Compared", value: "3" },
+        { label: "Pipeline", value: "Pre-registered" }
+      ],
+      features: [
+        {
+          title: "The Question",
+          icon: "warning",
+          iconColor: "text-accent-red",
+          iconBg: "bg-accent-red/20",
+          description: "Do AI-generated images leave their tell in the spatial domain, the frequency spectrum, or both? And does whatever works survive JPEG compression and a generator the detector has never seen? Most detectors answer none of this because they are opaque."
+        },
+        {
+          title: "The Method",
+          icon: "lightbulb",
+          iconColor: "text-accent-blue",
+          iconBg: "bg-accent-blue/20",
+          description: "A locked pipeline with identical processing on both classes, splits made by image group to stop leakage, and a deliberate mismatch control. Four experiments build up to the headline: an unseen generator evaluated at JPEG quality 75. Every claim traces back to a pre-registered protocol."
+        },
+        {
+          title: "What It Measures",
+          icon: "star",
+          iconColor: "text-accent-green",
+          iconBg: "bg-accent-green/20",
+          list: [
+            "Spatial (pixel-pattern) vs spectral (frequency) vs combined features",
+            "Robustness under matched JPEG compression (90 / 75 / 50)",
+            "Generalization to a held-out, unseen generator",
+            "A shortcut control to catch accidental leakage"
+          ]
+        }
+      ],
+      impact: {
+        title: "Outcomes",
+        description: "Explainable image statistics, measured honestly.",
+        metrics: [
+          { icon: 'compare', val: '3', label: 'Feature Sets Compared', color: 'accent-blue', bg: 'bg-accent-blue/20' },
+          { icon: 'lock', val: 'v1.0', label: 'Locked, Pre-Registered Pipeline', color: 'accent-peach', bg: 'bg-accent-peach/20' },
+          { icon: 'science', val: '5', label: 'Hypothesis-Driven Experiments', color: 'accent-green', bg: 'bg-accent-green/20' }
+        ],
+        testimonials: [
+          {
+            quote: "I wanted to understand what the detector was reacting to, not just how often it was right. That meant choosing features I could explain.",
+            author: "Research Takeaway"
           }
         ]
       }
