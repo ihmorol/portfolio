@@ -42,7 +42,7 @@ export default function ContactPage() {
           />
         </Reveal>
 
-        <Reveal delay={0.05} className="w-full max-w-7xl">
+        <Reveal delay={0.05} className="w-full">
           <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 mx-auto">
             
             {/* Schedule Meeting Card */}

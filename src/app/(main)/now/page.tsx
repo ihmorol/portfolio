@@ -13,11 +13,11 @@ export default function NowPage() {
 
   return (
     <>
-      <main className="flex-grow flex flex-col items-center w-full max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 pt-20 md:pt-24 pb-8 md:pb-12 relative min-h-screen">
+      <main className="flex-grow flex flex-col items-center w-full max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12 xl:px-20 pt-20 md:pt-24 pb-8 md:pb-12 relative min-h-screen">
         <PageLeftSideBar title="NOW" />
         <VerticalSocialLinks items={socialLinks} />
 
-        <div className="w-full max-w-7xl mx-auto pt-14 md:pt-20 pb-14 md:pb-20">
+        <div className="w-full pt-14 md:pt-20 pb-14 md:pb-20">
           {/* Editorial header: title block left, status right, rule underneath */}
           <Reveal>
             <header className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-end border-b border-border pb-10 md:pb-14">
