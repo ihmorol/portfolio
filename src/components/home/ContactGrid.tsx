@@ -1,6 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import { homeData } from '@/data/home-data';
+import { NewsletterForm } from '@/components/shared/NewsletterForm';
 
 export function ContactGrid() {
   const { blocks } = homeData.contact;
@@ -23,9 +25,9 @@ export function ContactGrid() {
             <div className="mt-auto relative z-10 text-center">
                 <h3 className="text-2xl font-bold text-text-primary mb-2">{emailBlock?.title}</h3>
                 <p className="text-xs text-text-secondary mb-6 px-4">{emailBlock?.description}</p>
-                <button className="bg-foreground text-background w-full py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 transition-colors">
+                <a href={`mailto:${emailBlock?.emailAddress}`} className="bg-foreground text-background w-full py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 transition-colors text-center">
                     {emailBlock?.cta}
-                </button>
+                </a>
             </div>
             <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background-secondary/80 to-transparent pointer-events-none"></div>
         </div>
@@ -47,9 +49,9 @@ export function ContactGrid() {
             <div className="mt-auto relative z-10 text-center">
                 <h3 className="text-2xl font-bold text-text-primary mb-2">{messageBlock?.title}</h3>
                 <p className="text-xs text-text-secondary mb-6 px-4">{messageBlock?.description}</p>
-                <button className="bg-foreground text-background w-full py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 transition-colors">
+                <Link href="/contact#message" className="bg-foreground text-background w-full py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 transition-colors text-center">
                     {messageBlock?.cta}
-                </button>
+                </Link>
             </div>
             <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background-secondary/80 to-transparent pointer-events-none"></div>
         </div>
@@ -68,12 +70,14 @@ export function ContactGrid() {
                 </div>
             </div>
             <p className="text-xs text-text-secondary mb-6 leading-relaxed">{newsletterBlock?.description}</p>
-            <div className="flex flex-col gap-3 mt-auto">
-                <input className="w-full min-h-[44px] bg-background-tertiary border border-border rounded-xl px-4 py-3 text-xs text-text-primary focus:outline-none focus:border-border-strong placeholder:text-text-muted focus:ring-0" placeholder={newsletterBlock?.placeholders?.name} aria-label={newsletterBlock?.placeholders?.name} autoComplete="name" type="text" />
-                <input className="w-full min-h-[44px] bg-background-tertiary border border-border rounded-xl px-4 py-3 text-xs text-text-primary focus:outline-none focus:border-border-strong placeholder:text-text-muted focus:ring-0" placeholder={newsletterBlock?.placeholders?.email} aria-label={newsletterBlock?.placeholders?.email} autoComplete="email" type="email" />
-                <button className="w-full bg-foreground text-background py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 transition-colors mt-2">
-                    {newsletterBlock?.cta}
-                </button>
+            <div className="mt-auto">
+                <NewsletterForm
+                  variant="stacked"
+                  showName
+                  buttonText={newsletterBlock?.cta || 'Sign Up'}
+                  namePlaceholder={newsletterBlock?.placeholders?.name}
+                  emailPlaceholder={newsletterBlock?.placeholders?.email}
+                />
             </div>
         </div>
     </section>

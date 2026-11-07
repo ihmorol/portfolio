@@ -21,7 +21,7 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
   const [activeCategory, setActiveCategory] = useState('All Posts');
   const [searchQuery, setSearchQuery] = useState('');
   const { socialLinks } = layoutData.footer;
-  const { header, categories, connect, loadMoreText } = blogData;
+  const { header, categories, connect } = blogData;
 
   const hasQuery = searchQuery.trim().length > 0;
 
@@ -142,14 +142,6 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
                     </p>
                   </div>
                 )}
-              </div>
-
-              {/* Load More Button Placeholder */}
-              <div className="flex justify-center pt-8">
-                <button className="bg-background hover:bg-background-tertiary text-text-primary border border-border px-8 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2">
-                  {loadMoreText}
-                  <span className="material-symbols-outlined text-sm">expand_more</span>
-                </button>
               </div>
 
               {/* Connect Section matching design */}

@@ -20,11 +20,8 @@ export const ConnectSection = () => {
         <p className="text-xs text-text-secondary font-body max-w-sm">{description}</p>
       </div>
       <div className="flex items-center gap-4 md:gap-6">
-        <a className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-surface-light flex items-center justify-center hover:bg-blue-500 transition-colors group cursor-pointer">
-          <span className="material-symbols-outlined text-blue-500 group-hover:text-text-primary text-xl">school</span>
-        </a>
         {socialLinks.map((link, index) => (
-          <a key={index} href={link.url} className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-surface-light flex items-center justify-center hover:bg-foreground text-text-secondary hover:text-background transition-colors group">
+          <a key={index} href={link.url} title={link.title} className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-surface-light flex items-center justify-center hover:bg-foreground text-text-secondary hover:text-background transition-colors group">
              {link.icon ? (
                <IconComponent name={link.icon} className="w-5 h-5 group-hover:scale-110 transition-transform" />
              ) : (
@@ -32,9 +29,6 @@ export const ConnectSection = () => {
              )}
           </a>
         ))}
-         <a className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-surface-light flex items-center justify-center hover:bg-blue-400 transition-colors group cursor-pointer">
-          <span className="material-symbols-outlined text-blue-400 group-hover:text-text-primary text-xl">alternate_email</span>
-        </a>
       </div>
     </div>
   );

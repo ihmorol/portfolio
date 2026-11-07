@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { homeData } from '@/data/home-data';
 import { PageHeader } from '@/components/shared/PageHeader';
 import { Zap } from 'lucide-react';
@@ -10,7 +11,7 @@ import { TiltCard } from '@/components/motion/TiltCard';
 import { pageEnterTransition } from '@/lib/motion-tokens';
 
 export function HeroSection() {
-  const { titlePrefix, titleHighlight, subtitle, description } = homeData.hero;
+  const { titlePrefix, titleHighlight, subtitle, description, now } = homeData.hero;
 
   return (
     <motion.section
@@ -84,11 +85,33 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="surface-card-strong flex-1 p-4 md:p-6 lg:p-10 relative overflow-hidden">
+        <div className="surface-card-strong flex-1 p-4 md:p-6 lg:p-10 relative overflow-hidden flex flex-col">
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-accent-yellow/20 to-transparent rounded-full -mr-32 -mt-32 opacity-80" />
-          <div className="relative z-10">
+          <div className="relative z-10 flex flex-1 flex-col">
             <h2 className="type-h2 text-text-primary mb-4">{subtitle}</h2>
-            <p className="type-body text-text-secondary max-w-xl">{description}</p>
+            <p className="type-body text-text-secondary max-w-xl mb-6">{description}</p>
+            <Link
+              href={now.link}
+              className="group focus-ring mt-auto flex items-center justify-between gap-3 w-full px-4 py-3 md:px-5 md:py-3.5 rounded-full border border-border bg-background-secondary/60 hover:border-border-strong hover:bg-background-tertiary/60 transition-colors"
+            >
+              <span className="flex items-center gap-3 min-w-0">
+                <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+                </span>
+                <span className="type-caption text-text-primary font-semibold whitespace-nowrap">
+                  What I&apos;m doing now
+                </span>
+                <span className="type-caption text-text-muted truncate hidden md:inline">
+                  {now.text}
+                </span>
+              </span>
+              <ArrowRight
+                size={14}
+                aria-hidden="true"
+                className="shrink-0 text-text-muted group-hover:translate-x-0.5 group-hover:text-text-primary transition-all"
+              />
+            </Link>
           </div>
         </div>
       </div>

@@ -1,19 +1,21 @@
 import Link from 'next/link';
-import { 
-  Github, 
-  Linkedin, 
-  Twitter, 
-  Mail, 
-  ArrowRight,
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  MessageCircle,
   LucideIcon
 } from 'lucide-react';
 import { layoutData } from '@/data/layout-data';
+import { NewsletterForm } from '@/components/shared/NewsletterForm';
 
 const iconMap: Record<string, LucideIcon> = {
   github: Github,
   linkedin: Linkedin,
   twitter: Twitter,
   mail: Mail,
+  whatsapp: MessageCircle,
 };
 
 export function Footer() {
@@ -93,22 +95,11 @@ export function Footer() {
             <p className="text-text-secondary text-sm mb-6">
               {newsletter.description}
             </p>
-            <form className="relative">
-              <input
-                type="email"
-                placeholder={newsletter.placeholder}
-                aria-label={newsletter.placeholder}
-                autoComplete="email"
-                className="w-full bg-foreground/5 border border-border rounded-full px-5 py-3 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-border-strong transition-colors"
-              />
-              <button
-                type="submit"
-                aria-label="Subscribe"
-                className="focus-ring absolute right-1 top-1 w-10 h-10 bg-foreground rounded-full flex items-center justify-center text-background hover:bg-foreground/85 transition-colors"
-              >
-                <ArrowRight size={18} aria-hidden="true" />
-              </button>
-            </form>
+            <NewsletterForm
+              variant="footer"
+              buttonText="Subscribe"
+              emailPlaceholder={newsletter.placeholder}
+            />
           </div>
         </div>
 

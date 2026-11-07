@@ -2,6 +2,7 @@
 
 import { Mail } from 'lucide-react';
 import { blogData } from '@/data/blog-data';
+import { NewsletterForm } from '@/components/shared/NewsletterForm';
 
 export function NewsletterWidget() {
   const { newsletter } = blogData;
@@ -23,22 +24,13 @@ export function NewsletterWidget() {
         {newsletter.description}
       </p>
       
-      <form className="space-y-3 mt-auto z-10" onSubmit={(e) => e.preventDefault()}>
-        <div className="relative">
-          <Mail className="absolute left-4 top-3 text-text-muted w-4 h-4" />
-          <input 
-            type="email" 
-            placeholder={newsletter.placeholder}
-            className="w-full bg-background-tertiary border border-border rounded-full pl-10 pr-4 py-3 text-xs text-text-primary placeholder:text-text-muted focus:border-border-strong focus:ring-0 transition-colors"
-          />
-        </div>
-        <button 
-            type="submit"
-            className="w-full bg-foreground hover:bg-foreground/85 text-background text-[10px] font-bold py-3 rounded-full transition-all uppercase tracking-wider mt-2 flex justify-center items-center gap-2"
-        >
-          {newsletter.buttonText}
-        </button>
-      </form>
+      <div className="mt-auto z-10">
+        <NewsletterForm
+          variant="pill"
+          buttonText={newsletter.buttonText}
+          emailPlaceholder={newsletter.placeholder}
+        />
+      </div>
     </div>
   );
 }

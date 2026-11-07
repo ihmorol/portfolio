@@ -28,6 +28,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     'coverImage',
     'category',
     'tags',
+    'readTime',
     'references'
   ]) as BlogPost;
 
@@ -61,7 +62,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                          <span className="font-bold text-text-primary">{post.author.name}</span>
                     </div>
                     <span className="flex items-center gap-2"><Calendar size={14} /> {formatDate(post.date)}</span>
-                    <span className="flex items-center gap-2"><Clock size={14} /> 5 min read</span>
+                    <span className="flex items-center gap-2"><Clock size={14} /> {post.readTime} min read</span>
                 </div>
             </div>
 

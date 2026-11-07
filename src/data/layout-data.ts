@@ -21,6 +21,7 @@ export const layoutData = {
       description: "Final-year CSE student at UIU, full-stack developer, and ML researcher. I build production software and study scientific machine learning, from neural ODE surrogates to physics-informed attack detection.",
     },
     socialLinks: [
+      { title: "WhatsApp", url: "https://wa.me/8801614714959", icon: "whatsapp" },
       { title: "GitHub", url: "https://github.com/ihmorol", icon: "github" },
       { title: "LinkedIn", url: "https://linkedin.com/in/ihmorol", icon: "linkedin" },
       { title: "Email", url: "mailto:ihmorol@gmail.com", icon: "mail" },

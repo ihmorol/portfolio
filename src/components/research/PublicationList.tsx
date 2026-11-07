@@ -32,11 +32,13 @@ export const PublicationList = () => {
             <p className="text-xs text-text-muted italic">{pub.venue}</p>
             <p className="text-xs text-text-secondary mt-2 line-clamp-2 font-body">{pub.description}</p>
             <div className="flex gap-3 mt-3">
-              {pub.links.map((link: { label: string; icon: string; url?: string }) => (
-                <a key={link.label} href={link.url || '/research'} className="flex items-center gap-1 text-[10px] font-bold text-text-secondary hover:text-text-primary transition-colors">
-                  <span className="material-symbols-outlined text-sm">{link.icon}</span> {link.label}
-                </a>
-              ))}
+              {pub.links.map((link: { label: string; icon: string; url?: string }) =>
+                link.url ? (
+                  <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-[10px] font-bold text-text-secondary hover:text-text-primary transition-colors">
+                    <span className="material-symbols-outlined text-sm">{link.icon}</span> {link.label}
+                  </a>
+                ) : null
+              )}
               {pub.citations && (
                 <span className="ml-auto text-[10px] text-text-muted flex items-center gap-1">
                   <span className="material-symbols-outlined text-xs">format_quote</span> {pub.citations} citations
@@ -45,11 +47,6 @@ export const PublicationList = () => {
             </div>
           </div>
         ))}
-      </div>
-      <div className="mt-auto pt-4">
-        <button className="w-full py-3 rounded-full border border-border hover:bg-surface-light text-xs font-bold text-text-primary transition-colors flex items-center justify-center gap-2">
-          View All Publications <span className="material-symbols-outlined text-sm">arrow_forward</span>
-        </button>
       </div>
     </div>
   );

@@ -156,9 +156,6 @@ export default function AcademicPage() {
                     </div>
                 ))}
               </div>
-              <button className="w-full bg-surface-light hover:bg-border text-text-primary text-[10px] font-bold py-3 rounded-full transition-all uppercase tracking-wider mt-6 border border-border">
-                View Credential Links
-              </button>
             </div>
           </div>
 
@@ -250,9 +247,6 @@ export default function AcademicPage() {
                   ))}
                 </div>
               </div>
-              <button className="mt-6 text-[10px] text-text-secondary hover:text-text-primary transition-colors flex items-center gap-1 w-full justify-center">
-                View All Awards <span className="material-symbols-outlined text-xs">chevron_right</span>
-              </button>
             </div>
           </div>
 
