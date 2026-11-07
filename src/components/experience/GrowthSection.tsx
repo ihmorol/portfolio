@@ -2,7 +2,8 @@ import { cn } from "@/lib/utils";
 
 interface Skill {
   name: string;
-  percentage: number;
+  percentage?: number;
+  evidence?: string;
   colorClass: string; // e.g., "bg-accent-pink" or custom hex if needed, but tailwind classes preferred
 }
 
@@ -25,14 +26,22 @@ export function GrowthSection({
           <div key={idx}>
             <div className="flex justify-between text-xs font-bold text-text-secondary mb-2 uppercase">
               <span>{skill.name}</span>
-              <span>{skill.percentage}%</span>
+              {typeof skill.percentage === "number" && (
+                <span>{skill.percentage}%</span>
+              )}
             </div>
-            <div className="w-full bg-background-tertiary rounded-full h-2">
-              <div 
-                className={cn("h-2 rounded-full", skill.colorClass)} 
-                style={{ width: `${skill.percentage}%` }}
-              ></div>
-            </div>
+            {typeof skill.percentage === "number" ? (
+              <div className="w-full bg-background-tertiary rounded-full h-2">
+                <div
+                  className={cn("h-2 rounded-full", skill.colorClass)}
+                  style={{ width: `${skill.percentage}%` }}
+                ></div>
+              </div>
+            ) : (
+              <p className="text-xs text-text-secondary leading-relaxed">
+                {skill.evidence}
+              </p>
+            )}
           </div>
         ))}
       </div>

@@ -9,29 +9,29 @@ export const academicData = {
     degree: "B.Sc. in Computer Science and Engineering",
     university: "United International University (UIU)",
     location: "Dhaka, Bangladesh",
-    gradDate: "Expected Graduation: December 2026",
+    gradDate: "Expected Graduation: January/February 2027",
     gpa: "3.94/4.0",
     focus: "Software Engineering & Machine Learning",
-    awards: ["100% Merit Scholarship (6 terms)", "Top 3% each trimester"],
+    awards: ["8 Merit Scholarships (6 at 100%)", "Top 3% each trimester"],
     visualLabel: "Teaching Assistant"
   },
   thesis: {
-    status: "In Progress (FYDP-II)",
-    title: "\"Solving the Lorenz ODE System Using Optimal ANN Architectures\"",
+    status: "FYDP-II Defended · Paper Submitted to ICEEICT 2027",
+    title: "\"Lorenz-1960 PINN: Solving the ODE System from the Equations Alone\"",
     advisor: "Dr. Muhammad Nomani Kabir",
-    duration: "2026 (FYDP-I defended June 2026)",
-    quote: "\"Can a plain, data-driven neural network learn a coupled nonlinear ODE system, and which architecture does it best? We answer with a controlled 69-run search over depth, width, activation, and optimizer.\"",
+    duration: "2025 - 2026 (FYDP-II defended)",
+    quote: "\"Can a neural network solve a differential equation from the equations alone? Our PINN trains on the ODE residual, never sees the answer, and lands within 3e-05 of a high-accuracy reference.\"",
     techStack: ["Python", "PyTorch", "NumPy", "SciPy"],
-    methodology: "A verified numerical baseline first (custom RK4 against SciPy DOP853, agreement RMSE around 1.3e-11), then a systematic architecture search benchmarked against published PINN results.",
-    outcomes: "FYDP-I defended with a 17-paper literature review, a verified ground-truth pipeline, and a locked 69-experiment design. The training phase is in progress.",
+    methodology: "A PINN with a hard-constrained initial condition, trained on the ODE residual alone and validated against SciPy DOP853, plus a nine-architecture sweep and a windowed causal-weighting study for longer horizons.",
+    outcomes: "FYDP-II defended and the manuscript submitted to ICEEICT 2027. Sixteen paper runs and sixteen windowed models are archived with SHA-256 verification, backed by 41 tests.",
     proposalLink: "https://github.com/ihmorol/lorenz1960-pinn"
   },
   certifications: [
     {
-      title: "100% Merit Scholarship",
+      title: "Merit Scholarships (8 total)",
       year: "2022-Present",
       issuer: "United International University",
-      skills: "Achievement: Top 3% each trimester, 6 terms running"
+      skills: "Six at 100%, one at 50%, one at 25%; the 100% awards go to the top 3% each trimester"
     },
     {
       title: "Champion - SE Lab Project Show",
@@ -138,7 +138,7 @@ export const academicData = {
      },
      {
        title: "Merit Scholar",
-       subtitle: "100% Scholarship, Top 3% (6 Terms)",
+       subtitle: "8 Scholarships, 6 at 100% (Top 3%)",
        icon: "school"
      }
   ]

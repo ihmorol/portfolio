@@ -10,14 +10,14 @@ export const aboutData = {
     title: "Full-Stack Developer & ML Researcher",
     description: [
       "I started programming in 2022 with simple MERN apps and competitive programming problems. Since then I've shipped real products: the live RimonsIELTS e-learning platform, which I engineer and run as the sole remote engineer, and Advyon, a legal-tech platform built by a five-member team I led to Champion at the UIU CSE Project Show.",
-      "I'm finishing my B.Sc. in Computer Science and Engineering at United International University with a 3.94 CGPA and a 100% merit scholarship for six straight terms, awarded to the top 3% each trimester. Lately I've moved into research. My thesis applies neural-network architecture search to differential-equation systems, and side studies range from physics-residual attack detection to AI-generated image forensics.",
-      "As an undergraduate teaching assistant for over a year, I support students in DBMS, DSA-I, ICS, and SWE lab courses. I also compete regularly, with 500+ problems solved on Codeforces, LeetCode, and HackerRank."
+      "I'm finishing my B.Sc. in Computer Science and Engineering at United International University with a 3.94 CGPA and eight merit scholarships so far: six at 100% for ranking in the top 3% each trimester, one at 50%, and one at 25%. Lately I've moved into research. My FYDP-II thesis trains physics-informed neural networks on differential-equation residuals, and side studies range from physics-residual attack detection to AI-generated image forensics.",
+      "As an undergraduate teaching assistant for over a year, I support students in DBMS, DSA-I, ICS, and SWE lab courses. Alongside the degree I work as the solo software engineer at RimonsIELTS. Early on I solved 500+ problems across Codeforces, LeetCode, and HackerRank, but I stopped competitive programming more than a year ago; the algorithmic grounding stayed."
     ],
     highlights: {
         title: "Key Highlights",
         items: [
             "3.94 CGPA at UIU",
-            "6× 100% Merit Scholarship",
+            "8× Merit Scholarship (6 at 100%)",
             "Sole Engineer, RimonsIELTS",
             "2× Project Show Champion"
         ]
@@ -51,10 +51,10 @@ export const aboutData = {
     title: "Beyond Coding",
     icon: "local_fire_department",
     items: [
-      { name: "Competitive Programming", icon: "emoji_events", colorClass: "text-accent-yellow" },
       { name: "Open Source", icon: "code", colorClass: "text-accent-green" },
       { name: "Tech Writing", icon: "edit_note", colorClass: "text-accent-blue" },
-      { name: "ML & Systems Research", icon: "science", colorClass: "text-accent-red" }
+      { name: "ML & Systems Research", icon: "science", colorClass: "text-accent-red" },
+      { name: "Teaching & Mentoring", icon: "school", colorClass: "text-accent-yellow" }
     ]
   },
   philosophy: {
@@ -69,14 +69,25 @@ export const aboutData = {
     items: [
         {
             period: '2026',
-            role: 'FYDP-I Defended, Research Grew',
+            role: 'FYDP-II Defended, Paper Submitted',
             company: 'UIU · Team Paradox',
-            description: 'Defended FYDP-I on neural ODE surrogates (supervised by Dr. Muhammad Nomani Kabir). New studies followed: physics-residual CAN attack detection, a DT-NB conference submission, and AI-image forensics.',
+            description: 'Defended FYDP-II on physics-informed neural networks for the Lorenz-1960 ODE system (supervised by Dr. Muhammad Nomani Kabir). The manuscript is submitted to ICEEICT 2027, and a windowed PINN study for longer horizons is archived alongside it.',
             color: 'bg-accent-green',
             textColor: 'text-accent-green',
             hoverColor: 'group-hover:text-accent-green',
             hoverBg: 'group-hover:bg-accent-green',
             active: true
+        },
+        {
+            period: '2025 - Present',
+            role: 'Solo Software Engineer',
+            company: 'RimonsIELTS',
+            description: 'The only engineer behind the live IELTS preparation platform at rimonsielts.com: a Next.js 15 student portal, an Express + TypeScript API, a React admin, and a Python central service.',
+            color: 'bg-accent-purple',
+            textColor: '',
+            hoverColor: 'group-hover:text-accent-purple',
+            hoverBg: 'group-hover:bg-accent-purple',
+            active: false
         },
         {
             period: 'Aug 2025 - Present',
@@ -101,10 +112,10 @@ export const aboutData = {
             active: false
         },
         {
-            period: '2022 - Present',
+            period: '2022 - 2027',
             role: 'B.Sc. in CSE',
             company: 'United International University',
-            description: 'Expected graduation December 2026. CGPA 3.94/4.0 with 100% Merit Scholarship for 6 terms.',
+            description: 'Expected graduation January or February 2027. CGPA 3.94/4.0 with eight merit scholarships so far, six of them at 100%.',
             color: 'bg-accent-red',
             textColor: '',
             hoverColor: 'group-hover:text-accent-red',

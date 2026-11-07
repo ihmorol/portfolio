@@ -307,7 +307,7 @@ export default function ProjectDetailPage({
                     &ldquo;{detail.impact.testimonials[0].quote}&rdquo;
                   </blockquote>
                   <figcaption className="type-caption text-text-muted mt-4">
-                    — {detail.impact.testimonials[0].author}
+                    {detail.impact.testimonials[0].author}
                   </figcaption>
                 </figure>
               </section>

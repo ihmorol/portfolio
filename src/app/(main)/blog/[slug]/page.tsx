@@ -102,7 +102,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                                 <span className="font-bold text-text-primary">{ref.label}</span>
                                 {ref.url ? (
                                     <>
-                                        {" — "}
+                                        {" · "}
                                         <a
                                             href={ref.url}
                                             target="_blank"

@@ -7,7 +7,7 @@ export const researchData = {
   },
   vision: {
     title: "Research Focus",
-    description: "My research asks practical questions. Can physics residuals flag masquerade attacks in a vehicle network better than purely data-driven models? Can plain neural networks act as surrogates for differential equation solvers? Every study runs on a reproducible pipeline with fixed seeds, leakage-proof splits, and metrics chosen to expose weaknesses rather than hide them.",
+    description: "My research asks practical questions. Can physics residuals flag masquerade attacks in a vehicle network better than purely data-driven models? Can a network trained on the residual of an ODE alone, never shown the answer, recover the solution? Every study runs on a reproducible pipeline with fixed seeds, leakage-proof splits, and metrics chosen to expose weaknesses rather than hide them.",
     currentFocus: {
       title: "Current Focus",
       text: "Physics-Informed Neural Networks, Neural ODE Surrogates, ML for Cyber-Physical Systems"
@@ -40,23 +40,23 @@ export const researchData = {
         institution: "United International University · Team Paradox",
         advisor: "Dr. Muhammad Nomani Kabir",
         period: "2025 - Present",
-        description: "Leading FYDP research on solving the Lorenz-1960 ODE system with optimal ANN architectures. I built a verified RK4/DOP853 ground-truth pipeline (agreement RMSE around 1.3e-11) and designed a controlled 69-run architecture and optimizer search. FYDP-I was defended in June 2026.",
-        tags: ["Scientific ML", "PyTorch", "Numerical Methods"]
+        description: "Leading FYDP research on the Lorenz-1960 ODE system. The current method is a physics-informed network trained on the ODE residual alone with a hard-constrained initial condition: 11,283 parameters, within 3e-05 of a DOP853 reference, trained in under six CPU minutes. Around it sit a nine-architecture sweep, a windowed PINN study with causal residual weighting for longer horizons, and the ICEEICT 2027 manuscript. FYDP-II defended.",
+        tags: ["PINN", "Scientific ML", "PyTorch", "Numerical Methods"]
       },
       {
         role: "Independent Researcher",
         institution: "PINN-CPS-Robo · CAN Masquerade Attack Detection",
         advisor: "Self-directed",
-        period: "2026",
+        period: "2026 - Present",
         description: "Studying whether physics-residual signals detect CAN masquerade attacks on the ROAD dataset better than purely data-driven baselines, with attention to attack attribution.",
         tags: ["PINN", "Cyber-Physical Systems", "Python"]
       },
       {
         role: "Researcher",
-        institution: "DT-NB Hybrid Study · ICEEICT 2027 Submission",
+        institution: "DT-NB Hybrid Study",
         advisor: "Self-directed",
         period: "2026",
-        description: "Compared Naive Bayes instance filtering and decision-tree attribute weighting, separately and in both orders, with all supervised steps refit inside each training fold across ten seeds. Manuscript submitted to ICEEICT 2027.",
+        description: "Compared Naive Bayes instance filtering and decision-tree attribute weighting, separately and in both orders, with all supervised steps refit inside each training fold across ten seeds. Manuscript written; not yet submitted to a conference.",
         tags: ["Weka", "Decision Trees", "Naive Bayes"]
       },
       {
@@ -90,22 +90,22 @@ export const researchData = {
     items: [
       {
         title: "NB Instance Filtering and Tree-Based Attribute Weighting: A Hybrid Study on Noisy Tabular Data",
-        status: "Submitted",
+        status: "Manuscript in Preparation",
         statusColor: "text-amber-400 bg-amber-900/20 border-amber-900/30",
         authors: [
           { name: "Ikramul Hasan Moral", isMe: true }
         ],
-        venue: "ICEEICT 2027",
-        description: "A conference study comparing Naive Bayes instance filtering and decision-tree attribute selection/weighting, separately and in both orders, with all supervised steps refit inside each training fold and scored on held-out rows across ten seeds.",
+        venue: "Self-directed study · Manuscript written, not yet submitted",
+        description: "A conference-ready study comparing Naive Bayes instance filtering and decision-tree attribute selection/weighting, separately and in both orders, with all supervised steps refit inside each training fold and scored on held-out rows across ten seeds. The manuscript is complete but has not been submitted to a conference.",
         citations: 0,
         links: [
           { label: "Code", icon: "code", url: "https://github.com/ihmorol/dt-nb-noise-removal" }
         ]
       },
       {
-        title: "Solving the Lorenz ODE System Using Optimal ANN Architectures",
-        status: "Thesis · In Progress",
-        statusColor: "text-blue-400 bg-blue-900/20 border-blue-900/30",
+        title: "Lorenz-1960 PINN: Solving the ODE System from the Equations Alone",
+        status: "Defended · Submitted to ICEEICT 2027",
+        statusColor: "text-green-400 bg-green-900/20 border-green-900/30",
         authors: [
           { name: "Ikramul Hasan Moral", isMe: true },
           { name: "Md. Abu Bakar" },
@@ -114,20 +114,21 @@ export const researchData = {
           { name: "Md. Touhidul Islam" }
         ],
         venue: "UIU Final Year Design Project · Supervisor: Dr. Muhammad Nomani Kabir",
-        description: "Which feedforward architecture best approximates a coupled nonlinear ODE system when trained purely on data? A controlled 69-run search over depth (1-4), width (20-100), five activations, and three optimizers, benchmarked against published PINN and DeepONet results on a solver-verified ground truth.",
+        description: "A physics-informed network with a hard-constrained initial condition, trained on the ODE residual alone with no data, lands within 3e-05 of a DOP853 reference in under six CPU minutes. A nine-architecture sweep and a windowed causal-weighting study for longer horizons sit alongside the run of record. Sixteen paper runs plus sixteen windowed models are archived with SHA-256 verification, and the manuscript is submitted to ICEEICT 2027.",
         links: [
-          { label: "Code", icon: "code", url: "https://github.com/ihmorol/lorenz1960-pinn" }
+          { label: "Code", icon: "code", url: "https://github.com/ihmorol/lorenz1960-pinn" },
+          { label: "Windowed Study", icon: "code", url: "https://github.com/ihmorol/lorenz1960-windowed-pinn" }
         ]
       },
       {
         title: "ANN Modeling of Hybrid Nanofluid Boundary Layer Flow",
-        status: "Research Project",
+        status: "Active · Extending to New Equations",
         statusColor: "text-green-400 bg-green-900/20 border-green-900/30",
         authors: [
           { name: "Ikramul Hasan Moral", isMe: true }
         ],
         venue: "Independent scientific ML project",
-        description: "A nine-layer neural network trained with Levenberg-Marquardt optimization to model hybrid nanofluid flow and heat transfer over a stretching sheet. Trained on about 32,400 physics-generated samples and validated against numerical solutions with MSE, RMSE, and R² metrics.",
+        description: "A nine-layer neural network trained with Levenberg-Marquardt optimization to model hybrid nanofluid flow and heat transfer over a stretching sheet, validated against numerical solutions with MSE, RMSE, and R-squared metrics. The boundary-layer direction is active again, now aimed at new equation systems.",
         links: []
       }
     ]
@@ -136,9 +137,9 @@ export const researchData = {
     title: "Talks & Teaching",
     items: [
       {
-        title: "FYDP-I Thesis Defense",
+        title: "FYDP-I & FYDP-II Thesis Defenses",
         event: "UIU CSE Department",
-        action: "Jun 2026",
+        action: "2026",
         icon: "co_present",
         link: "https://github.com/ihmorol/lorenz1960-pinn"
       },
@@ -155,8 +156,8 @@ export const researchData = {
     title: "Active Research Areas",
     items: [
       {
-        title: "Neural ODE Surrogates",
-        description: "Training the 69-experiment grid for the Lorenz-1960 thesis: separating architecture effects from optimizer effects, benchmarked against the PINN literature.",
+        title: "PINNs on New Equations",
+        description: "Extending the defended Lorenz-1960 thesis: windowed PINNs with causal residual weighting for longer horizons, and boundary-layer problems with new equation systems.",
         year: "2025 - Present",
         gradient: "from-blue-900 to-slate-900",
         icon: "model_training",
