@@ -85,28 +85,31 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="surface-card-strong flex-1 p-4 md:p-6 lg:p-10 relative overflow-hidden">
+        <div className="surface-card-strong flex-1 p-4 md:p-6 lg:p-10 relative overflow-hidden flex flex-col">
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-accent-yellow/20 to-transparent rounded-full -mr-32 -mt-32 opacity-80" />
-          <div className="relative z-10">
+          <div className="relative z-10 flex flex-1 flex-col">
             <h2 className="type-h2 text-text-primary mb-4">{subtitle}</h2>
-            <p className="type-body text-text-secondary max-w-xl">{description}</p>
+            <p className="type-body text-text-secondary max-w-xl mb-6">{description}</p>
             <Link
               href={now.link}
-              className="group focus-ring inline-flex items-center gap-3 mt-6 px-4 py-2.5 rounded-full border border-border bg-background-secondary/60 hover:border-border-strong transition-colors"
+              className="group focus-ring mt-auto flex items-center justify-between gap-3 w-full px-4 py-3 md:px-5 md:py-3.5 rounded-full border border-border bg-background-secondary/60 hover:border-border-strong hover:bg-background-tertiary/60 transition-colors"
             >
-              <span className="relative flex h-2 w-2" aria-hidden="true">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
-              </span>
-              <span className="type-caption text-text-secondary">
-                <span className="text-text-primary font-semibold">{now.label}</span>
-                <span className="mx-1.5 text-text-muted">&middot;</span>
-                {now.text}
+              <span className="flex items-center gap-3 min-w-0">
+                <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+                </span>
+                <span className="type-caption text-text-primary font-semibold whitespace-nowrap">
+                  What I&apos;m doing now
+                </span>
+                <span className="type-caption text-text-muted truncate hidden md:inline">
+                  {now.text}
+                </span>
               </span>
               <ArrowRight
                 size={14}
                 aria-hidden="true"
-                className="text-text-muted group-hover:translate-x-0.5 group-hover:text-text-primary transition-all"
+                className="shrink-0 text-text-muted group-hover:translate-x-0.5 group-hover:text-text-primary transition-all"
               />
             </Link>
           </div>
