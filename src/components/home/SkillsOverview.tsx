@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { homeData } from '@/data/home-data';
 import { Magnetic } from '@/components/motion/Magnetic';
 
@@ -14,9 +15,9 @@ export function SkillsOverview() {
                 {description}
             </p>
             <Magnetic strength={5}>
-                <button className="focus-ring bg-foreground text-background px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 hover:shadow-lg transition-all duration-300 w-max cursor-pointer">
+                <Link href="/skills" className="focus-ring bg-foreground text-background px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 hover:shadow-lg transition-all duration-300 w-max cursor-pointer">
                     {cta}
-                </button>
+                </Link>
             </Magnetic>
             <div className="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
                 <span aria-hidden="true" className="material-symbols-outlined text-[200px] text-text-primary">terminal</span>
