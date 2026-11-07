@@ -143,5 +143,44 @@ export const homeData = {
         { name: "LinkedIn", url: "https://linkedin.com/in/ihmorol", icon: "work", colorIdx: "blue" },
         { name: "Email", url: "mailto:ihmorol@gmail.com", icon: "mail", colorIdx: "red" }
     ]
+  },
+  latestWriting: {
+    title: "From the Blog",
+    viewAllText: "View All Posts",
+    viewAllLink: "/blog"
+  },
+  nowSpotlight: {
+    label: "Now",
+    updatedAt: "November 2026",
+    title: "The present tense",
+    description: "What I'm building, teaching, and researching right now — the short version. The /now page always carries the full picture.",
+    ctaText: "See the full now page",
+    ctaLink: "/now",
+    rows: [
+      {
+        title: "Building",
+        icon: "rocket_launch",
+        dot: "bg-green-500",
+        text: "RimonsIELTS, solo and remote — student portal, REST API, admin dashboard, and a Python central service, all live in production.",
+        href: "https://rimonsielts.com",
+        external: true
+      },
+      {
+        title: "Teaching",
+        icon: "school",
+        dot: "bg-amber-400",
+        text: "Undergraduate TA at UIU since Aug 2025 — weekly labs, office hours, and code reviews across DBMS, DSA-I, ICS, and SWE courses.",
+        href: "/experience",
+        external: false
+      },
+      {
+        title: "Researching",
+        icon: "science",
+        dot: "bg-accent-blue",
+        text: "FYDP-II: the 69-run architecture search for the Lorenz-1960 ODE system, plus a DT-NB hybrid study submitted to ICEEICT 2027.",
+        href: "/research",
+        external: false
+      }
+    ]
   }
 };
