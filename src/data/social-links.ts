@@ -1,5 +1,7 @@
-export const socialLinks = [
-  { title: "LinkedIn", url: "https://linkedin.com/in/ihmorol" },
-  { title: "GitHub", url: "https://github.com/ihmorol" },
-  { title: "Email", url: "mailto:ihmorol@gmail.com" }
-];
+/**
+ * Content wrapper: the editable source of truth is social-links.json,
+ * maintained through Portfolio Admin. Export names and shapes are unchanged.
+ */
+import data from './social-links.json';
+
+export const socialLinks = data;

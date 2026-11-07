@@ -1,22 +1,7 @@
-const username = 'ihmorol';
+/**
+ * Content wrapper: the editable source of truth is profile-data.json,
+ * maintained through Portfolio Admin. Export names and shapes are unchanged.
+ */
+import data from './profile-data.json';
 
-export const profileData = {
-  name: 'Ikramul Hasan',
-  fullName: 'Ikramul Hasan Moral',
-  username,
-  email: 'ihmorol@gmail.com',
-  location: 'Dhaka, Bangladesh',
-  roles: {
-    primary: 'Final-Year CSE Student',
-    secondary: 'Full-Stack Developer',
-    tertiary: 'ML Researcher',
-  },
-  social: {
-    github: `https://github.com/${username}`,
-    linkedin: `https://linkedin.com/in/${username}`,
-    x: `https://x.com/${username}`,
-    facebook: `https://facebook.com/${username}`,
-    instagram: `https://instagram.com/${username}`,
-    email: `mailto:ihmorol@gmail.com`,
-  },
-} as const;
+export const profileData = data;

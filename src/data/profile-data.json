@@ -1,0 +1,20 @@
+{
+  "name": "Ikramul Hasan",
+  "fullName": "Ikramul Hasan Moral",
+  "username": "ihmorol",
+  "email": "ihmorol@gmail.com",
+  "location": "Dhaka, Bangladesh",
+  "roles": {
+    "primary": "Final-Year CSE Student",
+    "secondary": "Full-Stack Developer",
+    "tertiary": "ML Researcher"
+  },
+  "social": {
+    "github": "https://github.com/ihmorol",
+    "linkedin": "https://linkedin.com/in/ihmorol",
+    "x": "https://x.com/ihmorol",
+    "facebook": "https://facebook.com/ihmorol",
+    "instagram": "https://instagram.com/ihmorol",
+    "email": "mailto:ihmorol@gmail.com"
+  }
+}
