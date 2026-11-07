@@ -1,13 +1,21 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, ExternalLink, Github, Globe } from 'lucide-react';
+import {
+  ArrowLeft,
+  ArrowRight,
+  Check,
+  ExternalLink,
+  Github,
+  Globe,
+  Quote
+} from 'lucide-react';
 import { Footer } from '@/components/layout/Footer';
 import { Reveal } from '@/components/motion/Reveal';
 import { PageLeftSideBar } from '@/components/shared/page-left-sidebar';
 import { VerticalSocialLinks } from '@/components/shared/vertical-social-links';
 import { layoutData } from '@/data/layout-data';
 import { projectsData } from '@/data/projects-data';
+import { projectDetailsData } from '@/data/project-details-data';
 
 const metricTextColorMap: Record<string, string> = {
   'accent-green': 'text-green-300',
@@ -39,13 +47,19 @@ export default function ProjectDetailPage({
     notFound();
   }
 
-  const detail =
-    projectsData.projectDetails[
-      params.slug as keyof typeof projectsData.projectDetails
-    ];
+  const detail = projectDetailsData[params.slug];
   const tags = detail?.tags ?? project.tags.map(stripTagHash);
   const headline = detail?.subtitle ?? project.category;
   const overview = detail?.heroDescription ?? project.description;
+
+  // Link buttons: prefer curated detail links, fall back to card github/live.
+  const links =
+    detail?.links?.length
+      ? detail.links
+      : [
+          ...(project.github ? [{ label: 'View Source', url: project.github }] : []),
+          ...(project.live ? [{ label: 'Live Site', url: project.live, primary: true }] : []),
+        ];
 
   return (
     <>
@@ -63,9 +77,10 @@ export default function ProjectDetailPage({
             </Link>
           </Reveal>
 
+          {/* ── Hero ─────────────────────────────────────────────── */}
           <Reveal delay={0.03}>
             <header className="mb-12 md:mb-16">
-              <p className="type-micro text-text-muted mb-3">{project.category}</p>
+              <p className="type-micro text-text-muted mb-3 uppercase tracking-widest">{project.category}</p>
               <h1 className="type-display-2 text-text-primary mb-4">{project.title}</h1>
               <p className="type-body-lg text-text-secondary max-w-3xl">{headline}</p>
 
@@ -80,30 +95,32 @@ export default function ProjectDetailPage({
                 ))}
               </div>
 
-              {(project.github || project.live) ? (
+              {links.length > 0 && (
                 <div className="flex flex-wrap gap-3 mt-6">
-                  {project.github ? (
+                  {links.map((link) => (
                     <a
-                      href={project.github}
+                      key={link.label}
+                      href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="focus-ring h-10 px-5 rounded-full border border-border-strong text-text-primary hover:bg-foreground hover:text-background transition-colors type-micro inline-flex items-center gap-2"
+                      className={
+                        link.primary
+                          ? 'focus-ring h-10 px-5 rounded-full bg-foreground text-background hover:bg-foreground/85 transition-colors type-micro inline-flex items-center gap-2'
+                          : 'focus-ring h-10 px-5 rounded-full border border-border-strong text-text-primary hover:bg-foreground hover:text-background transition-colors type-micro inline-flex items-center gap-2'
+                      }
                     >
-                      <Github size={16} /> View Source
+                      {/^https?:\/\/github\.com/.test(link.url) ? (
+                        <Github size={16} />
+                      ) : /Live|Site|Demo/i.test(link.label) ? (
+                        <Globe size={16} />
+                      ) : (
+                        <ExternalLink size={16} />
+                      )}
+                      {link.label}
                     </a>
-                  ) : null}
-                  {project.live ? (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="focus-ring h-10 px-5 rounded-full bg-foreground text-background hover:bg-foreground/85 transition-colors type-micro inline-flex items-center gap-2"
-                    >
-                      <Globe size={16} /> Live Site
-                    </a>
-                  ) : null}
+                  ))}
                 </div>
-              ) : null}
+              )}
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-8 pt-6 border-t border-border">
                 <div>
@@ -126,17 +143,38 @@ export default function ProjectDetailPage({
             </header>
           </Reveal>
 
+          {/* ── Evidence tiles ───────────────────────────────────── */}
+          {detail?.stats?.length ? (
+            <Reveal delay={0.05}>
+              <section className="mb-12 md:mb-16">
+                <h2 className="type-h2 mb-5">By the Numbers</h2>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                  {detail.stats.map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="surface-card p-5 flex flex-col justify-center min-h-[110px]"
+                    >
+                      <p className="type-h2 text-text-primary leading-tight">{stat.value}</p>
+                      <p className="type-caption text-text-muted mt-2">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </Reveal>
+          ) : null}
+
+          {/* ── Overview + Stack ─────────────────────────────────── */}
           <Reveal delay={0.05}>
             <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12 md:mb-16">
               <article className="surface-card p-6 md:p-8">
                 <h2 className="type-h2 mb-4">Overview</h2>
-                <p className="type-body text-text-secondary">{overview}</p>
+                <p className="type-body text-text-secondary leading-relaxed">{overview}</p>
               </article>
 
               <article className="surface-card p-6 md:p-8">
                 <h2 className="type-h2 mb-4">Tech Stack</h2>
                 <div className="flex flex-wrap gap-2">
-                  {(detail?.tags ?? project.tags.map(stripTagHash)).map((tech) => (
+                  {tags.map((tech) => (
                     <span
                       key={tech}
                       className="px-3 py-1.5 rounded-lg bg-background-secondary border border-border type-caption text-text-secondary"
@@ -149,6 +187,7 @@ export default function ProjectDetailPage({
             </section>
           </Reveal>
 
+          {/* ── Project screens (if any) ─────────────────────────── */}
           {detail?.screens?.length ? (
             <Reveal delay={0.07}>
               <section className="mb-12 md:mb-16">
@@ -159,11 +198,11 @@ export default function ProjectDetailPage({
                       key={screen}
                       className="relative aspect-video rounded-2xl overflow-hidden border border-border bg-black/30"
                     >
-                      <Image
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
                         src={screen}
                         alt={`${project.title} screen ${index + 1}`}
-                        fill
-                        className="object-cover"
+                        className="absolute inset-0 h-full w-full object-cover"
                       />
                     </div>
                   ))}
@@ -172,13 +211,29 @@ export default function ProjectDetailPage({
             </Reveal>
           ) : null}
 
+          {/* ── Feature blocks ───────────────────────────────────── */}
           {detail?.features?.length ? (
             <Reveal delay={0.09}>
               <section className="mb-12 md:mb-16">
-                <h2 className="type-h2 mb-4">Case Study Highlights</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {detail.features.map((feature) => (
-                    <article key={feature.title} className="surface-card p-6">
+                <h2 className="type-h2 mb-2">Inside the Project</h2>
+                <p className="type-caption text-text-secondary mb-6">
+                  What it does, how it works, and what it ships.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                  {detail.features.map((feature, index) => (
+                    <article key={feature.title} className="surface-card p-6 flex flex-col">
+                      <div className="flex items-center justify-between mb-4">
+                        <span
+                          className={`inline-flex w-10 h-10 rounded-xl items-center justify-center ${feature.iconBg}`}
+                        >
+                          <span className={`material-symbols-outlined text-sm ${feature.iconColor}`}>
+                            {feature.icon}
+                          </span>
+                        </span>
+                        <span className="type-micro text-text-muted" aria-hidden="true">
+                          {String(index + 1).padStart(2, '0')}
+                        </span>
+                      </div>
                       <h3 className="type-h3 mb-3">{feature.title}</h3>
                       {feature.description ? (
                         <p className="type-caption text-text-secondary leading-relaxed">
@@ -186,9 +241,19 @@ export default function ProjectDetailPage({
                         </p>
                       ) : null}
                       {feature.list?.length ? (
-                        <ul className="mt-3 space-y-1.5 type-caption text-text-secondary">
+                        <ul className="mt-4 space-y-2">
                           {feature.list.map((item) => (
-                            <li key={item}>• {item}</li>
+                            <li
+                              key={item}
+                              className="flex items-start gap-2 type-caption text-text-secondary"
+                            >
+                              <Check
+                                size={14}
+                                className="text-green-400 mt-0.5 shrink-0"
+                                aria-hidden="true"
+                              />
+                              <span>{item}</span>
+                            </li>
                           ))}
                         </ul>
                       ) : null}
@@ -199,25 +264,24 @@ export default function ProjectDetailPage({
             </Reveal>
           ) : null}
 
+          {/* ── Outcomes ─────────────────────────────────────────── */}
           {detail?.impact?.metrics?.length ? (
             <Reveal delay={0.11}>
               <section className="mb-12 md:mb-16">
-                <h2 className="type-h2 mb-4">Outcomes</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <h2 className="type-h2 mb-2">{detail.impact.title}</h2>
+                <p className="type-caption text-text-secondary mb-6">{detail.impact.description}</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                   {detail.impact.metrics.map((metric) => {
                     const textColor = metricTextColorMap[metric.color] || 'text-text-primary';
                     const bgColor =
-                      metricBgColorMap[metric.bg] ||
-                      'bg-foreground/10 border border-border';
+                      metricBgColorMap[metric.bg] || 'bg-foreground/10 border border-border';
 
                     return (
                       <article key={metric.label} className="surface-card p-6">
                         <span
                           className={`inline-flex w-10 h-10 rounded-full items-center justify-center ${bgColor} mb-3`}
                         >
-                          <span className="material-symbols-outlined text-sm">
-                            {metric.icon}
-                          </span>
+                          <span className="material-symbols-outlined text-sm">{metric.icon}</span>
                         </span>
                         <p className={`type-h1 ${textColor}`}>{metric.val}</p>
                         <p className="type-caption text-text-muted mt-1">{metric.label}</p>
@@ -229,7 +293,29 @@ export default function ProjectDetailPage({
             </Reveal>
           ) : null}
 
-          <Reveal delay={0.13}>
+          {/* ── Reflection quote ─────────────────────────────────── */}
+          {detail?.impact?.testimonials?.length ? (
+            <Reveal delay={0.13}>
+              <section className="mb-12 md:mb-16">
+                <figure className="surface-card p-6 md:p-10 relative overflow-hidden">
+                  <Quote
+                    size={64}
+                    className="absolute top-6 right-8 text-foreground/10"
+                    aria-hidden="true"
+                  />
+                  <blockquote className="type-body-lg text-text-primary leading-relaxed max-w-3xl">
+                    &ldquo;{detail.impact.testimonials[0].quote}&rdquo;
+                  </blockquote>
+                  <figcaption className="type-caption text-text-muted mt-4">
+                    — {detail.impact.testimonials[0].author}
+                  </figcaption>
+                </figure>
+              </section>
+            </Reveal>
+          ) : null}
+
+          {/* ── CTA ──────────────────────────────────────────────── */}
+          <Reveal delay={0.15}>
             <section className="surface-card p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div>
                 <h3 className="type-h3 mb-1">Interested in this project?</h3>
@@ -238,16 +324,17 @@ export default function ProjectDetailPage({
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-3">
-                {project.github ? (
+                {links.map((link) => (
                   <a
-                    href={project.github}
+                    key={link.label}
+                    href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="focus-ring h-11 px-5 rounded-full border border-border-strong hover:border-border-strong transition-colors type-micro inline-flex items-center gap-2"
                   >
-                    <Github size={14} /> GitHub
+                    <Github size={14} /> {link.label}
                   </a>
-                ) : null}
+                ))}
                 <Link
                   href="/projects"
                   className="focus-ring h-11 px-5 rounded-full border border-border-strong hover:border-border-strong transition-colors type-micro inline-flex items-center"
@@ -258,7 +345,7 @@ export default function ProjectDetailPage({
                   href="/contact"
                   className="focus-ring h-11 px-5 rounded-full bg-foreground text-background hover:bg-foreground/85 transition-colors type-micro inline-flex items-center gap-2"
                 >
-                  Contact <ExternalLink size={14} />
+                  Contact <ArrowRight size={14} />
                 </Link>
               </div>
             </section>
