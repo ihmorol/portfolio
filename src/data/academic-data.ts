@@ -24,7 +24,7 @@ export const academicData = {
     techStack: ["Python", "PyTorch", "NumPy", "SciPy"],
     methodology: "A verified numerical baseline first (custom RK4 against SciPy DOP853, agreement RMSE around 1.3e-11), then a systematic architecture search benchmarked against published PINN results.",
     outcomes: "FYDP-I defended with a 17-paper literature review, a verified ground-truth pipeline, and a locked 69-experiment design. The training phase is in progress.",
-    proposalLink: "https://github.com/ihmorol/fydp_workspace"
+    proposalLink: "https://github.com/ihmorol/lorenz1960-pinn"
   },
   certifications: [
     {
@@ -116,7 +116,7 @@ export const academicData = {
       month: "AUG",
       day: "25",
       title: "Teaching Assistant Onboarding",
-      description: "Started as TA for DSA and DBMS courses"
+      description: "Started as TA for DBMS, DSA-I, ICS, and SWE labs"
     },
     {
       month: "MAR",

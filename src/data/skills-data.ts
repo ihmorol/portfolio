@@ -42,28 +42,28 @@ export const skillsData = {
         icon: "TS",
         iconBg: "bg-blue-100",
         iconColor: "text-blue-600",
-        title: "E-Learning Platform",
-        description: "Three live apps: a Next.js 15 portal, an Express + TS API, and a React admin dashboard."
+        title: "RimonsIELTS Platform",
+        description: "Four live apps I run solo: a Next.js 15 portal, an Express + TS API, a React admin dashboard, and a Python central service."
       },
       {
         icon: "PY",
         iconBg: "bg-green-100",
         iconColor: "text-green-600",
-        title: "Intrusion Detection Research",
-        description: "The reproducible ML experiment grid behind my paper, now under peer review."
+        title: "PINN Research",
+        description: "Physics-informed models for the Lorenz-1960 system and CAN attack detection, on reproducible pipelines."
       }
     ]
   },
   aiMl: {
     title: "AI & Machine Learning",
-    description: "Controlled experiments and reproducible pipelines, with metrics chosen to hold up under review.",
+    description: "Controlled experiments and reproducible pipelines, with metrics chosen to hold up to scrutiny.",
     items: [
       {
         name: "PyTorch",
         icon: "model_training",
         iconColor: "text-orange-400",
         hoverBorder: "hover:border-orange-500/50",
-        description: "Neural network training for my thesis: ANN architecture search over ODE systems."
+        description: "Neural network training for my thesis (ANN search over ODE systems) and PINN experiments for attack detection."
       },
       {
         name: "scikit-learn & XGBoost",
@@ -118,7 +118,7 @@ export const skillsData = {
       items: [
         { name: "React 19 / Next.js 15", colorClass: "bg-blue-400" },
         { name: "Tailwind CSS / Radix UI", colorClass: "bg-blue-400" },
-        { name: "Zustand / TanStack Query", colorClass: "bg-blue-400" }
+        { name: "Zustand / TanStack Query / Router", colorClass: "bg-blue-400" }
       ]
     },
     backend: {
@@ -169,12 +169,12 @@ export const skillsData = {
       issuer: "United International University • 6 Terms (Top 3%)"
     },
     {
-      code: "ML",
+      code: "FYDP",
       codeBg: "bg-purple-500/20",
       codeColor: "text-purple-400",
-      title: "Research Paper Under Review",
+      title: "FYDP-I Defended",
       hoverColor: "group-hover:text-purple-400",
-      issuer: "Class-Imbalanced Intrusion Detection • 2026"
+      issuer: "Lorenz-1960 ODE × ANN Architecture Search • Jun 2026"
     },
     {
       code: "DSA",
