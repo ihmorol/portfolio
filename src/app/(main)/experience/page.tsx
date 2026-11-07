@@ -18,7 +18,7 @@ export default function ExperiencePage() {
   // The original file used specific socialLinks import. layoutData has them too. I'll use layoutData.
 
   return (
-    <div className="container mx-auto px-4 md:px-8 lg:px-12 xl:px-20 pt-20 md:pt-24 pb-8 md:pb-12 max-w-[1600px]">
+    <div className="mx-auto px-4 md:px-8 lg:px-12 xl:px-20 pt-20 md:pt-24 pb-8 md:pb-12 max-w-[1600px]">
       <PageLeftSideBar title="EXPERIENCE" />
       <VerticalSocialLinks items={socialLinks} />
       
