@@ -158,26 +158,28 @@ export default function ContactPage() {
             </div>
 
             {/* Newsletter Card */}
-            <div className="md:col-span-4 bg-background-secondary rounded-[2.5rem] p-8 border border-border/60 flex flex-col h-full hover:border-border transition-colors">
-                <div className="flex items-start gap-5 mb-8">
-                    <div className="w-14 h-14 bg-accent-red rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-red-900/20">
-                        <Mail className="text-white w-7 h-7" />
-                    </div>
-                    <div>
-                        <h3 className="text-xl font-bold text-text-primary leading-tight mt-1">{newsletter.title}</h3>
+            <div className="md:col-span-4 bg-background-secondary rounded-[2.5rem] p-1.5 flex flex-col h-full border border-border/60 group hover:border-border transition-all duration-300">
+                <div className="flex-grow p-8 flex flex-col items-center justify-center min-h-[220px]">
+                    <div className="w-36 h-36 relative mb-4">
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-32 h-24 bg-accent-red rounded-lg shadow-2xl z-20 flex items-center justify-center overflow-hidden">
+                            <Mail className="text-white w-10 h-10" />
+                        </div>
+                        <div className="absolute bottom-16 left-1/2 -translate-x-1/2 w-28 h-24 bg-white rounded-t-lg shadow-md z-10 transition-transform group-hover:translate-y-[-10px]"></div>
                     </div>
                 </div>
-                <p className="text-[11px] text-text-secondary mb-8 leading-relaxed font-body">
-                    {newsletter.description}
-                </p>
-                <div className="mt-auto">
-                    <NewsletterForm
-                      variant="pill"
-                      showName
-                      buttonText={newsletter.buttonText}
-                      namePlaceholder={newsletter.namePlaceholder}
-                      emailPlaceholder={newsletter.emailPlaceholder}
-                    />
+                <div className="bg-background-tertiary p-8 rounded-3xl mt-auto relative overflow-hidden">
+                     <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-background-secondary to-transparent opacity-50"></div>
+                    <h3 className="text-2xl font-bold text-text-primary mb-3">{newsletter.title}</h3>
+                    <p className="text-xs text-text-secondary mb-8 leading-relaxed font-body">{newsletter.description}</p>
+                    <div className="relative">
+                        <NewsletterForm
+                          variant="pill"
+                          showName
+                          buttonText={newsletter.buttonText}
+                          namePlaceholder={newsletter.namePlaceholder}
+                          emailPlaceholder={newsletter.emailPlaceholder}
+                        />
+                    </div>
                 </div>
             </div>
 

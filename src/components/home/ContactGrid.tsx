@@ -4,6 +4,12 @@ import Link from 'next/link';
 import { homeData } from '@/data/home-data';
 import { NewsletterForm } from '@/components/shared/NewsletterForm';
 
+/**
+ * One skeleton for all three cards: a fixed-height illustration zone, a
+ * centered title and description, then a bottom-pinned action area. Keeping
+ * the header and title rows at fixed heights is what lines the three cards
+ * up; the action area (button or form) absorbs the remaining height.
+ */
 export function ContactGrid() {
   const { blocks } = homeData.contact;
   const emailBlock = blocks.find(b => b.type === 'email');
@@ -11,10 +17,10 @@ export function ContactGrid() {
   const newsletterBlock = blocks.find(b => b.type === 'newsletter');
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
+    <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16 items-stretch">
         {/* Email Block */}
-        <div className="glass-dark rounded-3xl p-8 flex flex-col justify-between min-h-[360px] border border-border/60 relative overflow-hidden">
-            <div className="flex justify-center mb-6 relative z-10">
+        <div className="glass-dark rounded-3xl p-8 flex flex-col h-full min-h-[360px] border border-border/60 relative overflow-hidden">
+            <div className="flex justify-center items-center h-24 mb-6 relative z-10">
                 <div className="relative w-32 h-24">
                     <div className="absolute bottom-0 left-0 w-full h-20 bg-green-500 rounded-lg shadow-lg z-10 flex items-center justify-center overflow-hidden">
                         <div className="w-0 h-0 border-l-[64px] border-l-transparent border-r-[64px] border-r-transparent border-t-[40px] border-t-green-600 absolute top-0"></div>
@@ -22,10 +28,10 @@ export function ContactGrid() {
                     <div className="absolute -top-4 left-2 w-[90%] h-20 bg-white rounded-lg shadow-sm z-0 transform rotate-[-2deg]"></div>
                 </div>
             </div>
-            <div className="mt-auto relative z-10 text-center">
-                <h3 className="text-2xl font-bold text-text-primary mb-2">{emailBlock?.title}</h3>
-                <p className="text-xs text-text-secondary mb-6 px-4">{emailBlock?.description}</p>
-                <a href={`mailto:${emailBlock?.emailAddress}`} className="bg-foreground text-background w-full py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 transition-colors text-center">
+            <h3 className="text-2xl font-bold text-text-primary mb-2 text-center relative z-10">{emailBlock?.title}</h3>
+            <p className="text-xs text-text-secondary mb-6 px-4 text-center relative z-10">{emailBlock?.description}</p>
+            <div className="mt-auto relative z-10">
+                <a href={`mailto:${emailBlock?.emailAddress}`} className="block bg-foreground text-background w-full py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 transition-colors text-center">
                     {emailBlock?.cta}
                 </a>
             </div>
@@ -33,8 +39,8 @@ export function ContactGrid() {
         </div>
 
         {/* Message Block */}
-        <div className="glass-dark rounded-3xl p-8 flex flex-col justify-between min-h-[360px] border border-border/60 relative overflow-hidden">
-            <div className="flex justify-center mb-6 relative z-10 pt-4">
+        <div className="glass-dark rounded-3xl p-8 flex flex-col h-full min-h-[360px] border border-border/60 relative overflow-hidden">
+            <div className="flex justify-center items-center h-24 mb-6 relative z-10">
                 <div className="relative w-32 h-24">
                     <div className="absolute top-0 left-0 w-20 h-20 bg-blue-600 rounded-full rounded-bl-none shadow-lg z-10 flex items-center justify-center">
                         <div className="flex gap-1.5">
@@ -46,10 +52,10 @@ export function ContactGrid() {
                     <div className="absolute bottom-0 right-0 w-16 h-16 bg-blue-300 rounded-full rounded-br-none shadow-sm z-0 transform translate-x-2"></div>
                 </div>
             </div>
-            <div className="mt-auto relative z-10 text-center">
-                <h3 className="text-2xl font-bold text-text-primary mb-2">{messageBlock?.title}</h3>
-                <p className="text-xs text-text-secondary mb-6 px-4">{messageBlock?.description}</p>
-                <Link href="/contact#message" className="bg-foreground text-background w-full py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 transition-colors text-center">
+            <h3 className="text-2xl font-bold text-text-primary mb-2 text-center relative z-10">{messageBlock?.title}</h3>
+            <p className="text-xs text-text-secondary mb-6 px-4 text-center relative z-10">{messageBlock?.description}</p>
+            <div className="mt-auto relative z-10">
+                <Link href="/contact#message" className="block bg-foreground text-background w-full py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 transition-colors text-center">
                     {messageBlock?.cta}
                 </Link>
             </div>
@@ -57,20 +63,18 @@ export function ContactGrid() {
         </div>
 
         {/* Newsletter Block */}
-        <div className="glass-dark rounded-3xl p-8 flex flex-col border border-border/60">
-            <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-accent-red flex items-center justify-center shrink-0">
-                    <span className="text-text-primary font-bold text-xl lowercase">a</span>
-                </div>
-                <div>
-                     {/* Handling newline in title */}
-                    <h3 className="text-xl font-bold text-text-primary leading-tight">
-                        {newsletterBlock?.title.split('\n').map((line, i) => <span key={i}>{line}<br/></span>)}
-                    </h3>
+        <div className="glass-dark rounded-3xl p-8 flex flex-col h-full min-h-[360px] border border-border/60 relative">
+            <div className="flex justify-center items-center h-24 mb-6 relative z-10">
+                <div className="relative w-32 h-24">
+                    <div className="absolute bottom-0 left-0 w-full h-20 bg-accent-red rounded-lg shadow-lg z-10 flex items-center justify-center">
+                        <span className="text-white font-bold text-3xl lowercase">a</span>
+                    </div>
+                    <div className="absolute -top-4 left-2 w-[90%] h-20 bg-white rounded-lg shadow-sm z-0 transform rotate-[2deg]"></div>
                 </div>
             </div>
-            <p className="text-xs text-text-secondary mb-6 leading-relaxed">{newsletterBlock?.description}</p>
-            <div className="mt-auto">
+            <h3 className="text-2xl font-bold text-text-primary mb-2 text-center relative z-10">{newsletterBlock?.title}</h3>
+            <p className="text-xs text-text-secondary mb-6 px-4 text-center relative z-10">{newsletterBlock?.description}</p>
+            <div className="mt-auto relative z-10">
                 <NewsletterForm
                   variant="stacked"
                   showName
