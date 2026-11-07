@@ -1,7 +1,7 @@
 export const layoutData = {
   navbar: {
     brand: "Ikramul Hasan",
-    cta: "Hire",
+    cta: "Contact",
     menuItems: [
       { name: "Projects", href: "/projects" },
       { name: "About", href: "/about" },
@@ -13,6 +13,7 @@ export const layoutData = {
       { name: "Blog", href: "/blog" },
       { name: "Academic", href: "/academic" },
       { name: "Skills", href: "/skills" },
+      { name: "Contact", href: "/contact" },
     ],
   },
   footer: {

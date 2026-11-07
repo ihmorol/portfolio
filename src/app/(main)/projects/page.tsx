@@ -175,8 +175,8 @@ export default function ProjectsPage() {
             const cover = getProjectCover(project.slug);
 
             return (
-              <Reveal key={project.slug} delay={0.03 + index * 0.02} once>
-                <HoverField>
+              <Reveal key={project.slug} delay={0.03 + index * 0.02} once className="h-full">
+                <HoverField className="h-full">
                   <div className="group surface-card p-1 flex flex-col h-full hover:border-border-strong transition-colors">
                     <Link
                       href={`/projects/${project.slug}`}
@@ -199,7 +199,7 @@ export default function ProjectsPage() {
                     </Link>
 
                     <div className="p-6 flex flex-col flex-grow relative z-20 -mt-12">
-                      <div className="flex justify-between items-start mb-2 gap-3">
+                      <div className="flex justify-between items-start mb-2 gap-3 min-h-[3rem] lg:min-h-[3.75rem]">
                         <Link href={`/projects/${project.slug}`}>
                           <h3
                             className={`type-h3 text-text-primary ${project.hoverColor} transition-colors`}

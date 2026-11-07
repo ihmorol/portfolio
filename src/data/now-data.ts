@@ -19,7 +19,7 @@ export const nowData = {
       colorClass: "text-accent-blue",
       items: [
         "Engineering the RimonsIELTS e-learning platform solo and remote: student portal, REST API, admin dashboard, and a Python central service, all live in production.",
-        "Maintaining my own tools: BriefLi shortlinks, VoiceKey offline voice typing, and this portfolio."
+        "Building out Shera Bot, my multi-agent prototype with approval-gated actions, and maintaining my own tools: BriefLi shortlinks, VoiceKey offline voice typing, ODE 3D Orbit, and this portfolio."
       ]
     },
     {
@@ -35,9 +35,9 @@ export const nowData = {
       icon: "science",
       colorClass: "text-accent-green",
       items: [
-        "FYDP-II thesis in progress: the 69-run architecture search for the Lorenz-1960 ODE system (FYDP-I defended June 2026).",
-        "Physics-residual detection of CAN masquerade attacks on the ROAD dataset.",
-        "DT-NB hybrid study, submitted to ICEEICT 2027, and a PINN survey dossier in progress."
+        "FYDP-II is defended and the Lorenz-1960 PINN paper is submitted to ICEEICT 2027: a network trained on the ODE residual alone, within 3e-05 of a DOP853 reference without ever seeing the answer.",
+        "Solving boundary-layer problems with new equation systems, and working with PINNs across areas: windowed training with causal residual weighting for longer horizons, CAN masquerade attack detection on the ROAD dataset, and shape optimization for small robots.",
+        "The DT-NB hybrid study manuscript is written but not submitted anywhere yet, and the PINN survey dossier for Artificial Intelligence Review is in progress."
       ]
     },
     {
@@ -45,8 +45,16 @@ export const nowData = {
       icon: "auto_stories",
       colorClass: "text-accent-red",
       items: [
-        "Physics-informed neural networks and operator learning, beyond the survey level and into my own experiments.",
+        "Where PINNs hold up and where they break: long horizons, stiff systems, and boundary-value problems, through my own experiments rather than just reading.",
         "System design and Docker/CI pipelines for the production work."
+      ]
+    },
+    {
+      title: "Also Worth Knowing",
+      icon: "handshake",
+      colorClass: "text-accent-coral",
+      items: [
+        "All of my projects are open source because I like open source. To be clear about my place in it: I have not contributed to anyone else's project yet. Everything in my repos is mine."
       ]
     }
   ],

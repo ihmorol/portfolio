@@ -3,10 +3,10 @@ export const homeData = {
     titlePrefix: "Let's",
     titleHighlight: "Connect",
     subtitle: "Final-Year CSE Student at UIU | Full-Stack Developer | ML Researcher",
-    description: "I build production software and do applied machine learning research. I'm finishing my B.Sc. at United International University with a 3.94 CGPA and a full merit scholarship across six terms, and I work there as a teaching assistant. My thesis applies neural networks to differential equation systems, with side studies in physics-informed attack detection and AI-image forensics.",
+    description: "I build production software and do applied machine learning research. I'm finishing my B.Sc. at United International University with a 3.94 CGPA and eight merit scholarships so far, six of them at 100%, and I work there as a teaching assistant. My FYDP-II thesis trains a physics-informed network on the ODE residual alone, with side studies in physics-based attack detection and AI-image forensics.",
     now: {
       label: "Now",
-      text: "Engineering RimonsIELTS solo, teaching four labs at UIU, and running my FYDP-II thesis.",
+      text: "Engineering RimonsIELTS solo, teaching four labs at UIU, and writing up my defended FYDP-II thesis.",
       link: "/now"
     },
     buttons: [
@@ -17,7 +17,7 @@ export const homeData = {
   },
   stats: [
     { value: '3.94', label: 'CGPA (4.0 Scale)' },
-    { value: '6×', label: '100% Merit Scholarship' },
+    { value: '8×', label: 'Merit Scholarships (6 at 100%)' },
     { value: '500+', label: 'Problems Solved' },
     { value: '20+', label: 'Projects Built' },
   ],
@@ -63,7 +63,7 @@ export const homeData = {
         slug: 'lorenz-ann-thesis',
         title: 'Lorenz ODE Thesis',
         category: 'Research',
-        description: 'My FYDP thesis: a PINN trained on the ODE residual alone tracks a high-accuracy DOP853 reference to ~3e-05, alongside a controlled 69-run architecture search. Every run is archived immutably with 41 tests and an ICEEICT manuscript draft.',
+        description: 'My FYDP-II thesis, defended: a physics-informed network that never sees the answer, trained on the Lorenz-1960 ODE residual alone, lands within 3e-05 of a DOP853 reference in under six CPU minutes. Nine architectures swept, sixteen paper runs archived, 41 tests, manuscript submitted to ICEEICT 2027.',
         image: '/images/brand/divider-flow-01.svg',
         tech: ['Python', 'PyTorch', 'SciPy'],
         color: 'group-hover:text-cyan-400',
@@ -120,7 +120,7 @@ export const homeData = {
         {
             type: "message",
             title: "Send Message",
-            description: "Leave your email and message — I usually reply within a day.",
+            description: "Leave your email and message. I usually reply within a day.",
             cta: "Message Me"
         },
         {
@@ -142,6 +142,45 @@ export const homeData = {
         { name: "GitHub", url: "https://github.com/ihmorol", icon: "code", colorIdx: "gray" },
         { name: "LinkedIn", url: "https://linkedin.com/in/ihmorol", icon: "work", colorIdx: "blue" },
         { name: "Email", url: "mailto:ihmorol@gmail.com", icon: "mail", colorIdx: "red" }
+    ]
+  },
+  latestWriting: {
+    title: "From the Blog",
+    viewAllText: "View All Posts",
+    viewAllLink: "/blog"
+  },
+  nowSpotlight: {
+    label: "Now",
+    updatedAt: "November 2026",
+    title: "The present tense",
+    description: "What I'm building, teaching, and researching right now, in the short version. The /now page always carries the full picture.",
+    ctaText: "See the full now page",
+    ctaLink: "/now",
+    rows: [
+      {
+        title: "Building",
+        icon: "rocket_launch",
+        dot: "bg-green-500",
+        text: "RimonsIELTS, solo and remote: student portal, REST API, admin dashboard, and a Python central service, all live in production.",
+        href: "https://rimonsielts.com",
+        external: true
+      },
+      {
+        title: "Teaching",
+        icon: "school",
+        dot: "bg-amber-400",
+        text: "Undergraduate TA at UIU since Aug 2025, with weekly labs, office hours, and code reviews across DBMS, DSA-I, ICS, and SWE courses.",
+        href: "/experience",
+        external: false
+      },
+      {
+        title: "Researching",
+        icon: "science",
+        dot: "bg-accent-blue",
+        text: "FYDP-II defended and the Lorenz-1960 PINN paper submitted to ICEEICT 2027. Now solving boundary-layer problems with new equation systems.",
+        href: "/research",
+        external: false
+      }
     ]
   }
 };

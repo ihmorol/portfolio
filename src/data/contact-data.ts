@@ -22,7 +22,7 @@ export const contactData = {
   },
   sendMessage: {
     title: "Send Message",
-    description: "Leave your email and message — your mail app will open with everything ready to send.",
+    description: "Leave your email and message and your mail app will open with everything ready to send.",
     buttonText: "Message Me"
   },
   newsletter: {

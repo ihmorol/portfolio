@@ -13,7 +13,7 @@ import { cn } from '@/lib/utils';
 interface TiltCardProps {
   children: React.ReactNode;
   className?: string;
-  /** Max tilt in degrees. Keep small (3–7) to stay tasteful. */
+  /** Max tilt in degrees. Keep small (3-7) to stay tasteful. */
   intensity?: number;
   /** Moving light highlight that follows the pointer. */
   glare?: boolean;

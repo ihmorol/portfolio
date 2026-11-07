@@ -46,7 +46,7 @@ export function getProjectCover(slug: string): ProjectCoverConfig {
   if (!cover) {
     if (process.env.NODE_ENV !== 'production') {
       console.warn(
-        `[project-covers] No cover palette for slug "${slug}" — using DEFAULT_COVER. Add one in src/data/project-covers.ts.`
+        `[project-covers] No cover palette for slug "${slug}", using DEFAULT_COVER. Add one in src/data/project-covers.ts.`
       );
     }
     return DEFAULT_COVER;

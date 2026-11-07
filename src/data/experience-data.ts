@@ -115,23 +115,46 @@ export const experienceData = {
   },
   growth: {
     title: "Growth",
-    subTitle: "Skill Development",
+    subTitle: "Track Record",
     skills: [
-      { name: "Full-Stack Development", percentage: 90, colorClass: "bg-accent-blue" },
-      { name: "Applied Machine Learning", percentage: 75, colorClass: "bg-accent-purple" },
-      { name: "Data Structures & Algorithms", percentage: 90, colorClass: "bg-accent-green" },
-      { name: "Team Leadership", percentage: 80, colorClass: "bg-accent-yellow" }
+      {
+        name: "Full-Stack Development",
+        colorClass: "bg-accent-blue",
+        evidence: "Sole engineer of the four production apps behind rimonsielts.com, with 1,700+ commits across the suite and real students on the platform daily."
+      },
+      {
+        name: "Research Engineering",
+        colorClass: "bg-accent-purple",
+        evidence: "Two public PINN repos with 32 archived trained models, SHA-256-verified result archives, 41 tests, and a submitted ICEEICT 2027 manuscript."
+      },
+      {
+        name: "Algorithms & Problem Solving",
+        colorClass: "bg-accent-green",
+        evidence: "500+ problems solved on Codeforces, LeetCode, and HackerRank (2022-2025), and 1st place out of 80+ at the UIU CSE Week Programming Contest 2024."
+      },
+      {
+        name: "Team Leadership",
+        colorClass: "bg-accent-yellow",
+        evidence: "Led a five-member team through the full SDLC to two Champion titles at UIU showcases, on trimester deadlines."
+      }
     ]
   },
   volunteering: {
-    title: "Competitive Programming & Community",
+    title: "Community & Problem Solving",
     items: [
       {
-        role: "Active Competitive Programmer",
+        role: "Former Competitive Programmer",
         organization: "Codeforces, LeetCode, HackerRank",
-        period: "2022 - Present",
-        description: "Solved 500+ algorithm and data structure problems. I take part in online contests and virtual competitions regularly.",
+        period: "2022 - 2025",
+        description: "Solved 500+ algorithm and data structure problems and took part in online contests, peaking with 1st place at UIU CSE Week 2024. I stopped more than a year ago and now put that energy into research and shipping software.",
         tags: ["Algorithms", "Data Structures", "Problem Solving"]
+      },
+      {
+        role: "Active Researcher & Software Engineer",
+        organization: "UIU · RimonsIELTS",
+        period: "2025 - Present",
+        description: "My day-to-day problem solving now runs through PINN experiments with archived evidence at UIU, and production engineering for the live RimonsIELTS platform.",
+        tags: ["Research", "Production Engineering", "Scientific ML"]
       },
       {
         role: "Peer Mentor",

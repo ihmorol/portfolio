@@ -1,7 +1,7 @@
 /**
  * Case-study data for every project detail page. Every claim here is grounded
  * in the corresponding GitHub repository (README, file listing, commit history)
- * as of November 2026 — nothing is asserted beyond what the repos show.
+ * as of November 2026. Nothing is asserted beyond what the repos show.
  */
 
 export interface ProjectFeature {
@@ -76,7 +76,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "verified",
         iconColor: "text-accent-blue",
         iconBg: "bg-accent-blue/20",
-        description: "The API enforces OpenAPI inventory parity in CI (missing or extra endpoints fail the build) alongside a security gate with authz smoke tests, dependency audit, and secret scanning. The admin runs a full test pyramid — unit, integration, contract, accessibility, and Playwright E2E with MSW mocks — plus knip dead-code detection and generated API types.",
+        description: "The API enforces OpenAPI inventory parity in CI (missing or extra endpoints fail the build) alongside a security gate with authz smoke tests, dependency audit, and secret scanning. The admin runs a full test pyramid (unit, integration, contract, accessibility, and Playwright E2E with MSW mocks), plus knip dead-code detection and generated API types.",
         list: [
           "OpenAPI contract-parity gate with zero drift tolerance",
           "CI security workflows: authz smoke, dependency audit, gitleaks",
@@ -192,15 +192,15 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
 
   "lorenz-ann-thesis": {
     title: "Lorenz ODE Thesis",
-    subtitle: "FYDP: PINNs and architecture search on the Lorenz-1960 system",
+    subtitle: "FYDP-II, defended: PINNs on the Lorenz-1960 system",
     description: "Thesis code: a PINN trained on the ODE residual alone, validated against a DOP853 reference, with an immutable run catalog and archived experiments.",
-    heroDescription: "My FYDP thesis code, public and evidence-first. A physics-informed neural network solves the Lorenz-1960 system from the equations alone — the loss is the ODE residual, with the reference solver called only after training — and an 11,283-parameter network reaches within 3e-05 of a high-accuracy RK4/DOP853 baseline in under six minutes on a laptop CPU. Alongside it sits the controlled 69-run ANN architecture and optimizer search from the FYDP proposal. The repo preserves an immutable run catalog with settings hashes, per-collocation-point loss exports audited by hand, a two-branch source-code audit with repair notes, and an ICEEICT 2027 manuscript draft with provenance docs covering sixteen paper runs.",
+    heroDescription: "My FYDP-II thesis code, public and evidence-first, now defended with the manuscript submitted to ICEEICT 2027. A physics-informed neural network solves the Lorenz-1960 system from the equations alone: the loss is the ODE residual, the reference solver runs only after training, and an 11,283-parameter network reaches within 3e-05 of a high-accuracy RK4/DOP853 baseline in under six minutes on a laptop CPU. Around the run of record sit a nine-architecture sweep and a windowed causal-weighting study for longer horizons. The repo preserves an immutable run catalog with settings hashes, per-collocation-point loss exports audited by hand, a two-branch source-code audit with repair notes, and provenance docs covering sixteen paper runs.",
     heroImage: "/images/brand/divider-flow-01.svg",
     tags: ["Python", "PyTorch", "SciPy", "PINN", "RK4 / DOP853", "pytest"],
     screens: [],
     role: "Thesis Researcher (Team Lead)",
-    duration: "2025 - Present",
-    date: "2025 - Present",
+    duration: "2025 - 2026",
+    date: "2025 - 2026",
     client: "UIU Final Year Design Project",
     stats: [
       { label: "Commits", value: "118" },
@@ -214,7 +214,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "science",
         iconColor: "text-accent-red",
         iconBg: "bg-accent-red/20",
-        description: "Can a plain, data-driven neural network learn a coupled nonlinear ODE system, and which architecture does it best? The FYDP answers with a controlled 69-run search over depth (1-4), width (20-100), five activations, and three optimizers on a solver-verified ground truth."
+        description: "Can a neural network solve a differential equation from the equations alone, without ever being shown the answer? The thesis answers with a residual-only PINN: a trial solution that satisfies the initial condition exactly, derivatives by autograd, and 3000 collocation points doing all the teaching."
       },
       {
         title: "Training You Can Audit",
@@ -243,11 +243,11 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
     ],
     impact: {
       title: "Outcomes",
-      description: "FYDP-I defended June 2026; ICEEICT manuscript draft in progress.",
+      description: "FYDP-II defended; manuscript submitted to ICEEICT 2027.",
       metrics: [
         { icon: 'functions', val: '~3e-05', label: 'Agreement vs DOP853', color: 'accent-blue', bg: 'bg-accent-blue/20' },
-        { icon: 'science', val: '69', label: 'Controlled Runs', color: 'accent-green', bg: 'bg-accent-green/20' },
-        { icon: 'article', val: 'Draft', label: 'ICEEICT 2027 Manuscript', color: 'accent-peach', bg: 'bg-accent-peach/20' }
+        { icon: 'science', val: '9+16', label: 'Sweep Runs + Windowed Models', color: 'accent-green', bg: 'bg-accent-green/20' },
+        { icon: 'article', val: 'Submitted', label: 'ICEEICT 2027 Manuscript', color: 'accent-peach', bg: 'bg-accent-peach/20' }
       ]
     },
     links: [
@@ -286,7 +286,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "lightbulb",
         iconColor: "text-accent-blue",
         iconBg: "bg-accent-blue/20",
-        description: "Every link gets a unique, collision-checked code or an AI-suggested human-readable slug — the Gemini key stays server-side. Redirects run through Vercel rewrites that serve /:slug from serverless functions; every redirect increments the click counter atomically via a Postgres RPC. Zod validates every payload, and the README documents the full API surface and authorization rules.",
+        description: "Every link gets a unique, collision-checked code or an AI-suggested human-readable slug, and the Gemini key stays server-side. Redirects run through Vercel rewrites that serve /:slug from serverless functions; every redirect increments the click counter atomically via a Postgres RPC. Zod validates every payload, and the README documents the full API surface and authorization rules.",
         list: [
           "AI slug suggestions (Gemini, server-side key)",
           "Atomic click counting via Postgres RPC",
@@ -331,7 +331,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
     title: "Shera Bot",
     subtitle: "A multi-agent AI runtime where agents propose and the runtime decides",
     description: "A TypeScript monorepo prototype: agent packs, approval-gated execution, and an append-only event journal.",
-    heroDescription: "Shera Bot is my most engineering-heavy repository: 637 commits across a pnpm + Turborepo monorepo with a Next.js web client, an Express control plane, and an agent-pack SDK. Agents never act directly — they propose, the runtime validates and executes, and risky work sits behind scoped, expiring, revocable approvals with five fixed choices. Every event lands in an append-only journal where live, replayed, delayed, and disconnected states are visually distinct. Per-user containers keep product state in container-local SQLite (WAL) while central PostgreSQL holds only control-plane records.",
+    heroDescription: "Shera Bot is my most engineering-heavy repository: 637 commits across a pnpm + Turborepo monorepo with a Next.js web client, an Express control plane, and an agent-pack SDK. Agents never act directly: they propose, the runtime validates and executes, and risky work sits behind scoped, expiring, revocable approvals with five fixed choices. Every event lands in an append-only journal where live, replayed, delayed, and disconnected states are visually distinct. Per-user containers keep product state in container-local SQLite (WAL) while central PostgreSQL holds only control-plane records.",
     heroImage: "/images/brand/mesh-hero-01.svg",
     tags: ["TypeScript", "Turborepo", "Next.js", "Express", "PostgreSQL", "SQLite WAL", "Zod"],
     screens: [],
@@ -350,7 +350,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "smart_toy",
         iconColor: "text-accent-red",
         iconBg: "bg-accent-red/20",
-        description: "No agent action shows as done before runtime validation. Approvals are runtime objects — scoped, expiring, revocable grants with five fixed choices — so dangerous operations need explicit human sign-off."
+        description: "No agent action shows as done before runtime validation. Approvals are runtime objects, scoped and expiring and revocable grants with five fixed choices, so dangerous operations need explicit human sign-off."
       },
       {
         title: "Honest Events",
@@ -374,7 +374,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
     ],
     impact: {
       title: "Outcomes",
-      description: "The prototype ships an agent pack with six student agents — Researcher, Developer, Citation Manager, Programming Tutor, Study Planner, General Assistant — plus three operations.",
+      description: "The prototype ships an agent pack with six student agents (Researcher, Developer, Citation Manager, Programming Tutor, Study Planner, General Assistant) plus three operations.",
       metrics: [
         { icon: 'commit', val: '637', label: 'Commits', color: 'accent-blue', bg: 'bg-accent-blue/20' },
         { icon: 'smart_toy', val: '6+3', label: 'Agents + Operations', color: 'accent-green', bg: 'bg-accent-green/20' },
@@ -390,7 +390,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
     title: "VoiceKey",
     subtitle: "Offline, privacy-first voice-to-keyboard for Linux and Windows",
     description: "Real-time voice typing on faster-whisper with daemon mode, a CLI, and an opt-in cloud fallback.",
-    heroDescription: "VoiceKey types what you say, entirely offline, using faster-whisper. It runs as a daemon or in the foreground, ships a CLI with status, devices, and config commands, and offers an explicit opt-in hybrid mode with an OpenAI-compatible cloud fallback — local stays the default. The installer supports skip flags and model profiles (tiny, base, small), and the project is packaged the way real tools are: CI plus a release workflow, a MkDocs documentation site, and architecture, requirements, security, and changelog documents.",
+    heroDescription: "VoiceKey types what you say, entirely offline, using faster-whisper. It runs as a daemon or in the foreground, ships a CLI with status, devices, and config commands, and offers an explicit opt-in hybrid mode with an OpenAI-compatible cloud fallback. Local stays the default. The installer supports skip flags and model profiles (tiny, base, small), and the project is packaged the way real tools are: CI plus a release workflow, a MkDocs documentation site, and architecture, requirements, security, and changelog documents.",
     heroImage: "/images/brand/divider-flow-01.svg",
     tags: ["Python", "faster-whisper", "PortAudio / ALSA", "ffmpeg", "CLI", "MkDocs"],
     screens: [],
@@ -453,7 +453,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
     title: "ODE 3D Orbit",
     subtitle: "An interactive 3D explorer for nonlinear dynamics, live in the browser",
     description: "Sixteen built-in ODE systems, live-editable equations, RK4 integration, and conserved-quantity drift feedback.",
-    heroDescription: "ODE 3D Orbit lets you edit the equations, scrub the constants, and watch chaotic attractors integrate live in 3D. Sixteen systems ship built in — Lorenz 1960 and 1963, Lorenz-96 rings, Thomas, Lotka-Volterra, Kuramoto, Rössler, Chen, Halvorsen, Aizawa, Rabinovich-Fabrikant, and two four-variable hyperchaotic systems — with a ring generator that copies one rule across up to 40 wrapping variables the way Lorenz-96 is constructed. Integration is RK4 with step-size control, and the Lorenz-1960 view shows conserved-quantity drift so a bad time step is visible immediately. Zero build step: vanilla ES modules and Three.js, MIT-licensed, live on Vercel.",
+    heroDescription: "ODE 3D Orbit lets you edit the equations, scrub the constants, and watch chaotic attractors integrate live in 3D. Sixteen systems ship built in, from Lorenz 1960 and 1963 and Lorenz-96 rings through Thomas, Lotka-Volterra, Kuramoto, Rössler, Chen, Halvorsen, Aizawa, Rabinovich-Fabrikant, and two four-variable hyperchaotic systems, with a ring generator that copies one rule across up to 40 wrapping variables the way Lorenz-96 is constructed. Integration is RK4 with step-size control, and the Lorenz-1960 view shows conserved-quantity drift so a bad time step is visible immediately. Zero build step: vanilla ES modules and Three.js, MIT-licensed, live on Vercel.",
     heroImage: "/images/brand/blob-depth-01.svg",
     tags: ["JavaScript", "Three.js", "RK4", "ODEs", "Visualization", "Zero-build"],
     screens: [],
@@ -479,7 +479,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "insights",
         iconColor: "text-accent-blue",
         iconBg: "bg-accent-blue/20",
-        description: "Equations compile into one solver function with plain-language error messages, and the Lorenz-1960 view displays conserved-quantity drift — big drift means a bad time step. Numerics you can see, not just trust."
+        description: "Equations compile into one solver function with plain-language error messages, and the Lorenz-1960 view displays conserved-quantity drift, where big drift means a bad time step. Numerics you can see, not just trust."
       },
       {
         title: "Viewing Tools",
@@ -512,7 +512,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
     title: "Meme Research Console",
     subtitle: "A live research instrument for collecting perception data on Bangla memes",
     description: "A Next.js + Supabase survey app covering ~500 stratified Bangla memes, live and documented.",
-    heroDescription: "A research data-collection web app that surveys user viewpoints on roughly 500 Bangla memes, deployed live for an ongoing study. It is built on the Next.js App Router with Supabase Auth and PostgreSQL, and the repository ships the research instruments alongside the code: the stratified meme dataset and the question set live in-repo. The documentation is unusually thorough for its size — a standalone MkDocs site with a system architecture doc covering component, data-flow, database, API, and security architecture with mermaid diagrams.",
+    heroDescription: "A research data-collection web app that surveys user viewpoints on roughly 500 Bangla memes, deployed live for an ongoing study. It is built on the Next.js App Router with Supabase Auth and PostgreSQL, and the repository ships the research instruments alongside the code: the stratified meme dataset and the question set live in-repo. The documentation is unusually thorough for its size: a standalone MkDocs site with a system architecture doc covering component, data-flow, database, API, and security architecture with mermaid diagrams.",
     heroImage: "/images/brand/mesh-hero-01.svg",
     tags: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "MkDocs"],
     screens: [],
@@ -538,7 +538,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "schema",
         iconColor: "text-accent-blue",
         iconBg: "bg-accent-blue/20",
-        description: "A full architecture document covers implementation plan, UX flows, database design, API architecture, and security architecture — with mermaid diagrams and a matching dark-theme docs site."
+        description: "A full architecture document covers implementation plan, UX flows, database design, API architecture, and security architecture, with mermaid diagrams and a matching dark-theme docs site."
       },
       {
         title: "Key Features",
@@ -571,7 +571,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
     title: "PINN Attack Detection",
     subtitle: "Physics-residual detection of CAN masquerade attacks on the ROAD dataset",
     description: "Vehicle-kinematics consistency residuals catch 3 of 4 attack classes at a 0.1% ambient false-positive rate, with an honest negative on PINN attribution.",
-    heroDescription: "A cyber-physical security study on the ROAD dataset (Oak Ridge National Laboratory): 33 verified attack captures including 13 masquerade and 12 ambient drives. The work recovered the signal map from raw DBC mismatches, built a physics taxonomy of all 26 injection captures — every class except reverse-light violates at least one kinematic consistency law, with ratios of 178-1273× — and showed physics plus range statistics catch 3 of 4 classes with recall 1.0 at a 0.1% ambient false-positive rate, detecting within a single CAN frame. Milestone four reports an honest negative: the PINN twin shows parity with the physics-free model across four data regimes and three loss weights, so attribution credit goes to the physics, not the neural network. All five pre-registered milestones are complete and a five-page paper draft is compiled.",
+    heroDescription: "A cyber-physical security study on the ROAD dataset (Oak Ridge National Laboratory): 33 verified attack captures including 13 masquerade and 12 ambient drives. The work recovered the signal map from raw DBC mismatches, built a physics taxonomy of all 26 injection captures, where every class except reverse-light violates at least one kinematic consistency law with ratios of 178-1273×, and showed physics plus range statistics catch 3 of 4 classes with recall 1.0 at a 0.1% ambient false-positive rate, detecting within a single CAN frame. Milestone four reports an honest negative: the PINN twin shows parity with the physics-free model across four data regimes and three loss weights, so attribution credit goes to the physics, not the neural network. All five pre-registered milestones are complete and a five-page paper draft is compiled.",
     heroImage: "/images/brand/divider-flow-01.svg",
     tags: ["Python", "PyTorch", "scikit-learn", "XGBoost", "CAN Bus", "ROAD Dataset"],
     screens: [],
@@ -610,7 +610,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "balance",
         iconColor: "text-accent-green",
         iconBg: "bg-accent-green/20",
-        description: "The PINN-versus-physics-free ablation showed parity across every regime tested — reported as a negative attribution result, not buried. One script reproduces raw data to final figures."
+        description: "The PINN-versus-physics-free ablation showed parity across every regime tested, reported as a negative attribution result rather than buried. One script reproduces raw data to final figures."
       }
     ],
     impact: {
@@ -629,20 +629,20 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
 
   "dt-nb-noise-removal": {
     title: "DT-NB Hybrid Study",
-    subtitle: "NB filtering vs tree-based attribute weighting, submitted to ICEEICT 2027",
-    description: "A twelve-arm conference study with Holm-corrected statistics and a self-audit that documents what the protocol can and cannot claim.",
-    heroDescription: "A conference study comparing Naive Bayes instance filtering and decision-tree attribute selection/weighting for noise handling in DT-NB hybrids, run separately and in both orders. The authoritative experiment uses Weka J48 3.8.6 and FaithfulNB over the original attribute columns with seeds 0-9 and stratified 10-fold cross-validation, refitting every supervised step inside each training fold and scoring on held-out rows. Plain C4.5 averaged 86.33% accuracy against 81.21% (instances-first) and 80.89% (attributes-first), and none of the eight post-hoc comparisons survived Holm correction — framed honestly as a protocol-sensitivity study rather than a win claim. Results are archived with hashes, and the repo carries three manuscript variants including the anonymous ICEEICT 2027 submission.",
+    subtitle: "NB filtering vs tree-based attribute weighting, manuscript ready",
+    description: "A twelve-arm study with Holm-corrected statistics and a self-audit that documents what the protocol can and cannot claim.",
+    heroDescription: "A conference-ready study comparing Naive Bayes instance filtering and decision-tree attribute selection/weighting for noise handling in DT-NB hybrids, run separately and in both orders. The authoritative experiment uses Weka J48 3.8.6 and FaithfulNB over the original attribute columns with seeds 0-9 and stratified 10-fold cross-validation, refitting every supervised step inside each training fold and scoring on held-out rows. Plain C4.5 averaged 86.33% accuracy against 81.21% (instances-first) and 80.89% (attributes-first), and none of the eight post-hoc comparisons survived Holm correction, framed honestly as a protocol-sensitivity study rather than a win claim. Results are archived with hashes and the repo carries three manuscript variants. The manuscript is written but has not been submitted to any conference.",
     heroImage: "/images/brand/mesh-hero-01.svg",
     tags: ["Weka", "J48", "FaithfulNB", "Python", "Cross-Validation", "Statistics"],
     screens: [],
     role: "Researcher",
     duration: "2026",
     date: "2026",
-    client: "Conference Submission",
+    client: "Self-directed Research",
     stats: [
       { label: "Experimental Arms", value: "12" },
       { label: "Seeds × Folds", value: "10 × 10" },
-      { label: "Status", value: "Submitted" }
+      { label: "Status", value: "Not Submitted" }
     ],
     features: [
       {
@@ -650,7 +650,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "sync",
         iconColor: "text-accent-red",
         iconBg: "bg-accent-red/20",
-        description: "All supervised steps — filtering, weighting, training — refit inside each training fold and score on held-out rows, eliminating the leakage that plagues pipeline comparisons."
+        description: "All supervised steps, from filtering to weighting to training, refit inside each training fold and score on held-out rows, eliminating the leakage that plagues pipeline comparisons."
       },
       {
         title: "Statistics With Discipline",
@@ -671,17 +671,17 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         iconBg: "bg-accent-green/20",
         list: [
           "No combined NB method beats attribute weighting alone",
-          "Cleaning before CV changes label access — a documented audit finding",
-          "Anonymous submission prepared for ICEEICT 2027"
+          "Cleaning before CV changes label access, a documented audit finding",
+          "Manuscript complete; no conference submission yet"
         ]
       }
     ],
     impact: {
       title: "Outcomes",
-      description: "A complete, self-audited study cycle from hypothesis to anonymous submission.",
+      description: "A complete, self-audited study cycle from hypothesis to finished manuscript.",
       metrics: [
         { icon: 'science', val: '12', label: 'Arms Compared', color: 'accent-blue', bg: 'bg-accent-blue/20' },
-        { icon: 'article', val: '2027', label: 'ICEEICT Submission', color: 'accent-green', bg: 'bg-accent-green/20' },
+        { icon: 'article', val: 'Draft', label: 'Manuscript Status', color: 'accent-green', bg: 'bg-accent-green/20' },
         { icon: 'verified', val: 'Hashed', label: 'Archived Results', color: 'accent-peach', bg: 'bg-accent-peach/20' }
       ]
     },
@@ -731,7 +731,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "star",
         iconColor: "text-accent-green",
         iconBg: "bg-accent-green/20",
-        description: "The multi-seed probe (σ=0.15) did not beat seed 0 at the budget — reported, not dropped. An audited research log maps every hypothesis to its experiment and outcome."
+        description: "The multi-seed probe (σ=0.15) did not beat seed 0 at the budget; it is reported rather than dropped. An audited research log maps every hypothesis to its experiment and outcome."
       }
     ],
     impact: {
@@ -778,7 +778,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "sensors",
         iconColor: "text-accent-blue",
         iconBg: "bg-accent-blue/20",
-        description: "Raw accelerometer-gyroscope data trains an Edge Impulse model that is exported to the wearable for on-device inference — no cloud round-trip for the classification decision. The raw sensor dataset ships in the repo.",
+        description: "Raw accelerometer-gyroscope data trains an Edge Impulse model that is exported to the wearable for on-device inference, so there is no cloud round-trip for the classification decision. The raw sensor dataset ships in the repo.",
         list: [
           "ei-fall_detection-arduino export via EloquentTinyML",
           "Raw acc_gyr.csv sensor dataset included"
@@ -819,7 +819,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
     title: "AI-Image Forensics",
     subtitle: "Which simple features expose AI-generated images?",
     description: "A pre-registered, five-experiment feature-level study under matched JPEG compression and unseen generators.",
-    heroDescription: "A measurement study, explicitly not a new detector: five pre-registered experiments (E1-E5) mapped to four hypotheses test which explainable feature set — pixel-pattern, frequency-spectrum, or combined — best separates real photographs from AI-generated images. The pipeline specification was locked at v1.0 (stages 0-10) before results ran, with a deliberate negative-control experiment for mismatch shortcuts, JPEG quality levels 90/75/50, and an unseen-generator holdout, culminating in the headline E5 condition (unseen generator + JPEG 75). The repo carries the final results, a separate limitations report, a 20-paper curated reference set with BibTeX, and a CITATION.cff — with a written scope statement of what the study is not.",
+    heroDescription: "A measurement study, explicitly not a new detector: five pre-registered experiments (E1-E5) mapped to four hypotheses test which explainable feature set (pixel-pattern, frequency-spectrum, or combined) best separates real photographs from AI-generated images. The pipeline specification was locked at v1.0 (stages 0-10) before results ran, with a deliberate negative-control experiment for mismatch shortcuts, JPEG quality levels 90/75/50, and an unseen-generator holdout, culminating in the headline E5 condition (unseen generator + JPEG 75). The repo carries the final results, a separate limitations report, a 20-paper curated reference set with BibTeX, and a CITATION.cff, alongside a written scope statement of what the study is not.",
     heroImage: "/images/brand/blob-depth-01.svg",
     tags: ["Python", "Computer Vision", "Forensics", "JPEG", "Pre-registration"],
     screens: [],
@@ -881,7 +881,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
     title: "PrintSlot",
     subtitle: "A bilingual campus print-shop app from a five-person team",
     description: "Expo Router mobile app, NestJS API, live WebSocket order tracking, and four user roles in a Turborepo monorepo.",
-    heroDescription: "A team project (Team ParaDox, five members) for a Mobile Application Development course: students upload files, set per-file print options — color mode, paper size, orientation, copies, duplex, page range — see the server-computed price before paying, then join a Print Now live queue or book a pickup slot. Orders track in real time over WebSocket with a 30-second polling fallback, staff and owners move jobs through stages, and the platform admin approves shops and reads analytics. The stack is a Turborepo monorepo: Expo Router mobile app, NestJS REST + WebSocket API, a shared package, Supabase PostgreSQL via Prisma, and a bilingual English/Bengali UI via i18next.",
+    heroDescription: "A team project (Team ParaDox, five members) for a Mobile Application Development course: students upload files, set per-file print options (color mode, paper size, orientation, copies, duplex, page range), see the server-computed price before paying, then join a Print Now live queue or book a pickup slot. Orders track in real time over WebSocket with a 30-second polling fallback, staff and owners move jobs through stages, and the platform admin approves shops and reads analytics. The stack is a Turborepo monorepo: Expo Router mobile app, NestJS REST + WebSocket API, a shared package, Supabase PostgreSQL via Prisma, and a bilingual English/Bengali UI via i18next.",
     heroImage: "/images/brand/mesh-hero-01.svg",
     tags: ["React Native", "Expo Router", "NestJS", "WebSocket", "Prisma", "Supabase", "i18next"],
     screens: [],
@@ -900,7 +900,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "group",
         iconColor: "text-accent-red",
         iconBg: "bg-accent-red/20",
-        description: "Four roles span the whole workflow — Customer, Staff, Shop Owner, Platform Admin — with in-app wallet and cash payments, push notifications, and a ready-time ETA estimated from recent shop jobs."
+        description: "Four roles span the whole workflow (Customer, Staff, Shop Owner, Platform Admin) with in-app wallet and cash payments, push notifications, and a ready-time ETA estimated from recent shop jobs."
       },
       {
         title: "Live Tracking",
@@ -995,7 +995,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
   "skill-paradox": {
     title: "Skill Paradox",
     subtitle: "A skill-exchange platform specified like a product, built like one",
-    description: "Barter and paid skill sessions with booking, real-time chat, and endorsement-based ranking — MySQL, Express, React 19.",
+    description: "Barter and paid skill sessions with booking, real-time chat, and endorsement-based ranking, on MySQL, Express, and React 19.",
     heroDescription: "Skill Paradox is a skill-sharing platform where users list what they offer and what they need, barter or pay for sessions, book timeslots, and chat in real time. The backend README reads like a full product spec: users must list at least one skill to appear publicly, listings support public/private visibility with pricing and category constraints, search filters by category, location, price range, availability, and rating, and results rank by endorsements, trending, and completed sessions. Payments run through a secure gateway with admin verification and refunds, and booking enforces confirmations, reminders, and double-booking prevention. The committed SQL schema and a React 19 + Vite frontend complete the picture.",
     heroImage: "/images/brand/blob-depth-01.svg",
     tags: ["TypeScript", "Express", "MySQL", "JWT", "Zod", "React 19", "Vite"],
@@ -1022,7 +1022,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "schedule",
         iconColor: "text-accent-blue",
         iconBg: "bg-accent-blue/20",
-        description: "Timeslot booking with confirmations, reminders, and explicit double-booking prevention — plus real-time chat once a session is set."
+        description: "Timeslot booking with confirmations, reminders, and explicit double-booking prevention, plus real-time chat once a session is set."
       },
       {
         title: "Discovery",
@@ -1053,9 +1053,9 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
 
   "carried": {
     title: "Carried",
-    subtitle: "The line a book left in you — shared, no account needed",
+    subtitle: "The line a book left in you, shared and account-free",
     description: "A no-account web app for underlining book lines: real-time cards, Open Library covers, and an offline mode where the link itself carries the line.",
-    heroDescription: "Carried is a tiny product with real engineering inside: pick a book, write the line you would underline, stamp it with your name, and share a printable catalog-card link — with no accounts anywhere. Lines land on book pages and the home ticker live (6-8 second polling), slugs are cut deterministically from the line's own words plus a hash, and covers come from Open Library with an Internet Archive fallback and find-the-book links to Open Library, Internet Archive, Bookshop.org, and WorldCat — no API keys anywhere. Underline voting uses anonymous device IDs stored as unique-voter sets, and the app runs in two storage modes: Upstash Redis, or an offline mode where the base64url link itself carries the line. OG cards render through satori, and the shareable card draws client-side on canvas.",
+    heroDescription: "Carried is a tiny product with real engineering inside: pick a book, write the line you would underline, stamp it with your name, and share a printable catalog-card link, with no accounts anywhere. Lines land on book pages and the home ticker live (6-8 second polling), slugs are cut deterministically from the line's own words plus a hash, and covers come from Open Library with an Internet Archive fallback and find-the-book links to Open Library, Internet Archive, Bookshop.org, and WorldCat, with no API keys anywhere. Underline voting uses anonymous device IDs stored as unique-voter sets, and the app runs in two storage modes: Upstash Redis, or an offline mode where the base64url link itself carries the line. OG cards render through satori, and the shareable card draws client-side on canvas.",
     heroImage: "/images/brand/mesh-hero-01.svg",
     tags: ["Next.js 16", "React 19", "Tailwind v4", "TypeScript", "Upstash Redis", "satori", "Vitest"],
     screens: [],
@@ -1081,7 +1081,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "storage",
         iconColor: "text-accent-blue",
         iconBg: "bg-accent-blue/20",
-        description: "Global mode uses Upstash Redis; offline mode encodes the whole line into the link as base64url JSON — the URL is the database. Legacy base64 links still resolve.",
+        description: "Global mode uses Upstash Redis; offline mode encodes the whole line into the link as base64url JSON, so the URL is the database. Legacy base64 links still resolve.",
         list: [
           "Live ticker and book pages via 6-8s polling",
           "Underline voting with unique anonymous voter sets"
@@ -1114,7 +1114,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
     title: "Task Manager",
     subtitle: "A spec-first mobile assignment, scoped honestly",
     description: "A React Native + Expo task board built PRD-first, deliberately frontend-only with local state.",
-    heroDescription: "A scoped course assignment executed spec-first: PRD, mobile UI spec, an agent build brief, and a feature checklist went into docs/ before any code. The result is a single-screen visual task manager with Board, List, and Activity tabs — task creation, drag-and-drop status changes, deadline color coding, in-app push-style notifications, a deadline-sorted list view, and an activity log. The README documents explicit non-goals: no backend and no persistence, local React state only. Built in a day, exactly to spec.",
+    heroDescription: "A scoped course assignment executed spec-first: PRD, mobile UI spec, an agent build brief, and a feature checklist went into docs/ before any code. The result is a single-screen visual task manager with Board, List, and Activity tabs covering task creation, drag-and-drop status changes, deadline color coding, in-app push-style notifications, a deadline-sorted list view, and an activity log. The README documents explicit non-goals: no backend and no persistence, local React state only. Built in a day, exactly to spec.",
     heroImage: "/images/brand/divider-flow-01.svg",
     tags: ["React Native", "Expo", "TypeScript"],
     screens: [],
@@ -1133,7 +1133,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "description",
         iconColor: "text-accent-red",
         iconBg: "bg-accent-red/20",
-        description: "PRD, mobile UI spec, build brief, and feature checklist came first — the implementation just follows them."
+        description: "PRD, mobile UI spec, build brief, and feature checklist came first, and the implementation just follows them."
       },
       {
         title: "The Board",
@@ -1166,7 +1166,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
     title: "Class Imbalance Study",
     subtitle: "A university term paper on imbalanced classification, UNSW-NB15",
     description: "An 18-run reproducible grid comparing class-imbalance strategies, with Friedman tests and rare-class analysis.",
-    heroDescription: "A university term paper executed with research-grade discipline: an 18-experiment grid — two tasks (binary and multiclass) × three models (LR, RF, XGBoost) × three strategies (no balancing, class weighting, SMOTE) — on the UNSW-NB15 dataset. Preprocessing fits only on training data to prevent leakage, seeds and config snapshots are fixed, and the results archive includes Friedman nonparametric tests, metric confidence intervals, per-class metrics, and rare-class aggregates for Worms (0.07%) and Shellcode (0.65%), moving well past raw accuracy with macro-F1, ROC-AUC, and G-Mean. A one-click Colab notebook reruns the study, and IEEE-style paper drafts with a professor review report live in the private repo.",
+    heroDescription: "A university term paper executed with research-grade discipline: an 18-experiment grid crossing two tasks (binary and multiclass) with three models (LR, RF, XGBoost) and three strategies (no balancing, class weighting, SMOTE) on the UNSW-NB15 dataset. Preprocessing fits only on training data to prevent leakage, seeds and config snapshots are fixed, and the results archive includes Friedman nonparametric tests, metric confidence intervals, per-class metrics, and rare-class aggregates for Worms (0.07%) and Shellcode (0.65%), moving well past raw accuracy with macro-F1, ROC-AUC, and G-Mean. A one-click Colab notebook reruns the study, and IEEE-style paper drafts with a professor review report live in the private repo.",
     heroImage: "/images/brand/mesh-hero-01.svg",
     tags: ["Python", "scikit-learn", "XGBoost", "SMOTE", "UNSW-NB15", "Statistics"],
     screens: [],
@@ -1192,7 +1192,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "shield",
         iconColor: "text-accent-blue",
         iconBg: "bg-accent-blue/20",
-        description: "Preprocessing fits on training data only, with fixed seeds, exact config snapshots, and a Docker-ready structure — results regenerate from configs, not memory.",
+        description: "Preprocessing fits on training data only, with fixed seeds, exact config snapshots, and a Docker-ready structure, so results regenerate from configs rather than memory.",
         list: [
           "Friedman test with metric confidence intervals",
           "Rare-class analysis: Worms 0.07%, Shellcode 0.65%",
@@ -1204,7 +1204,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "star",
         iconColor: "text-accent-green",
         iconBg: "bg-accent-green/20",
-        description: "MkDocs documentation tree, results tables and metrics JSON, and IEEE-style paper drafts with a professor review report — private repo, so no code link."
+        description: "MkDocs documentation tree, results tables and metrics JSON, and IEEE-style paper drafts with a professor review report. Private repo, so no code link."
       }
     ],
     impact: {
@@ -1223,7 +1223,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
     title: "Nanofluid Flow Model",
     subtitle: "An ANN surrogate for hybrid nanofluid boundary-layer flow",
     description: "A nine-layer Levenberg-Marquardt network trained on ~32,400 physics-generated samples, validated against numerical solutions.",
-    heroDescription: "An independent scientific-ML study: a nine-layer neural network trained with Levenberg-Marquardt optimization models hybrid nanofluid boundary-layer flow and heat transfer over a stretching sheet. Training data — about 32,400 samples — is generated from the physics equations themselves, so no experimental dataset dependency exists. The workflow runs end to end from one command (python src/main.py all: clean, generate, train with real-time visualization, save model and scalers in 8-22 minutes), followed by a separate validation stage computing MSE, RMSE, MAE, and R² against numerical solutions with publication-quality comparison plots. Implementation documentation ships in three formats.",
+    heroDescription: "An independent scientific-ML study: a nine-layer neural network trained with Levenberg-Marquardt optimization models hybrid nanofluid boundary-layer flow and heat transfer over a stretching sheet. Training data (about 32,400 samples) is generated from the physics equations themselves, so no experimental dataset dependency exists. The workflow runs end to end from one command (python src/main.py all: clean, generate, train with real-time visualization, save model and scalers in 8-22 minutes), followed by a separate validation stage computing MSE, RMSE, MAE, and R² against numerical solutions with publication-quality comparison plots. Implementation documentation ships in three formats.",
     heroImage: "/images/brand/blob-depth-01.svg",
     tags: ["Python", "Neural Networks", "Levenberg-Marquardt", "SciML", "Heat Transfer"],
     screens: [],
@@ -1260,7 +1260,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "star",
         iconColor: "text-accent-green",
         iconBg: "bg-accent-green/20",
-        description: "IMPLEMENTATION_DOCUMENTATION.md plus PDF, and implementation_steps.md plus DOCX — the repo explains itself. Private repo, so no code link."
+        description: "IMPLEMENTATION_DOCUMENTATION.md plus PDF, and implementation_steps.md plus DOCX; the repo explains itself. Private repo, so no code link."
       }
     ],
     impact: {
@@ -1279,7 +1279,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
     title: "Shera Clip",
     subtitle: "Turn IELTS class recordings into reviewed clips, locally",
     description: "A spec-first local tool: Zoom import, AI-ranked candidate clips, human-approved rendering, cost-capped paid steps.",
-    heroDescription: "A local product for Rimons IELTS that turns Zoom class recordings into reviewable Facebook/YouTube clips: import MP4/VTT from Zoom cloud recordings month-at-a-time, rank candidate clips with AI, and render only after human approval in the review UI — paid work is explicitly authorized and capped at USD 1.50 per class. One codebase serves three interfaces — web (python -m shera), desktop (shera desktop), and CLI with JSON output so scripts and agents can drive the machine stages. The one-command installer sets up Python 3.12 and FFmpeg, creates the venv, adds Start-menu shortcuts, and finishes with a shera doctor checklist. This is a spec-first repo: the PRD is the sole authority, decisions carry recorded IDs, acceptance gates must pass on real classes before anything is publish-ready, and a phase-1 prototype is working today.",
+    heroDescription: "A local product for Rimons IELTS that turns Zoom class recordings into reviewable Facebook/YouTube clips: import MP4/VTT from Zoom cloud recordings month-at-a-time, rank candidate clips with AI, and render only after human approval in the review UI, so paid work is explicitly authorized and capped at USD 1.50 per class. One codebase serves three interfaces: web (python -m shera), desktop (shera desktop), and a CLI with JSON output so scripts and agents can drive the machine stages. The one-command installer sets up Python 3.12 and FFmpeg, creates the venv, adds Start-menu shortcuts, and finishes with a shera doctor checklist. This is a spec-first repo: the PRD is the sole authority, decisions carry recorded IDs, acceptance gates must pass on real classes before anything is publish-ready, and a phase-1 prototype is working today.",
     heroImage: "/images/brand/mesh-hero-01.svg",
     tags: ["Python", "FFmpeg", "OpenRouter", "Zoom API", "CLI"],
     screens: [],
@@ -1341,7 +1341,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
     title: "Email Templates",
     subtitle: "A small static tool for reusable HTML emails",
     description: "Form-based generation of reusable HTML email templates with live preview pages.",
-    heroDescription: "A deliberately small utility: static HTML pages with form inputs that generate reusable email templates for transactional and marketing sends, with live preview pages for each template variant. No build system, no backend — six HTML files that solve a repeated chore. Built mainly to speed up creating and customizing HTML emails for class communication.",
+    heroDescription: "A deliberately small utility: static HTML pages with form inputs that generate reusable email templates for transactional and marketing sends, with live preview pages for each template variant. No build system and no backend, just six HTML files that solve a repeated chore. Built mainly to speed up creating and customizing HTML emails for class communication.",
     heroImage: "/images/brand/divider-flow-01.svg",
     tags: ["HTML", "Email", "Static"],
     screens: [],
@@ -1373,7 +1373,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "star",
         iconColor: "text-accent-green",
         iconBg: "bg-accent-green/20",
-        description: "No framework, no deploy pipeline — the smallest tool in my portfolio, and honest about it."
+        description: "No framework and no deploy pipeline, the smallest tool in my portfolio, and honest about it."
       }
     ],
     impact: {
@@ -1393,7 +1393,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
     title: "This Portfolio",
     subtitle: "Designed and built from scratch",
     description: "Next.js 14, TypeScript strict, a custom design-token and motion system, and a markdown blog pipeline.",
-    heroDescription: "The site you're reading: Next.js 14 (App Router) with strict TypeScript, a custom design-token and motion system, Tailwind + global CSS tokens, Framer Motion and Radix UI primitives, and a data-driven content architecture — every page renders from src/data files, and the blog runs on a gray-matter + remark markdown pipeline with 30 posts. The contact API route is typed and SMTP/Resend-ready, pages statically generate with a sitemap, and the whole thing passes strict lint and type-check gates. Designed and built from scratch.",
+    heroDescription: "The site you're reading: Next.js 14 (App Router) with strict TypeScript, a custom design-token and motion system, Tailwind + global CSS tokens, Framer Motion and Radix UI primitives, and a data-driven content architecture where every page renders from src/data files, and the blog runs on a gray-matter + remark markdown pipeline with 30 posts. The contact API route is typed and SMTP/Resend-ready, pages statically generate with a sitemap, and the whole thing passes strict lint and type-check gates. Designed and built from scratch.",
     heroImage: "/images/brand/blob-depth-01.svg",
     tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Radix UI", "Markdown"],
     screens: [],
@@ -1412,7 +1412,7 @@ export const projectDetailsData: Record<string, ProjectDetail> = {
         icon: "dataset",
         iconColor: "text-accent-red",
         iconBg: "bg-accent-red/20",
-        description: "Every page renders from typed data files — projects, experience, research, skills — so content updates never touch components."
+        description: "Every page renders from typed data files (projects, experience, research, skills), so content updates never touch components."
       },
       {
         title: "Design System, Not Ad-Hoc Styling",

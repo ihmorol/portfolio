@@ -6,7 +6,7 @@ export const skillsData = {
   },
   programmingLanguages: {
     title: "Programming Languages",
-    description: "The languages I work in most: TypeScript for production apps, Python for research, and C++ for contests.",
+    description: "The languages I work in most: TypeScript for production apps, Python for research, and C++ from my contest years.",
     languages: [
       {
         name: "JavaScript / TypeScript",
@@ -164,17 +164,17 @@ export const skillsData = {
       code: "UIU",
       codeBg: "bg-blue-500/20",
       codeColor: "text-blue-400",
-      title: "100% Merit Scholarship",
+      title: "Merit Scholarships (8 total)",
       hoverColor: "group-hover:text-blue-400",
-      issuer: "United International University • 6 Terms (Top 3%)"
+      issuer: "United International University • 6 at 100%, 1 at 50%, 1 at 25%"
     },
     {
       code: "FYDP",
       codeBg: "bg-purple-500/20",
       codeColor: "text-purple-400",
-      title: "FYDP-I Defended",
+      title: "FYDP-II Defended",
       hoverColor: "group-hover:text-purple-400",
-      issuer: "Lorenz-1960 ODE × ANN Architecture Search • Jun 2026"
+      issuer: "Lorenz-1960 PINN • Paper Submitted to ICEEICT 2027"
     },
     {
       code: "DSA",
@@ -182,7 +182,7 @@ export const skillsData = {
       codeColor: "text-green-400",
       title: "500+ Problems Solved",
       hoverColor: "group-hover:text-green-400",
-      issuer: "Codeforces, LeetCode, HackerRank • Ongoing"
+      issuer: "Codeforces, LeetCode, HackerRank • 2022-2025"
     }
   ],
   softSkills: {
