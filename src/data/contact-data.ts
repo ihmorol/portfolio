@@ -4,9 +4,14 @@ export const contactData = {
     icon: "Zap",
     titleSuffix: "Connect"
   },
+  whatsapp: {
+    number: "8801614714959",
+    meetingMessage: "Hi Ikramul! I'd like to schedule a 15-minute call.",
+    helloMessage: "Hi Ikramul! I found you through your portfolio."
+  },
   scheduleMeeting: {
     title: "Schedule a Meeting",
-    description: "Book a 15-minute call to talk about an internship, a role, or a project idea.",
+    description: "Book a 15-minute call to talk about an internship, a role, or a project idea. Message me on WhatsApp and we'll find a time.",
     buttonText: "Schedule Now"
   },
   email: {
@@ -17,7 +22,7 @@ export const contactData = {
   },
   sendMessage: {
     title: "Send Message",
-    description: "Prefer not to open your mail client? Send a message right from this page.",
+    description: "Leave your email and message — your mail app will open with everything ready to send.",
     buttonText: "Message Me"
   },
   newsletter: {
@@ -29,6 +34,6 @@ export const contactData = {
   },
   socialChannels: {
     title: "Social Channels",
-    description: "GitHub for code, LinkedIn for everything else."
+    description: "WhatsApp for quick messages, GitHub for code, LinkedIn for everything else."
   }
 };

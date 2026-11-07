@@ -19,6 +19,7 @@ import { layoutData } from '@/data/layout-data';
 import { contactData } from '@/data/contact-data';
 import { ContactForm } from '@/components/contact/ContactForm';
 import { NewsletterForm } from '@/components/shared/NewsletterForm';
+import { whatsappLink } from '@/lib/contact-links';
 
 export default function ContactPage() {
   const { socialLinks } = layoutData.footer;
@@ -52,7 +53,9 @@ export default function ContactPage() {
                         {scheduleMeeting.description}
                     </p>
                     <a
-                      href={`mailto:${email.emailAddress}?subject=${encodeURIComponent('Meeting request')}`}
+                      href={whatsappLink(contactData.whatsapp.meetingMessage)}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="focus-ring block bg-foreground hover:bg-foreground/85 text-background type-micro py-4 px-10 rounded-full transition-all w-full md:w-fit text-center shadow-lg"
                     >
                         {scheduleMeeting.buttonText}
@@ -185,6 +188,9 @@ export default function ContactPage() {
                     <p className="text-xs text-text-secondary font-body max-w-sm">{socialChannels.description}</p>
                 </div>
                 <div className="flex items-center gap-3 md:gap-5 flex-wrap justify-center">
+                     <a href={whatsappLink(contactData.whatsapp.helloMessage)} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-12 h-12 rounded-full bg-background-tertiary flex items-center justify-center transition-all duration-300 group hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                        <MessageCircle className="text-green-500 group-hover:text-green-400 w-5 h-5" />
+                    </a>
                      <a href="https://linkedin.com/in/ihmorol" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-background-tertiary flex items-center justify-center transition-all duration-300 group hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
                         <Linkedin className="text-blue-600 group-hover:text-blue-500 w-5 h-5" />
                     </a>

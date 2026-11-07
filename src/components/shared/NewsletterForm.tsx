@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ArrowRight, Loader2 } from 'lucide-react';
 import { toast } from 'react-hot-toast';
+import { subscribeMailto } from '@/lib/contact-links';
 
 type Variant = 'footer' | 'pill' | 'stacked';
 
@@ -45,6 +46,17 @@ export function NewsletterForm({
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Zero-credential path: when /api/subscribe has no mail transport
+  // configured, open the visitor's mail app with a pre-filled signup draft
+  // addressed to the site owner.
+  const openMailDraft = () => {
+    toast('Opening your mail app to finish subscribing.', { icon: '✉️' });
+    window.location.href = subscribeMailto(
+      email,
+      showName && name ? name : undefined
+    );
+  };
+
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsSubmitting(true);
@@ -54,19 +66,17 @@ export function NewsletterForm({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, name: showName ? name : undefined }),
       });
-      const data = await response.json().catch(() => null);
-      if (!response.ok) {
-        throw new Error(data?.error || 'Something went wrong. Please try again.');
+
+      if (response.ok) {
+        toast.success('Thanks for subscribing!');
+        setName('');
+        setEmail('');
+        return;
       }
-      toast.success('Thanks for subscribing!');
-      setName('');
-      setEmail('');
-    } catch (error) {
-      toast.error(
-        error instanceof Error
-          ? error.message
-          : 'Something went wrong. Please try again.'
-      );
+
+      openMailDraft();
+    } catch {
+      openMailDraft();
     } finally {
       setIsSubmitting(false);
     }

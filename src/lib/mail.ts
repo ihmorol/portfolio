@@ -23,6 +23,10 @@ function isSmtpConfigured(): boolean {
  * configured: Resend (preferred, works on serverless hosts) or SMTP via
  * nodemailer. Returns a descriptive error instead of throwing so API routes
  * can surface a useful message to the sender.
+ *
+ * Both contact forms treat "no transport configured" as a signal to fall back
+ * to opening the visitor's own mail app with a pre-filled draft, so the site
+ * works with zero credentials.
  */
 export async function sendMail({
   subject,

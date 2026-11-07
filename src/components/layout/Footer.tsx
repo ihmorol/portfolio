@@ -4,6 +4,7 @@ import {
   Linkedin,
   Twitter,
   Mail,
+  MessageCircle,
   LucideIcon
 } from 'lucide-react';
 import { layoutData } from '@/data/layout-data';
@@ -14,6 +15,7 @@ const iconMap: Record<string, LucideIcon> = {
   linkedin: Linkedin,
   twitter: Twitter,
   mail: Mail,
+  whatsapp: MessageCircle,
 };
 
 export function Footer() {

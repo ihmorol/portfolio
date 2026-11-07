@@ -2,10 +2,10 @@
 
 import { homeData } from '@/data/home-data';
 import { contactData } from '@/data/contact-data';
+import { whatsappLink } from '@/lib/contact-links';
 
 export function ScheduleMeeting() {
   const { title, description, cta } = homeData.scheduleMeeting;
-  const meetingMailto = `mailto:${contactData.email.emailAddress}?subject=${encodeURIComponent('Meeting request')}`;
 
   return (
     <section className="flex flex-col gap-6 mb-16">
@@ -13,7 +13,7 @@ export function ScheduleMeeting() {
             <div className="w-full md:w-2/5 p-6 md:p-10 flex flex-col justify-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">{title}</h2>
                 <p className="text-text-muted mb-8 leading-relaxed">{description}</p>
-                <a href={meetingMailto} className="focus-ring bg-foreground text-background w-full py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 transition-colors text-center">
+                <a href={whatsappLink(contactData.whatsapp.meetingMessage)} target="_blank" rel="noopener noreferrer" className="focus-ring bg-foreground text-background w-full py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 transition-colors text-center">
                     {cta}
                 </a>
             </div>

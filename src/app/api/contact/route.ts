@@ -9,22 +9,24 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { name, email, subject, message } = body ?? {};
 
-    // Mirror the client-side zod schema: name >= 2, subject >= 5, message >= 10
+    // Required: a valid email and a message (mirrors the client-side schema).
+    // Name and subject are optional extras if a caller provides them.
+    const isOptionalText = (value: unknown) =>
+      typeof value === 'string' || value === undefined;
+
     const valid =
-      typeof name === 'string' &&
-      name.trim().length >= 2 &&
       typeof email === 'string' &&
       EMAIL_RE.test(email) &&
-      typeof subject === 'string' &&
-      subject.trim().length >= 5 &&
       typeof message === 'string' &&
-      message.trim().length >= 10;
+      message.trim().length >= 10 &&
+      isOptionalText(name) &&
+      isOptionalText(subject);
 
     if (!valid) {
       return NextResponse.json(
         {
           error:
-            'Please fill in all fields: name, a valid email, a subject, and a message of at least 10 characters.',
+            'Please provide a valid email and a message of at least 10 characters.',
         },
         { status: 400 }
       );
@@ -38,9 +40,20 @@ export async function POST(req: Request) {
     }
 
     const result = await sendMail({
-      subject: `Portfolio contact: ${subject.trim()}`,
+      subject: `Portfolio message${
+        typeof subject === 'string' && subject.trim()
+          ? `: ${subject.trim()}`
+          : ''
+      }`,
       replyTo: email,
-      text: `Name: ${name.trim()}\nEmail: ${email}\n\n${message.trim()}`,
+      text: [
+        `Email: ${email}`,
+        typeof name === 'string' && name.trim() ? `Name: ${name.trim()}` : null,
+        '',
+        message.trim(),
+      ]
+        .filter((part) => part !== null)
+        .join('\n'),
     });
 
     if (!result.ok) {

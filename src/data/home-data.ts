@@ -105,7 +105,7 @@ export const homeData = {
   },
   scheduleMeeting: {
     title: "Schedule a Meeting",
-    description: "Book a 15-minute call to talk about a role, a project, or a possible collaboration.",
+    description: "Book a 15-minute call to talk about a role, a project, or a possible collaboration. Message me on WhatsApp and we'll find a time.",
     cta: "Schedule Now"
   },
   contact: {
@@ -120,7 +120,7 @@ export const homeData = {
         {
             type: "message",
             title: "Send Message",
-            description: "Prefer not to open your mail client? Send a message right from this site.",
+            description: "Leave your email and message — I usually reply within a day.",
             cta: "Message Me"
         },
         {
