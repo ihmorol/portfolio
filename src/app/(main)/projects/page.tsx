@@ -51,7 +51,7 @@ export default function ProjectsPage() {
         </Reveal>
 
         <Reveal delay={0.03}>
-          <div className="w-full max-w-6xl mx-auto mb-12">
+          <div className="w-full max-w-7xl mx-auto mb-12">
             <div className="flex flex-wrap justify-center gap-2 md:gap-3">
               {categories.map((category) => {
                 const isActive = activeCategory === category;
@@ -76,7 +76,7 @@ export default function ProjectsPage() {
 
         {activeCategory === 'All Projects' && (
           <Reveal delay={0.06}>
-            <section className="w-full max-w-6xl mx-auto mb-12 md:mb-16 surface-card-strong p-6 md:p-10 relative overflow-hidden">
+            <section className="w-full max-w-7xl mx-auto mb-12 md:mb-16 surface-card-strong p-6 md:p-10 relative overflow-hidden">
               <div
                 className="absolute inset-0"
                 style={{
@@ -169,7 +169,7 @@ export default function ProjectsPage() {
           </Reveal>
         )}
 
-        <StaggerGroup className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">
+        <StaggerGroup className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-12 md:pb-16 max-w-7xl mx-auto">
           {filteredProjects.map((project, index) => {
             const Icon = project.icon;
             const cover = getProjectCover(project.slug);

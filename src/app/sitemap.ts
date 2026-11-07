@@ -5,7 +5,7 @@ import { projectsData } from '@/data/projects-data';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ['', '/about', '/projects', '/experience', '/academic', '/skills', '/research', '/blog', '/contact'];
+  const staticRoutes = ['', '/about', '/projects', '/experience', '/academic', '/skills', '/research', '/blog', '/contact', '/now'];
 
   const staticEntries = staticRoutes.map((path) => ({
     url: `${siteUrl}${path}`,

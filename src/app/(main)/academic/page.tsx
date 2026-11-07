@@ -33,7 +33,7 @@ export default function AcademicPage() {
         />
 
         {/* Main Grid: Current Degree + Thesis + Certifications */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">
+        <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 max-w-7xl mx-auto">
           
           {/* Current Degree Card */}
           <div className="md:col-span-12 bg-background-secondary border border-border rounded-3xl p-2 md:p-3 flex flex-col md:flex-row gap-6 md:gap-12 overflow-hidden min-h-[350px]">
@@ -156,9 +156,6 @@ export default function AcademicPage() {
                     </div>
                 ))}
               </div>
-              <button className="w-full bg-surface-light hover:bg-border text-text-primary text-[10px] font-bold py-3 rounded-full transition-all uppercase tracking-wider mt-6 border border-border">
-                View Credential Links
-              </button>
             </div>
           </div>
 
@@ -250,9 +247,6 @@ export default function AcademicPage() {
                   ))}
                 </div>
               </div>
-              <button className="mt-6 text-[10px] text-text-secondary hover:text-text-primary transition-colors flex items-center gap-1 w-full justify-center">
-                View All Awards <span className="material-symbols-outlined text-xs">chevron_right</span>
-              </button>
             </div>
           </div>
 

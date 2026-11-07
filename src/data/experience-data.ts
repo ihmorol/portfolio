@@ -3,7 +3,7 @@ export const experienceData = {
     titlePrefix: "Work",
     titleIcon: "history_edu",
     titleSuffix: "Experience",
-    description: "Teaching, freelance production work, team leadership, and research, all alongside a computer science degree."
+    description: "Teaching, production engineering for RimonsIELTS, team leadership, and research, all alongside a computer science degree."
   },
   experience: {
     title: "Experience",
@@ -14,44 +14,46 @@ export const experienceData = {
         location: "Dhaka, Bangladesh",
         type: "Part-time",
         period: "Aug 2025 - Present",
-        description: "I help students in Data Structures & Algorithms and Database Management courses through office hours, code reviews, and tutorial sessions.",
+        description: "Over a year of teaching support across four lab courses: DBMS Lab, DSA-I Lab, ICS Lab, and SWE Lab. I run lab sessions, office hours, and code reviews.",
         sections: [
           {
             title: "Key Responsibilities",
             icon: "check_circle",
             iconColor: "text-accent-green",
             items: [
-              "Assist 100+ students in understanding DSA and DBMS concepts",
-              "Design and grade programming assignments focusing on algorithmic efficiency",
-              "Conduct tutorial sessions on graph algorithms, dynamic programming, SQL, and database normalization"
+              "Guide students through weekly lab sessions for DBMS, DSA-I, ICS, and SWE courses",
+              "Review and grade lab assignments with feedback on correctness and code quality",
+              "Hold office hours and tutorial sessions on SQL, normalization, graph algorithms, dynamic programming, and software engineering practice"
             ]
           },
           {
-             title: "Topics Covered",
+             title: "Courses Supported",
              icon: "school",
              iconColor: "text-accent-blue",
              items: [
-               "Data Structures & Algorithms (Trees, Graphs, DP)",
-               "Database Management (SQL, Normalization, ER Diagrams)"
+               "Database Management Systems Lab (SQL, Normalization, ER Diagrams)",
+               "Data Structures & Algorithms-I Lab (Trees, Graphs, DP)",
+               "Introduction to Computer Systems Lab",
+               "Software Engineering Lab"
              ]
           }
         ],
-        tags: ["Teaching", "DSA", "DBMS", "Mentorship"]
+        tags: ["Teaching", "DBMS", "DSA-I", "ICS", "SWE", "Mentorship"]
       },
       {
-        role: "Freelance Full-Stack Developer",
-        company: "EdTech Client · IELTS Preparation Platform",
+        role: "Software Engineer (Remote, Sole Engineer)",
+        company: "RimonsIELTS",
         location: "Remote",
-        type: "Freelance",
+        type: "Remote",
         period: "2025 - Present",
-        description: "I develop and operate a live three-app e-learning platform for a commercial client: a Next.js 15 student portal, an Express + TypeScript API, and a React admin dashboard.",
+        description: "I'm the only engineer behind a live IELTS preparation platform, and I own all of it: a Next.js 15 student portal, an Express + TypeScript REST API, a React admin dashboard, and a Python central service.",
         sections: [
           {
             title: "What I Own",
             icon: "check_circle",
             iconColor: "text-accent-green",
             items: [
-              "Full-stack architecture across student portal, REST API, and admin dashboard",
+              "End-to-end architecture across the student portal, REST API, admin dashboard, and central service",
               "Video streaming integration (Vimeo/Zoom), AI features, and cloud file storage",
               "Production releases: OpenAPI docs, Zod validation, JWT auth, go-live checklists"
             ]
@@ -61,12 +63,12 @@ export const experienceData = {
              icon: "school",
              iconColor: "text-accent-blue",
              items: [
-               "Next.js 15, React 19, Tailwind CSS v4, Zustand, TanStack Query",
-               "Express + TypeScript, MongoDB, Swagger/OpenAPI, Zod"
+               "Next.js 15, React 19, Tailwind CSS v4, Zustand, TanStack Query / Router",
+               "Express + TypeScript, Python, MongoDB, Swagger/OpenAPI, Zod"
              ]
           }
         ],
-        tags: ["Production", "Next.js", "TypeScript", "Client Work"]
+        tags: ["Production", "RimonsIELTS", "Next.js", "TypeScript", "Solo Engineering"]
       }
     ]
   },
@@ -135,7 +137,7 @@ export const experienceData = {
         role: "Peer Mentor",
         organization: "UIU CSE Community",
         period: "2023 - Present",
-        description: "I help junior students with programming fundamentals, debugging, and contest preparation, and share open study guides that hundreds of classmates have used.",
+        description: "I help junior students with programming fundamentals, debugging, and contest preparation, and share open study guides with classmates.",
         tags: ["Mentorship", "Teaching", "Community"]
       }
     ]

@@ -3,21 +3,22 @@ export const layoutData = {
     brand: "Ikramul Hasan",
     cta: "Hire",
     menuItems: [
-      { name: "Home", href: "/" },
-      { name: "About", href: "/about" },
       { name: "Projects", href: "/projects" },
+      { name: "About", href: "/about" },
       { name: "Experience", href: "/experience" },
+      { name: "Research", href: "/research" },
+      { name: "Now", href: "/now" },
+    ],
+    moreItems: [
+      { name: "Blog", href: "/blog" },
       { name: "Academic", href: "/academic" },
       { name: "Skills", href: "/skills" },
-      { name: "Research", href: "/research" },
-      { name: "Blog", href: "/blog" },
-      { name: "Contact", href: "/contact" },
     ],
   },
   footer: {
     brand: {
       name: "Ikramul Hasan",
-      description: "Final-year CSE student at UIU, full-stack developer, and ML researcher. I build production software and study machine learning for intrusion detection and differential equations.",
+      description: "Final-year CSE student at UIU, full-stack developer, and ML researcher. I build production software and study scientific machine learning, from neural ODE surrogates to physics-informed attack detection.",
     },
     socialLinks: [
       { title: "GitHub", url: "https://github.com/ihmorol", icon: "github" },
@@ -36,6 +37,7 @@ export const layoutData = {
       { name: "Contact", href: "/contact" },
       { name: "Skills", href: "/skills" },
       { name: "Research", href: "/research" },
+      { name: "Now", href: "/now" },
     ],
     newsletter: {
       title: "Newsletter",

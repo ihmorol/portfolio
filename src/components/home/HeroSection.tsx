@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { homeData } from '@/data/home-data';
 import { PageHeader } from '@/components/shared/PageHeader';
 import { Zap } from 'lucide-react';
@@ -10,7 +11,7 @@ import { TiltCard } from '@/components/motion/TiltCard';
 import { pageEnterTransition } from '@/lib/motion-tokens';
 
 export function HeroSection() {
-  const { titlePrefix, titleHighlight, subtitle, description } = homeData.hero;
+  const { titlePrefix, titleHighlight, subtitle, description, now } = homeData.hero;
 
   return (
     <motion.section
@@ -89,6 +90,25 @@ export function HeroSection() {
           <div className="relative z-10">
             <h2 className="type-h2 text-text-primary mb-4">{subtitle}</h2>
             <p className="type-body text-text-secondary max-w-xl">{description}</p>
+            <Link
+              href={now.link}
+              className="group focus-ring inline-flex items-center gap-3 mt-6 px-4 py-2.5 rounded-full border border-border bg-background-secondary/60 hover:border-border-strong transition-colors"
+            >
+              <span className="relative flex h-2 w-2" aria-hidden="true">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+              </span>
+              <span className="type-caption text-text-secondary">
+                <span className="text-text-primary font-semibold">{now.label}</span>
+                <span className="mx-1.5 text-text-muted">&middot;</span>
+                {now.text}
+              </span>
+              <ArrowRight
+                size={14}
+                aria-hidden="true"
+                className="text-text-muted group-hover:translate-x-0.5 group-hover:text-text-primary transition-all"
+              />
+            </Link>
           </div>
         </div>
       </div>

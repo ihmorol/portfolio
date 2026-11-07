@@ -9,16 +9,16 @@ export const aboutData = {
     name: "Ikramul Hasan Moral",
     title: "Full-Stack Developer & ML Researcher",
     description: [
-      "I started programming in 2022 with simple MERN apps and competitive programming problems. Since then I've shipped real products: a live three-app e-learning platform that students use every day, and Advyon, a legal-tech platform built by a five-member team I led to Champion at the UIU CSE Project Show.",
-      "I'm finishing my B.Sc. in Computer Science and Engineering at United International University with a 3.94 CGPA and a 100% merit scholarship for six straight terms, awarded to the top 3% each trimester. Lately I've moved into research. My first paper, on handling class imbalance in network intrusion detection, is under peer review, and my thesis applies neural network architecture search to differential equation systems.",
-      "As an undergraduate teaching assistant I help over 100 students with Data Structures & Algorithms and Database Management. I also compete regularly, with 500+ problems solved on Codeforces, LeetCode, and HackerRank."
+      "I started programming in 2022 with simple MERN apps and competitive programming problems. Since then I've shipped real products: the live RimonsIELTS e-learning platform, which I engineer and run as the sole remote engineer, and Advyon, a legal-tech platform built by a five-member team I led to Champion at the UIU CSE Project Show.",
+      "I'm finishing my B.Sc. in Computer Science and Engineering at United International University with a 3.94 CGPA and a 100% merit scholarship for six straight terms, awarded to the top 3% each trimester. Lately I've moved into research. My thesis applies neural-network architecture search to differential-equation systems, and side studies range from physics-residual attack detection to AI-generated image forensics.",
+      "As an undergraduate teaching assistant for over a year, I support students in DBMS, DSA-I, ICS, and SWE lab courses. I also compete regularly, with 500+ problems solved on Codeforces, LeetCode, and HackerRank."
     ],
     highlights: {
         title: "Key Highlights",
         items: [
             "3.94 CGPA at UIU",
             "6× 100% Merit Scholarship",
-            "Research Paper Under Review",
+            "Sole Engineer, RimonsIELTS",
             "2× Project Show Champion"
         ]
     },
@@ -69,9 +69,9 @@ export const aboutData = {
     items: [
         {
             period: '2026',
-            role: 'First Research Paper Submitted',
-            company: 'UNSW-NB15 Intrusion Detection Study',
-            description: 'Submitted an ML paper on class-imbalanced intrusion detection for peer review and defended FYDP-I on neural ODE surrogates (Team Paradox, supervised by Dr. Muhammad Nomani Kabir).',
+            role: 'FYDP-I Defended, Research Grew',
+            company: 'UIU · Team Paradox',
+            description: 'Defended FYDP-I on neural ODE surrogates (supervised by Dr. Muhammad Nomani Kabir). New studies followed: physics-residual CAN attack detection, a DT-NB conference submission, and AI-image forensics.',
             color: 'bg-accent-green',
             textColor: 'text-accent-green',
             hoverColor: 'group-hover:text-accent-green',
@@ -82,7 +82,7 @@ export const aboutData = {
             period: 'Aug 2025 - Present',
             role: 'Undergraduate Teaching Assistant',
             company: 'United International University',
-            description: 'Helping 100+ students in DSA and DBMS courses. I design assignments and run tutorial sessions.',
+            description: 'Supporting DBMS, DSA-I, ICS, and SWE lab courses. I run lab sessions, design assignments, and hold office hours.',
             color: 'bg-accent-yellow',
             textColor: '',
             hoverColor: 'group-hover:text-accent-yellow',

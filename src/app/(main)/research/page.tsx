@@ -23,7 +23,7 @@ export default function ResearchPage() {
 
         <ResearchHero />
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">
+        <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 max-w-7xl mx-auto">
           <ResearchVision />
 
           <ResearchExperience />
