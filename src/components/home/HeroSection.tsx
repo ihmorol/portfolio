@@ -34,7 +34,7 @@ export function HeroSection() {
         <div className="flex flex-row gap-3 md:gap-4 lg:gap-5">
           <div className="flex flex-col gap-2 md:gap-3 w-[calc(50%-6px)] sm:w-36 md:w-44 lg:w-52 flex-shrink-0">
             <TiltCard
-              className="relative w-full aspect-[3/4] sm:aspect-[9/14] rounded-xl md:rounded-2xl overflow-hidden bg-gradient-to-br from-background-tertiary to-background-secondary border border-border"
+              className="relative w-full aspect-[3/4] sm:aspect-[9/14] lg:aspect-auto lg:flex-1 rounded-xl md:rounded-2xl overflow-hidden bg-gradient-to-br from-background-tertiary to-background-secondary border border-border"
               intensity={6}
             >
               <Image src="/images/profile/image.jpeg" alt="Profile" fill className="object-cover" priority />
@@ -56,10 +56,10 @@ export function HeroSection() {
           </div>
 
           <div className="flex flex-col gap-2 md:gap-3 w-[calc(50%-6px)] sm:w-36 md:w-44 lg:w-52 flex-shrink-0">
-            <TiltCard intensity={7} className="rounded-xl md:rounded-2xl">
+            <TiltCard intensity={7} className="rounded-xl md:rounded-2xl lg:flex-1">
               <Link
                 href="/projects"
-                className="group focus-ring relative w-full aspect-[3/4] sm:aspect-[9/14] bg-gradient-to-br from-accent-blue via-accent-teal to-accent-coral rounded-xl md:rounded-2xl flex flex-col items-center justify-center gap-2 md:gap-4 transition-transform cursor-pointer border border-border-strong [transform-style:preserve-3d]"
+                className="group focus-ring relative w-full aspect-[3/4] sm:aspect-[9/14] lg:aspect-auto lg:h-full bg-gradient-to-br from-accent-blue to-accent-teal rounded-xl md:rounded-2xl flex flex-col items-center justify-center gap-2 md:gap-4 transition-transform cursor-pointer border border-border-strong [transform-style:preserve-3d]"
               >
                 <span
                   className="material-symbols-outlined text-text-primary text-4xl md:text-5xl lg:text-6xl drop-shadow-sm [transform:translateZ(34px)]"

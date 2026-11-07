@@ -11,7 +11,7 @@ export function FeaturedProjects() {
 
   return (
     <section className="mb-16">
-      <div className="flex items-center justify-between mb-8 px-2">
+      <div className="flex items-center justify-between mb-8">
         <h2 className="text-2xl font-bold text-text-primary">{title}</h2>
         <Link href={viewAllLink} className="text-xs font-bold uppercase tracking-widest text-text-muted hover:text-text-primary transition-colors">
           {viewAllText}

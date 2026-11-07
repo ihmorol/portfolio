@@ -24,7 +24,7 @@ export function Footer() {
 
   return (
     <footer className="bg-background-secondary border-t border-border/60 pt-12 pb-8">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12 xl:px-20">
+      <div className="section-shell">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-10">
           
           {/* Brand Section */}
