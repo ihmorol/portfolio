@@ -332,7 +332,12 @@ export default function ProjectDetailPage({
                     rel="noopener noreferrer"
                     className="focus-ring h-11 px-5 rounded-full border border-border-strong hover:border-border-strong transition-colors type-micro inline-flex items-center gap-2"
                   >
-                    <Github size={14} /> {link.label}
+                    {/^https?:\/\/github\.com/.test(link.url) ? (
+                      <Github size={14} />
+                    ) : (
+                      <Globe size={14} />
+                    )}
+                    {link.label}
                   </a>
                 ))}
                 <Link
