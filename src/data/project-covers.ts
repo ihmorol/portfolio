@@ -25,6 +25,14 @@ export const projectCovers: Record<string, ProjectCoverConfig> = {
   'task-manager-mobile': { from: '#0ea5e9', to: '#3b82f6' },
   'email-template-generator': { from: '#eab308', to: '#f59e0b' },
   'portfolio-website': { from: '#71717a', to: '#a1a1aa' },
+  'pinn-cps-robo': { from: '#22c55e', to: '#14b8a6', materialIcon: 'radar' },
+  'pinn-shape-optimization': { from: '#14b8a6', to: '#06b6d4', materialIcon: 'category' },
+  'dt-nb-noise-removal': { from: '#84cc16', to: '#22c55e', materialIcon: 'filter_alt' },
+  'spatial-spectral-forensics': { from: '#f43f5e', to: '#f97316', materialIcon: 'image_search' },
+  'shera-bot': { from: '#8b5cf6', to: '#6366f1', materialIcon: 'smart_toy' },
+  'carried': { from: '#f59e0b', to: '#ef4444', materialIcon: 'menu_book' },
+  'ode-3d-orbit': { from: '#0ea5e9', to: '#8b5cf6', materialIcon: 'orbit' },
+  'shera-clip': { from: '#14b8a6', to: '#0ea5e9', materialIcon: 'movie' },
 };
 
 export const DEFAULT_COVER: ProjectCoverConfig = {

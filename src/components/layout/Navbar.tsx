@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { layoutData } from '@/data/layout-data';
 import { ThemeToggle } from '@/components/layout/ThemeToggle';
 import { cn } from '@/lib/utils';
@@ -22,7 +23,12 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const { brand, cta, menuItems } = layoutData.navbar;
+  const { brand, cta, menuItems, moreItems } = layoutData.navbar;
+  const isMoreActive = moreItems.some(
+    (link) => pathname === link.href || pathname.startsWith(`${link.href}/`)
+  );
+  // Mobile keeps an explicit Home link; the desktop bar relies on the brand link.
+  const mobileMenuItems = [{ name: 'Home', href: '/' }, ...menuItems, ...moreItems];
 
   return (
     <header
@@ -72,6 +78,59 @@ export function Navbar() {
                 </Link>
                 );
                 })}
+                <DropdownMenu.Root>
+                  <DropdownMenu.Trigger asChild>
+                    <button
+                      aria-label="More pages"
+                      className={cn(
+                        'focus-ring group relative inline-flex items-center px-5 py-2 text-xs font-bold uppercase tracking-wider rounded-full transition-colors duration-300',
+                        isMoreActive
+                          ? 'text-background'
+                          : 'text-text-secondary hover:text-text-primary hover:bg-foreground/10'
+                      )}
+                    >
+                      {isMoreActive && (
+                        <motion.span
+                          layoutId="navbar-active-pill"
+                          className="absolute inset-0 bg-foreground rounded-full shadow-lg"
+                          transition={{ type: 'spring', stiffness: 380, damping: 32 }}
+                          aria-hidden="true"
+                        />
+                      )}
+                      <span className="relative z-10 inline-flex items-center gap-1.5">
+                        More
+                        <ChevronDown
+                          size={14}
+                          aria-hidden="true"
+                          className="transition-transform duration-200 group-data-[state=open]:rotate-180"
+                        />
+                      </span>
+                    </button>
+                  </DropdownMenu.Trigger>
+                  <DropdownMenu.Portal>
+                    <DropdownMenu.Content
+                      align="end"
+                      sideOffset={10}
+                      className="z-50 min-w-[170px] p-1.5 rounded-2xl bg-background-secondary/95 backdrop-blur-md border border-border shadow-lg"
+                    >
+                      {moreItems.map((link) => (
+                        <DropdownMenu.Item key={link.name} asChild>
+                          <Link
+                            href={link.href}
+                            className={cn(
+                              'block px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-full transition-colors duration-200',
+                              pathname === link.href
+                                ? 'text-text-primary bg-foreground/10'
+                                : 'text-text-secondary hover:text-text-primary hover:bg-foreground/10'
+                            )}
+                          >
+                            {link.name}
+                          </Link>
+                        </DropdownMenu.Item>
+                      ))}
+                    </DropdownMenu.Content>
+                  </DropdownMenu.Portal>
+                </DropdownMenu.Root>
             </div>
             <ThemeToggle />
         </div>
@@ -100,7 +159,7 @@ export function Navbar() {
             className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl pt-24 px-6 lg:hidden pointer-events-auto"
           >
             <div className="flex flex-col gap-6 items-center">
-              {menuItems.map((link) => (
+              {mobileMenuItems.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}

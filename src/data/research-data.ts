@@ -3,32 +3,32 @@ export const researchData = {
     title: "Research",
     highlightedTitle: "& Publications",
     highlightIcon: "auto_stories",
-    description: "Applied machine learning research in network security and scientific computing, built on reproducible pipelines and verified baselines."
+    description: "Applied machine learning research in scientific computing and systems security, built on reproducible pipelines and verified baselines."
   },
   vision: {
     title: "Research Focus",
-    description: "My research asks practical questions. How should intrusion detection systems handle severely imbalanced attack classes? Can plain neural networks act as surrogates for differential equation solvers? Every study runs on a reproducible pipeline with fixed seeds, leakage-proof splits, and metrics chosen to expose weaknesses rather than hide them.",
+    description: "My research asks practical questions. Can physics residuals flag masquerade attacks in a vehicle network better than purely data-driven models? Can plain neural networks act as surrogates for differential equation solvers? Every study runs on a reproducible pipeline with fixed seeds, leakage-proof splits, and metrics chosen to expose weaknesses rather than hide them.",
     currentFocus: {
       title: "Current Focus",
-      text: "ML for Network Security, Neural ODE Surrogates"
+      text: "Physics-Informed Neural Networks, Neural ODE Surrogates, ML for Cyber-Physical Systems"
     },
     longTermGoal: {
       title: "Long-term Goal",
       text: "Graduate research in applied ML & systems"
     },
     coreInterests: [
-      "Intrusion Detection Systems",
-      "Class-Imbalanced Learning",
+      "Physics-Informed Neural Networks",
       "Scientific Machine Learning",
-      "ANN Architecture Search",
+      "ML for Cyber-Physical Systems",
+      "AI-Generated Media Forensics",
       "Reproducible ML Pipelines"
     ]
   },
   topics: [
-    "Network Security ML",
-    "Class Imbalance",
+    "Physics-Informed NNs",
     "Neural ODE Surrogates",
-    "Architecture Search",
+    "Cyber-Physical Security",
+    "Media Forensics",
     "Experiment Design",
     "Reproducibility"
   ],
@@ -44,20 +44,44 @@ export const researchData = {
         tags: ["Scientific ML", "PyTorch", "Numerical Methods"]
       },
       {
-        role: "Independent ML Researcher",
-        institution: "UNSW-NB15 Intrusion Detection Study",
+        role: "Independent Researcher",
+        institution: "PINN-CPS-Robo · CAN Masquerade Attack Detection",
         advisor: "Self-directed",
-        period: "2025 - 2026",
-        description: "Designed and ran a reproducible 18-experiment grid (binary and multiclass, three models, three imbalance strategies) on UNSW-NB15, focusing on rare attack classes like Worms (0.07%) with macro-F1, ROC-AUC, and G-Mean. The paper was submitted for peer review.",
-        tags: ["IDS", "Class Imbalance", "scikit-learn", "XGBoost"]
+        period: "2026",
+        description: "Studying whether physics-residual signals detect CAN masquerade attacks on the ROAD dataset better than purely data-driven baselines, with attention to attack attribution.",
+        tags: ["PINN", "Cyber-Physical Systems", "Python"]
+      },
+      {
+        role: "Researcher",
+        institution: "DT-NB Hybrid Study · ICEEICT 2027 Submission",
+        advisor: "Self-directed",
+        period: "2026",
+        description: "Compared Naive Bayes instance filtering and decision-tree attribute weighting, separately and in both orders, with all supervised steps refit inside each training fold across ten seeds. Manuscript submitted to ICEEICT 2027.",
+        tags: ["Weka", "Decision Trees", "Naive Bayes"]
+      },
+      {
+        role: "Independent Researcher",
+        institution: "AI-Generated Image Forensics",
+        advisor: "Self-directed",
+        period: "2026",
+        description: "A pre-registered feature-level study of pixel-pattern, frequency, and combined feature sets for detecting AI-generated images under matched JPEG compression and unseen-generator shift.",
+        tags: ["Forensics", "Computer Vision", "Python"]
+      },
+      {
+        role: "Solo Reviewer",
+        institution: "PINN Literature Review Dossier",
+        advisor: "Self-directed",
+        period: "2026",
+        description: "A structured survey of physics-informed neural networks covering 2021-2026 plus pre-2021 anchors, formatted for Springer's Artificial Intelligence Review.",
+        tags: ["Literature Review", "PINN", "Survey"]
       },
       {
         role: "Undergraduate Teaching Assistant",
         institution: "United International University",
         advisor: "CSE Department Faculty",
         period: "Aug 2025 - Present",
-        description: "Helping 100+ students in Data Structures & Algorithms and Database Management courses. I run tutorial sessions and grade assignments.",
-        tags: ["Teaching", "DSA", "DBMS"]
+        description: "Supporting students in DBMS, DSA-I, ICS, and SWE lab courses. I run lab sessions and tutorials, review code, and grade assignments.",
+        tags: ["Teaching", "DBMS", "DSA-I", "ICS", "SWE"]
       }
     ]
   },
@@ -65,17 +89,17 @@ export const researchData = {
     title: "Publications",
     items: [
       {
-        title: "Handling Class Imbalance in UNSW-NB15: Reproducible Baselines for Binary and Multiclass Intrusion Detection",
-        status: "Under Review",
+        title: "NB Instance Filtering and Tree-Based Attribute Weighting: A Hybrid Study on Noisy Tabular Data",
+        status: "Submitted",
         statusColor: "text-amber-400 bg-amber-900/20 border-amber-900/30",
         authors: [
           { name: "Ikramul Hasan Moral", isMe: true }
         ],
-        venue: "Submitted for peer review, 2026",
-        description: "An 18-experiment evaluation of class-imbalance strategies (no balancing, class weighting, SMOTE) across logistic regression, random forest, and XGBoost. It includes explicit rare-class analysis (Worms: 0.07%, Shellcode: 0.65%) using macro-F1, ROC-AUC, and G-Mean on a leakage-proof, fully reproducible pipeline.",
+        venue: "ICEEICT 2027",
+        description: "A conference study comparing Naive Bayes instance filtering and decision-tree attribute selection/weighting, separately and in both orders, with all supervised steps refit inside each training fold and scored on held-out rows across ten seeds.",
         citations: 0,
         links: [
-          { label: "Code", icon: "code", url: "https://github.com/ihmorol/unsw-nb15-handling-binary-multiclass-ids" }
+          { label: "Code", icon: "code", url: "https://github.com/ihmorol/dt-nb-noise-removal" }
         ]
       },
       {
@@ -92,7 +116,7 @@ export const researchData = {
         venue: "UIU Final Year Design Project · Supervisor: Dr. Muhammad Nomani Kabir",
         description: "Which feedforward architecture best approximates a coupled nonlinear ODE system when trained purely on data? A controlled 69-run search over depth (1-4), width (20-100), five activations, and three optimizers, benchmarked against published PINN and DeepONet results on a solver-verified ground truth.",
         links: [
-          { label: "Workspace", icon: "folder", url: "https://github.com/ihmorol/fydp_workspace" }
+          { label: "Code", icon: "code", url: "https://github.com/ihmorol/lorenz1960-pinn" }
         ]
       },
       {
@@ -104,9 +128,7 @@ export const researchData = {
         ],
         venue: "Independent scientific ML project",
         description: "A nine-layer neural network trained with Levenberg-Marquardt optimization to model hybrid nanofluid flow and heat transfer over a stretching sheet. Trained on about 32,400 physics-generated samples and validated against numerical solutions with MSE, RMSE, and R² metrics.",
-        links: [
-          { label: "Code", icon: "code", url: "https://github.com/ihmorol/ann-hybrid-nanofluid-model" }
-        ]
+        links: []
       }
     ]
   },
@@ -118,20 +140,13 @@ export const researchData = {
         event: "UIU CSE Department",
         action: "Jun 2026",
         icon: "co_present",
-        link: "https://github.com/ihmorol/fydp_workspace"
+        link: "https://github.com/ihmorol/lorenz1960-pinn"
       },
       {
-        title: "Data Structures & Algorithms",
-        event: "UIU TA Tutorial Sessions",
+        title: "Lab Tutorial Sessions",
+        event: "UIU TA · DBMS, DSA-I, ICS, SWE Labs",
         action: "Ongoing",
         icon: "school",
-        link: "/contact"
-      },
-      {
-        title: "Database Management",
-        event: "UIU TA Tutorial Sessions",
-        action: "Ongoing",
-        icon: "storage",
         link: "/contact"
       }
     ]
@@ -149,13 +164,22 @@ export const researchData = {
         buttonHover: "hover:bg-blue-400"
       },
       {
-        title: "ML for Network Security",
-        description: "Extending the UNSW-NB15 baseline study with richer imbalance strategies, cost-sensitive learning, and cross-dataset generalization.",
-        year: "2025 - Present",
+        title: "Physics-Residual Attack Detection",
+        description: "Studying physics-residual signals for CAN masquerade detection on the ROAD dataset, and PINN-based shape optimization for small robots (PhORM).",
+        year: "2026 - Present",
         gradient: "from-emerald-900 to-teal-900",
         icon: "security",
         hoverColor: "group-hover:text-emerald-400",
         buttonHover: "hover:bg-emerald-400"
+      },
+      {
+        title: "AI-Generated Media Forensics",
+        description: "A pre-registered feature-level study of which simple feature sets detect AI-generated images under matched compression and unseen generators.",
+        year: "2026 - Present",
+        gradient: "from-rose-900 to-red-900",
+        icon: "image_search",
+        hoverColor: "group-hover:text-rose-400",
+        buttonHover: "hover:bg-rose-400"
       },
       {
         title: "Research Data Collection",

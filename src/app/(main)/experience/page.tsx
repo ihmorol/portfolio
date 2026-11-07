@@ -33,7 +33,7 @@ export default function ExperiencePage() {
         }
       />
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">
+      <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 max-w-7xl mx-auto">
         
         {/* Experience Section */}
         <div className="md:col-span-12 space-y-6">
