@@ -17,6 +17,8 @@ import { PageHeader } from '@/components/shared/PageHeader';
 import { Reveal } from '@/components/motion/Reveal';
 import { layoutData } from '@/data/layout-data';
 import { contactData } from '@/data/contact-data';
+import { ContactForm } from '@/components/contact/ContactForm';
+import { NewsletterForm } from '@/components/shared/NewsletterForm';
 
 export default function ContactPage() {
   const { socialLinks } = layoutData.footer;
@@ -39,7 +41,7 @@ export default function ContactPage() {
           />
         </Reveal>
 
-        <Reveal delay={0.05} className="w-full max-w-[1200px]">
+        <Reveal delay={0.05} className="w-full max-w-7xl">
           <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 mx-auto">
             
             {/* Schedule Meeting Card */}
@@ -49,9 +51,12 @@ export default function ContactPage() {
                     <p className="text-text-muted text-sm md:text-base mb-10 max-w-md leading-relaxed font-body">
                         {scheduleMeeting.description}
                     </p>
-                    <button className="focus-ring bg-foreground hover:bg-foreground/85 text-background type-micro py-4 px-10 rounded-full transition-all w-full md:w-fit text-center shadow-lg">
+                    <a
+                      href={`mailto:${email.emailAddress}?subject=${encodeURIComponent('Meeting request')}`}
+                      className="focus-ring block bg-foreground hover:bg-foreground/85 text-background type-micro py-4 px-10 rounded-full transition-all w-full md:w-fit text-center shadow-lg"
+                    >
                         {scheduleMeeting.buttonText}
-                    </button>
+                    </a>
                 </div>
                 <div className="bg-background-tertiary rounded-[2rem] flex-1 relative min-h-[300px] md:min-h-auto overflow-hidden flex items-center justify-center">
                     <div className="relative w-full h-full flex flex-col items-center justify-center gap-6 p-8">
@@ -77,7 +82,7 @@ export default function ContactPage() {
                                 <div className="h-2.5 w-32 bg-white/40 rounded-full mb-2.5"></div>
                                 <div className="h-2.5 w-20 bg-white/40 rounded-full"></div>
                             </div>
-                            <div className="bg-cyan-200 rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer">
+                            <div className="bg-cyan-200 rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
                                 <Plus className="text-cyan-800 w-6 h-6 stroke-[3]" />
                             </div>
                         </div>
@@ -140,9 +145,12 @@ export default function ContactPage() {
                     <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-background-secondary to-transparent opacity-50"></div>
                      <h3 className="text-2xl font-bold text-text-primary mb-3">{sendMessage.title}</h3>
                     <p className="text-xs text-text-secondary mb-8 leading-relaxed font-body">{sendMessage.description}</p>
-                     <button className="focus-ring block w-full bg-foreground hover:bg-foreground/85 text-background type-micro py-4 px-4 rounded-full transition-all text-center">
+                     <a
+                      href="#message"
+                      className="focus-ring block w-full bg-foreground hover:bg-foreground/85 text-background type-micro py-4 px-4 rounded-full transition-all text-center"
+                    >
                         {sendMessage.buttonText}
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -159,13 +167,15 @@ export default function ContactPage() {
                 <p className="text-[11px] text-text-secondary mb-8 leading-relaxed font-body">
                     {newsletter.description}
                 </p>
-                <form action="" className="space-y-4 mt-auto">
-                    <input type="text" placeholder={newsletter.namePlaceholder} className="w-full bg-transparent border border-border rounded-full px-6 py-4 text-xs text-text-primary placeholder:text-text-muted focus:border-border-strong focus:ring-0 transition-colors" />
-                    <input type="email" placeholder={newsletter.emailPlaceholder} className="w-full bg-transparent border border-border rounded-full px-6 py-4 text-xs text-text-primary placeholder:text-text-muted focus:border-border-strong focus:ring-0 transition-colors" />
-                    <button type="submit" className="focus-ring w-full bg-foreground hover:bg-foreground/85 text-background type-micro py-4 rounded-full transition-all mt-2 flex items-center justify-center gap-2">
-                        {newsletter.buttonText}
-                    </button>
-                </form>
+                <div className="mt-auto">
+                    <NewsletterForm
+                      variant="pill"
+                      showName
+                      buttonText={newsletter.buttonText}
+                      namePlaceholder={newsletter.namePlaceholder}
+                      emailPlaceholder={newsletter.emailPlaceholder}
+                    />
+                </div>
             </div>
 
             {/* Social Channels */}
@@ -188,6 +198,21 @@ export default function ContactPage() {
             </div>
 
         </div>
+        </Reveal>
+
+        <Reveal delay={0.1} className="w-full max-w-7xl">
+          <section
+            id="message"
+            className="scroll-mt-24 w-full max-w-3xl mx-auto bg-background-secondary border border-border rounded-[2.5rem] p-6 md:p-10 mb-12 md:mb-16"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-2 text-center">
+              {sendMessage.title}
+            </h2>
+            <p className="text-text-secondary text-xs mb-8 text-center font-body">
+              {sendMessage.description}
+            </p>
+            <ContactForm />
+          </section>
         </Reveal>
       </main>
       <Footer />

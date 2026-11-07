@@ -1,19 +1,21 @@
 'use client';
 
 import { homeData } from '@/data/home-data';
+import { contactData } from '@/data/contact-data';
 
 export function ScheduleMeeting() {
   const { title, description, cta } = homeData.scheduleMeeting;
-  
+  const meetingMailto = `mailto:${contactData.email.emailAddress}?subject=${encodeURIComponent('Meeting request')}`;
+
   return (
     <section className="flex flex-col gap-6 mb-16">
         <div className="glass-light rounded-3xl p-2 sm:p-3 lg:col-span-12 flex flex-col md:flex-row overflow-hidden min-h-[400px]">
             <div className="w-full md:w-2/5 p-6 md:p-10 flex flex-col justify-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">{title}</h2>
                 <p className="text-text-muted mb-8 leading-relaxed">{description}</p>
-                <button className="focus-ring bg-foreground text-background w-full py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 transition-colors">
+                <a href={meetingMailto} className="focus-ring bg-foreground text-background w-full py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground/85 transition-colors text-center">
                     {cta}
-                </button>
+                </a>
             </div>
             <div className="w-full md:w-3/5 bg-background-tertiary rounded-[20px] p-6 md:p-10 flex flex-col justify-center relative overflow-hidden">
                 <div className="flex flex-col gap-6 relative z-10">

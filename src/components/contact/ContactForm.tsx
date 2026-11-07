@@ -38,13 +38,20 @@ export function ContactForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
+      const result = await response.json().catch(() => null);
 
-      if (!response.ok) throw new Error('Failed to send message');
+      if (!response.ok) {
+        throw new Error(result?.error || 'Failed to send message');
+      }
 
       toast.success('Message sent successfully!');
       reset();
     } catch (error) {
-      toast.error('Something went wrong. Please try again.');
+      toast.error(
+        error instanceof Error
+          ? error.message
+          : 'Something went wrong. Please try again.'
+      );
     } finally {
       setIsSubmitting(false);
     }

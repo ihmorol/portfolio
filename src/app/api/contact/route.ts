@@ -1,41 +1,57 @@
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { sendMail } from '@/lib/mail';
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MAX_MESSAGE_LENGTH = 5000;
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name, email, subject, message } = body;
+    const { name, email, subject, message } = body ?? {};
 
-    // Basic validation
-    if (!name || !email || !message) {
+    // Mirror the client-side zod schema: name >= 2, subject >= 5, message >= 10
+    const valid =
+      typeof name === 'string' &&
+      name.trim().length >= 2 &&
+      typeof email === 'string' &&
+      EMAIL_RE.test(email) &&
+      typeof subject === 'string' &&
+      subject.trim().length >= 5 &&
+      typeof message === 'string' &&
+      message.trim().length >= 10;
+
+    if (!valid) {
       return NextResponse.json(
-        { error: 'Missing required fields' },
+        {
+          error:
+            'Please fill in all fields: name, a valid email, a subject, and a message of at least 10 characters.',
+        },
         { status: 400 }
       );
     }
 
-    // Configure transporter (Update with real credentials in .env.local)
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT),
-      secure: false, // true for 465, false for other ports
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASSWORD,
-      },
+    if (message.length > MAX_MESSAGE_LENGTH) {
+      return NextResponse.json(
+        { error: 'Message is too long (max 5000 characters).' },
+        { status: 400 }
+      );
+    }
+
+    const result = await sendMail({
+      subject: `Portfolio contact: ${subject.trim()}`,
+      replyTo: email,
+      text: `Name: ${name.trim()}\nEmail: ${email}\n\n${message.trim()}`,
     });
 
-    // In a real scenario, you'd send the email here
-    // await transporter.sendMail({ ... });
-    
-    // For now, we'll simulate a success log
-    console.log('Email received:', { name, email, subject });
+    if (!result.ok) {
+      return NextResponse.json({ error: result.error }, { status: 503 });
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Contact error:', error);
     return NextResponse.json(
-      { error: 'Internal Server Error' },
+      { error: 'Something went wrong. Please try again.' },
       { status: 500 }
     );
   }

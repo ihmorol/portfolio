@@ -3,7 +3,12 @@ export const homeData = {
     titlePrefix: "Let's",
     titleHighlight: "Connect",
     subtitle: "Final-Year CSE Student at UIU | Full-Stack Developer | ML Researcher",
-    description: "I build production software and do applied machine learning research. I'm finishing my B.Sc. at United International University with a 3.94 CGPA and a full merit scholarship across six terms, and I work there as a teaching assistant. My first paper, on class-imbalanced intrusion detection, is under peer review. My thesis applies neural networks to differential equation systems.",
+    description: "I build production software and do applied machine learning research. I'm finishing my B.Sc. at United International University with a 3.94 CGPA and a full merit scholarship across six terms, and I work there as a teaching assistant. My thesis applies neural networks to differential equation systems, with side studies in physics-informed attack detection and AI-image forensics.",
+    now: {
+      label: "Now",
+      text: "Engineering RimonsIELTS solo, teaching four labs at UIU, and running my FYDP-II thesis.",
+      link: "/now"
+    },
     buttons: [
       { text: "View Projects", variant: "primary", action: "view_projects" },
       { text: "Download Resume", variant: "secondary", action: "download_resume" },
@@ -14,7 +19,7 @@ export const homeData = {
     { value: '3.94', label: 'CGPA (4.0 Scale)' },
     { value: '6×', label: '100% Merit Scholarship' },
     { value: '500+', label: 'Problems Solved' },
-    { value: '1', label: 'Paper Under Review' },
+    { value: '20+', label: 'Projects Built' },
   ],
   featuredProjects: {
     title: "Featured Projects",
@@ -23,26 +28,10 @@ export const homeData = {
     projects: [
       {
         id: '1',
-        slug: 'advyon',
-        title: 'Advyon',
-        category: 'Full Stack',
-        description: 'Legal-tech platform with case management, document workflows, and AI-assisted legal insights. I led a five-member team through the full SDLC and we won Champion at the UIU CSE Project Show.',
-        image: '/images/brand/mesh-hero-01.svg',
-        tech: ['React', 'Express', 'TypeScript', 'MongoDB'],
-        color: 'group-hover:text-blue-400',
-        hoverColor: 'hover:text-blue-400',
-        icons: [
-            { name: "gavel", title: "Legal-Tech" },
-            { name: "dns", title: "Express" },
-            { name: "database", title: "MongoDB" }
-        ]
-      },
-      {
-        id: '2',
         slug: 'elearning-platform',
         title: 'E-Learning Platform',
         category: 'Full Stack',
-        description: 'A live IELTS preparation platform built as three apps: a Next.js 15 student portal with video courses and progress tracking, an Express + TypeScript API with Vimeo and Zoom streaming, and a React admin dashboard.',
+        description: 'The live IELTS preparation platform I engineer solo for RimonsIELTS: a Next.js 15 student portal with mock tests and video courses, an Express + TypeScript API with enforced OpenAPI contract parity, a React admin with a full test pyramid, and a Python central service. Live at rimonsielts.com.',
         image: '/images/brand/blob-depth-01.svg',
         tech: ['Next.js 15', 'React 19', 'Express', 'TypeScript'],
         color: 'group-hover:text-purple-400',
@@ -54,17 +43,33 @@ export const homeData = {
         ]
       },
       {
-        id: '3',
-        slug: 'unsw-nb15-ids',
-        title: 'Intrusion Detection',
-        category: 'AI / ML',
-        description: 'A reproducible 18-experiment study of class-imbalance strategies for binary and multiclass intrusion detection on UNSW-NB15. The paper is under peer review.',
-        image: '/images/brand/divider-flow-01.svg',
-        tech: ['Python', 'XGBoost', 'scikit-learn'],
-        color: 'group-hover:text-green-400',
-        hoverColor: 'hover:text-green-400',
+        id: '2',
+        slug: 'advyon',
+        title: 'Advyon',
+        category: 'Full Stack',
+        description: 'Legal-tech platform with case management, document workflows, and AI-assisted legal insights, built on a feature-module React 19 architecture. I led a five-member team through the full SDLC and we won Champion at the UIU CSE Project Show.',
+        image: '/images/brand/mesh-hero-01.svg',
+        tech: ['React', 'Express', 'TypeScript', 'MongoDB'],
+        color: 'group-hover:text-blue-400',
+        hoverColor: 'hover:text-blue-400',
         icons: [
-            { name: "security", title: "Network Security" },
+            { name: "gavel", title: "Legal-Tech" },
+            { name: "dns", title: "Express" },
+            { name: "database", title: "MongoDB" }
+        ]
+      },
+      {
+        id: '3',
+        slug: 'lorenz-ann-thesis',
+        title: 'Lorenz ODE Thesis',
+        category: 'Research',
+        description: 'My FYDP thesis: a PINN trained on the ODE residual alone tracks a high-accuracy DOP853 reference to ~3e-05, alongside a controlled 69-run architecture search. Every run is archived immutably with 41 tests and an ICEEICT manuscript draft.',
+        image: '/images/brand/divider-flow-01.svg',
+        tech: ['Python', 'PyTorch', 'SciPy'],
+        color: 'group-hover:text-cyan-400',
+        hoverColor: 'hover:text-cyan-400',
+        icons: [
+            { name: "functions", title: "ODE Systems" },
             { name: "model_training", title: "Machine Learning" },
             { name: "science", title: "Research" }
         ]
@@ -109,7 +114,8 @@ export const homeData = {
             type: "email",
             title: "Email",
             description: "Email me about a project or role. I usually reply within a day.",
-            cta: "Email Me"
+            cta: "Email Me",
+            emailAddress: "ihmorol@gmail.com"
         },
         {
             type: "message",
