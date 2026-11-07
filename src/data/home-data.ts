@@ -125,7 +125,7 @@ export const homeData = {
         },
         {
             type: "newsletter",
-            title: "Sign up for\nNewsletter",
+            title: "Newsletter",
             description: "Occasional updates on new projects, writing, and research.",
             cta: "Sign Up",
             placeholders: {
