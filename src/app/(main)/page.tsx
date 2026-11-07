@@ -14,33 +14,35 @@ import { StaggerGroup } from '@/components/motion/StaggerGroup';
 
 export default function HomePage() {
   return (
-    <main className="section-shell page-padding-y relative flex flex-col">
-      <PageLeftSideBar title="HOME" />
-      <VerticalSocialLinks items={socialLinks} />
-      <Reveal>
-        <HeroSection />
-      </Reveal>
-      <StaggerGroup className="space-y-0">
-        <Reveal delay={0.02}>
-          <StatsSection />
+    <>
+      <main className="section-shell page-padding-y relative flex flex-col">
+        <PageLeftSideBar title="HOME" />
+        <VerticalSocialLinks items={socialLinks} />
+        <Reveal>
+          <HeroSection />
         </Reveal>
-        <Reveal delay={0.05}>
-          <FeaturedProjects />
-        </Reveal>
-        <Reveal delay={0.08}>
-          <SkillsOverview />
-        </Reveal>
-        <Reveal delay={0.1}>
-          <ScheduleMeeting />
-        </Reveal>
-        <Reveal delay={0.12}>
-          <ContactGrid />
-        </Reveal>
-        <Reveal delay={0.14}>
-          <SocialChannels />
-        </Reveal>
-      </StaggerGroup>
+        <StaggerGroup className="space-y-0">
+          <Reveal delay={0.02}>
+            <StatsSection />
+          </Reveal>
+          <Reveal delay={0.05}>
+            <FeaturedProjects />
+          </Reveal>
+          <Reveal delay={0.08}>
+            <SkillsOverview />
+          </Reveal>
+          <Reveal delay={0.1}>
+            <ScheduleMeeting />
+          </Reveal>
+          <Reveal delay={0.12}>
+            <ContactGrid />
+          </Reveal>
+          <Reveal delay={0.14}>
+            <SocialChannels />
+          </Reveal>
+        </StaggerGroup>
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
