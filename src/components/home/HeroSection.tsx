@@ -59,7 +59,7 @@ export function HeroSection() {
             <TiltCard intensity={7} className="rounded-xl md:rounded-2xl lg:flex-1">
               <Link
                 href="/projects"
-                className="group focus-ring relative w-full aspect-[3/4] sm:aspect-[9/14] lg:aspect-auto lg:h-full bg-gradient-to-br from-accent-blue via-accent-teal to-accent-coral rounded-xl md:rounded-2xl flex flex-col items-center justify-center gap-2 md:gap-4 transition-transform cursor-pointer border border-border-strong [transform-style:preserve-3d]"
+                className="group focus-ring relative w-full aspect-[3/4] sm:aspect-[9/14] lg:aspect-auto lg:h-full bg-gradient-to-br from-accent-blue to-accent-teal rounded-xl md:rounded-2xl flex flex-col items-center justify-center gap-2 md:gap-4 transition-transform cursor-pointer border border-border-strong [transform-style:preserve-3d]"
               >
                 <span
                   className="material-symbols-outlined text-text-primary text-4xl md:text-5xl lg:text-6xl drop-shadow-sm [transform:translateZ(34px)]"

@@ -174,8 +174,7 @@
     background-image: linear-gradient(
       100deg,
       hsl(var(--accent-primary)),
-      hsl(var(--accent-cyan)) 55%,
-      hsl(var(--accent-warm))
+      hsl(var(--accent-cyan))
     );
     background-clip: text;
     -webkit-background-clip: text;
