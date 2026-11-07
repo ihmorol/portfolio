@@ -15,7 +15,7 @@ export default function AcademicPage() {
 
   return (
     <div className="bg-background text-text-primary font-display overflow-x-hidden min-h-screen flex flex-col selection:bg-foreground selection:text-background">
-      <main className="flex-grow flex flex-col items-center w-full max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 pt-20 md:pt-24 pb-8 md:pb-12 relative">
+      <main className="flex-grow flex flex-col items-center w-full max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12 xl:px-20 pt-20 md:pt-24 pb-8 md:pb-12 relative">
         
         {/* Fixed Side Elements - Hidden on smaller screens */}
         <PageLeftSideBar title="ACADEMICS" />
@@ -33,7 +33,7 @@ export default function AcademicPage() {
         />
 
         {/* Main Grid: Current Degree + Thesis + Certifications */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16 max-w-6xl mx-auto">
+        <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 pb-12 md:pb-16">
           
           {/* Current Degree Card */}
           <div className="md:col-span-12 bg-background-secondary border border-border rounded-3xl p-2 md:p-3 flex flex-col md:flex-row gap-6 md:gap-12 overflow-hidden min-h-[350px]">

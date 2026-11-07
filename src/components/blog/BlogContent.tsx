@@ -60,7 +60,7 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
             <div className="absolute top-32 left-1/2 -translate-x-1/2 w-[520px] h-[300px] rounded-full bg-accent-yellow/5 blur-3xl" />
           </div>
 
-          <div className="relative max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 pt-16 md:pt-20 pb-10 md:pb-12">
+          <div className="relative max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12 xl:px-20 pt-16 md:pt-20 pb-10 md:pb-12">
             <PageHeader
               titlePrefix={header.title}
               icon="menu_book"
@@ -110,8 +110,8 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
 
         {/* Latest posts */}
         <section className="border-y border-border/60 bg-background-tertiary/40">
-          <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16">
-            <div className="max-w-6xl mx-auto">
+          <div className="max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12 xl:px-20 py-12 md:py-16">
+            <div className="w-full">
 
               <div className="flex items-end justify-between mb-8">
                 <h2 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight">
