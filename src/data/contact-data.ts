@@ -1,39 +1,7 @@
-export const contactData = {
-  header: {
-    title: "Let's",
-    icon: "Zap",
-    titleSuffix: "Connect"
-  },
-  whatsapp: {
-    number: "8801614714959",
-    meetingMessage: "Hi Ikramul! I'd like to schedule a 15-minute call.",
-    helloMessage: "Hi Ikramul! I found you through your portfolio."
-  },
-  scheduleMeeting: {
-    title: "Schedule a Meeting",
-    description: "Book a 15-minute call to talk about an internship, a role, or a project idea. Message me on WhatsApp and we'll find a time.",
-    buttonText: "Schedule Now"
-  },
-  email: {
-    title: "Email",
-    description: "The most reliable way to reach me. I usually reply within a day.",
-    buttonText: "Email Me",
-    emailAddress: "ihmorol@gmail.com"
-  },
-  sendMessage: {
-    title: "Send Message",
-    description: "Leave your email and message and your mail app will open with everything ready to send.",
-    buttonText: "Message Me"
-  },
-  newsletter: {
-    title: "Sign up for Newsletter",
-    description: "Occasional updates on new projects, writing, and research.",
-    namePlaceholder: "Your Name",
-    emailPlaceholder: "Email Address",
-    buttonText: "Sign Up"
-  },
-  socialChannels: {
-    title: "Social Channels",
-    description: "WhatsApp for quick messages, GitHub for code, LinkedIn for everything else."
-  }
-};
+/**
+ * Content wrapper: the editable source of truth is contact-data.json,
+ * maintained through Portfolio Admin. Export names and shapes are unchanged.
+ */
+import data from './contact-data.json';
+
+export const contactData = data;
