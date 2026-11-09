@@ -63,27 +63,27 @@ export default function ContactPage() {
                 </div>
                 <div className="bg-background-tertiary rounded-[2rem] flex-1 relative min-h-[300px] md:min-h-auto overflow-hidden flex items-center justify-center">
                     <div className="relative w-full h-full flex flex-col items-center justify-center gap-6 p-8">
-                        <div className="flex gap-6 items-center">
-                            <div className="bg-accent-red rounded-3xl w-20 h-20 flex items-center justify-center shadow-xl shadow-red-200">
-                                <Calendar className="text-white w-10 h-10" />
+                        <div className="flex gap-3 sm:gap-6 items-center">
+                            <div className="bg-accent-red rounded-3xl w-14 h-14 sm:w-20 sm:h-20 flex items-center justify-center shadow-xl shadow-red-200">
+                                <Calendar className="text-white w-7 h-7 sm:w-10 sm:h-10" />
                             </div>
-                            <div className="bg-blue-600 rounded-full py-4 px-6 shadow-xl shadow-blue-200 min-w-[140px]">
-                                <div className="h-2.5 w-24 bg-white/40 rounded-full mb-2.5"></div>
-                                <div className="h-2.5 w-16 bg-white/40 rounded-full"></div>
+                            <div className="bg-blue-600 rounded-full py-4 px-4 sm:px-6 shadow-xl shadow-blue-200 min-w-0 sm:min-w-[140px]">
+                                <div className="h-2.5 w-20 sm:w-24 bg-white/40 rounded-full mb-2.5"></div>
+                                <div className="h-2.5 w-14 sm:w-16 bg-white/40 rounded-full"></div>
                             </div>
-                            <div className="bg-blue-600 rounded-full w-20 h-20 flex items-center justify-center shadow-xl shadow-blue-200 relative">
-                                <Video className="text-white w-10 h-10" />
+                            <div className="bg-blue-600 rounded-full w-14 h-14 sm:w-20 sm:h-20 flex items-center justify-center shadow-xl shadow-blue-200 relative">
+                                <Video className="text-white w-7 h-7 sm:w-10 sm:h-10" />
                                 <div className="absolute top-0 right-0 w-5 h-5 bg-green-400 border-4 border-background-tertiary rounded-full"></div>
                             </div>
                         </div>
-                        <div className="flex gap-6 items-center translate-x-4">
-                            <div className="bg-blue-600 rounded-full py-4 px-8 shadow-xl shadow-blue-200 relative min-w-[160px]">
+                        <div className="flex gap-3 sm:gap-6 items-center sm:translate-x-4">
+                            <div className="bg-blue-600 rounded-full py-4 px-4 sm:px-8 shadow-xl shadow-blue-200 relative sm:min-w-[160px]">
                                 <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-blue-600 transform rotate-45 rounded-sm"></div>
-                                <div className="absolute -left-10 top-1/2 -translate-y-1/2 bg-accent-red rounded-full p-2 border-4 border-background-tertiary">
+                                <div className="absolute -left-8 sm:-left-10 top-1/2 -translate-y-1/2 bg-accent-red rounded-full p-2 border-4 border-background-tertiary">
                                   <User className="text-white w-6 h-6" />
                                 </div>
-                                <div className="h-2.5 w-32 bg-white/40 rounded-full mb-2.5"></div>
-                                <div className="h-2.5 w-20 bg-white/40 rounded-full"></div>
+                                <div className="h-2.5 w-24 sm:w-32 bg-white/40 rounded-full mb-2.5"></div>
+                                <div className="h-2.5 w-16 sm:w-20 bg-white/40 rounded-full"></div>
                             </div>
                             <div className="bg-cyan-200 rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
                                 <Plus className="text-cyan-800 w-6 h-6 stroke-[3]" />
