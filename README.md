@@ -125,6 +125,17 @@ For UI-heavy work, manually verify desktop and mobile on:
 - Update section/page content through files in `src/data/*`.
 - Add or edit blog posts in `src/content/blog`.
 - Keep reusable section logic inside `src/components/*`.
+- Material Symbols are self-hosted as a subset in `public/fonts/`. After adding
+  icons in TSX or JSON content, regenerate it with Python 3.10+:
+
+  ```bash
+  python -m pip install fonttools brotli
+  python -I scripts/generate_material_symbols_subset.py
+  ```
+
+  The generator downloads and caches the source font in `.tmp-font/`, then checks
+  retained ligatures. Ordinary Next.js builds use the committed WOFF2 file and do
+  not require Python. The font's license and modification notice are alongside it.
 
 ## Deployment Notes
 

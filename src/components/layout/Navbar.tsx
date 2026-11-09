@@ -23,6 +23,34 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
+  // While the mobile menu is open: lock background scroll, close on Escape,
+  // and auto-close if the viewport grows to desktop so the lock can't leak.
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsMobileMenuOpen(false);
+    };
+    const desktopQuery = window.matchMedia('(min-width: 1024px)');
+    const handleViewportChange = () => {
+      if (desktopQuery.matches) setIsMobileMenuOpen(false);
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    desktopQuery.addEventListener('change', handleViewportChange);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+      desktopQuery.removeEventListener('change', handleViewportChange);
+    };
+  }, [isMobileMenuOpen]);
+
   const { brand, cta, menuItems, moreItems } = layoutData.navbar;
   const isMoreActive = moreItems.some(
     (link) => pathname === link.href || pathname.startsWith(`${link.href}/`)
@@ -36,15 +64,19 @@ export function Navbar() {
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 pointer-events-none'
       )}
     >
-      <nav className="container mx-auto px-6 py-4 md:py-6 flex items-center justify-between pointer-events-auto">
-        {/* Left Group: Brand + CTA */}
-        <div className="flex items-center gap-1 p-1 bg-background-secondary/70 backdrop-blur-md border border-border rounded-full shadow-lg z-50">
-          <Link href="/" className="focus-ring rounded-full pl-4 pr-3 text-lg font-bold text-text-primary whitespace-nowrap">
+      {/* Tighter gutters on phones: the fixed pill row must fit 320-430px
+          viewports or the burger button gets clipped by overflow-x-hidden. */}
+      <nav className="container mx-auto px-3 sm:px-6 py-4 md:py-6 flex items-center justify-between pointer-events-auto">
+        {/* Left Group: Brand + CTA (brand/CTA scale down below sm so the
+            whole row still fits next to the theme toggle + burger). */}
+        <div className="flex items-center gap-0.5 sm:gap-1 p-1 bg-background-secondary/70 backdrop-blur-md border border-border rounded-full shadow-lg z-50">
+          <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="focus-ring rounded-full pl-2.5 pr-2 sm:pl-4 sm:pr-3 text-[15px] sm:text-lg font-bold text-text-primary whitespace-nowrap">
             {brand}
           </Link>
           <Link
             href="/contact"
-            className="focus-ring inline-flex items-center justify-center rounded-full bg-foreground text-background hover:bg-foreground/85 font-medium px-5 h-10 text-xs font-bold uppercase tracking-widest transition-colors"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="focus-ring inline-flex items-center justify-center rounded-full bg-foreground text-background hover:bg-foreground/85 font-medium h-9 sm:h-10 px-2.5 sm:px-5 text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest transition-colors"
           >
             {cta}
           </Link>
@@ -136,7 +168,7 @@ export function Navbar() {
         </div>
 
         {/* Mobile: Theme Toggle + Menu Toggle */}
-        <div className="lg:hidden z-50 flex items-center gap-2">
+        <div className="lg:hidden z-50 flex items-center gap-1.5 sm:gap-2">
           <ThemeToggle />
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -156,7 +188,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl pt-24 px-6 lg:hidden pointer-events-auto"
+            className="fixed inset-0 z-40 overflow-y-auto overscroll-contain bg-background/95 backdrop-blur-xl pt-24 px-6 pb-8 lg:hidden pointer-events-auto"
           >
             <div className="flex flex-col gap-6 items-center">
               {mobileMenuItems.map((link) => (

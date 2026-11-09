@@ -66,17 +66,17 @@ export default function AcademicPage() {
             {/* Visual Illustration */}
             <div className="bg-background-tertiary rounded-2xl flex-1 relative min-h-[300px] md:min-h-auto overflow-hidden flex items-center justify-center p-8">
               <div className="relative w-full h-full flex flex-col items-center justify-center gap-6">
-                <div className="flex gap-4 items-end">
-                  <div className="bg-blue-600 w-12 h-32 rounded-t-xl shadow-lg relative group overflow-hidden">
+                <div className="flex gap-2 sm:gap-4 items-end">
+                  <div className="bg-blue-600 w-10 sm:w-12 h-32 rounded-t-xl shadow-lg relative group overflow-hidden">
                     <div className="absolute bottom-0 left-0 w-full h-0 bg-blue-400 group-hover:h-full transition-all duration-700 ease-out"></div>
                   </div>
-                  <div className="bg-cyan-400 w-12 h-48 rounded-t-xl shadow-lg relative group overflow-hidden">
+                  <div className="bg-cyan-400 w-10 sm:w-12 h-48 rounded-t-xl shadow-lg relative group overflow-hidden">
                     <div className="absolute bottom-0 left-0 w-full h-0 bg-cyan-200 group-hover:h-full transition-all duration-700 ease-out delay-100"></div>
                   </div>
-                  <div className="bg-indigo-600 w-12 h-40 rounded-t-xl shadow-lg relative group overflow-hidden">
+                  <div className="bg-indigo-600 w-10 sm:w-12 h-40 rounded-t-xl shadow-lg relative group overflow-hidden">
                     <div className="absolute bottom-0 left-0 w-full h-0 bg-indigo-400 group-hover:h-full transition-all duration-700 ease-out delay-200"></div>
                   </div>
-                  <div className="bg-purple-500 w-12 h-24 rounded-t-xl shadow-lg relative group overflow-hidden">
+                  <div className="bg-purple-500 w-10 sm:w-12 h-24 rounded-t-xl shadow-lg relative group overflow-hidden">
                     <div className="absolute bottom-0 left-0 w-full h-0 bg-purple-300 group-hover:h-full transition-all duration-700 ease-out delay-300"></div>
                   </div>
                 </div>

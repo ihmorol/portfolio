@@ -51,12 +51,20 @@ export default function RootLayout({
             __html: `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}if(t==='dark'){document.documentElement.classList.add('dark');}}catch(e){document.documentElement.classList.add('dark');}})();`,
           }}
         />
+        {/*
+          Icon font subset is self-hosted (see globals.css) — preload it so the
+          ~37 KB file arrives with the initial HTML instead of a render-blocking
+          third-party stylesheet chain.
+        */}
+        <link
+          rel="preload"
+          href="/fonts/material-symbols-subset.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="bg-background text-text-primary font-body antialiased selection:bg-foreground selection:text-background overflow-x-hidden">
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block"
-          rel="stylesheet"
-        />
         <Navbar />
         <AmbientBackground />
         <CursorGlow />

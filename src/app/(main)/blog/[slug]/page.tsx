@@ -54,15 +54,15 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                     {post.title}
                 </h1>
                 
-                <div className="flex items-center gap-6 text-sm text-text-secondary border-b border-border/60 pb-8">
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-text-secondary border-b border-border/60 pb-8">
                     <div className="flex items-center gap-3">
                          <div className="w-10 h-10 rounded-full overflow-hidden relative">
                              <Image src={post.author.image} alt={post.author.name} fill className="object-cover" />
                          </div>
                          <span className="font-bold text-text-primary">{post.author.name}</span>
                     </div>
-                    <span className="flex items-center gap-2"><Calendar size={14} /> {formatDate(post.date)}</span>
-                    <span className="flex items-center gap-2"><Clock size={14} /> {post.readTime} min read</span>
+                    <span className="flex items-center gap-2 whitespace-nowrap"><Calendar size={14} /> {formatDate(post.date)}</span>
+                    <span className="flex items-center gap-2 whitespace-nowrap"><Clock size={14} /> {post.readTime} min read</span>
                 </div>
             </div>
 

@@ -200,14 +200,14 @@ export default function ProjectsPage() {
 
                     <div className="p-6 flex flex-col flex-grow relative z-20 -mt-12">
                       <div className="flex justify-between items-start mb-2 gap-3 min-h-[3rem] lg:min-h-[3.75rem]">
-                        <Link href={`/projects/${project.slug}`}>
+                        <Link href={`/projects/${project.slug}`} className="min-w-0">
                           <h3
                             className={`type-h3 text-text-primary ${project.hoverColor} transition-colors`}
                           >
                             {project.title}
                           </h3>
                         </Link>
-                        <span className="type-caption text-text-muted mt-1 whitespace-nowrap">
+                        <span className="type-caption text-text-muted mt-1 whitespace-nowrap shrink-0">
                           {project.date}
                         </span>
                       </div>
