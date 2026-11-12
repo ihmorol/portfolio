@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Geometric "i." monogram echoing the "Ikramul Hasan." brand mark -->
+  <rect width="64" height="64" rx="14" fill="hsl(221 29% 8%)"/>
+  <rect x="20" y="10" width="10" height="10" rx="4" fill="hsl(220 18% 96%)"/>
+  <rect x="20" y="26" width="10" height="28" rx="5" fill="hsl(220 18% 96%)"/>
+  <rect x="37" y="44" width="9" height="10" rx="2" fill="hsl(174 72% 54%)"/>
+</svg>
