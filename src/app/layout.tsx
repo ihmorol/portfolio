@@ -23,6 +23,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.ihmorol.me'),
   title: {
     default: 'Ikramul Hasan - Portfolio',
     template: '%s | Ikramul Hasan',
