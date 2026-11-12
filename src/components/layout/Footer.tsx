@@ -5,10 +5,11 @@ import {
   Twitter,
   Mail,
   MessageCircle,
-  LucideIcon
+  LucideIcon,
 } from 'lucide-react';
 import { layoutData } from '@/data/layout-data';
 import { NewsletterForm } from '@/components/shared/NewsletterForm';
+import { NameWatermark } from '@/components/layout/NameWatermark';
 
 const iconMap: Record<string, LucideIcon> = {
   github: Github,
@@ -20,17 +21,28 @@ const iconMap: Record<string, LucideIcon> = {
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  const { brand, socialLinks, sitemap, resources, newsletter, copyright, legals } = layoutData.footer;
+  const {
+    brand,
+    socialLinks,
+    sitemap,
+    resources,
+    newsletter,
+    copyright,
+    legals,
+  } = layoutData.footer;
 
   return (
-    <footer className="bg-background-secondary border-t border-border/60 pt-12 pb-8">
+    <footer className="bg-background-secondary border-t border-border/60 pt-12">
       <div className="section-shell">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-10">
-          
           {/* Brand Section */}
           <div className="md:col-span-4">
-            <Link href="/" className="text-2xl font-bold text-text-primary mb-6 block">
-              {brand.name}<span className="text-text-muted">.</span>
+            <Link
+              href="/"
+              className="text-2xl font-bold text-text-primary mb-6 block"
+            >
+              {brand.name}
+              <span className="text-text-muted">.</span>
             </Link>
             <p className="text-text-secondary text-sm leading-relaxed max-w-xs mb-8">
               {brand.description}
@@ -40,11 +52,14 @@ export function Footer() {
                 const Icon = iconMap[social.icon] || Mail;
                 // Define hover colors based on platform or just generic
                 const socialTitle = social.title.toLowerCase();
-                const hoverColorClass = 
-                  socialTitle === "github" ? "hover:bg-foreground hover:text-background" :
-                  socialTitle === "linkedin" ? "hover:bg-[#0077b5] hover:text-white" :
-                  socialTitle === "twitter" ? "hover:bg-[#1DA1F2] hover:text-white" :
-                  "hover:bg-foreground hover:text-background";
+                const hoverColorClass =
+                  socialTitle === 'github'
+                    ? 'hover:bg-foreground hover:text-background'
+                    : socialTitle === 'linkedin'
+                      ? 'hover:bg-[#0077b5] hover:text-white'
+                      : socialTitle === 'twitter'
+                        ? 'hover:bg-[#1DA1F2] hover:text-white'
+                        : 'hover:bg-foreground hover:text-background';
 
                 return (
                   <a
@@ -52,7 +67,9 @@ export function Footer() {
                     href={social.url}
                     className={`focus-ring w-10 h-10 rounded-full bg-foreground/5 flex items-center justify-center text-text-secondary ${hoverColorClass} transition-all`}
                     aria-label={social.title}
-                    {...(social.url.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    {...(social.url.startsWith('http')
+                      ? { target: '_blank', rel: 'noopener noreferrer' }
+                      : {})}
                   >
                     <Icon size={18} aria-hidden="true" />
                   </a>
@@ -67,7 +84,10 @@ export function Footer() {
             <ul className="space-y-4">
               {sitemap.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-text-secondary hover:text-text-primary transition-colors">
+                  <Link
+                    href={link.href}
+                    className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -79,19 +99,24 @@ export function Footer() {
           <div className="md:col-span-2">
             <h4 className="text-text-primary font-bold mb-6">Resources</h4>
             <ul className="space-y-4">
-               {resources.map((link) => (
+              {resources.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-text-secondary hover:text-text-primary transition-colors">
+                  <Link
+                    href={link.href}
+                    className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+                  >
                     {link.name}
                   </Link>
                 </li>
-               ))}
+              ))}
             </ul>
           </div>
 
           {/* Newsletter */}
           <div className="md:col-span-4">
-            <h4 className="text-text-primary font-bold mb-6">{newsletter.title}</h4>
+            <h4 className="text-text-primary font-bold mb-6">
+              {newsletter.title}
+            </h4>
             <p className="text-text-secondary text-sm mb-6">
               {newsletter.description}
             </p>
@@ -110,13 +135,18 @@ export function Footer() {
           </p>
           <div className="flex gap-6">
             {legals.map((legal) => (
-              <Link key={legal.name} href={legal.href} className="text-xs text-text-muted hover:text-text-secondary transition-colors uppercase tracking-wider">
+              <Link
+                key={legal.name}
+                href={legal.href}
+                className="text-xs text-text-muted hover:text-text-secondary transition-colors uppercase tracking-wider"
+              >
                 {legal.name}
               </Link>
             ))}
           </div>
         </div>
       </div>
+      <NameWatermark className="mt-10" />
     </footer>
   );
 }
